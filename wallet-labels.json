@@ -1,0 +1,101 @@
+{
+  "disclaimer": "42.space 没有公布具名做市商地址。这里的分层是根据公开文档和链上行为做的推断，不是官方确认名单。不要把任何地址写成已确认的官方做市商。",
+  "pointsWeekStart": "Thursday 00:00 UTC",
+  "pointsWeekSources": [
+    {
+      "name": "42 Points",
+      "url": "https://docs.42.space/getting-started/42-points/42-points",
+      "note": "Official weekly cycle: Thursday 00:00 UTC to Wednesday 23:59 UTC. Points are updated once a week after Wednesday UTC closes."
+    },
+    {
+      "name": "Points leaderboard payload",
+      "url": "https://www.42.space/api/points/leaderboard",
+      "note": "No epoch/week endpoint. latestWeek is the last distributed week, with an exclusive `to`. Observed at implementation: latestWeek from 2026-11-04T00:00:00.000Z to 2026-11-12T00:00:00.000Z (Week 1, eight days from the launch announcement). That `to` is Thursday 00:00 UTC and is the start of the following cycle. The site bundle renders latestWeek as from through (to - 1ms) in UTC and does not hardcode a weekday."
+    }
+  ],
+  "tiers": [
+    {
+      "id": "A",
+      "label": "疑似官方做市",
+      "tone": "a",
+      "group": "mm",
+      "tooltip": "竞速榜已排除。官方文档称竞速榜会排除部署配置的做市钱包；这些地址在官方 Blitz 盘大量交易却被竞速榜排除，并非官方公布名单。",
+      "source": "https://docs.42.space/for-developers/rest-api-alpha/leaderboard/get-race-leaderboard",
+      "addresses": [
+        "0xe1838C8DA07Dd68483FD1929d08dABf942d987e1",
+        "0x76dF1872D1658B439a044269C20F635D5dDF7296",
+        "0x7d10cA0E56531018B25d08324EB28077d5B9d497"
+      ]
+    },
+    {
+      "id": "B",
+      "label": "疑似做市/机器人",
+      "tone": "b",
+      "group": "mm",
+      "tooltip": "同一策略：在一笔交易里买入某个 Blitz 的全部结果，且从不卖出。按三结果全买，预测胜率大约 33%。非官方公布名单。",
+      "addresses": [
+        "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
+        "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
+        "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
+        "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
+        "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
+        {"address": "0x3cE29DA6f5fb915Cc92310d77EAe3e924427bb56", "periods": ["all"]}
+      ]
+    },
+    {
+      "id": "C",
+      "label": "疑似高频机器人",
+      "tone": "c",
+      "group": "mm",
+      "tooltip": "没有固定名单。当前窗口同时满足：成交笔数 ≥ 20000，预测结算（winningPredictions + losingPredictions）≤ 笔数的 5%，盈亏比例在 -2% 到 -0.8% 之间。计入做市/机器人，不计入散户。",
+      "addresses": []
+    }
+  ],
+  "identities": [
+    {
+      "id": "team",
+      "label": "Team",
+      "tooltip": "官方团队身份。计入散户，不是做市标签。",
+      "addresses": [
+        "0x67506AC99034FEC04aE6f3fdBFDc4ED6fDCDfcE0",
+        "0x369A90011194b5Ec501F1381dB57f2009e5c60C7",
+        "0x2eca735b859431DC18a1682c9d6e8881DD71f552",
+        "0x7a941497f764513528E27Ba1e87010B498c08214",
+        "0xBCC7eCb88FeA3B276FBC71Dd87B15F2CC0e44a0c",
+        "0x49876839d5f920eC73da43e05C00deB773e107b6"
+      ]
+    },
+    {
+      "id": "mod",
+      "label": "Community Mod",
+      "tooltip": "社区管理员身份。计入散户，不是做市标签。",
+      "addresses": [
+        "0xce01B1f6c9b550AED459471B379bfb47c5C37A23"
+      ]
+    },
+    {
+      "id": "treasury",
+      "label": "Treasury",
+      "tooltip": "财库身份。计入散户，不是做市标签。",
+      "addresses": [
+        "0xc60E3415648684b1D0D0D97e85CB21E6a2bCb620"
+      ]
+    }
+  ],
+  "heuristics": {
+    "tierB": {
+      "winRate": 0,
+      "volumeMin": 1000000,
+      "tradeCountMin": 5000,
+      "pnlPctMin": -0.8,
+      "pnlPctMax": -0.2
+    },
+    "tierC": {
+      "tradeCountMin": 20000,
+      "predictionRatioMax": 0.05,
+      "pnlPctMin": -2,
+      "pnlPctMax": -0.8
+    },
+    "precedence": "A listed address for this window wins over B. An address whose list entry limits the windows (0x3cE29… only `all`) is left as retail outside those windows, and is not auto-flagged there. Identity badges stay retail even if a heuristic matches. Otherwise Tier C heuristic, then Tier B heuristic. pnlPct bounds are inclusive. winRate is the API fraction (0 means 0%). pnlPct is the API percent-points value (-0.5 means -0.5%)."
+  }
+}
