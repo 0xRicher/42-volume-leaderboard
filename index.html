@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>42 成交量实时排行榜</title>
+  <meta name="description" content="42.space 交易者成交量实时排行榜" />
+  <link rel="icon" href="https://www.42.space/favicon.ico" />
+  <style>
+    :root {
+      --bg: #07080c;
+      --bg-elev: #10121a;
+      --bg-row: #12141d;
+      --bg-row-alt: #161924;
+      --bg-hover: #1c2030;
+      --line: rgba(255, 255, 255, 0.07);
+      --line-strong: rgba(255, 255, 255, 0.12);
+      --text: #eef0f5;
+      --muted: #8b91a3;
+      --dim: #5e6475;
+      --accent: #c8ff3d;
+      --accent-2: #8b7dff;
+      --gold: #f0c14b;
+      --silver: #c5cde0;
+      --bronze: #d0894f;
+      --up: #3ee07f;
+      --down: #ff5d73;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      --radius: 16px;
+      --mono: "IBM Plex Mono", "ui-monospace", "SFMono-Regular", Menlo, Consolas, monospace;
+      --sans: "Sora", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      color: var(--text);
+      font-family: var(--sans);
+      background:
+        radial-gradient(1200px 500px at 10% -10%, rgba(200, 255, 61, 0.08), transparent 55%),
+        radial-gradient(900px 420px at 100% 0%, rgba(139, 125, 255, 0.12), transparent 50%),
+        var(--bg);
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    header.hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(160deg, #1a1d27, #0d0f16);
+      border: 1px solid var(--line-strong);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      color: var(--accent);
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 650;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+
+    .subtitle a { color: var(--accent); text-decoration: none; }
+    .subtitle a:hover { text-decoration: underline; }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .pill.live { color: var(--accent); border-color: rgba(200,255,61,0.25); background: rgba(200,255,61,0.08); }
+    .pill.snap { color: var(--gold); border-color: rgba(240,193,75,0.25); background: rgba(240,193,75,0.08); }
+    .pill.error { color: var(--down); border-color: rgba(255,93,115,0.3); }
+
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 0 3px color-mix(in srgb, currentColor 20%, transparent);
+    }
+    .pill.live .dot { animation: pulse 1.6s ease-in-out infinite; }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .tabs {
+      display: flex;
+      padding: 4px;
+      gap: 4px;
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+
+    .tabs button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .tabs button[aria-selected="true"] {
+      background: #1c2030;
+      color: var(--text);
+      box-shadow: inset 0 0 0 1px var(--line-strong);
+    }
+    .tabs button:hover { color: var(--text); }
+
+    .search-box {
+      position: relative;
+      flex: 1 1 240px;
+      min-width: 200px;
+      max-width: 360px;
+    }
+    .search-box input {
+      width: 100%;
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font: inherit;
+      font-size: 13px;
+      border-radius: 12px;
+      padding: 10px 36px 10px 14px;
+      outline: none;
+    }
+    .search-box input:focus { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+    .search-box input::placeholder { color: var(--dim); }
+    .search-box .clear {
+      position: absolute;
+      right: 8px; top: 50%;
+      transform: translateY(-50%);
+      border: 0; background: transparent;
+      color: var(--dim); cursor: pointer; font-size: 16px;
+      display: none;
+    }
+    .search-box.has-value .clear { display: block; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 800px) {
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .stat {
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+    }
+    .stat .label { color: var(--muted); font-size: 12px; }
+    .stat .value {
+      margin-top: 6px;
+      font-family: var(--mono);
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .board {
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .table-scroll { overflow-x: auto; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      text-align: left;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      background: #151823;
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+      white-space: nowrap;
+      user-select: none;
+    }
+    thead th.sortable { cursor: pointer; }
+    thead th.sortable:hover { color: var(--text); }
+    thead th .arrow { margin-left: 4px; color: var(--accent); }
+    thead th.num, tbody td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono); }
+    tbody td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+    }
+    tbody tr:nth-child(even) { background: var(--bg-row-alt); }
+    tbody tr:hover { background: var(--bg-hover); }
+    tbody tr:last-child td { border-bottom: 0; }
+
+    .rank {
+      font-family: var(--mono);
+      font-weight: 700;
+      color: var(--muted);
+      min-width: 48px;
+    }
+    .rank.r1 { color: var(--gold); }
+    .rank.r2 { color: var(--silver); }
+    .rank.r3 { color: var(--bronze); }
+
+    .trader {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+    .trader a { text-decoration: none; }
+    .trader a:hover { color: var(--accent); text-decoration: underline; }
+    .copy {
+      border: 0;
+      background: transparent;
+      color: var(--dim);
+      cursor: pointer;
+      font-size: 12px;
+      padding: 0 2px;
+    }
+    .copy:hover { color: var(--text); }
+
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    .flat { color: var(--muted); }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 12px 16px;
+      color: var(--dim);
+      font-size: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .empty, .error-banner, .loading {
+      padding: 40px 20px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .error-banner { color: var(--down); }
+
+    .hint {
+      margin-top: 18px;
+      color: var(--dim);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 640px) {
+      .wrap { padding: 18px 12px 48px; }
+      th.hide-sm, td.hide-sm { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">42</div>
+        <div>
+          <h1>42 成交量实时排行榜</h1>
+          <p class="subtitle">
+            数据来自 <a href="https://www.42.space/" target="_blank" rel="noopener">42.space</a>
+            公开 Market API，按交易者成交量排序。
+          </p>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="pill" id="source-pill"><span class="dot"></span><span id="source-label">加载中</span></span>
+        <span class="pill" id="updated-pill">更新时间：--</span>
+        <span class="pill" id="refresh-pill">自动刷新：30 秒</span>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <div class="tabs" role="tablist" aria-label="时间范围">
+        <button type="button" role="tab" data-period="1d" aria-selected="true">24 小时</button>
+        <button type="button" role="tab" data-period="7d" aria-selected="false">7 日</button>
+        <button type="button" role="tab" data-period="30d" aria-selected="false">30 日</button>
+        <button type="button" role="tab" data-period="all" aria-selected="false">全部</button>
+      </div>
+      <div class="search-box" id="search-wrap">
+        <input id="search" type="search" placeholder="搜索钱包地址…" autocomplete="off" spellcheck="false" />
+        <button type="button" class="clear" id="clear-search" aria-label="清空搜索">×</button>
+      </div>
+    </div>
+
+    <section class="stats" id="stats">
+      <article class="stat"><div class="label">上榜交易者</div><div class="value" id="stat-traders">--</div></article>
+      <article class="stat"><div class="label">本页显示</div><div class="value" id="stat-shown">--</div></article>
+      <article class="stat"><div class="label">本页合计成交量</div><div class="value" id="stat-volume">--</div></article>
+      <article class="stat"><div class="label">第一名成交量</div><div class="value" id="stat-top">--</div></article>
+    </section>
+
+    <section class="board">
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th class="sortable num" data-key="rank">排名<span class="arrow"></span></th>
+              <th class="sortable" data-key="trader">交易者<span class="arrow"></span></th>
+              <th class="sortable num" data-key="volume">成交量 (USDT)<span class="arrow"></span></th>
+              <th class="sortable num" data-key="pnl">已实现盈亏<span class="arrow"></span></th>
+              <th class="sortable num hide-sm" data-key="pnl_pct">盈亏比例<span class="arrow"></span></th>
+              <th class="sortable num" data-key="trade_count">笔数<span class="arrow"></span></th>
+              <th class="sortable num hide-sm" data-key="win_rate">胜率<span class="arrow"></span></th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td colspan="7" class="loading">正在拉取成交量数据…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="footer">
+        <span id="count-label"></span>
+        <span>成交量单位为 USDT · 官方默认按盈亏排序，本榜强制按成交量排序</span>
+      </div>
+    </section>
+
+    <p class="hint">
+      页面优先直连 <code>https://rest.ft.42.space</code>（该接口允许跨域）。若实时接口不可用，将回退到仓库里由 GitHub Actions 每 10 分钟更新一次的 <code>data/leaderboard.json</code> 快照。
+      官方积分页 <a href="https://www.42.space/points" target="_blank" rel="noopener">42.space/points</a> 按积分而非成交量排名。
+    </p>
+  </div>
+
+  <script>
+    const API = "https://rest.ft.42.space/api/v1/market-data/leaderboard";
+    const SNAPSHOT = "./data/leaderboard.json";
+    const LIMIT = 200;
+    const REFRESH_MS = 30_000;
+    const PERIODS = ["1d", "7d", "30d", "all"];
+    const TZ = "Asia/Tokyo";
+
+    const state = {
+      period: "1d",
+      rows: [],
+      totalTraders: 0,
+      updatedAt: null,
+      source: "loading", // live | snapshot | error
+      sortKey: "volume",
+      sortDir: "desc",
+      query: "",
+    };
+
+    const els = {
+      tbody: document.getElementById("tbody"),
+      search: document.getElementById("search"),
+      searchWrap: document.getElementById("search-wrap"),
+      clear: document.getElementById("clear-search"),
+      sourcePill: document.getElementById("source-pill"),
+      sourceLabel: document.getElementById("source-label"),
+      updatedPill: document.getElementById("updated-pill"),
+      traders: document.getElementById("stat-traders"),
+      shown: document.getElementById("stat-shown"),
+      volume: document.getElementById("stat-volume"),
+      top: document.getElementById("stat-top"),
+      count: document.getElementById("count-label"),
+    };
+
+    function shortAddr(addr) {
+      if (!addr || addr.length < 12) return addr || "";
+      return addr.slice(0, 6) + "…" + addr.slice(-4);
+    }
+
+    function formatUsd(n, digits = 2) {
+      const abs = Math.abs(Number(n) || 0);
+      const sign = n < 0 ? "-" : "";
+      if (abs >= 1e9) return sign + "$" + (abs / 1e9).toFixed(2) + "B";
+      if (abs >= 1e6) return sign + "$" + (abs / 1e6).toFixed(2) + "M";
+      if (abs >= 1e3) return sign + "$" + (abs / 1e3).toFixed(2) + "K";
+      return sign + "$" + abs.toLocaleString("en-US", { maximumFractionDigits: digits, minimumFractionDigits: 0 });
+    }
+
+    function formatInt(n) {
+      return Number(n || 0).toLocaleString("en-US");
+    }
+
+    function formatPct(n) {
+      const v = Number(n) || 0;
+      return (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+    }
+
+    function formatWinRate(n) {
+      return ((Number(n) || 0) * 100).toFixed(1) + "%";
+    }
+
+    function formatTime(iso) {
+      if (!iso) return "--";
+      const d = new Date(iso);
+      if (Number.isNaN(d.getTime())) return iso;
+      const text = new Intl.DateTimeFormat("zh-CN", {
+        timeZone: TZ,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      }).format(d);
+      return text.replace(/\//g, "-") + " (东京时间)";
+    }
+
+    function pnlClass(n) {
+      if (n > 0) return "up";
+      if (n < 0) return "down";
+      return "flat";
+    }
+
+    function explorerUrl(addr) {
+      return "https://bscscan.com/address/" + addr;
+    }
+
+    function setSource(kind, message) {
+      state.source = kind;
+      els.sourcePill.classList.remove("live", "snap", "error");
+      if (kind === "live") {
+        els.sourcePill.classList.add("live");
+        els.sourceLabel.textContent = "实时 API";
+      } else if (kind === "snapshot") {
+        els.sourcePill.classList.add("snap");
+        els.sourceLabel.textContent = "本地快照";
+      } else {
+        els.sourcePill.classList.add("error");
+        els.sourceLabel.textContent = message || "加载失败";
+      }
+    }
+
+    function normalizeApiRows(raw) {
+      return (raw || []).map((row) => ({
+        rank: Number(row.rank),
+        trader: row.walletAddress || row.trader,
+        volume: Number(row.totalVolume ?? row.volume) || 0,
+        pnl: Number(row.pnl) || 0,
+        pnl_pct: Number(row.pnlPct ?? row.pnl_pct) || 0,
+        win_rate: Number(row.winRate ?? row.win_rate) || 0,
+        trade_count: Number(row.tradeCount ?? row.trade_count) || 0,
+        profitable_sells: Number(row.profitableSells ?? row.profitable_sells) || 0,
+        losing_sells: Number(row.losingSells ?? row.losing_sells) || 0,
+        winning_predictions: Number(row.winningPredictions ?? row.winning_predictions) || 0,
+        losing_predictions: Number(row.losingPredictions ?? row.losing_predictions) || 0,
+      }));
+    }
+
+    async function fetchLive(period) {
+      const url = `${API}?period=${period}&sort_by=volume&limit=${LIMIT}&offset=0`;
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error("live HTTP " + res.status);
+      const json = await res.json();
+      if (!json || !Array.isArray(json.data)) throw new Error("live payload invalid");
+      return {
+        rows: normalizeApiRows(json.data),
+        totalTraders: json.pagination?.totalResults ?? json.data.length,
+        updatedAt: new Date().toISOString(),
+        source: "live",
+      };
+    }
+
+    async function fetchSnapshot(period) {
+      const res = await fetch(SNAPSHOT, { cache: "no-store" });
+      if (!res.ok) throw new Error("snapshot HTTP " + res.status);
+      const json = await res.json();
+      const block = json?.periods?.[period];
+      if (!block || !Array.isArray(block.rows)) throw new Error("snapshot missing period " + period);
+      return {
+        rows: normalizeApiRows(block.rows),
+        totalTraders: block.total_traders ?? block.rows.length,
+        updatedAt: json.updated_at,
+        source: "snapshot",
+      };
+    }
+
+    async function load(period, { silent } = {}) {
+      if (!silent) {
+        els.tbody.innerHTML = `<tr><td colspan="7" class="loading">正在拉取 ${labelFor(period)} 成交量数据…</td></tr>`;
+      }
+      try {
+        const live = await fetchLive(period);
+        applyData(live);
+      } catch (liveErr) {
+        try {
+          const snap = await fetchSnapshot(period);
+          applyData(snap);
+        } catch (snapErr) {
+          setSource("error", "无法加载数据");
+          els.tbody.innerHTML = `<tr><td colspan="7" class="error-banner">实时接口与本地快照都不可用。<br>${escapeHtml(String(liveErr))} / ${escapeHtml(String(snapErr))}</td></tr>`;
+        }
+      }
+    }
+
+    function labelFor(period) {
+      return { "1d": "24 小时", "7d": "7 日", "30d": "30 日", all: "全部" }[period] || period;
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+      }[c]));
+    }
+
+    function applyData({ rows, totalTraders, updatedAt, source }) {
+      state.rows = rows;
+      state.totalTraders = totalTraders;
+      state.updatedAt = updatedAt;
+      setSource(source);
+      els.updatedPill.textContent = "更新时间：" + formatTime(updatedAt);
+      render();
+    }
+
+    function sortedFiltered() {
+      const q = state.query.trim().toLowerCase();
+      let rows = state.rows;
+      if (q) rows = rows.filter((r) => (r.trader || "").toLowerCase().includes(q));
+      const key = state.sortKey;
+      const dir = state.sortDir === "asc" ? 1 : -1;
+      rows = rows.slice().sort((a, b) => {
+        const va = a[key];
+        const vb = b[key];
+        if (typeof va === "string") return va.localeCompare(vb) * dir;
+        return ((Number(va) || 0) - (Number(vb) || 0)) * dir;
+      });
+      return rows;
+    }
+
+    function render() {
+      const rows = sortedFiltered();
+      const totalVol = rows.reduce((s, r) => s + (r.volume || 0), 0);
+      const top = rows[0]?.volume ?? 0;
+      els.traders.textContent = formatInt(state.totalTraders);
+      els.shown.textContent = formatInt(rows.length);
+      els.volume.textContent = formatUsd(totalVol);
+      els.top.textContent = rows.length ? formatUsd(top) : "--";
+      els.count.textContent = state.query
+        ? `搜索到 ${rows.length} 名交易者（共 ${state.rows.length} 条本页数据）`
+        : `显示前 ${rows.length} 名 / 共 ${formatInt(state.totalTraders)} 名交易者`;
+
+      document.querySelectorAll("thead th.sortable").forEach((th) => {
+        const arrow = th.querySelector(".arrow");
+        arrow.textContent = th.dataset.key === state.sortKey
+          ? (state.sortDir === "asc" ? "▲" : "▼")
+          : "";
+      });
+
+      if (!rows.length) {
+        els.tbody.innerHTML = `<tr><td colspan="7" class="empty">没有匹配的交易者</td></tr>`;
+        return;
+      }
+
+      els.tbody.innerHTML = rows.map((r) => {
+        const rankClass = r.rank === 1 ? "r1" : r.rank === 2 ? "r2" : r.rank === 3 ? "r3" : "";
+        const medal = r.rank === 1 ? "🥇 " : r.rank === 2 ? "🥈 " : r.rank === 3 ? "🥉 " : "";
+        return `<tr>
+          <td class="num rank ${rankClass}">${medal}${r.rank}</td>
+          <td>
+            <div class="trader">
+              <a href="${explorerUrl(r.trader)}" target="_blank" rel="noopener" title="${r.trader}">${shortAddr(r.trader)}</a>
+              <button type="button" class="copy" data-addr="${r.trader}" title="复制地址">复制</button>
+            </div>
+          </td>
+          <td class="num" title="${(r.volume || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}">${formatUsd(r.volume)}</td>
+          <td class="num ${pnlClass(r.pnl)}" title="${(r.pnl || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}">${formatUsd(r.pnl)}</td>
+          <td class="num hide-sm ${pnlClass(r.pnl_pct)}">${formatPct(r.pnl_pct)}</td>
+          <td class="num">${formatInt(r.trade_count)}</td>
+          <td class="num hide-sm">${formatWinRate(r.win_rate)}</td>
+        </tr>`;
+      }).join("");
+    }
+
+    document.querySelectorAll(".tabs button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        state.period = btn.dataset.period;
+        document.querySelectorAll(".tabs button").forEach((b) => {
+          b.setAttribute("aria-selected", b === btn ? "true" : "false");
+        });
+        load(state.period);
+      });
+    });
+
+    document.querySelectorAll("thead th.sortable").forEach((th) => {
+      th.addEventListener("click", () => {
+        const key = th.dataset.key;
+        if (state.sortKey === key) state.sortDir = state.sortDir === "desc" ? "asc" : "desc";
+        else {
+          state.sortKey = key;
+          state.sortDir = key === "trader" || key === "rank" ? "asc" : "desc";
+        }
+        render();
+      });
+    });
+
+    els.search.addEventListener("input", () => {
+      state.query = els.search.value;
+      els.searchWrap.classList.toggle("has-value", Boolean(state.query));
+      render();
+    });
+    els.clear.addEventListener("click", () => {
+      els.search.value = "";
+      state.query = "";
+      els.searchWrap.classList.remove("has-value");
+      render();
+      els.search.focus();
+    });
+
+    els.tbody.addEventListener("click", async (ev) => {
+      const btn = ev.target.closest("button.copy");
+      if (!btn) return;
+      const addr = btn.dataset.addr;
+      try {
+        await navigator.clipboard.writeText(addr);
+        btn.textContent = "已复制";
+        setTimeout(() => { btn.textContent = "复制"; }, 1200);
+      } catch {
+        btn.textContent = "失败";
+        setTimeout(() => { btn.textContent = "复制"; }, 1200);
+      }
+    });
+
+    load(state.period);
+    setInterval(() => load(state.period, { silent: true }), REFRESH_MS);
+  </script>
+</body>
+</html>
