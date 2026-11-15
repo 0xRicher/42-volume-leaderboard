@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T15:06:02Z",
+  "updated_at": "2026-11-15T16:39:35Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
@@ -30,14 +30,14 @@
       "pointsStatus": "not_distributed",
       "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
       "totals": {
-        "traders": 400,
-        "total_volume": 6506411.495063646,
-        "mm_share_pct": 89.64369644350239,
-        "mm_volume": 5832587.77,
+        "traders": 406,
+        "total_volume": 6684446.113264481,
+        "mm_share_pct": 89.71293998615748,
+        "mm_volume": 5996813.13,
         "mm_count": 6,
-        "retail_volume": 673823.7250636477,
-        "retail_share_pct": 10.356303556497641,
-        "retail_count": 394,
+        "retail_volume": 687632.9832644827,
+        "retail_share_pct": 10.287060013842547,
+        "retail_count": 400,
         "points_traders": null,
         "total_distributed_points": null
       }
