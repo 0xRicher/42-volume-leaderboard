@@ -169,12 +169,17 @@ def compile_labels(labels: dict) -> dict:
         raise SystemExit("wallet-labels.json is missing heuristics.tierB or heuristics.tierC")
     if not labels.get("pointsWeekStart"):
         raise SystemExit("wallet-labels.json is missing pointsWeekStart")
+    launch = labels.get("pointsLaunch") or {}
+    if not launch.get("from") or not launch.get("to"):
+        raise SystemExit("wallet-labels.json is missing pointsLaunch.from and pointsLaunch.to")
     return {
         "tiers": tiers,
         "listed": listed,
         "identities": identities,
         "heuristics": heuristics,
         "points_week_start": str(labels["pointsWeekStart"]),
+        "points_launch_from": str(launch["from"]),
+        "points_launch_to": str(launch["to"]),
     }
 
 
@@ -746,7 +751,7 @@ def fetch_week_points(
         }
     status = classify_points_payload(payload, start, end_exclusive)
     note = POINTS_NOTES[status]
-    if kind == "distribution" and status == "weekly":
+    if kind in {"distribution", "launch"} and status == "weekly":
         note = (
             "这是积分接口 latestWeek 的发放窗口，从公告日算到下一周周四 00:00 UTC，"
             "共 8 天，不是周四到周三的标准积分周。" + note
@@ -846,6 +851,8 @@ def index_entry(doc: dict) -> dict:
         "startAt": doc["start_at"],
         "endExclusive": doc["end_exclusive"],
         "kind": doc["kind"],
+        "group": doc.get("group") or "points",
+        "weekNumber": doc.get("weekNumber"),
         "current": bool(doc.get("current")),
         "finalized": bool(doc.get("finalized")),
         "hasPoints": bool(doc.get("hasPoints")),
@@ -908,6 +915,42 @@ def refresh_week(
     return doc
 
 
+def plan_week_slots(
+    earliest: datetime.date | None,
+    current_start: datetime,
+    spec: str,
+    launch_start: datetime,
+    launch_end: datetime,
+) -> list[dict]:
+    """Points weeks start at the launch distribution.
+
+    Week 1 is the configured launch window (2026-11-04 to 2026-11-12).
+    Week 2 and later are Thursday weeks from that exclusive end onward.
+    Thursday weeks that start before the launch stay as unnumbered
+    pre-points volume weeks. A Thursday week that starts inside the launch
+    window (2026-11-05) overlaps it and is omitted.
+    """
+    slots: list[dict] = []
+    for start in thursday_series(earliest, current_start, spec):
+        end = start + timedelta(days=7)
+        if start < launch_start:
+            slots.append({"start": start, "end": end, "kind": "pre", "group": "pre"})
+        elif same_instant(start, launch_end) or start > launch_end:
+            slots.append({"start": start, "end": end, "kind": "thursday", "group": "points"})
+        # launch_start < start < launch_end overlaps the launch window.
+    if not any(same_instant(slot["start"], launch_start) for slot in slots):
+        slots.append({"start": launch_start, "end": launch_end, "kind": "launch", "group": "points"})
+    slots.sort(key=lambda slot: slot["start"])
+    number = 0
+    for slot in slots:
+        if slot["group"] == "points":
+            number += 1
+            slot["weekNumber"] = number
+        else:
+            slot["weekNumber"] = None
+    return slots
+
+
 def discover_distribution_week() -> tuple[datetime, datetime] | None:
     # POINTS_URL already includes limit=1. A second ?limit= makes the API 400.
     payload = fetch_ok(POINTS_URL)
@@ -927,26 +970,46 @@ def discover_distribution_week() -> tuple[datetime, datetime] | None:
 def update_week_history(
     compiled: dict,
     now: datetime,
-    current_rows: list[dict],
-    current_total: int,
+    current_rows: list[dict] | None,
+    current_total: int | None,
     current_start: datetime,
     current_end: datetime,
 ) -> dict:
-    """Write one file per points week.
+    """Write one file per kept week and refresh data/weeks/index.json.
 
-    Thursday weeks cover every volume week back to the first day with trades.
-    A points distribution whose bounds are not a Thursday week (the 8-day
-    launch week) is stored beside them. Finished files are not fetched again.
+    Pre-points Thursday weeks (before the launch) stay as volume-only files.
+    The launch distribution is week 1. Later Thursday weeks are numbered from
+    the launch end. A Thursday week that starts inside the launch window is
+    deleted and not listed. Finished files are not fetched again.
     """
+    del current_end  # the open week is identified by current_start
     WEEKS_DIR.mkdir(parents=True, exist_ok=True)
+    launch_start = parse_iso(compiled["points_launch_from"])
+    launch_end = parse_iso(compiled["points_launch_to"])
     print("discovering earliest volume day ...", flush=True)
     earliest = find_earliest_day(now)
     print(f"  earliest day={earliest}", flush=True)
-    starts = thursday_series(earliest, current_start, compiled["points_week_start"])
+    slots = plan_week_slots(
+        earliest,
+        current_start,
+        compiled["points_week_start"],
+        launch_start,
+        launch_end,
+    )
+    keep_names = {week_path(slot["start"]).name for slot in slots}
+    keep_names.add("index.json")
+    for path in WEEKS_DIR.glob("*.json"):
+        if path.name not in keep_names:
+            path.unlink()
+            print(f"removed overlapping or stale week {path.name}", flush=True)
+
     documents: list[dict] = []
-    for start in starts:
-        end = start + timedelta(days=7)
+    current_key = current_start.date().isoformat()
+    for slot in slots:
+        start = slot["start"]
+        end = slot["end"]
         path = week_path(start)
+        label = f"{slot['kind']} {start.date().isoformat()}"
         if should_skip_week(path, end, now):
             existing = load_week_file(path)
             if not existing:
@@ -954,57 +1017,38 @@ def update_week_history(
             if existing.get("current"):
                 existing["current"] = False
                 write_json(path, existing)
-            documents.append(existing)
-            print(f"week thursday {start.date().isoformat()} cached", flush=True)
-            continue
-        if same_instant(start, current_start):
-            documents.append(
-                refresh_week(
-                    start,
-                    end,
-                    "thursday",
-                    now,
-                    compiled,
-                    volume_rows=current_rows,
-                    api_total=current_total,
-                )
+            doc = existing
+            print(f"week {label} cached", flush=True)
+        elif slot["group"] == "points" and same_instant(start, current_start):
+            doc = refresh_week(
+                start,
+                end,
+                "thursday",
+                now,
+                compiled,
+                volume_rows=current_rows,
+                api_total=current_total,
             )
-            continue
-        documents.append(refresh_week(start, end, "thursday", now, compiled))
+        else:
+            doc = refresh_week(start, end, slot["kind"], now, compiled)
+        indexed = dict(doc)
+        indexed["group"] = slot["group"]
+        indexed["weekNumber"] = slot["weekNumber"]
+        indexed["kind"] = slot["kind"]
+        indexed["current"] = slot["group"] == "points" and indexed.get("start") == current_key
+        documents.append(indexed)
 
-    distribution = discover_distribution_week()
-    if distribution:
-        dist_start, dist_end = distribution
-        already = False
-        for doc in documents:
-            try:
-                doc_start = parse_iso(doc["start_at"])
-                doc_end = parse_iso(doc["end_exclusive"])
-            except (KeyError, ValueError):
-                continue
-            if same_instant(doc_start, dist_start) and same_instant(doc_end, dist_end):
-                already = True
-                break
-        if not already:
-            path = week_path(dist_start)
-            if should_skip_week(path, dist_end, now):
-                existing = load_week_file(path)
-                if existing:
-                    documents.append(existing)
-                    print(f"week distribution {dist_start.date().isoformat()} cached", flush=True)
-            else:
-                documents.append(
-                    refresh_week(dist_start, dist_end, "distribution", now, compiled)
-                )
-
-    current_key = current_start.date().isoformat()
-    for doc in documents:
-        doc["current"] = doc.get("kind") == "thursday" and doc.get("start") == current_key
-    documents.sort(key=lambda doc: (doc.get("start") or "", doc.get("kind") != "thursday"), reverse=True)
-    points_weeks = [doc["start"] for doc in documents if doc.get("hasPoints")]
+    documents.sort(key=lambda doc: doc.get("start") or "", reverse=True)
+    points_weeks = [
+        doc["start"] for doc in documents if doc.get("group") == "points" and doc.get("hasPoints")
+    ]
     index = {
         "updated_at": iso_now(),
         "points_week_start": compiled["points_week_start"],
+        "points_launch": {
+            "from": compiled["points_launch_from"],
+            "to": compiled["points_launch_to"],
+        },
         "current_start": current_key,
         "earliest_day": earliest.isoformat() if earliest else None,
         "pointsHistory": {
@@ -1012,9 +1056,10 @@ def update_week_history(
             "mode": "api-boundary",
             "weeks_with_points": points_weeks,
             "detail": (
-                "积分接口只接受已经存在的发放窗口，不能按任意周四到周三查询。"
-                "起止时间对得上的周写入积分榜；对不上的周只有成交量。"
-                "进行中的一周在发放前没有积分，快照不会编造积分。"
+                "第1周是积分上线发放窗口。之后的积分周从该窗口结束的周四算起。"
+                "更早的周四只有成交量，归在「积分前」，不编号。"
+                "落在上线窗口内部的标准周四不单列。"
+                "积分接口对不上的周不会编造积分。"
             ),
         },
         "weeks": [index_entry(doc) for doc in documents],

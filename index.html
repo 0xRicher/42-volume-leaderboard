@@ -1111,21 +1111,30 @@
       return listedWeeks().find((week) => week.start === start) || null;
     }
 
-    function previousThursday(start) {
-      const list = listedWeeks().filter((week) => week.kind !== "distribution");
-      const idx = list.findIndex((week) => week.start === start);
+    function weekGroup(week) {
+      return week?.group === "pre" ? "pre" : "points";
+    }
+
+    function weeksInGroup(group) {
+      return listedWeeks().filter((week) => weekGroup(week) === group);
+    }
+
+    function previousInGroup(start) {
+      const week = listedWeeks().find((item) => item.start === start);
+      const list = weeksInGroup(week ? weekGroup(week) : "points");
+      const idx = list.findIndex((item) => item.start === start);
       if (idx >= 0) return list[idx + 1] || null;
-      return list.find((week) => week.start < start) || null;
+      return weeksInGroup("points").find((item) => item.start < start) || null;
     }
 
     function weekOptionLabel(week) {
       const currentStart = state.weekIndex?.current_start || state.week?.from;
-      const prev = listedWeeks().filter((item) => item.kind !== "distribution")
-        .find((item) => item.start < currentStart);
-      const bits = [`${week.start} – ${week.end}`];
-      if (week.kind === "distribution") bits.push("发放周");
-      if (week.current || (week.kind !== "distribution" && week.start === currentStart)) bits.push("本周");
-      else if (week.kind !== "distribution" && prev && week.start === prev.start) bits.push("上一周");
+      const prevPoints = weeksInGroup("points").find((item) => item.start < currentStart);
+      const bits = [];
+      if (week.weekNumber) bits.push(`第${week.weekNumber}周`);
+      bits.push(`${week.start} – ${week.end}`);
+      if (week.current) bits.push("本周");
+      else if (weekGroup(week) === "points" && prevPoints && week.start === prevPoints.start) bits.push("上一周");
       if (week.hasPoints) bits.push("有积分");
       else if (week.pointsStatus === "not_distributed" || week.pointsStatus === "pending") bits.push("积分未发放");
       else bits.push("仅成交量");
@@ -1440,15 +1449,21 @@
     function paintWeekSelector() {
       if (!els.weekSelect) return;
       const weeks = listedWeeks();
-      const key = weeks.map((week) => `${week.start}:${week.hasPoints}:${week.pointsStatus}:${week.current}`).join("|");
+      const key = weeks.map((week) => `${week.start}:${week.group}:${week.weekNumber}:${week.hasPoints}:${week.pointsStatus}:${week.current}`).join("|");
       if (key !== weekOptionsKey) {
         weekOptionsKey = key;
-        els.weekSelect.innerHTML = weeks.map((week) => (
+        const option = (week) => (
           `<option value="${escapeHtml(week.start)}">${escapeHtml(weekOptionLabel(week))}</option>`
-        )).join("");
+        );
+        const points = weeks.filter((week) => weekGroup(week) === "points").map(option).join("");
+        const pre = weeks.filter((week) => weekGroup(week) === "pre").map(option).join("");
+        els.weekSelect.innerHTML = `
+          <optgroup label="积分周">${points}</optgroup>
+          ${pre ? `<optgroup label="积分前">${pre}</optgroup>` : ""}
+        `;
       }
       if (state.selectedWeekStart) els.weekSelect.value = state.selectedWeekStart;
-      const older = previousThursday(state.selectedWeekStart || state.week?.from);
+      const older = previousInGroup(state.selectedWeekStart || state.week?.from);
       els.weekPrev.disabled = !older;
     }
 
@@ -1493,9 +1508,13 @@
       const rangeKey = `${viewing.from}|${viewing.to}|${viewing.kind}|${align}|${show}|${flag}|${state.weekPointsNote}`;
       if (rangeKey !== weekRangeKey) {
         weekRangeKey = rangeKey;
-        els.weekKicker.textContent = viewing.kind === "distribution"
-          ? "积分发放周"
-          : (viewing.current ? "本积分周" : "历史积分周");
+        const meta = selectedWeekMeta();
+        const numbered = meta?.weekNumber ? `第${meta.weekNumber}周` : "";
+        els.weekKicker.textContent = meta?.group === "pre"
+          ? "积分前"
+          : (numbered || (viewing.kind === "distribution" || viewing.kind === "launch"
+            ? "第1周"
+            : (viewing.current ? "本积分周" : "历史积分周")));
         els.weekRange.innerHTML = `
           <div>开始 ${escapeHtml(formatDual(viewing.start))}</div>
           <div>结束 ${escapeHtml(endLabel)}</div>
@@ -1858,8 +1877,8 @@
         <h3>本积分周</h3>
         <p>起始时刻是配置里的单个值 <code>${escapeHtml(labels.pointsWeekStart)}</code>，一周 7 天，结束于下一周开始前的最后一分钟。成交量直接用排行榜的 <code>from</code> / <code>to</code>（UTC 日历日，含首尾，和 <code>period</code> 互斥）。周四日期到周三日期，正好覆盖文档里的周四 00:00 UTC 至周三 23:59 UTC。官方文档写明这两个参数存在，实时请求也接受尚未结束的 <code>to</code>，返回的是截至目前的本周成交量。因此不需要用全历史成交量去减周初基线。</p>
         <h3>积分周历史</h3>
-        <p>打开「本积分周」后，下拉框列出每一个周四到周三，默认停在进行中的一周。「上一周」切到刚结束的那一周。选中的一周同时给出成交量排行榜，以及全平台总成交量、交易者人数、做市/机器人占比和散户成交量。积分榜只有积分接口按同一起止时间返回了发放数据时才出现，并按钱包地址并上成交量和做市徽章，所以一行里能看到积分排名、积分、成交量。对不上的周标成「仅成交量」，不会把别的周的积分填进来。</p>
-        <p>积分接口目前只接受已经存在的发放窗口，不能按任意一周查询。首周发放如果不是标准的 7 天（公告日到下一个周四），会单独出现在下拉里，并写明它是发放周。已经结束并且积分状态已经确定的周写在 <code>data/weeks/&lt;开始日期&gt;.json</code>，例行更新发现文件齐全就跳过。进行中的一周每次都刷新：成交量仍走实时接口，积分从快照读。</p>
+        <p>第 1 周是积分上线发放窗口（2026-11-04 00:00 UTC 到 2026-11-12 00:00 UTC，8 天）。第 2 周从 2026-11-12 的周四开始，之后每七天一周。「上一周」在积分周之间切换，从本周回到第 1 周。更早的周四只有成交量，收在下拉里的「积分前」，不编号。和上线窗口重叠的 2026-11-05 那一周不单列。</p>
+        <p>选中的一周同时给出成交量排行榜，以及全平台总成交量、交易者人数、做市/机器人占比和散户成交量。积分榜只有积分接口按同一起止时间返回了发放数据时才出现，并按钱包地址并上成交量和做市徽章。对不上的周标成「仅成交量」，不会把别的周的积分填进来。已经结束并且积分状态已经确定的周写在 <code>data/weeks/&lt;开始日期&gt;.json</code>，例行更新发现文件齐全就跳过。进行中的一周每次都刷新：成交量仍走实时接口，积分从快照读。</p>
         <ul>${sources}</ul>
         <p>站点的积分页没有单独的 epoch 接口。<code>latestWeek</code> 是最近一个已经发放的积分周（结束时刻不含在内），不是正在进行的这一周。第一周从公告日 2026-11-04 00:00 UTC 算到 2026-11-12 00:00 UTC，长 8 天；之后的周期按上面的周四规则。积分接口没有对第三方页面开放 CORS，对照信息由 <code>fetch.py</code> 写入快照。</p>
         <h3>市场列表成交量</h3>
@@ -1873,7 +1892,7 @@
     });
 
     els.weekPrev.addEventListener("click", () => {
-      const older = previousThursday(state.selectedWeekStart || state.week?.from);
+      const older = previousInGroup(state.selectedWeekStart || state.week?.from);
       if (!older) return;
       state.selectedWeekStart = older.start;
       load("week");
