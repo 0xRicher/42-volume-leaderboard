@@ -1,6 +1,10 @@
 {
   "disclaimer": "42.space 没有公布具名做市商地址。这里的分层是根据公开文档和链上行为做的推断，不是官方确认名单。不要把任何地址写成已确认的官方做市商。",
   "pointsWeekStart": "Thursday 00:00 UTC",
+  "pointsLaunch": {
+    "from": "2026-11-04T00:00:00.000Z",
+    "to": "2026-11-12T00:00:00.000Z"
+  },
   "pointsWeekSources": [
     {
       "name": "42 Points",
