@@ -158,6 +158,64 @@
       color: var(--accent);
     }
     .countdown-label { color: var(--muted); font-size: 12px; margin-bottom: 2px; }
+    .week-flag {
+      margin-top: 6px;
+      font-size: 12.5px;
+      line-height: 1.55;
+      max-width: 640px;
+    }
+    .week-flag.ok { color: var(--accent); }
+    .week-flag.wait { color: var(--gold); }
+    .week-flag.no { color: var(--muted); }
+
+    .week-tools { margin-top: -2px; }
+    .week-tools[hidden] { display: none; }
+    .week-picker {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .week-select-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .week-picker select {
+      background: var(--bg-elev);
+      color: var(--text);
+      border: 1px solid var(--line-strong);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font: inherit;
+      font-size: 13px;
+      max-width: min(560px, 100%);
+    }
+    .week-picker button {
+      appearance: none;
+      border: 1px solid rgba(200, 255, 61, 0.35);
+      background: rgba(200, 255, 61, 0.1);
+      color: var(--accent);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+    .week-picker button:hover { background: rgba(200, 255, 61, 0.16); }
+    .week-picker button:disabled {
+      opacity: 0.4;
+      cursor: default;
+      background: transparent;
+      color: var(--muted);
+      border-color: var(--line);
+    }
+    .who {
+      font-family: var(--sans);
+      color: var(--muted);
+      font-size: 12px;
+    }
 
     .toolbar {
       display: flex;
@@ -456,7 +514,7 @@
           <h1>42 成交量实时排行榜</h1>
           <p class="subtitle">
             数据来自 <a href="https://www.42.space/" target="_blank" rel="noopener">42.space</a>
-            公开 Market API。合计是该窗口的全平台数字，表格只展示成交量前 200 名。
+            公开 Market API。合计是该窗口的全平台数字，表格只展示前 200 名。积分周可以回看历史成交量，有积分的周还会并上积分榜。
           </p>
         </div>
       </div>
@@ -469,22 +527,36 @@
 
     <section class="week-banner" id="week-banner" hidden>
       <div>
-        <div class="week-kicker">本积分周</div>
+        <div class="week-kicker" id="week-kicker">本积分周</div>
         <div class="week-range" id="week-range">正在根据配置计算本周区间…</div>
+        <div class="week-flag no" id="week-points-flag"></div>
       </div>
       <div class="countdown-wrap">
-        <div class="countdown-label">距离本周结束</div>
+        <div class="countdown-label" id="countdown-label">距离本周结束</div>
         <div class="countdown" id="countdown">--</div>
       </div>
     </section>
 
+    <div class="toolbar week-tools" id="week-tools" hidden>
+      <div class="week-picker">
+        <label class="week-select-label" for="week-select">积分周</label>
+        <select id="week-select" aria-label="选择积分周"></select>
+        <button type="button" id="week-prev">上一周</button>
+        <button type="button" id="week-current">本周</button>
+      </div>
+      <div class="tabs" id="week-board-tabs" role="tablist" aria-label="本周榜单">
+        <button type="button" role="tab" data-board="volume" aria-selected="true">成交量排行榜</button>
+        <button type="button" role="tab" data-board="points" aria-selected="false">积分排行榜</button>
+      </div>
+    </div>
+
     <div class="toolbar">
       <div class="tabs" id="period-tabs" role="tablist" aria-label="时间范围">
-        <button type="button" role="tab" data-period="1d" aria-selected="true">24 小时</button>
+        <button type="button" role="tab" data-period="1d" aria-selected="false">24 小时</button>
         <button type="button" role="tab" data-period="7d" aria-selected="false">7 日</button>
         <button type="button" role="tab" data-period="30d" aria-selected="false">30 日</button>
         <button type="button" role="tab" data-period="all" aria-selected="false">全部</button>
-        <button type="button" role="tab" data-period="week" aria-selected="false" id="week-tab">本积分周</button>
+        <button type="button" role="tab" data-period="week" aria-selected="true" id="week-tab">本积分周</button>
       </div>
       <div class="tabs" id="filter-tabs" role="tablist" aria-label="交易者范围">
         <button type="button" role="tab" data-filter="all" aria-selected="true">全部</button>
@@ -538,9 +610,11 @@
         <table>
           <thead>
             <tr>
-              <th class="sortable num" data-key="rank">排名<span class="arrow"></span></th>
+              <th class="sortable num" data-key="rank"><span class="hlabel">排名</span><span class="arrow"></span></th>
               <th class="sortable num retail-only" data-key="retail_rank" hidden>散户排名<span class="arrow"></span></th>
+              <th class="sortable num week-only" data-key="points_rank" hidden>积分排名<span class="arrow"></span></th>
               <th class="sortable" data-key="trader">交易者<span class="arrow"></span></th>
+              <th class="sortable num week-only" data-key="points" hidden>积分<span class="arrow"></span></th>
               <th class="sortable num" data-key="volume">成交量 (USDT)<span class="arrow"></span></th>
               <th class="sortable num" data-key="pnl">已实现盈亏<span class="arrow"></span></th>
               <th class="sortable num hide-sm" data-key="pnl_pct">盈亏比例<span class="arrow"></span></th>
@@ -562,9 +636,10 @@
     <section class="explain" id="explain"></section>
 
     <p class="hint">
-      页面优先直连 <code>https://rest.ft.42.space</code>（该接口允许跨域）。24 小时、7 日、30 日和本积分周会把交易者分页拉完再合计。
+      页面优先直连 <code>https://rest.ft.42.space</code>（该接口允许跨域）。24 小时、7 日、30 日和进行中的积分周会把交易者分页拉完再合计。
       「全部」窗口交易者约 6 万，全量合计由 GitHub Actions 写入 <code>data/leaderboard.json</code>，页面读这份快照，表格前 200 名仍走实时接口。
-      实时接口失败时，整页回退到同一份快照。
+      已经结束的积分周读 <code>data/weeks/</code>，不再每次重拉。积分接口没有跨域，积分榜也来自这份快照。
+      实时接口失败时，整页回退到快照。
       官方积分页 <a href="https://www.42.space/points" target="_blank" rel="noopener">42.space/points</a> 按积分排名。
     </p>
   </div>
@@ -573,6 +648,7 @@
   <script>
     const API = "https://rest.ft.42.space/api/v1/market-data/leaderboard";
     const SNAPSHOT = "./data/leaderboard.json";
+    const WEEKS_INDEX = "./data/weeks/index.json";
     const LABELS_URL = "./wallet-labels.json";
     const TABLE_CAP = 200;
     const PAGE_SIZE = 500;
@@ -581,7 +657,7 @@
     const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
     const state = {
-      period: "1d",
+      period: "week",
       filter: "all",
       rows: [],
       aggregate: null,
@@ -596,6 +672,14 @@
       compiled: null,
       snapshot: null,
       week: null,
+      weekIndex: null,
+      selectedWeekStart: null,
+      weekDoc: null,
+      weekBoard: "volume",
+      weekHasPoints: false,
+      weekPointsNote: "",
+      volumeRows: null,
+      pointsRows: null,
     };
 
     let loadSeq = 0;
@@ -619,7 +703,15 @@
       scope: document.getElementById("scope-note"),
       count: document.getElementById("count-label"),
       weekBanner: document.getElementById("week-banner"),
+      weekKicker: document.getElementById("week-kicker"),
       weekRange: document.getElementById("week-range"),
+      weekFlag: document.getElementById("week-points-flag"),
+      weekTools: document.getElementById("week-tools"),
+      weekSelect: document.getElementById("week-select"),
+      weekPrev: document.getElementById("week-prev"),
+      weekCurrent: document.getElementById("week-current"),
+      weekBoardTabs: document.getElementById("week-board-tabs"),
+      countdownLabel: document.getElementById("countdown-label"),
       countdown: document.getElementById("countdown"),
       weekTab: document.getElementById("week-tab"),
       explain: document.getElementById("explain"),
@@ -936,7 +1028,116 @@
         losing_sells: Number(row.losingSells ?? row.losing_sells) || 0,
         winning_predictions: Number(row.winningPredictions ?? row.winning_predictions) || 0,
         losing_predictions: Number(row.losingPredictions ?? row.losing_predictions) || 0,
+        points: row.points == null ? null : Number(row.points),
+        points_rank: row.points_rank == null ? null : Number(row.points_rank),
+        name: row.name || null,
       }));
+    }
+
+    function formatPoints(n) {
+      if (n == null || Number.isNaN(Number(n))) return "—";
+      return Number(n).toLocaleString("en-US", { maximumFractionDigits: 2 });
+    }
+
+    function weekFileUrl(start) {
+      return `./data/weeks/${start}.json`;
+    }
+
+    async function fetchWeekIndex() {
+      const res = await fetch(WEEKS_INDEX, { cache: "no-store" });
+      if (!res.ok) throw new Error("weeks index HTTP " + res.status);
+      return res.json();
+    }
+
+    async function fetchWeekDoc(start) {
+      const res = await fetch(weekFileUrl(start), { cache: "no-store" });
+      if (!res.ok) throw new Error("week HTTP " + res.status);
+      return res.json();
+    }
+
+    function pointsMap(rows) {
+      const map = new Map();
+      for (const row of rows || []) {
+        const key = String(row.address || "").toLowerCase();
+        if (key) map.set(key, row);
+      }
+      return map;
+    }
+
+    function attachPoints(volumeRows, map) {
+      for (const row of volumeRows) {
+        const match = map.get(String(row.trader || "").toLowerCase());
+        row.points = match ? Number(match.points) : null;
+        row.points_rank = match && match.rank != null ? Number(match.rank) : null;
+        row.name = match?.name || row.name || null;
+      }
+      return volumeRows;
+    }
+
+    function pointsBoardRows(pointsRows) {
+      return (pointsRows || []).map((item) => ({
+        rank: item.volume_rank == null ? null : Number(item.volume_rank),
+        trader: item.address,
+        name: item.name || null,
+        volume: Number(item.volume) || 0,
+        pnl: Number(item.pnl) || 0,
+        pnl_pct: Number(item.pnl_pct) || 0,
+        win_rate: Number(item.win_rate) || 0,
+        trade_count: Number(item.trade_count) || 0,
+        winning_predictions: Number(item.winning_predictions) || 0,
+        losing_predictions: Number(item.losing_predictions) || 0,
+        points: Number(item.points) || 0,
+        points_rank: item.rank == null ? null : Number(item.rank),
+      }));
+    }
+
+    function listedWeeks() {
+      const weeks = state.weekIndex?.weeks;
+      if (weeks && weeks.length) return weeks;
+      if (!state.week) return [];
+      return [{
+        start: state.week.from,
+        end: state.week.to,
+        kind: "thursday",
+        current: true,
+        hasPoints: false,
+        pointsStatus: "not_distributed",
+        pointsNote: "",
+      }];
+    }
+
+    function selectedWeekMeta() {
+      const start = state.selectedWeekStart || state.week?.from;
+      return listedWeeks().find((week) => week.start === start) || null;
+    }
+
+    function previousThursday(start) {
+      const list = listedWeeks().filter((week) => week.kind !== "distribution");
+      const idx = list.findIndex((week) => week.start === start);
+      if (idx >= 0) return list[idx + 1] || null;
+      return list.find((week) => week.start < start) || null;
+    }
+
+    function weekOptionLabel(week) {
+      const currentStart = state.weekIndex?.current_start || state.week?.from;
+      const prev = listedWeeks().filter((item) => item.kind !== "distribution")
+        .find((item) => item.start < currentStart);
+      const bits = [`${week.start} – ${week.end}`];
+      if (week.kind === "distribution") bits.push("发放周");
+      if (week.current || (week.kind !== "distribution" && week.start === currentStart)) bits.push("本周");
+      else if (week.kind !== "distribution" && prev && week.start === prev.start) bits.push("上一周");
+      if (week.hasPoints) bits.push("有积分");
+      else if (week.pointsStatus === "not_distributed" || week.pointsStatus === "pending") bits.push("积分未发放");
+      else bits.push("仅成交量");
+      return bits.join(" · ");
+    }
+
+    function syncWeekColumns() {
+      const on = state.period === "week";
+      document.querySelectorAll(".week-only").forEach((el) => { el.hidden = !on; });
+      if (els.weekTools) els.weekTools.hidden = !on;
+      const rankLabel = document.querySelector('thead th[data-key="rank"] .hlabel');
+      if (rankLabel) rankLabel.textContent = on ? "成交量排名" : "排名";
     }
 
     async function fetchWindow({ period, from, to, maxRows, onProgress }) {
@@ -1002,11 +1203,60 @@
       render();
     }
 
+    function rememberWeekRows(volumeRows, pointsRows) {
+      state.volumeRows = volumeRows;
+      state.pointsRows = pointsRows;
+      state.rows = state.weekBoard === "points" ? pointsRows : volumeRows;
+    }
+
+    function activeWeekBounds() {
+      const doc = state.weekDoc;
+      const startKey = state.selectedWeekStart || state.week?.from;
+      if (doc && doc.start === startKey && doc.start_at && doc.end_exclusive) {
+        const start = new Date(doc.start_at);
+        const end = new Date(doc.end_exclusive);
+        return {
+          start,
+          end,
+          from: doc.volume?.from || doc.start,
+          to: doc.volume?.to || doc.end,
+          kind: doc.kind || "thursday",
+          current: doc.kind !== "distribution" && doc.start === state.week?.from,
+        };
+      }
+      const meta = selectedWeekMeta();
+      if (meta?.startAt && meta?.endExclusive) {
+        return {
+          start: new Date(meta.startAt),
+          end: new Date(meta.endExclusive),
+          from: meta.start,
+          to: meta.end,
+          kind: meta.kind || "thursday",
+          current: Boolean(meta.current) || (meta.kind !== "distribution" && meta.start === state.week?.from),
+        };
+      }
+      const week = state.week;
+      return {
+        start: week.start,
+        end: week.end,
+        from: week.from,
+        to: week.to,
+        kind: "thursday",
+        current: !state.selectedWeekStart || state.selectedWeekStart === week.from,
+      };
+    }
+
     async function load(period, { silent } = {}) {
       const seq = ++loadSeq;
       const week = currentPointsWeek(new Date(), state.labels.pointsWeekStart);
       state.week = week;
+      if (!state.selectedWeekStart) state.selectedWeekStart = week.from;
+      syncWeekColumns();
       paintWeek();
+      if (period === "week") {
+        await loadWeek(seq, silent, week);
+        return;
+      }
       if (!silent) {
         const cols = visibleColumnCount();
         els.tbody.innerHTML = `<tr><td colspan="${cols}" class="loading">正在拉取${escapeHtml(labelFor(period))}的全平台成交量…</td></tr>`;
@@ -1019,9 +1269,7 @@
       };
       try {
         let live;
-        if (period === "week") {
-          live = await fetchWindow({ from: week.from, to: week.to, onProgress: progress });
-        } else if (period === "all") {
+        if (period === "all") {
           live = await fetchWindow({ period: "all", maxRows: TABLE_CAP, onProgress: progress });
         } else {
           live = await fetchWindow({ period, onProgress: progress });
@@ -1061,9 +1309,6 @@
         try {
           if (!state.snapshot) state.snapshot = await loadSnapshotDoc();
           const block = snapshotBlock(period);
-          if (period === "week" && block && (block.from !== week.from || block.to !== week.to)) {
-            throw new Error("快照里的积分周已过期");
-          }
           if (!block || !Array.isArray(block.rows)) throw new Error("快照缺少 " + period);
           const rows = decorate(normalizeApiRows(block.rows), period);
           applyData({
@@ -1088,41 +1333,199 @@
       }
     }
 
+    async function loadWeek(seq, silent, current) {
+      const start = state.selectedWeekStart || current.from;
+      if (!silent) {
+        syncWeekColumns();
+        const cols = visibleColumnCount();
+        els.tbody.innerHTML = `<tr><td colspan="${cols}" class="loading">正在读取 ${escapeHtml(start)} 这一积分周…</td></tr>`;
+      }
+      try {
+        state.weekIndex = await fetchWeekIndex();
+      } catch {
+        /* selector falls back to the computed current week */
+      }
+      if (seq !== loadSeq) return;
+      let doc = null;
+      try {
+        doc = await fetchWeekDoc(start);
+      } catch {
+        doc = null;
+      }
+      if (seq !== loadSeq) return;
+      state.weekDoc = doc && doc.start === start ? doc : null;
+      state.weekHasPoints = Boolean(state.weekDoc?.hasPoints);
+      state.weekPointsNote = state.weekDoc?.points?.note || selectedWeekMeta()?.pointsNote || "";
+      paintWeek();
+      const isLiveCurrent = start === current.from && (state.weekDoc?.kind || "thursday") !== "distribution";
+      const pointRows = pointsBoardRows(state.weekDoc?.points?.rows);
+      const map = pointsMap(state.weekDoc?.points?.rows);
+
+      if (!isLiveCurrent) {
+        const block = state.weekDoc?.volume;
+        if (!block || !Array.isArray(block.rows)) {
+          state.aggregate = null;
+          setSource("error", "缺少该周快照");
+          const cols = visibleColumnCount();
+          els.tbody.innerHTML = `<tr><td colspan="${cols}" class="error-banner">还没有 ${escapeHtml(start)} 的周数据。先运行 <code>python3 fetch.py</code>。</td></tr>`;
+          renderSummary();
+          return;
+        }
+        const volumeRows = decorate(attachPoints(normalizeApiRows(block.rows), map), "week");
+        const pointsRows = decorate(pointRows, "week");
+        rememberWeekRows(volumeRows, pointsRows);
+        applyData({
+          rows: state.rows,
+          aggregate: block.aggregate || null,
+          aggregateSource: block.aggregate ? "snapshot" : "missing",
+          totalTraders: block.aggregate?.total_traders || block.total_traders || volumeRows.length,
+          updatedAt: state.weekIndex?.updated_at || state.weekDoc?.points?.fetched_at || null,
+          sourceKind: "snapshot",
+          sourceText: state.weekHasPoints ? "历史周 · 含积分" : "历史周 · 仅成交量",
+        });
+        return;
+      }
+
+      const progress = silent ? null : (got, total) => {
+        if (seq !== loadSeq) return;
+        const cols = visibleColumnCount();
+        const totalText = total ? ` / ${formatInt(total)}` : "";
+        els.tbody.innerHTML = `<tr><td colspan="${cols}" class="loading">正在分页拉取本周全部交易者… ${formatInt(got)}${totalText}</td></tr>`;
+      };
+      try {
+        const live = await fetchWindow({ from: current.from, to: current.to, onProgress: progress });
+        if (seq !== loadSeq) return;
+        const volumeRows = decorate(attachPoints(live.rows, map), "week");
+        const pointsRows = decorate(pointRows, "week");
+        rememberWeekRows(volumeRows, pointsRows);
+        applyData({
+          rows: state.rows,
+          aggregate: aggregateRows(volumeRows, live.totalTraders),
+          aggregateSource: "live",
+          totalTraders: live.totalTraders,
+          updatedAt: new Date().toISOString(),
+          sourceKind: "live",
+          sourceText: state.weekHasPoints ? "实时成交量 · 积分来自快照" : "实时全量",
+        });
+      } catch (liveErr) {
+        if (seq !== loadSeq) return;
+        const block = state.weekDoc?.volume;
+        if (block && Array.isArray(block.rows) && block.from === current.from) {
+          const volumeRows = decorate(attachPoints(normalizeApiRows(block.rows), map), "week");
+          const pointsRows = decorate(pointRows, "week");
+          rememberWeekRows(volumeRows, pointsRows);
+          applyData({
+            rows: state.rows,
+            aggregate: block.aggregate || aggregateRows(volumeRows, block.total_traders),
+            aggregateSource: block.aggregate ? "snapshot" : "partial",
+            totalTraders: block.aggregate?.total_traders || block.total_traders || volumeRows.length,
+            updatedAt: state.weekIndex?.updated_at || null,
+            sourceKind: "snapshot",
+            sourceText: "本地快照",
+          });
+          return;
+        }
+        if (silent && state.rows.length) {
+          setSource("error", "刷新失败");
+          return;
+        }
+        setSource("error", "无法加载数据");
+        const cols = visibleColumnCount();
+        els.tbody.innerHTML = `<tr><td colspan="${cols}" class="error-banner">本周实时接口不可用。<br>${escapeHtml(String(liveErr))}</td></tr>`;
+      }
+    }
+
     let weekRangeKey = "";
+    let weekOptionsKey = "";
+    function paintWeekSelector() {
+      if (!els.weekSelect) return;
+      const weeks = listedWeeks();
+      const key = weeks.map((week) => `${week.start}:${week.hasPoints}:${week.pointsStatus}:${week.current}`).join("|");
+      if (key !== weekOptionsKey) {
+        weekOptionsKey = key;
+        els.weekSelect.innerHTML = weeks.map((week) => (
+          `<option value="${escapeHtml(week.start)}">${escapeHtml(weekOptionLabel(week))}</option>`
+        )).join("");
+      }
+      if (state.selectedWeekStart) els.weekSelect.value = state.selectedWeekStart;
+      const older = previousThursday(state.selectedWeekStart || state.week?.from);
+      els.weekPrev.disabled = !older;
+    }
+
     function paintWeek() {
       const week = state.week;
       if (!week) return;
       const show = state.period === "week";
       els.weekBanner.hidden = !show;
-      const endLabel = formatDual(new Date(week.end.getTime() - 60 * 1000));
+      syncWeekColumns();
+      paintWeekSelector();
+      const bounds = show ? activeWeekBounds() : null;
+      const viewing = bounds || {
+        start: week.start,
+        end: week.end,
+        from: week.from,
+        to: week.to,
+        kind: "thursday",
+        current: true,
+      };
+      const endLabel = formatDual(new Date(viewing.end.getTime() - 60 * 1000));
       let align = "";
-      const latest = state.snapshot?.points_api?.latest_week;
-      if (latest?.to) {
-        const apiEnd = new Date(latest.to);
-        const cfg = parsePointsWeekStart(state.labels.pointsWeekStart);
-        const aligned = apiEnd.getUTCDay() === cfg.weekday
-          && apiEnd.getUTCHours() === cfg.hour
-          && apiEnd.getUTCMinutes() === cfg.minute;
-        if (aligned && Math.abs(apiEnd.getTime() - week.start.getTime()) < 1000) {
-          align = "积分接口上一已发放周的结束时刻与本周开始相同。";
-        } else if (aligned) {
-          align = "积分接口记录的最近已发放周结束于 " + formatDual(apiEnd) + "，进行中的一周仍按配置推算。";
-        } else {
-          align = "积分接口最近一周的结束时刻与配置的起始星期不一致，请核对 pointsWeekStart。";
+      if (viewing.kind === "distribution") {
+        align = "这是积分接口返回的发放窗口，不是标准的周四到周三。";
+      } else if (viewing.current) {
+        const latest = state.snapshot?.points_api?.latest_week || state.weekIndex?.pointsHistory?.latestWeek;
+        if (latest?.to) {
+          const apiEnd = new Date(latest.to);
+          const cfg = parsePointsWeekStart(state.labels.pointsWeekStart);
+          const aligned = apiEnd.getUTCDay() === cfg.weekday
+            && apiEnd.getUTCHours() === cfg.hour
+            && apiEnd.getUTCMinutes() === cfg.minute;
+          if (aligned && Math.abs(apiEnd.getTime() - week.start.getTime()) < 1000) {
+            align = "积分接口上一已发放周的结束时刻与本周开始相同。";
+          } else if (aligned) {
+            align = "积分接口记录的最近已发放周结束于 " + formatDual(apiEnd) + "，进行中的一周仍按配置推算。";
+          }
         }
       }
-      const rangeKey = `${week.from}|${week.to}|${align}|${show}`;
+      const flag = state.weekHasPoints
+        ? "有积分"
+        : (state.weekDoc?.points?.status || selectedWeekMeta()?.pointsStatus || "");
+      const rangeKey = `${viewing.from}|${viewing.to}|${viewing.kind}|${align}|${show}|${flag}|${state.weekPointsNote}`;
       if (rangeKey !== weekRangeKey) {
         weekRangeKey = rangeKey;
+        els.weekKicker.textContent = viewing.kind === "distribution"
+          ? "积分发放周"
+          : (viewing.current ? "本积分周" : "历史积分周");
         els.weekRange.innerHTML = `
-          <div>开始 ${escapeHtml(formatDual(week.start))}</div>
+          <div>开始 ${escapeHtml(formatDual(viewing.start))}</div>
           <div>结束 ${escapeHtml(endLabel)}</div>
-          <div><span>查询 <code>from=${escapeHtml(week.from)}&amp;to=${escapeHtml(week.to)}</code>（UTC 日历日，含首尾）。${escapeHtml(align)}</span></div>
+          <div><span>查询 <code>from=${escapeHtml(viewing.from)}&amp;to=${escapeHtml(viewing.to)}</code>（UTC 日历日，含首尾）。${escapeHtml(align)}</span></div>
         `;
+        els.weekFlag.classList.remove("ok", "wait", "no");
+        if (state.weekHasPoints) {
+          const traders = state.weekDoc?.points?.total_traders;
+          const distributed = state.weekDoc?.points?.total_distributed_points;
+          const extra = traders != null
+            ? ` ${formatInt(traders)} 人，发放 ${formatPoints(distributed)}。`
+            : "";
+          els.weekFlag.classList.add("ok");
+          els.weekFlag.textContent = (state.weekPointsNote || "这一周有积分榜。") + extra;
+        } else if (flag === "not_distributed" || flag === "pending") {
+          els.weekFlag.classList.add("wait");
+          els.weekFlag.textContent = state.weekPointsNote || "积分尚未发放。下面先展示成交量。";
+        } else {
+          els.weekFlag.classList.add("no");
+          els.weekFlag.textContent = state.weekPointsNote || "这一周只有成交量，积分接口没有对应的发放榜。";
+        }
       }
-      const remain = week.end.getTime() - Date.now();
-      els.countdown.textContent = formatRemain(remain);
-      els.weekTab.title = "积分周 " + week.spec + "，" + week.from + " 至 " + week.to;
+      if (viewing.current) {
+        els.countdownLabel.textContent = "距离本周结束";
+        els.countdown.textContent = formatRemain(viewing.end.getTime() - Date.now());
+      } else {
+        els.countdownLabel.textContent = "这一周";
+        els.countdown.textContent = "已结束";
+      }
+      els.weekTab.title = "积分周 " + (week.spec || "") + "，当前查看 " + viewing.from + " 至 " + viewing.to;
     }
 
     function formatRemain(ms) {
@@ -1172,10 +1575,22 @@
       else if (state.filter === "mm") rows = rows.filter((row) => row.tag?.tier);
       const poolSize = rows.length;
       const q = state.query.trim().toLowerCase();
-      if (q) rows = rows.filter((row) => (row.trader || "").toLowerCase().includes(q));
+      if (q) {
+        rows = rows.filter((row) => (
+          (row.trader || "").toLowerCase().includes(q)
+          || (row.name || "").toLowerCase().includes(q)
+        ));
+      }
       const matched = rows.length;
       if (!q) {
-        rows.sort((a, b) => b.volume - a.volume || a.rank - b.rank || a.trader.localeCompare(b.trader));
+        if (state.period === "week" && state.weekBoard === "points") {
+          rows.sort((a, b) => (
+            (a.points_rank ?? 1e12) - (b.points_rank ?? 1e12)
+            || (Number(b.points) || 0) - (Number(a.points) || 0)
+          ));
+        } else {
+          rows.sort((a, b) => b.volume - a.volume || (a.rank ?? 1e12) - (b.rank ?? 1e12) || a.trader.localeCompare(b.trader));
+        }
         rows = rows.slice(0, TABLE_CAP);
       }
       const dir = state.sortDir === "asc" ? 1 : -1;
@@ -1257,6 +1672,24 @@
     }
 
     function paintScope(agg) {
+      if (state.period === "week") {
+        const bounds = activeWeekBounds();
+        const when = bounds.current
+          ? "本周成交量来自刚刚的实时全量分页。"
+          : "这一周已经结束，成交量和上方合计来自快照，例行更新不会重拉。";
+        const status = state.weekDoc?.points?.status || selectedWeekMeta()?.pointsStatus || "";
+        const points = state.weekHasPoints
+          ? "积分榜按钱包地址并上了同一周的成交量，行里有积分排名、积分、成交量和做市徽章。"
+          : (state.weekPointsNote
+            || ((status === "not_distributed" || status === "pending")
+              ? "积分尚未发放，这里先展示成交量。"
+              : "这一周没有积分数据。"));
+        const tableNote = bounds.current
+          ? ""
+          : "成交量表格是该周成交量前 200 名；合计仍覆盖全部交易者。";
+        els.scope.textContent = `${when}${points}${tableNote}`;
+        return;
+      }
       const when = state.period === "all"
         ? (state.snapshot?.updated_at ? "全部时间的全平台合计更新于 " + formatTime(state.snapshot.updated_at) + "。" : "")
         : "这份合计来自刚刚的实时全量分页。";
@@ -1269,11 +1702,24 @@
       }
     }
 
+    function rankMarkup(rank, medal) {
+      if (rank == null || Number.isNaN(Number(rank))) return `<td class="num rank">—</td>`;
+      const value = Number(rank);
+      const rankClass = value === 1 ? "r1" : value === 2 ? "r2" : value === 3 ? "r3" : "";
+      const medalText = medal && value === 1 ? "🥇 " : medal && value === 2 ? "🥈 " : medal && value === 3 ? "🥉 " : "";
+      return `<td class="num rank ${rankClass}">${medalText}${value}</td>`;
+    }
+
     function render() {
       if (state.filter !== "retail" && state.sortKey === "retail_rank") {
         state.sortKey = "volume";
         state.sortDir = "desc";
       }
+      if (state.period !== "week" && (state.sortKey === "points" || state.sortKey === "points_rank")) {
+        state.sortKey = "volume";
+        state.sortDir = "desc";
+      }
+      syncWeekColumns();
       document.querySelectorAll(".retail-only").forEach((el) => {
         el.hidden = state.filter !== "retail";
       });
@@ -1288,12 +1734,20 @@
           : "";
       });
       const capped = !state.query.trim() && view.poolSize > view.rows.length;
-      els.count.textContent = state.query.trim()
-        ? `搜索到 ${formatInt(view.matched)} 名，表格显示 ${formatInt(view.rows.length)} 行`
-        : `表格显示成交量前 ${formatInt(view.rows.length)} 名` + (capped ? `（筛选后共 ${formatInt(view.poolSize)} 名）` : "");
+      const pointsMode = state.period === "week" && state.weekBoard === "points";
+      if (!view.rows.length && pointsMode && !state.weekHasPoints) {
+        els.count.textContent = "这一周没有积分榜";
+      } else {
+        els.count.textContent = state.query.trim()
+          ? `搜索到 ${formatInt(view.matched)} 名，表格显示 ${formatInt(view.rows.length)} 行`
+          : `表格显示${pointsMode ? "积分" : "成交量"}前 ${formatInt(view.rows.length)} 名` + (capped ? `（筛选后共 ${formatInt(view.poolSize)} 名）` : "");
+      }
 
       if (!view.rows.length) {
-        els.tbody.innerHTML = `<tr><td colspan="${cols}" class="empty">没有匹配的交易者</td></tr>`;
+        const empty = pointsMode && !state.weekHasPoints
+          ? (state.weekPointsNote || "这一周没有积分数据，只有成交量。")
+          : "没有匹配的交易者";
+        els.tbody.innerHTML = `<tr><td colspan="${cols}" class="empty">${escapeHtml(empty)}</td></tr>`;
         renderTierC();
         return;
       }
@@ -1301,25 +1755,36 @@
       els.tbody.innerHTML = view.rows.map((row) => {
         const tier = row.tag?.tier;
         const rowClass = tier ? `row-${tier.toLowerCase()}` : "";
-        const useRetailMedal = state.filter === "retail";
+        const useRetailMedal = state.filter === "retail" && !pointsMode;
         const medalRank = useRetailMedal ? row.retail_rank : row.rank;
         const rankClass = medalRank === 1 ? "r1" : medalRank === 2 ? "r2" : medalRank === 3 ? "r3" : "";
         const medal = medalRank === 1 ? "🥇 " : medalRank === 2 ? "🥈 " : medalRank === 3 ? "🥉 " : "";
         const retailCell = state.filter === "retail"
-          ? `<td class="num rank ${rankClass}">${medal}${row.retail_rank ?? ""}</td>`
+          ? `<td class="num rank ${rankClass}">${useRetailMedal ? medal : ""}${row.retail_rank ?? "—"}</td>`
           : "";
-        const globalRankClass = useRetailMedal ? "" : rankClass;
-        const globalMedal = useRetailMedal ? "" : medal;
+        const weekCells = state.period === "week"
+          ? `${rankMarkup(row.points_rank, pointsMode)}`
+          : "";
+        const pointsCell = state.period === "week"
+          ? `<td class="num">${formatPoints(row.points)}</td>`
+          : "";
+        const name = row.name ? `<span class="who">${escapeHtml(row.name)}</span>` : "";
+        const globalRankClass = useRetailMedal || pointsMode ? "" : rankClass;
+        const globalMedal = useRetailMedal || pointsMode ? "" : medal;
+        const volumeRankText = row.rank == null ? "—" : `${globalMedal}${row.rank}`;
         return `<tr class="${rowClass}">
-          <td class="num rank ${globalRankClass}">${globalMedal}${row.rank}</td>
+          <td class="num rank ${globalRankClass}">${volumeRankText}</td>
           ${retailCell}
+          ${weekCells}
           <td>
             <div class="trader">
               <a href="${explorerUrl(row.trader)}" target="_blank" rel="noopener" title="${escapeHtml(row.trader)}">${escapeHtml(shortAddr(row.trader))}</a>
+              ${name}
               ${badgesFor(row)}
               <button type="button" class="copy" data-addr="${escapeHtml(row.trader)}" title="复制地址">复制</button>
             </div>
           </td>
+          ${pointsCell}
           <td class="num" title="${(row.volume || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}">${formatUsd(row.volume)}</td>
           <td class="num ${pnlClass(row.pnl)}" title="${(row.pnl || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}">${formatUsd(row.pnl)}</td>
           <td class="num hide-sm ${pnlClass(row.pnl_pct)}">${formatPct(row.pnl_pct)}</td>
@@ -1392,12 +1857,55 @@
         <p>四个卡片统计的是该窗口里每一个交易者，用排行榜接口分页拉完（<code>limit=500</code>）。「全部」大约有六万名交易者，浏览器不每 30 秒扫一遍；<code>fetch.py</code> 在 GitHub Actions 里扫完，把合计和高频机器人地址写进快照，页面注明那次扫描的更新时间。表格始终只放成交量前 ${TABLE_CAP} 名。</p>
         <h3>本积分周</h3>
         <p>起始时刻是配置里的单个值 <code>${escapeHtml(labels.pointsWeekStart)}</code>，一周 7 天，结束于下一周开始前的最后一分钟。成交量直接用排行榜的 <code>from</code> / <code>to</code>（UTC 日历日，含首尾，和 <code>period</code> 互斥）。周四日期到周三日期，正好覆盖文档里的周四 00:00 UTC 至周三 23:59 UTC。官方文档写明这两个参数存在，实时请求也接受尚未结束的 <code>to</code>，返回的是截至目前的本周成交量。因此不需要用全历史成交量去减周初基线。</p>
+        <h3>积分周历史</h3>
+        <p>打开「本积分周」后，下拉框列出每一个周四到周三，默认停在进行中的一周。「上一周」切到刚结束的那一周。选中的一周同时给出成交量排行榜，以及全平台总成交量、交易者人数、做市/机器人占比和散户成交量。积分榜只有积分接口按同一起止时间返回了发放数据时才出现，并按钱包地址并上成交量和做市徽章，所以一行里能看到积分排名、积分、成交量。对不上的周标成「仅成交量」，不会把别的周的积分填进来。</p>
+        <p>积分接口目前只接受已经存在的发放窗口，不能按任意一周查询。首周发放如果不是标准的 7 天（公告日到下一个周四），会单独出现在下拉里，并写明它是发放周。已经结束并且积分状态已经确定的周写在 <code>data/weeks/&lt;开始日期&gt;.json</code>，例行更新发现文件齐全就跳过。进行中的一周每次都刷新：成交量仍走实时接口，积分从快照读。</p>
         <ul>${sources}</ul>
         <p>站点的积分页没有单独的 epoch 接口。<code>latestWeek</code> 是最近一个已经发放的积分周（结束时刻不含在内），不是正在进行的这一周。第一周从公告日 2026-11-04 00:00 UTC 算到 2026-11-12 00:00 UTC，长 8 天；之后的周期按上面的周四规则。积分接口没有对第三方页面开放 CORS，对照信息由 <code>fetch.py</code> 写入快照。</p>
         <h3>市场列表成交量</h3>
         <p><code>GET /api/v1/markets</code> 每个市场有一个累计 <code>volume</code>。把它全部加总，只和「全部」窗口的交易者成交量比较。相差不超过 1% 时，卡片会注明两者一致。差得更多时，卡片仍用交易者合计（散户和做市的占比以它为分母），并写出市场列表的数字。两种口径为什么可能不同，写在 README 里。</p>
       `;
     }
+
+    els.weekSelect.addEventListener("change", () => {
+      state.selectedWeekStart = els.weekSelect.value;
+      load("week");
+    });
+
+    els.weekPrev.addEventListener("click", () => {
+      const older = previousThursday(state.selectedWeekStart || state.week?.from);
+      if (!older) return;
+      state.selectedWeekStart = older.start;
+      load("week");
+    });
+
+    els.weekCurrent.addEventListener("click", () => {
+      const current = state.weekIndex?.current_start || state.week?.from;
+      if (!current || current === state.selectedWeekStart) return;
+      state.selectedWeekStart = current;
+      load("week");
+    });
+
+    els.weekBoardTabs.addEventListener("click", (ev) => {
+      const btn = ev.target.closest("button[data-board]");
+      if (!btn) return;
+      state.weekBoard = btn.dataset.board;
+      document.querySelectorAll("#week-board-tabs button").forEach((item) => {
+        item.setAttribute("aria-selected", item === btn ? "true" : "false");
+      });
+      if (state.weekBoard === "points") {
+        state.sortKey = "points_rank";
+        state.sortDir = "asc";
+        if (state.pointsRows) state.rows = state.pointsRows;
+      } else {
+        if (state.sortKey === "points" || state.sortKey === "points_rank") {
+          state.sortKey = "volume";
+          state.sortDir = "desc";
+        }
+        if (state.volumeRows) state.rows = state.volumeRows;
+      }
+      render();
+    });
 
     document.getElementById("period-tabs").addEventListener("click", (ev) => {
       const btn = ev.target.closest("button[data-period]");
@@ -1426,7 +1934,7 @@
         if (state.sortKey === key) state.sortDir = state.sortDir === "desc" ? "asc" : "desc";
         else {
           state.sortKey = key;
-          state.sortDir = key === "trader" || key === "rank" || key === "retail_rank" ? "asc" : "desc";
+          state.sortDir = key === "trader" || key === "rank" || key === "retail_rank" || key === "points_rank" ? "asc" : "desc";
         }
         render();
       });
@@ -1505,13 +2013,21 @@
       }
       paintWeek();
       await load(state.period);
-      setInterval(() => load(state.period, { silent: true }), REFRESH_MS);
+      setInterval(() => {
+        if (state.period === "week") {
+          const currentFrom = state.week?.from;
+          if (state.selectedWeekStart && currentFrom && state.selectedWeekStart !== currentFrom) return;
+        }
+        load(state.period, { silent: true });
+      }, REFRESH_MS);
       setInterval(() => {
         if (!state.labels) return;
         const prevFrom = state.week?.from;
+        const wasOnCurrent = !state.selectedWeekStart || state.selectedWeekStart === prevFrom;
         state.week = currentPointsWeek(new Date(), state.labels.pointsWeekStart);
+        if (wasOnCurrent) state.selectedWeekStart = state.week.from;
         paintWeek();
-        if (state.period === "week" && prevFrom && state.week.from !== prevFrom) {
+        if (state.period === "week" && wasOnCurrent && prevFrom && state.week.from !== prevFrom) {
           load("week", { silent: true });
         }
       }, 1000);
