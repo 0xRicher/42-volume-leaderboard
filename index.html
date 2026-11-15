@@ -287,12 +287,16 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
     }
+    .stats.has-points { grid-template-columns: repeat(5, 1fr); }
+    @media (max-width: 1100px) {
+      .stats.has-points { grid-template-columns: repeat(3, 1fr); }
+    }
     @media (max-width: 980px) {
-      .stats { grid-template-columns: repeat(2, 1fr); }
+      .stats, .stats.has-points { grid-template-columns: repeat(2, 1fr); }
       .countdown-wrap { text-align: left; }
     }
     @media (max-width: 560px) {
-      .stats { grid-template-columns: 1fr; }
+      .stats, .stats.has-points { grid-template-columns: 1fr; }
     }
 
     .stat {
@@ -590,6 +594,11 @@
         <div class="value" id="stat-retail">--</div>
         <div class="sub" id="stat-retail-sub">身份徽章（Team / Mod / Treasury）计入散户</div>
       </article>
+      <article class="stat" id="stat-points-card" hidden>
+        <div class="label">总发放积分</div>
+        <div class="value" id="stat-points">--</div>
+        <div class="sub" id="stat-points-sub">含第1周之前已发放的积分</div>
+      </article>
     </section>
     <div class="splitbar-wrap">
       <div class="splitbar" id="splitbar" aria-hidden="true">
@@ -612,10 +621,10 @@
             <tr>
               <th class="sortable num" data-key="rank"><span class="hlabel">排名</span><span class="arrow"></span></th>
               <th class="sortable num retail-only" data-key="retail_rank" hidden>散户排名<span class="arrow"></span></th>
-              <th class="sortable num week-only" data-key="points_rank" hidden>积分排名<span class="arrow"></span></th>
+              <th class="sortable num week-only" data-key="points_rank" hidden><span class="hlabel">积分排名</span><span class="arrow"></span></th>
               <th class="sortable" data-key="trader">交易者<span class="arrow"></span></th>
-              <th class="sortable num week-only" data-key="points" hidden>积分<span class="arrow"></span></th>
-              <th class="sortable num" data-key="volume">成交量 (USDT)<span class="arrow"></span></th>
+              <th class="sortable num week-only" data-key="points" hidden><span class="hlabel">积分</span><span class="arrow"></span></th>
+              <th class="sortable num" data-key="volume"><span class="hlabel">成交量 (USDT)</span><span class="arrow"></span></th>
               <th class="sortable num" data-key="pnl">已实现盈亏<span class="arrow"></span></th>
               <th class="sortable num hide-sm" data-key="pnl_pct">盈亏比例<span class="arrow"></span></th>
               <th class="sortable num" data-key="trade_count">笔数<span class="arrow"></span></th>
@@ -649,6 +658,8 @@
     const API = "https://rest.ft.42.space/api/v1/market-data/leaderboard";
     const SNAPSHOT = "./data/leaderboard.json";
     const WEEKS_INDEX = "./data/weeks/index.json";
+    const CUMULATIVE_URL = "./data/weeks/cumulative.json";
+    const CUMULATIVE_ID = "cumulative";
     const LABELS_URL = "./wallet-labels.json";
     const TABLE_CAP = 200;
     const PAGE_SIZE = 500;
@@ -675,6 +686,7 @@
       weekIndex: null,
       selectedWeekStart: null,
       weekDoc: null,
+      cumulative: false,
       weekBoard: "volume",
       weekHasPoints: false,
       weekPointsNote: "",
@@ -700,6 +712,10 @@
       mmSub: document.getElementById("stat-mm-sub"),
       retail: document.getElementById("stat-retail"),
       retailSub: document.getElementById("stat-retail-sub"),
+      pointsCard: document.getElementById("stat-points-card"),
+      points: document.getElementById("stat-points"),
+      pointsSub: document.getElementById("stat-points-sub"),
+      stats: document.getElementById("stats"),
       scope: document.getElementById("scope-note"),
       count: document.getElementById("count-label"),
       weekBanner: document.getElementById("week-banner"),
@@ -1120,6 +1136,7 @@
     }
 
     function previousInGroup(start) {
+      if (!start || start === CUMULATIVE_ID) return null;
       const week = listedWeeks().find((item) => item.start === start);
       const list = weeksInGroup(week ? weekGroup(week) : "points");
       const idx = list.findIndex((item) => item.start === start);
@@ -1141,12 +1158,20 @@
       return bits.join(" · ");
     }
 
+    function setHeaderLabel(key, text) {
+      const el = document.querySelector(`thead th[data-key="${key}"] .hlabel`);
+      if (el) el.textContent = text;
+    }
+
     function syncWeekColumns() {
       const on = state.period === "week";
       document.querySelectorAll(".week-only").forEach((el) => { el.hidden = !on; });
       if (els.weekTools) els.weekTools.hidden = !on;
-      const rankLabel = document.querySelector('thead th[data-key="rank"] .hlabel');
-      if (rankLabel) rankLabel.textContent = on ? "成交量排名" : "排名";
+      if (els.weekBoardTabs) els.weekBoardTabs.hidden = !on || state.cumulative;
+      setHeaderLabel("rank", on ? "成交量排名" : "排名");
+      setHeaderLabel("points_rank", state.cumulative ? "总积分排名" : "积分排名");
+      setHeaderLabel("points", state.cumulative ? "总积分" : "积分");
+      setHeaderLabel("volume", state.cumulative ? "总交易量 (USDT)" : "成交量 (USDT)");
     }
 
     async function fetchWindow({ period, from, to, maxRows, onProgress }) {
@@ -1342,8 +1367,69 @@
       }
     }
 
+    async function loadCumulative(seq, silent) {
+      if (!silent) {
+        syncWeekColumns();
+        const cols = visibleColumnCount();
+        els.tbody.innerHTML = `<tr><td colspan="${cols}" class="loading">正在读取总榜…</td></tr>`;
+      }
+      state.sortKey = "points_rank";
+      state.sortDir = "asc";
+      try {
+        state.weekIndex = await fetchWeekIndex();
+      } catch {
+        /* selector still lists the computed current week */
+      }
+      if (seq !== loadSeq) return;
+      let doc = null;
+      try {
+        const res = await fetch(CUMULATIVE_URL, { cache: "no-store" });
+        if (!res.ok) throw new Error("cumulative HTTP " + res.status);
+        doc = await res.json();
+      } catch (err) {
+        if (seq !== loadSeq) return;
+        state.weekDoc = null;
+        state.weekHasPoints = false;
+        state.weekPointsNote = "还没有总榜文件。先运行 python3 fetch.py。";
+        state.aggregate = null;
+        paintWeek();
+        setSource("error", "缺少总榜");
+        const cols = visibleColumnCount();
+        els.tbody.innerHTML = `<tr><td colspan="${cols}" class="error-banner">${escapeHtml(String(err))}</td></tr>`;
+        renderSummary();
+        return;
+      }
+      if (seq !== loadSeq) return;
+      state.weekDoc = doc;
+      state.weekHasPoints = Boolean(doc.hasPoints);
+      state.weekPointsNote = doc.points?.note || "";
+      paintWeek();
+      const map = pointsMap(doc.points?.rows);
+      const volumeRows = decorate(attachPoints(normalizeApiRows(doc.volume?.rows), map), "all");
+      const pointsRows = decorate(pointsBoardRows(doc.points?.rows), "all");
+      const seen = new Set(pointsRows.map((row) => String(row.trader || "").toLowerCase()));
+      const union = pointsRows.concat(volumeRows.filter((row) => !seen.has(String(row.trader || "").toLowerCase())));
+      state.volumeRows = volumeRows;
+      state.pointsRows = pointsRows;
+      state.rows = union;
+      applyData({
+        rows: union,
+        aggregate: doc.volume?.aggregate || null,
+        aggregateSource: doc.volume?.aggregate ? "snapshot" : "missing",
+        totalTraders: doc.volume?.aggregate?.total_traders || volumeRows.length,
+        updatedAt: doc.fetched_at,
+        sourceKind: "snapshot",
+        sourceText: doc.hasPoints ? "总榜 · 全部积分" : "总榜 · 没有积分总榜",
+      });
+    }
+
     async function loadWeek(seq, silent, current) {
       const start = state.selectedWeekStart || current.from;
+      state.cumulative = start === CUMULATIVE_ID;
+      if (state.cumulative) {
+        await loadCumulative(seq, silent);
+        return;
+      }
       if (!silent) {
         syncWeekColumns();
         const cols = visibleColumnCount();
@@ -1458,6 +1544,7 @@
         const points = weeks.filter((week) => weekGroup(week) === "points").map(option).join("");
         const pre = weeks.filter((week) => weekGroup(week) === "pre").map(option).join("");
         els.weekSelect.innerHTML = `
+          <option value="${CUMULATIVE_ID}">总榜（全部积分）</option>
           <optgroup label="积分周">${points}</optgroup>
           ${pre ? `<optgroup label="积分前">${pre}</optgroup>` : ""}
         `;
@@ -1474,6 +1561,31 @@
       els.weekBanner.hidden = !show;
       syncWeekColumns();
       paintWeekSelector();
+      if (show && state.cumulative) {
+        const doc = state.weekDoc;
+        const pointsTo = doc?.points?.period?.to ? formatDual(new Date(doc.points.period.to)) : "最近一次发放";
+        const rangeKey = `cumulative|${doc?.fetched_at || ""}|${state.weekHasPoints}|${state.weekPointsNote}`;
+        if (rangeKey !== weekRangeKey) {
+          weekRangeKey = rangeKey;
+          els.weekKicker.textContent = "总榜";
+          els.weekRange.innerHTML = `
+            <div>积分：站点 Overall 总榜，截至 ${escapeHtml(pointsTo)}，含第1周之前已发放的积分。</div>
+            <div>成交量：<code>period=all</code>，从平台开始算到现在。</div>
+          `;
+          els.weekFlag.classList.remove("ok", "wait", "no");
+          if (state.weekHasPoints) {
+            els.weekFlag.classList.add("ok");
+            els.weekFlag.textContent = state.weekPointsNote || "这是全部积分，不是把每周发放相加。";
+          } else {
+            els.weekFlag.classList.add("no");
+            els.weekFlag.textContent = state.weekPointsNote || "没有拿到全部积分的总榜，页面不会估算。";
+          }
+        }
+        els.countdownLabel.textContent = "范围";
+        els.countdown.textContent = "全部时间";
+        els.weekTab.title = "总榜（全部积分）";
+        return;
+      }
       const bounds = show ? activeWeekBounds() : null;
       const viewing = bounds || {
         start: week.start,
@@ -1602,7 +1714,10 @@
       }
       const matched = rows.length;
       if (!q) {
-        if (state.period === "week" && state.weekBoard === "points") {
+        const byPoints = state.cumulative
+          ? (state.sortKey === "points" || state.sortKey === "points_rank")
+          : (state.period === "week" && state.weekBoard === "points");
+        if (byPoints) {
           rows.sort((a, b) => (
             (a.points_rank ?? 1e12) - (b.points_rank ?? 1e12)
             || (Number(b.points) || 0) - (Number(a.points) || 0)
@@ -1627,7 +1742,18 @@
     }
 
     function renderSummary() {
+      const showPointsCard = Boolean(state.cumulative);
+      if (els.pointsCard) els.pointsCard.hidden = !showPointsCard;
+      if (els.stats) els.stats.classList.toggle("has-points", showPointsCard);
       const agg = state.aggregate;
+      if (showPointsCard) {
+        const total = state.weekDoc?.points?.total_distributed_points;
+        const wallets = state.weekDoc?.points?.total_traders;
+        els.points.textContent = state.weekHasPoints && total != null ? formatPoints(total) : "—";
+        els.pointsSub.textContent = state.weekHasPoints && wallets != null
+          ? `${formatInt(wallets)} 个钱包 · 含第1周之前的发放`
+          : (state.weekPointsNote || "没有全部积分总榜，未估算");
+      }
       if (!agg) {
         els.traders.textContent = "--";
         els.volume.textContent = "--";
@@ -1691,6 +1817,12 @@
     }
 
     function paintScope(agg) {
+      if (state.cumulative) {
+        els.scope.textContent = state.weekHasPoints
+          ? "总积分来自不带 from/to 的积分总榜，含第1周之前已发放的积分。总交易量是 period=all 的全平台合计。表格可按总积分或总交易量排序，每列只显示前 200 名。"
+          : (state.weekPointsNote || "没有全部积分的总榜，页面不会把各周积分加总来估算。");
+        return;
+      }
       if (state.period === "week") {
         const bounds = activeWeekBounds();
         const when = bounds.current
@@ -1734,7 +1866,8 @@
         state.sortKey = "volume";
         state.sortDir = "desc";
       }
-      if (state.period !== "week" && (state.sortKey === "points" || state.sortKey === "points_rank")) {
+      const pointsSort = state.cumulative || (state.period === "week" && state.weekBoard === "points");
+      if (!pointsSort && (state.sortKey === "points" || state.sortKey === "points_rank")) {
         state.sortKey = "volume";
         state.sortDir = "desc";
       }
@@ -1753,13 +1886,18 @@
           : "";
       });
       const capped = !state.query.trim() && view.poolSize > view.rows.length;
-      const pointsMode = state.period === "week" && state.weekBoard === "points";
-      if (!view.rows.length && pointsMode && !state.weekHasPoints) {
+      const pointsMode = state.cumulative || (state.period === "week" && state.weekBoard === "points");
+      const capName = state.cumulative
+        ? ((state.sortKey === "volume" || state.sortKey === "rank") ? "总交易量" : "总积分")
+        : (pointsMode ? "积分" : "成交量");
+      if (!view.rows.length && pointsMode && !state.weekHasPoints && !state.cumulative) {
         els.count.textContent = "这一周没有积分榜";
+      } else if (!view.rows.length && state.cumulative && !state.weekHasPoints) {
+        els.count.textContent = "没有全部积分总榜";
       } else {
         els.count.textContent = state.query.trim()
           ? `搜索到 ${formatInt(view.matched)} 名，表格显示 ${formatInt(view.rows.length)} 行`
-          : `表格显示${pointsMode ? "积分" : "成交量"}前 ${formatInt(view.rows.length)} 名` + (capped ? `（筛选后共 ${formatInt(view.poolSize)} 名）` : "");
+          : `表格显示${capName}前 ${formatInt(view.rows.length)} 名` + (capped ? `（筛选后共 ${formatInt(view.poolSize)} 名）` : "");
       }
 
       if (!view.rows.length) {

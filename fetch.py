@@ -998,6 +998,7 @@ def update_week_history(
     )
     keep_names = {week_path(slot["start"]).name for slot in slots}
     keep_names.add("index.json")
+    keep_names.add("cumulative.json")
     for path in WEEKS_DIR.glob("*.json"):
         if path.name not in keep_names:
             path.unlink()
@@ -1073,6 +1074,181 @@ def update_week_history(
     return index
 
 
+def fetch_points_overall() -> dict:
+    """The site's Overall board: /api/points/leaderboard with no from/to.
+
+    That payload is every distributed point up to the latest snapshot,
+    including points from before the first weekly window. A response whose
+    period has a `from` is a weekly slice, not this board.
+    """
+    rows: list[dict] = []
+    seen: set[str] = set()
+    cursor = None
+    first: dict | None = None
+    pages = 0
+    while True:
+        query: dict[str, str] = {"limit": str(POINTS_PAGE_SIZE)}
+        if cursor:
+            query["cursor"] = cursor
+        elif first is not None:
+            period = first.get("period") or {}
+            if period.get("to"):
+                query["to"] = str(period["to"])
+        url = "https://www.42.space/api/points/leaderboard?" + urllib.parse.urlencode(query)
+        status, payload = fetch_json(url, tolerate=(400,))
+        pages += 1
+        if status == 400:
+            return {
+                "status": "unavailable",
+                "note": "积分总榜接口返回 400，没有可展示的全部积分。页面不会用各周积分相加来代替。",
+                "source": "https://www.42.space/api/points/leaderboard",
+                "query": {"limit": POINTS_PAGE_SIZE},
+                "fetched_at": iso_now(),
+                "rows": [],
+            }
+        if status != 200:
+            raise SystemExit(f"Unexpected points status {status} for {url}")
+        if pages == 1:
+            first = payload
+            period = payload.get("period") or {}
+            if period.get("from"):
+                return {
+                    "status": "unavailable",
+                    "note": (
+                        "不带 from/to 的积分接口返回了带起点的窗口，不是全部积分总榜。"
+                        "页面不会把各周积分加总来估算。"
+                    ),
+                    "source": "https://www.42.space/api/points/leaderboard",
+                    "query": {"limit": POINTS_PAGE_SIZE},
+                    "fetched_at": iso_now(),
+                    "period": period,
+                    "rows": [],
+                }
+        chunk = payload.get("data") or []
+        if not isinstance(chunk, list):
+            raise SystemExit("Points overall payload is missing data[]")
+        for item in chunk:
+            address = str(item.get("address") or "")
+            key = address.lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            rank = item.get("rank")
+            rows.append(
+                {
+                    "address": address,
+                    "name": item.get("name"),
+                    "rank": int(rank) if rank is not None else None,
+                    "points": float(item.get("points") or 0),
+                    "rank_change": item.get("rankChange"),
+                    "points_change": item.get("pointsChange"),
+                }
+            )
+        print(
+            f"    points overall page {pages} got={len(chunk)} unique={len(rows)} "
+            f"traders={payload.get('totalTraders')}",
+            flush=True,
+        )
+        cursor = payload.get("nextCursor") or None
+        if not cursor or not chunk:
+            break
+        if pages > 400:
+            raise SystemExit("Points overall pagination did not finish")
+        time.sleep(REQUEST_PAUSE_S)
+    assert first is not None
+    total_points = first.get("totalDistributedPoints")
+    return {
+        "status": "overall",
+        "note": (
+            "站点积分页 Overall 用的就是不带 from/to 的 /api/points/leaderboard。"
+            "这个榜包含第1周之前已经发放的积分，不是只把每周发放加起来。"
+        ),
+        "source": "https://www.42.space/api/points/leaderboard",
+        "query": {"limit": POINTS_PAGE_SIZE},
+        "fetched_at": iso_now(),
+        "snapshot_id": first.get("snapshotId"),
+        "updated_at": first.get("updatedAt"),
+        "period": first.get("period"),
+        "comparison_period": first.get("comparisonPeriod"),
+        "total_traders": int(first.get("totalTraders") or len(rows)),
+        "total_distributed_points": float(total_points) if total_points is not None else None,
+        "returned": len(rows),
+        "rows": rows,
+    }
+
+
+def build_cumulative(
+    compiled: dict,
+    now: datetime,
+    volume_rows: list[dict] | None = None,
+    api_total: int | None = None,
+) -> dict:
+    """All-time points (official overall board) joined to all-time volume."""
+    print("building 总榜 cumulative.json ...", flush=True)
+    points = fetch_points_overall()
+    if volume_rows is None or api_total is None:
+        print("fetching all-time volume for 总榜 ...", flush=True)
+        volume_rows, api_total = fetch_leaderboard("?period=all&")
+    by_addr = {row["trader"].lower(): row for row in volume_rows}
+    joined_points: list[dict] = []
+    if points.get("status") == "overall":
+        for item in points.get("rows") or []:
+            stats = volume_snapshot_fields(by_addr.get(str(item["address"]).lower()))
+            if stats["traded"]:
+                vol = by_addr[str(item["address"]).lower()]
+                item = dict(item)
+                item["address"] = vol["trader"]
+            joined_points.append({**item, **stats})
+        joined_points.sort(
+            key=lambda item: (item["rank"] is None, item["rank"] or 0, str(item["address"]).lower())
+        )
+    points = dict(points)
+    points["rows"] = joined_points
+    points["returned"] = len(joined_points)
+    volume = window_block(
+        volume_rows,
+        "all",
+        compiled,
+        api_total or len(volume_rows),
+        extra={
+            "period": "all",
+            "method": (
+                "GET /api/v1/market-data/leaderboard?period=all. "
+                "All-time trader volume from platform start, same window as the "
+                "main 全部 tab."
+            ),
+        },
+    )
+    by_points = {str(item.get("address") or "").lower(): item for item in joined_points}
+    for row in volume["rows"]:
+        match = by_points.get(str(row["trader"]).lower())
+        row["points_rank"] = match.get("rank") if match else None
+        row["points"] = match.get("points") if match else None
+        row["name"] = match.get("name") if match else None
+    doc = {
+        "id": "cumulative",
+        "label": "总榜（全部积分）",
+        "kind": "cumulative",
+        "fetched_at": iso_now(),
+        "hasPoints": points.get("status") == "overall" and bool(joined_points),
+        "points": points,
+        "volume": volume,
+    }
+    path = WEEKS_DIR / "cumulative.json"
+    WEEKS_DIR.mkdir(parents=True, exist_ok=True)
+    write_json(path, doc)
+    aggregate = volume["aggregate"]
+    print(
+        f"  wrote {path.name} points={points.get('status')} "
+        f"wallets={points.get('total_traders')} "
+        f"points_total={points.get('total_distributed_points')} "
+        f"traders={aggregate['total_traders']} volume={aggregate['total_volume']:.2f} "
+        f"mm={aggregate['mm']['share_pct']:.2f}% retail={aggregate['retail']['volume']:.2f}",
+        flush=True,
+    )
+    return doc
+
+
 def print_summary(window: str, block: dict) -> None:
     agg = block["aggregate"]
     tiers = agg["mm"]["tiers"]
@@ -1112,11 +1288,16 @@ def main() -> int:
     )
 
     periods: dict[str, dict] = {}
+    all_rows: list[dict] | None = None
+    all_total = 0
     for index, period in enumerate(PERIODS):
         if index:
             time.sleep(REQUEST_PAUSE_S)
         print(f"fetching period={period} ...", flush=True)
         rows, total = fetch_leaderboard(f"?period={period}&")
+        if period == "all":
+            all_rows = rows
+            all_total = total
         periods[period] = window_block(rows, period, compiled, total)
         print_summary(period, periods[period])
 
@@ -1201,6 +1382,7 @@ def main() -> int:
         week_start,
         week_end,
     )
+    build_cumulative(compiled, now, all_rows, all_total)
     return 0
 
 
