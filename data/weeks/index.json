@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T00:49:30Z",
+  "updated_at": "2026-11-19T08:05:20Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
@@ -11,6 +11,7 @@
     "available": true,
     "mode": "api-boundary",
     "weeks_with_points": [
+      "2026-11-12",
       "2026-11-04"
     ],
     "detail": "第1周是积分上线发放窗口。之后的积分周从该窗口结束的周四算起。更早的周四只有成交量，归在「积分前」，不编号。落在上线窗口内部的标准周四不单列。积分接口对不上的周不会编造积分。"
@@ -30,14 +31,14 @@
       "pointsStatus": "not_distributed",
       "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
       "totals": {
-        "traders": 93,
-        "total_volume": 440597.43713166215,
-        "mm_share_pct": 0.0,
-        "mm_volume": 0.0,
-        "mm_count": 0,
-        "retail_volume": 440597.43713166215,
-        "retail_share_pct": 100.0,
-        "retail_count": 93,
+        "traders": 148,
+        "total_volume": 1293913.1216987916,
+        "mm_share_pct": 63.838222686506306,
+        "mm_volume": 826011.14,
+        "mm_count": 6,
+        "retail_volume": 467901.98169879196,
+        "retail_share_pct": 36.161777313493715,
+        "retail_count": 142,
         "points_traders": null,
         "total_distributed_points": null
       }
@@ -51,10 +52,10 @@
       "group": "points",
       "weekNumber": 2,
       "current": false,
-      "finalized": false,
-      "hasPoints": false,
-      "pointsStatus": "pending",
-      "pointsNote": "这一周已经结束，积分可能还在发放，下次更新会再试。",
+      "finalized": true,
+      "hasPoints": true,
+      "pointsStatus": "weekly",
+      "pointsNote": "积分接口按这一周的起止时间返回了发放榜。",
       "totals": {
         "traders": 736,
         "total_volume": 17603621.847349748,
@@ -64,8 +65,8 @@
         "retail_volume": 6210715.057349783,
         "retail_share_pct": 35.28089339345139,
         "retail_count": 730,
-        "points_traders": null,
-        "total_distributed_points": null
+        "points_traders": 722,
+        "total_distributed_points": 1470000.0
       }
     },
     {
