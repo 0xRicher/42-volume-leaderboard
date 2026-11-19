@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-18T18:48:06Z",
+  "updated_at": "2026-11-19T00:49:30Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
     "to": "2026-11-12T00:00:00.000Z"
   },
-  "current_start": "2026-11-12",
+  "current_start": "2026-11-19",
   "earliest_day": "2026-02-05",
   "pointsHistory": {
     "available": true,
@@ -17,6 +17,32 @@
   },
   "weeks": [
     {
+      "start": "2026-11-19",
+      "end": "2026-11-25",
+      "startAt": "2026-11-19T00:00:00Z",
+      "endExclusive": "2026-11-26T00:00:00Z",
+      "kind": "thursday",
+      "group": "points",
+      "weekNumber": 3,
+      "current": true,
+      "finalized": false,
+      "hasPoints": false,
+      "pointsStatus": "not_distributed",
+      "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
+      "totals": {
+        "traders": 93,
+        "total_volume": 440597.43713166215,
+        "mm_share_pct": 0.0,
+        "mm_volume": 0.0,
+        "mm_count": 0,
+        "retail_volume": 440597.43713166215,
+        "retail_share_pct": 100.0,
+        "retail_count": 93,
+        "points_traders": null,
+        "total_distributed_points": null
+      }
+    },
+    {
       "start": "2026-11-12",
       "end": "2026-11-18",
       "startAt": "2026-11-12T00:00:00Z",
@@ -24,20 +50,20 @@
       "kind": "thursday",
       "group": "points",
       "weekNumber": 2,
-      "current": true,
+      "current": false,
       "finalized": false,
       "hasPoints": false,
-      "pointsStatus": "not_distributed",
-      "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
+      "pointsStatus": "pending",
+      "pointsNote": "这一周已经结束，积分可能还在发放，下次更新会再试。",
       "totals": {
-        "traders": 732,
-        "total_volume": 17053794.49706283,
-        "mm_share_pct": 66.05859172244777,
-        "mm_volume": 11265496.48,
+        "traders": 736,
+        "total_volume": 17603621.847349748,
+        "mm_share_pct": 64.7191066065488,
+        "mm_volume": 11392906.79,
         "mm_count": 6,
-        "retail_volume": 5788298.017062822,
-        "retail_share_pct": 33.941408277552185,
-        "retail_count": 726,
+        "retail_volume": 6210715.057349783,
+        "retail_share_pct": 35.28089339345139,
+        "retail_count": 730,
         "points_traders": null,
         "total_distributed_points": null
       }
