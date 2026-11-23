@@ -3670,7 +3670,20 @@
           "win_rate": 0.01098901098901099,
           "trade_count": 364,
           "profitable_sells": 4,
-          "losing_sells": 360,
+          "losing_sells": 364,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 189,
+          "trader": "0xC75d6Ebb62644ACd34bBBC1fa7c0B7999c8eF9c0",
+          "volume": 14090.396474094696,
+          "pnl": -227.57972547750867,
+          "pnl_pct": -1.6151406803627972,
+          "win_rate": 0.010899182561307902,
+          "trade_count": 367,
+          "profitable_sells": 4,
+          "losing_sells": 363,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -7255,6 +7268,19 @@
         },
         {
           "rank": 53,
+          "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
+          "volume": 369166.6126796057,
+          "pnl": -5785.793119252127,
+          "pnl_pct": -1.5672579590163351,
+          "win_rate": 0.00010640561821664184,
+          "trade_count": 18791,
+          "profitable_sells": 1,
+          "losing_sells": 9397,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 54,
           "trader": "0xA8b8080f9257B50c723C7D4C98F217c921b04a13",
           "volume": 358480.394189575,
           "pnl": -3552.959987537845,
@@ -7267,7 +7293,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 54,
+          "rank": 55,
           "trader": "0xbad06db00c7Bb089B48929CC29F449C939A4e91B",
           "volume": 355813.48661572294,
           "pnl": 1311.2608117103362,
@@ -9305,7 +9331,7 @@
                 {
                   "address": "0xA8b8080f9257B50c723C7D4C98F217c921b04a13",
                   "volume": 358480.39419,
-                  "rank": 53,
+                  "rank": 54,
                   "trade_count": 72064,
                   "pnl_pct": -0.9911169606834719,
                   "win_rate": 0.05575635314224875,
@@ -10518,7 +10544,7 @@
           "win_rate": 0.01098901098901099,
           "trade_count": 364,
           "profitable_sells": 4,
-          "losing_sells": 360,
+          "losing_sells": 364,
           "winning_predictions": 0,
           "losing_predictions": 0
         },

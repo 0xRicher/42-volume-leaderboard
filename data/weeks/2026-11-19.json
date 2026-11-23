@@ -77,13 +77,13 @@
       {
         "rank": 3,
         "trader": "0x583AF2BD8A25B2E5886176B7D5bfA4D209e5b8d4",
-        "volume": 1361543.8434758242,
-        "pnl": -49790.191866596324,
-        "pnl_pct": -3.656892292171009,
+        "volume": 1371184.2084175455,
+        "pnl": -50143.61326838876,
+        "pnl_pct": -3.6569567356860415,
         "win_rate": 0.0,
-        "trade_count": 458,
+        "trade_count": 460,
         "profitable_sells": 0,
-        "losing_sells": 458,
+        "losing_sells": 460,
         "winning_predictions": 0,
         "losing_predictions": 0,
         "points_rank": null,
@@ -703,6 +703,22 @@
       },
       {
         "rank": 36,
+        "trader": "0xD75beC354A848e9AaB3c83b15B73ee7e6dd039BB",
+        "volume": 16360.169886233503,
+        "pnl": -272.59689613755023,
+        "pnl_pct": -1.6662228939745347,
+        "win_rate": 0.015384615384615385,
+        "trade_count": 86,
+        "profitable_sells": 1,
+        "losing_sells": 64,
+        "winning_predictions": 7,
+        "losing_predictions": 14,
+        "points_rank": null,
+        "points": null,
+        "name": null
+      },
+      {
+        "rank": 37,
         "trader": "0xc4B3203884D911BDe664A810Bb1020d125177424",
         "volume": 16312.106665557747,
         "pnl": -318.7062063688215,
@@ -721,7 +737,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 37,
+        "rank": 38,
         "trader": "0x61034071cd35E031390FF9aC6ac2Ee380406c4Dc",
         "volume": 16271.115035561457,
         "pnl": -271.48810757280694,
@@ -740,7 +756,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 38,
+        "rank": 39,
         "trader": "0x805057c0489B2326c2ba003EAd6927F0C6Ed9f17",
         "volume": 16231.733403249205,
         "pnl": -232.22005321961237,
@@ -759,7 +775,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 39,
+        "rank": 40,
         "trader": "0xD3c765EF014682477711BD6889755AebFF169a0C",
         "volume": 16226.69591878133,
         "pnl": -362.3587077601144,
@@ -778,7 +794,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 40,
+        "rank": 41,
         "trader": "0xa87ACc600152a1a08aCFB0198F881681c5e63B7a",
         "volume": 16218.20863174599,
         "pnl": -310.9304478997703,
@@ -797,7 +813,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 41,
+        "rank": 42,
         "trader": "0x283e55C052A04Aa15c109eC336D584A270e34346",
         "volume": 16216.248480566775,
         "pnl": -375.92213765896736,
@@ -816,7 +832,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 42,
+        "rank": 43,
         "trader": "0x898A873B77ff4FedF11a355fa1c037e82E6F41ae",
         "volume": 16185.096043323592,
         "pnl": -318.64873990052166,
@@ -835,7 +851,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 43,
+        "rank": 44,
         "trader": "0xc0ED4AE93d61eB8e049136cC5d8051c6e660665a",
         "volume": 15977.299075707551,
         "pnl": -269.6954281636461,
@@ -854,7 +870,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 44,
+        "rank": 45,
         "trader": "0x21FB64EA363A45bF8a7d737953A64562105299A3",
         "volume": 15848.569010584075,
         "pnl": -293.25086068680315,
@@ -873,7 +889,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 45,
+        "rank": 46,
         "trader": "0x40750fbFc5d3EEA3D083ED822D1e00d37f239e06",
         "volume": 15833.212945533816,
         "pnl": -245.78320593876074,
@@ -949,7 +965,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 49,
+        "rank": 50,
         "trader": "0xa3456B4Ca104BBf95ca4C0b2C51424ca8C831F00",
         "volume": 15686.130126278378,
         "pnl": -238.61764895486417,
@@ -1443,7 +1459,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 75,
+        "rank": 76,
         "trader": "0xeC83941586E77c11a3d7fd3f0EeC6CE4173C5cC8",
         "volume": 14454.45238191565,
         "pnl": -294.03179463677594,
@@ -1462,7 +1478,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 76,
+        "rank": 77,
         "trader": "0xf6642B489dCA96dc26b6ED797275B01D966aAdA8",
         "volume": 14333.359414039147,
         "pnl": -292.9807221634396,
@@ -1481,7 +1497,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 77,
+        "rank": 78,
         "trader": "0x99b676BEBb080B8b8048B72C7b49B570CD7886B8",
         "volume": 14237.172904309036,
         "pnl": -289.2485183884099,
@@ -1500,7 +1516,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 78,
+        "rank": 79,
         "trader": "0xf8C8b5149A6212ea7904a7Aa9B8c4EB2a36B8319",
         "volume": 14221.054970885441,
         "pnl": -257.3362641586268,
@@ -1519,7 +1535,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 79,
+        "rank": 80,
         "trader": "0xd110520b79CA6E1d68cc30B98dc43b364a5Ff1f7",
         "volume": 14178.587048177711,
         "pnl": -220.62440204861258,
@@ -1538,7 +1554,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 80,
+        "rank": 81,
         "trader": "0x2e358672d12Fc9Ef0c82A3b11130746Ff59C2BB0",
         "volume": 14056.43490864546,
         "pnl": -222.05827773444952,
@@ -1565,7 +1581,7 @@
         "win_rate": 0.01098901098901099,
         "trade_count": 364,
         "profitable_sells": 4,
-        "losing_sells": 360,
+        "losing_sells": 364,
         "winning_predictions": 0,
         "losing_predictions": 0,
         "points_rank": null,
@@ -1614,7 +1630,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 84,
+        "rank": 85,
         "trader": "0x6788e688615c022551bf2DB6912a0Be180A548fc",
         "volume": 13683.44717529831,
         "pnl": -207.45563620526124,
@@ -1633,7 +1649,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 85,
+        "rank": 86,
         "trader": "0x51E64F3F89BfC7A6Be271abf9137e5C4913a1955",
         "volume": 13245.360655023738,
         "pnl": -253.92208688779345,
@@ -1652,7 +1668,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 86,
+        "rank": 87,
         "trader": "0x7581ac7Bb27a801AB090cdDD91Ce0eEB522F194A",
         "volume": 13162.733765011042,
         "pnl": -261.3081740405618,
@@ -1671,7 +1687,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 87,
+        "rank": 88,
         "trader": "0x84FCBF150A9F54b1Be2A5a447bF03c046dcc3519",
         "volume": 13069.006610224613,
         "pnl": -155.06320283626565,
@@ -1976,6 +1992,22 @@
       },
       {
         "rank": 103,
+        "trader": "0x2AA73f65Db7965B7FC917Cd0b350d9a14d1136DA",
+        "volume": 10747.406179607276,
+        "pnl": -166.90144571108792,
+        "pnl_pct": -1.5529462916157013,
+        "win_rate": 0.007194244604316547,
+        "trade_count": 278,
+        "profitable_sells": 2,
+        "losing_sells": 276,
+        "winning_predictions": 0,
+        "losing_predictions": 0,
+        "points_rank": null,
+        "points": null,
+        "name": null
+      },
+      {
+        "rank": 104,
         "trader": "0xDf17448b2dAF04A1ee52a99482b4Ee59166b086f",
         "volume": 10544.374033072965,
         "pnl": -169.1275778632777,
@@ -1994,7 +2026,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 104,
+        "rank": 105,
         "trader": "0x00d52077ebb66923c69b41e72a6Fc8a279d83713",
         "volume": 10540.494361115356,
         "pnl": -215.32658410102155,
@@ -2299,6 +2331,22 @@
       },
       {
         "rank": 120,
+        "trader": "0x2FC7D3C70A2ebb8f4411224d50e5760EcF10C92E",
+        "volume": 9472.41156528037,
+        "pnl": -164.43135433826092,
+        "pnl_pct": -1.735897487192787,
+        "win_rate": 0.008097165991902834,
+        "trade_count": 247,
+        "profitable_sells": 2,
+        "losing_sells": 245,
+        "winning_predictions": 0,
+        "losing_predictions": 0,
+        "points_rank": null,
+        "points": null,
+        "name": null
+      },
+      {
+        "rank": 121,
         "trader": "0x7eA0A14012663b311A40362A8FF9C817C2D09C86",
         "volume": 9438.0975951561,
         "pnl": -174.36404299786543,
@@ -2317,7 +2365,7 @@
         "pool_role": "trader"
       },
       {
-        "rank": 121,
+        "rank": 122,
         "trader": "0xDF4aa01A21c96180d1435FC91c0781fab1dc6b82",
         "volume": 9359.207946164679,
         "pnl": -193.8706210024637,
@@ -3287,6 +3335,38 @@
       },
       {
         "rank": 172,
+        "trader": "0x6facf620205feC9d2FeeC82a2Fc3d96Ad6686266",
+        "volume": 5236.582330423676,
+        "pnl": -80.61177748035297,
+        "pnl_pct": -1.5393967361500631,
+        "win_rate": 0.014492753623188406,
+        "trade_count": 138,
+        "profitable_sells": 2,
+        "losing_sells": 136,
+        "winning_predictions": 0,
+        "losing_predictions": 0,
+        "points_rank": null,
+        "points": null,
+        "name": null
+      },
+      {
+        "rank": 173,
+        "trader": "0xa4044C557C754dc3a3711562aF74F4828F6776fC",
+        "volume": 5228.9708989971605,
+        "pnl": -90.067040457918,
+        "pnl_pct": -1.7224620713645877,
+        "win_rate": 0.02142857142857143,
+        "trade_count": 140,
+        "profitable_sells": 3,
+        "losing_sells": 137,
+        "winning_predictions": 0,
+        "losing_predictions": 0,
+        "points_rank": null,
+        "points": null,
+        "name": null
+      },
+      {
+        "rank": 174,
         "trader": "0x8E0903F7A921e9fA1CED3EECEAbAAD388de9414c",
         "volume": 5213.813091682936,
         "pnl": -97.75962954316763,
