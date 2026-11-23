@@ -1146,9 +1146,9 @@
         "winning_predictions": 1,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.9524752475247524,
+        "regular_volume": 31460.76313828252,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x7fa2b4b568da91d0fc490d9a701de932f2d4d1a6",
@@ -4046,9 +4046,9 @@
         "winning_predictions": 0,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 9.900990099009901,
+        "regular_volume": -9.900990099009901,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x2a3663b00bc4486b4a931e23861fff95277d5572",
@@ -4806,9 +4806,9 @@
         "winning_predictions": 0,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 3.9603960396039604,
+        "regular_volume": -3.9603960396039604,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x9de96a9ad8297b3e7ea318b64f530c1c4830c719",
@@ -6466,9 +6466,9 @@
         "winning_predictions": 4,
         "losing_predictions": 11,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 613.264856928972,
+        "regular_volume": -613.264856928972,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x4e9f15be6d23fb481d36d621960fdbdb7c264d8f",
@@ -6766,9 +6766,9 @@
         "winning_predictions": 3,
         "losing_predictions": 13,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 421.92488195759455,
+        "regular_volume": -421.92488195759455,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x07988ad91948f9674cda754fb95bfd0573066352",
@@ -8186,9 +8186,9 @@
         "winning_predictions": 2,
         "losing_predictions": 8,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 187.4133817965202,
+        "regular_volume": -187.4133817965202,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x2502c26c62c09f4417ac59d808057a94f4042ed5",
@@ -8206,9 +8206,9 @@
         "winning_predictions": 3,
         "losing_predictions": 13,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 174.66111702122907,
+        "regular_volume": -174.66111702122907,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x1a096fb30c4f1eae6fca8156065eb13c6822a898",
@@ -8426,9 +8426,9 @@
         "winning_predictions": 3,
         "losing_predictions": 15,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 140.31577839188733,
+        "regular_volume": -140.31577839188733,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xe6ce1730525c2a631e898e409e68b1acb39412e1",
@@ -8806,9 +8806,9 @@
         "winning_predictions": 3,
         "losing_predictions": 9,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 112.84073204639874,
+        "regular_volume": -112.84073204639874,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x67cae0333741fe313a16ce70b53191fcde82680a",
@@ -9386,9 +9386,9 @@
         "winning_predictions": 6,
         "losing_predictions": 24,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 82.42242302731913,
+        "regular_volume": -82.42242302731913,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x25ec3487d017c248b0a5c5384c4655816ae86c9d",
@@ -9546,9 +9546,9 @@
         "winning_predictions": 3,
         "losing_predictions": 11,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 72.61015699834361,
+        "regular_volume": -72.61015699834361,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x292e7c25e30cf6f9d56be76ca2a958777196c015",
@@ -9666,9 +9666,9 @@
         "winning_predictions": 5,
         "losing_predictions": 21,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 67.70400591692635,
+        "regular_volume": -67.70400591692635,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x4ee4e3cb9c75696a29b8b26d2aee150ca7b4415b",
@@ -10006,9 +10006,9 @@
         "winning_predictions": 1,
         "losing_predictions": 7,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 53.96761311241121,
+        "regular_volume": -53.96761311241121,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xde616237d19f351e2a35a1fca5a3dba5a8500447",
@@ -10166,9 +10166,9 @@
         "winning_predictions": 1,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 48.0798475030943,
+        "regular_volume": -48.0798475030943,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x856fee6e1b2196585eeaea6bba0290c8cd1b22e2",
@@ -10566,9 +10566,9 @@
         "winning_predictions": 1,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 1.4851485148514851,
+        "regular_volume": -1.4851485148514851,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x60ccd82b69a73cb4a122b9256f4c2ba7a6f27695",
@@ -10626,9 +10626,9 @@
         "winning_predictions": 3,
         "losing_predictions": 7,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 41.21227123190414,
+        "regular_volume": -41.21227123190414,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x97fd3f4493846fecbc767bf6c97512b637e6e58c",
@@ -10686,9 +10686,9 @@
         "winning_predictions": 1,
         "losing_predictions": 7,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 35.32419163429419,
+        "regular_volume": -35.32419163429419,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x5bb519db601e75b4c3e3317e6fe47e044744b54e",
@@ -10846,9 +10846,9 @@
         "winning_predictions": 0,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 29.43670861110012,
+        "regular_volume": -29.43670861110012,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x58229a20652ec6f48648b72023976ed49006b81f",
@@ -10906,9 +10906,9 @@
         "winning_predictions": 2,
         "losing_predictions": 6,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 45.050368274171525,
+        "regular_volume": -45.050368274171525,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xcefa1b7cf2c6ad6ad68c51ca5bdd97876fea8a26",
@@ -10926,9 +10926,9 @@
         "winning_predictions": 0,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 24.531014406143374,
+        "regular_volume": -24.531014406143374,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x044f457963d8716db2a361ab5846585a52acbc03",
@@ -10946,9 +10946,9 @@
         "winning_predictions": 0,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 24.530449211290442,
+        "regular_volume": -24.530449211290442,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xeaeee5def170d2ef4c8f85c0d5b1ef4ca2352979",
@@ -11006,9 +11006,9 @@
         "winning_predictions": 0,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 23.549319786880865,
+        "regular_volume": -23.549319786880865,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x53721212db753e14f0217967e8d34e05f02774b0",
@@ -11166,9 +11166,9 @@
         "winning_predictions": 1,
         "losing_predictions": 9,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 24.53175229032493,
+        "regular_volume": -24.53175229032493,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xc9ae1998445c8c8999905df4143caca27dd16b2d",
@@ -11186,9 +11186,9 @@
         "winning_predictions": 0,
         "losing_predictions": 6,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 21.58685684882365,
+        "regular_volume": -21.58685684882365,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xc558bacf348886eec1d413afb349eeae11d4ecfa",
@@ -11206,9 +11206,9 @@
         "winning_predictions": 3,
         "losing_predictions": 10,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 24.53059050975252,
+        "regular_volume": -24.53059050975252,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x1259513711f5faceae9215e39f3d3bd89f110b3f",
@@ -11226,9 +11226,9 @@
         "winning_predictions": 4,
         "losing_predictions": 12,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 24.53095159954242,
+        "regular_volume": -24.53095159954242,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x9048cd17f95a710f129b00dbb35745e297f19a5d",
@@ -11266,9 +11266,9 @@
         "winning_predictions": 2,
         "losing_predictions": 12,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 22.764837003652687,
+        "regular_volume": -22.764837003652687,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xc0167fbafe6afc6cee0bb570dd33fb3113e966af",
@@ -11566,9 +11566,9 @@
         "winning_predictions": 3,
         "losing_predictions": 7,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 16.681084140953455,
+        "regular_volume": -16.681084140953455,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x17c1dea5fa8b081de8800b7e8fe3212b21346ea1",
@@ -11686,9 +11686,9 @@
         "winning_predictions": 2,
         "losing_predictions": 13,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 15.700001814524082,
+        "regular_volume": -15.700001814524082,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x10d18f2129f599b4bd5d178fc395dd2621a94431",
@@ -11706,9 +11706,9 @@
         "winning_predictions": 4,
         "losing_predictions": 12,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 16.680958549102723,
+        "regular_volume": -16.680958549102723,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x7f0e4931d59391b30a2f73d73befd1fe03afbf5e",
@@ -11726,9 +11726,9 @@
         "winning_predictions": 3,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 4.691579355995146,
+        "regular_volume": -4.691579355995146,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xe3c60cbcd538e533dadbf64a59141ab4021f23a7",
@@ -11766,9 +11766,9 @@
         "winning_predictions": 2,
         "losing_predictions": 14,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 15.699860514052535,
+        "regular_volume": -15.699860514052535,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x4471dc71fc2deef62b2c258ceebd4c01e7a0beea",
@@ -11926,9 +11926,9 @@
         "winning_predictions": 2,
         "losing_predictions": 6,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 20.481120245445947,
+        "regular_volume": -20.481120245445947,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x4acf6864cabdcfb576ebcc89c8ebdcad53aee7ff",
@@ -11946,9 +11946,9 @@
         "winning_predictions": 2,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 12.756048358750697,
+        "regular_volume": -12.756048358750697,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x9eff732a435a2686e49fb08786b031fbda3bd255",
@@ -11966,9 +11966,9 @@
         "winning_predictions": 1,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 12.755797167513393,
+        "regular_volume": -12.755797167513393,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xda06eee16df4a8092c170aefcb0c3a25252453d9",
@@ -12006,9 +12006,9 @@
         "winning_predictions": 2,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 14.718322905891867,
+        "regular_volume": -14.718322905891867,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x78bbac91933f6f9341fb34a4b9e84623e41af745",
@@ -12066,9 +12066,9 @@
         "winning_predictions": 6,
         "losing_predictions": 13,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 9.646771527840581,
+        "regular_volume": -9.646771527840581,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xecdd7dba79f98421d2c8c1d6f250f1e6b06c9e91",
@@ -12106,9 +12106,9 @@
         "winning_predictions": 0,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 10.793397025758352,
+        "regular_volume": -10.793397025758352,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xd7ee0c15ad9fb76ac52fa4d5e45ec0e5e4a1e0d9",
@@ -12126,9 +12126,9 @@
         "winning_predictions": 0,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 10.793334227697855,
+        "regular_volume": -10.793334227697855,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xf0031c5f57502724ef205bfe216468bec78e68e2",
@@ -12166,9 +12166,9 @@
         "winning_predictions": 1,
         "losing_predictions": 8,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 10.793601118010724,
+        "regular_volume": -10.793601118010724,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x2747ad71ff7532c9a6d66f51c7490f8505da5a1d",
@@ -12186,9 +12186,9 @@
         "winning_predictions": 4,
         "losing_predictions": 10,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 11.774683444440175,
+        "regular_volume": -11.774683444440175,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xfbb6b6e4014c5dd4decc8dc195f437715035b89c",
@@ -12226,9 +12226,9 @@
         "winning_predictions": 0,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 9.812236203700051,
+        "regular_volume": -9.812236203700051,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x419c2ded1f339d5d8a8acf3195438498857be4f4",
@@ -12246,9 +12246,9 @@
         "winning_predictions": 0,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 9.812173404383575,
+        "regular_volume": -9.812173404383575,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x5e425c06a9b8df6eabfc4db7eb3186445b01a202",
@@ -12266,9 +12266,9 @@
         "winning_predictions": 0,
         "losing_predictions": 1,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 9.812173404383575,
+        "regular_volume": -9.812173404383575,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x46bf891d85471aec3a04e0e7efb5b59c76685336",
@@ -12346,9 +12346,9 @@
         "winning_predictions": 1,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 9.812247194007487,
+        "regular_volume": -9.812247194007487,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x89e09872d1adb397b535109819ddd7583f7f800e",
@@ -12366,9 +12366,9 @@
         "winning_predictions": 0,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 8.831310874305881,
+        "regular_volume": -8.831310874305881,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x39edf9fc2b17c31a800dad2eadff0f78770f5f78",
@@ -12386,9 +12386,9 @@
         "winning_predictions": 4,
         "losing_predictions": 6,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 10.793915111327486,
+        "regular_volume": -10.793915111327486,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xd5312687725da7f7ddeb956b776e69659a8b789b",
@@ -12446,9 +12446,9 @@
         "winning_predictions": 1,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 11.80990099009901,
+        "regular_volume": -11.80990099009901,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x784e105960e35115f45ef2f316fca4e0d2114445",
@@ -12466,9 +12466,9 @@
         "winning_predictions": 1,
         "losing_predictions": 7,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 7.850071557623483,
+        "regular_volume": -7.850071557623483,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x2b4b706a2e76f5e4fbf2dbdb9bdf0c3b8a7f28a0",
@@ -12586,9 +12586,9 @@
         "winning_predictions": 2,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 7.849788962960041,
+        "regular_volume": -7.849788962960041,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xd72b77fb96362b8b75a9648026482a8c0c15b08f",
@@ -12606,9 +12606,9 @@
         "winning_predictions": 2,
         "losing_predictions": 6,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 7.849788962960041,
+        "regular_volume": -7.849788962960041,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xe197628a03d2cc7810beb9fb68b06967c759eec6",
@@ -12626,9 +12626,9 @@
         "winning_predictions": 2,
         "losing_predictions": 6,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 7.849788962960041,
+        "regular_volume": -7.849788962960041,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x30e05ce90164ba90268acaa2898405035d14575c",
@@ -12646,9 +12646,9 @@
         "winning_predictions": 0,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 5.9405940594059405,
+        "regular_volume": -5.9405940594059405,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x8af968d77e9b30287b5bfb9710d979380abbd3f5",
@@ -12666,9 +12666,9 @@
         "winning_predictions": 1,
         "losing_predictions": 7,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 9.192492835410171,
+        "regular_volume": -9.192492835410171,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x9c28c83d8e6bef22dd087d0b64c55e44e467e111",
@@ -12706,9 +12706,9 @@
         "winning_predictions": 1,
         "losing_predictions": 1,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 8.178356435643565,
+        "regular_volume": -8.178356435643565,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x2867911ed77e82187e7c6545adaf2b60e1687b89",
@@ -12726,9 +12726,9 @@
         "winning_predictions": 0,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 7.873267326732673,
+        "regular_volume": -7.873267326732673,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x2c709b6383ff024fa178d0c845c03dda546f9ded",
@@ -12766,9 +12766,9 @@
         "winning_predictions": 1,
         "losing_predictions": 1,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 6.868502544278332,
+        "regular_volume": -6.868502544278332,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xab03071b7f6ff2a451c4142cac78510aecd53ffb",
@@ -12806,9 +12806,9 @@
         "winning_predictions": 0,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 5.396723632203858,
+        "regular_volume": -5.396723632203858,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x9f4e13ac5d69f4cbd39acc0e10f2aefa66cd14a7",
@@ -12846,9 +12846,9 @@
         "winning_predictions": 3,
         "losing_predictions": 7,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 8.307509878802954,
+        "regular_volume": -8.307509878802954,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x284b3ab1ecfcaea66991f599dea2b33415738a81",
@@ -12866,9 +12866,9 @@
         "winning_predictions": 0,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 4.907954939908243,
+        "regular_volume": -4.907954939908243,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x200b612a4c040dcace6b88fa8e079b79377802a7",
@@ -12886,9 +12886,9 @@
         "winning_predictions": 0,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 4.906118106371432,
+        "regular_volume": -4.906118106371432,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xfd211f11489af981b214b661fa053082268a4d32",
@@ -12906,9 +12906,9 @@
         "winning_predictions": 0,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 4.906118104110729,
+        "regular_volume": -4.906118104110729,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x39c8627191638611ad8dbaa0f70bed6c483a5399",
@@ -12926,9 +12926,9 @@
         "winning_predictions": 0,
         "losing_predictions": 5,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 4.9061181018500255,
+        "regular_volume": -4.9061181018500255,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xb4818c7aca08a9ce33b7837c68fdfd6c2da95ca8",
@@ -12946,9 +12946,9 @@
         "winning_predictions": 0,
         "losing_predictions": 1,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 4.9061181018500255,
+        "regular_volume": -4.9061181018500255,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xdee94459baab6d268bb813d26fb3111d9a3ae613",
@@ -12966,9 +12966,9 @@
         "winning_predictions": 0,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 4.9061181018500255,
+        "regular_volume": -4.9061181018500255,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x9aaef91578844d1ae19ef8625e5a7abb291b7e36",
@@ -12986,9 +12986,9 @@
         "winning_predictions": 0,
         "losing_predictions": 1,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 4.906055304291901,
+        "regular_volume": -4.906055304291901,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x33dbfad343c0d6081cab18f71aa5d1187ccad2f4",
@@ -13046,9 +13046,9 @@
         "winning_predictions": 1,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 5.8874673168338925,
+        "regular_volume": -5.8874673168338925,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xc74894de92d66307cfcbf4fd1c62c1fe95f4193d",
@@ -13166,9 +13166,9 @@
         "winning_predictions": 1,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 4.906133801176776,
+        "regular_volume": -4.906133801176776,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x5d18b5d63ab3a9f95ca20bf4cebb50eaea3a95fe",
@@ -13206,9 +13206,9 @@
         "winning_predictions": 2,
         "losing_predictions": 6,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 6.719532416835502,
+        "regular_volume": -6.719532416835502,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x932a0877ff3a41a688095df3c8ff150fb0f14ee8",
@@ -13246,9 +13246,9 @@
         "winning_predictions": 4,
         "losing_predictions": 9,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 6.397029702970297,
+        "regular_volume": -6.397029702970297,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x5ae68744aaa918c7a1916eb25774b4c0fd4f3c11",
@@ -13286,9 +13286,9 @@
         "winning_predictions": 0,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 3.9250357754206306,
+        "regular_volume": -3.9250357754206306,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x9e6b9cc64ec96e68fb50a27d48a5b94e42947b30",
@@ -13366,9 +13366,9 @@
         "winning_predictions": 1,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 3.925035779942093,
+        "regular_volume": -3.925035779942093,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x673955c3fdfcad270f98898019d94da0e283e1b1",
@@ -13506,9 +13506,9 @@
         "winning_predictions": 2,
         "losing_predictions": 4,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 5.0981006474021555,
+        "regular_volume": -5.0981006474021555,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x80fe31e70bddd0e27539dc59867ada05cd53320c",
@@ -13526,9 +13526,9 @@
         "winning_predictions": 0,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.943953449996033,
+        "regular_volume": -2.943953449996033,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x418f59dce24d95590f25c6a6b8e3d45109a5096f",
@@ -13546,9 +13546,9 @@
         "winning_predictions": 0,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.9436708611100153,
+        "regular_volume": -2.9436708611100153,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xbd897a591d0267cf07dbca9b1bede0ddc139ad5e",
@@ -13566,9 +13566,9 @@
         "winning_predictions": 0,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.9436708611100153,
+        "regular_volume": -2.9436708611100153,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xf6066fe683630e5605b843c23d5511636631d10b",
@@ -13586,9 +13586,9 @@
         "winning_predictions": 1,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 3.925051477761642,
+        "regular_volume": -3.925051477761642,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x460bd545332464e98ffc4c7d7d0adbdbe378b1ac",
@@ -13606,9 +13606,9 @@
         "winning_predictions": 1,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 3.924937698456176,
+        "regular_volume": -3.924937698456176,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x41620d969ef2a06776cb0c2f9d8c7e4c5dcd75de",
@@ -13626,9 +13626,9 @@
         "winning_predictions": 1,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 3.9248944814800204,
+        "regular_volume": -3.9248944814800204,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x926634932927b388a7c06d4193e7792abbe11881",
@@ -13646,9 +13646,9 @@
         "winning_predictions": 1,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 3.9248944814800204,
+        "regular_volume": -3.9248944814800204,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xa3ae9ead8f066e193f0ffce9b9c1667f720bc780",
@@ -13666,9 +13666,9 @@
         "winning_predictions": 1,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.9436708611100153,
+        "regular_volume": -2.9436708611100153,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x3b4a0f84a29037975ad3e927f8b3d77df4edae47",
@@ -13726,9 +13726,9 @@
         "winning_predictions": 1,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.9438121573113487,
+        "regular_volume": -2.9438121573113487,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x165c278a3f1bd2fbded5ce8116e6a2fcad32fb99",
@@ -13786,9 +13786,9 @@
         "winning_predictions": 1,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.9702970297029703,
+        "regular_volume": -2.9702970297029703,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xe2b23bb03bdc890cf1ee27102822a45fa0a544e7",
@@ -13806,9 +13806,9 @@
         "winning_predictions": 0,
         "losing_predictions": 1,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 1.9624944386935168,
+        "regular_volume": -1.9624944386935168,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x2206452969cdb7961b837c628062adf592418b28",
@@ -13826,9 +13826,9 @@
         "winning_predictions": 0,
         "losing_predictions": 1,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 1.9624472407400102,
+        "regular_volume": -1.9624472407400102,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x32b1d0f0b942e7c5f9e43736c8bb2ba529a0ff36",
@@ -13846,9 +13846,9 @@
         "winning_predictions": 0,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 1.9624472407400102,
+        "regular_volume": -1.9624472407400102,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0xff8dd9ab41f3848ce6d35d25d8cd971882771e58",
@@ -13866,9 +13866,9 @@
         "winning_predictions": 1,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.9436708611100153,
+        "regular_volume": -2.9436708611100153,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x5d08eaef38253b6c5fc6973111cf0e00a8f69c4a",
@@ -13906,9 +13906,9 @@
         "winning_predictions": 0,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.4603960396039604,
+        "regular_volume": -2.4603960396039604,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x73e27582dc60a87aa0cbc0ede799be03615d932e",
@@ -13966,9 +13966,9 @@
         "winning_predictions": 0,
         "losing_predictions": 1,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 1.9643564356435643,
+        "regular_volume": -1.9643564356435643,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x274f4435db49a55b81918670e2c3342019873e1e",
@@ -14006,9 +14006,9 @@
         "winning_predictions": 1,
         "losing_predictions": 2,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.014783929964175,
+        "regular_volume": -2.014783929964175,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x31af9f245eaab5e84c4e2d15dc78913c9947743b",
@@ -14066,9 +14066,9 @@
         "winning_predictions": 1,
         "losing_predictions": 3,
         "traded": true,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 1.9683168316831683,
+        "regular_volume": -1.9683168316831683,
+        "pool_role": "blitz_real"
       },
       {
         "address": "0x483783dea37c7372e1355b3f432879be9cf32d38",
@@ -15651,9 +15651,9 @@
         "points_rank": 56,
         "points": 7378.419297033152,
         "name": null,
-        "blitz_volume": null,
-        "regular_volume": null,
-        "pool_role": null
+        "blitz_volume": 2.9524752475247524,
+        "regular_volume": 31460.76313828252,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 63,
@@ -18339,7 +18339,7 @@
   },
   "breakdown": {
     "status": "partial",
-    "fetched_at": "2026-11-23T07:49:22Z",
+    "fetched_at": "2026-11-23T08:27:33Z",
     "formula": "regular = total - blitz_total - agents; blitz_seed = blitz_total - blitz_real",
     "total": 17603621.847349748,
     "blitz_total": 11433996.803571187,
@@ -18387,10 +18387,10 @@
     "race_count": 10897,
     "seed_addresses": [],
     "gaps_closed": false,
-    "note": "本轮每钱包 Blitz 已到约 5 分钟上限，下次运行从缓存继续。 真实玩家 Blitz 还有 3464.41 没有落到具体钱包。 种子 Blitz 还有 11392906.79 没有落到具体钱包。 3 个 Blitz 请求失败。失败的钱包不填 0。",
+    "note": "本轮每钱包 Blitz 已到约 5 分钟上限，下次运行从缓存继续。 真实玩家 Blitz 还有 669.69 没有落到具体钱包。 种子 Blitz 还有 11392906.79 没有落到具体钱包。 3 个 Blitz 请求失败。失败的钱包不填 0。",
     "wallet_check": {
-      "real_sum": 37625.6061875013,
-      "real_gap": 3464.407383685204,
+      "real_sum": 40420.32740882654,
+      "real_gap": 669.6861623599616,
       "seed_sum": 0,
       "seed_gap": 11392906.790000001,
       "failed": 3
@@ -20038,6 +20038,825 @@
         "agent": null,
         "role": "blitz_real",
         "races": 2
+      },
+      {
+        "address": "0x460BD545332464E98fFc4C7D7d0AdBDbE378b1AC",
+        "blitz": 3.924937698456176,
+        "regular": -3.924937698456176,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x2b6f82Cef0C58Afd1698f360554161AbC434a20C",
+        "blitz": 1.9683168316831683,
+        "regular": -1.9683168316831683,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xbCE784C82aACaa1a7FC4502D640247A1a8491e2f",
+        "blitz": 2.9438121573113487,
+        "regular": -2.9438121573113487,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xa3ae9Ead8F066E193f0fFce9b9c1667F720BC780",
+        "blitz": 2.9436708611100153,
+        "regular": -2.9436708611100153,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xff8dD9aB41F3848ce6D35d25d8Cd971882771E58",
+        "blitz": 2.9436708611100153,
+        "regular": -2.9436708611100153,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xf701478782CED01759E088843DFa4292283AEeCC",
+        "blitz": 2.9524752475247524,
+        "regular": 31460.76313828252,
+        "leaderboard": 31463.715613530047,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x98e0aDe91D8aaBA571B5262BA78731a3E67A4152",
+        "blitz": 2.014783929964175,
+        "regular": -2.014783929964175,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x2fB13E168E05E689dCfeb06fFa930cD3dfe9d73d",
+        "blitz": 5.8874673168338925,
+        "regular": -5.8874673168338925,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x7f0e4931d59391B30a2F73d73BefD1FE03AfBF5e",
+        "blitz": 4.691579355995146,
+        "regular": -4.691579355995146,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x49d07AD5ecD5c31c73BE01596d2A1D6e51Ed72F3",
+        "blitz": 14.718322905891867,
+        "regular": -14.718322905891867,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xff869fA83BDA026280C908C1D133B674EE380adc",
+        "blitz": 6.397029702970297,
+        "regular": -6.397029702970297,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0xf6066FE683630E5605b843c23d5511636631D10B",
+        "blitz": 3.925051477761642,
+        "regular": -3.925051477761642,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x41620D969Ef2a06776Cb0c2f9d8C7e4C5DCD75dE",
+        "blitz": 3.9248944814800204,
+        "regular": -3.9248944814800204,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x39EdF9fc2B17C31a800daD2eaDff0f78770f5F78",
+        "blitz": 10.793915111327486,
+        "regular": -10.793915111327486,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x926634932927b388A7c06D4193E7792aBBE11881",
+        "blitz": 3.9248944814800204,
+        "regular": -3.9248944814800204,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x2B68348CeE3DCb3B6cBb93b7d7c54ea4E92f2F11",
+        "blitz": 3.925035779942093,
+        "regular": -3.925035779942093,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x82AD6c6f8670746b22Abce5A1823B5373fDC5f0d",
+        "blitz": 5.0981006474021555,
+        "regular": -5.0981006474021555,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x97D83735c51178129bAe1BD7686ea0E942184864",
+        "blitz": 6.868502544278332,
+        "regular": -6.868502544278332,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x9800D530902125b7AfA6c2260F552585Cf4751fc",
+        "blitz": 4.906133801176776,
+        "regular": -4.906133801176776,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x88797edFFAB6DfBB37bF11F238bC2f77232Ac1C1",
+        "blitz": 6.719532416835502,
+        "regular": -6.719532416835502,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0xD72b77FB96362b8b75a9648026482a8C0C15b08f",
+        "blitz": 7.849788962960041,
+        "regular": -7.849788962960041,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0x6a30557bD1Dbd2AeeC400D553959602Cea17ebb7",
+        "blitz": 7.849788962960041,
+        "regular": -7.849788962960041,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0xA19b6dE5100A5407fD67Afbd1C87E47B34c70404",
+        "blitz": 8.307509878802954,
+        "regular": -8.307509878802954,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x19E0627994ba5C5e81F1bf402784efB67a947B44",
+        "blitz": 9.646771527840581,
+        "regular": -9.646771527840581,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 18
+      },
+      {
+        "address": "0xE1835aF987A0746894BDd1E7a6Bd937ec4103263",
+        "blitz": 11.80990099009901,
+        "regular": -11.80990099009901,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xe197628A03d2cC7810BeB9fb68B06967C759Eec6",
+        "blitz": 7.849788962960041,
+        "regular": -7.849788962960041,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0x784e105960E35115F45eF2f316fca4e0D2114445",
+        "blitz": 7.850071557623483,
+        "regular": -7.850071557623483,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0x98A8Ff629CFc1ea2CF5D1526bC6FD39D0363F61C",
+        "blitz": 20.481120245445947,
+        "regular": -20.481120245445947,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x8Af968d77E9b30287b5BfB9710D979380aBbD3f5",
+        "blitz": 9.192492835410171,
+        "regular": -9.192492835410171,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0x4caD4Fb82bfee2826316FF9BaE54B0E7dF416c6c",
+        "blitz": 8.178356435643565,
+        "regular": -8.178356435643565,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x10D18F2129f599b4bD5D178FC395Dd2621A94431",
+        "blitz": 16.680958549102723,
+        "regular": -16.680958549102723,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 16
+      },
+      {
+        "address": "0xDb2a7e3b0Ba2E2c5DC6dBccED393D2ea367bC5bD",
+        "blitz": 9.812247194007487,
+        "regular": -9.812247194007487,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x9EFF732A435A2686E49fb08786b031FbdA3BD255",
+        "blitz": 12.755797167513393,
+        "regular": -12.755797167513393,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x0229B0Fe3BEfcf6999Ad08c1989c73A14a387659",
+        "blitz": 10.793601118010724,
+        "regular": -10.793601118010724,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0x4acF6864cabDCFb576ebCc89c8eBdCaD53aeE7FF",
+        "blitz": 12.756048358750697,
+        "regular": -12.756048358750697,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0x0e28F19b57fBA8bFB8Ef91a8E39D924375fC039d",
+        "blitz": 16.681084140953455,
+        "regular": -16.681084140953455,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0xc558BACf348886Eec1d413aFB349EEAE11d4ECFa",
+        "blitz": 24.53059050975252,
+        "regular": -24.53059050975252,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0x3564C8BD066Ec0755a625B5153c790DDdf9042Cb",
+        "blitz": 15.700001814524082,
+        "regular": -15.700001814524082,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 15
+      },
+      {
+        "address": "0x74284FC1E8849C3c41705A48fe512E005350a44D",
+        "blitz": 15.699860514052535,
+        "regular": -15.699860514052535,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0xabAE9B378c92a5cF725F2c1579e84595B7825680",
+        "blitz": 45.050368274171525,
+        "regular": -45.050368274171525,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x55BC822cBB9b45d326F37F6752e4e381B1C65206",
+        "blitz": 24.53175229032493,
+        "regular": -24.53175229032493,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0x1259513711f5FacEAE9215E39F3D3bD89f110B3F",
+        "blitz": 24.53095159954242,
+        "regular": -24.53095159954242,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0x8BB57db19b10c1562629d08a717367c6ee8e7EC3",
+        "blitz": 41.21227123190414,
+        "regular": -41.21227123190414,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x4840490f39414b0e0F8761Bf18bF53093A447d5b",
+        "blitz": 22.764837003652687,
+        "regular": -22.764837003652687,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0xc4C3c579c8c7c426f49e8519cB1dadD10B167C99",
+        "blitz": 48.0798475030943,
+        "regular": -48.0798475030943,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xD07F6C6Be3338886453cad6c3Cc167Ffa62a3f05",
+        "blitz": 35.32419163429419,
+        "regular": -35.32419163429419,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0x44fc9D778fa95e7c4aEB47Fba4179138452e9212",
+        "blitz": 53.96761311241121,
+        "regular": -53.96761311241121,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0x85CD4547eEA77bc10FC5594B374036603548C071",
+        "blitz": 72.61015699834361,
+        "regular": -72.61015699834361,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0x637EB5f3A1eAA9a031Cd8d62a5210a2176C9612C",
+        "blitz": 67.70400591692635,
+        "regular": -67.70400591692635,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 23
+      },
+      {
+        "address": "0x81197e51B29b8A1489B78a6d5E8Be069B71F19B9",
+        "blitz": 82.42242302731913,
+        "regular": -82.42242302731913,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 27
+      },
+      {
+        "address": "0xEA96c293424994aBc1a99b131dE80Fa369d37eA1",
+        "blitz": 112.84073204639874,
+        "regular": -112.84073204639874,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 12
+      },
+      {
+        "address": "0xb1fC3b22B99a7B2A63c2b7952DdE76Bad5d3f71D",
+        "blitz": 140.31577839188733,
+        "regular": -140.31577839188733,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 18
+      },
+      {
+        "address": "0x4ba5912F6D0302255B351D3624f116f5E1E39998",
+        "blitz": 187.4133817965202,
+        "regular": -187.4133817965202,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x2502C26C62C09F4417AC59D808057A94f4042ed5",
+        "blitz": 174.66111702122907,
+        "regular": -174.66111702122907,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 16
+      },
+      {
+        "address": "0x17e64AdbebB4D3c0D8071A02461fa1b56338ccCF",
+        "blitz": 613.264856928972,
+        "regular": -613.264856928972,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0xe318331186E49f8ff20162631787E0a0bc407470",
+        "blitz": 421.92488195759455,
+        "regular": -421.92488195759455,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 16
+      },
+      {
+        "address": "0x150F1B8D8E6253324dc835B7c52a1438d5395014",
+        "blitz": 1.4851485148514851,
+        "regular": -1.4851485148514851,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xb24a87c78dc7B0A19C32E45c6c6901750Ea07A31",
+        "blitz": 2.9702970297029703,
+        "regular": -2.9702970297029703,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x713E5DB5eaCFC22D6Fe21938B1e85433c34EDdF4",
+        "blitz": 1.9643564356435643,
+        "regular": -1.9643564356435643,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x2206452969Cdb7961b837C628062adf592418b28",
+        "blitz": 1.9624472407400102,
+        "regular": -1.9624472407400102,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x32b1d0F0B942e7C5F9e43736c8BB2ba529a0Ff36",
+        "blitz": 1.9624472407400102,
+        "regular": -1.9624472407400102,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xe2b23BB03bdc890Cf1ee27102822a45FA0a544E7",
+        "blitz": 1.9624944386935168,
+        "regular": -1.9624944386935168,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xdDd2B9DC12eA952Fc6dc5f89D095CDa5F2962Bb6",
+        "blitz": 2.4603960396039604,
+        "regular": -2.4603960396039604,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x2747ad71ff7532c9a6d66f51C7490f8505Da5a1d",
+        "blitz": 11.774683444440175,
+        "regular": -11.774683444440175,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x418F59Dce24d95590F25c6A6B8e3d45109A5096f",
+        "blitz": 2.9436708611100153,
+        "regular": -2.9436708611100153,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xbD897a591D0267CF07DbcA9B1bedE0ddc139ad5E",
+        "blitz": 2.9436708611100153,
+        "regular": -2.9436708611100153,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x80fE31e70BDDD0E27539dC59867AdA05cD53320C",
+        "blitz": 2.943953449996033,
+        "regular": -2.943953449996033,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xDc8d39fCfcB06e2CB6ac0324066ddB5B5576a095",
+        "blitz": 3.9603960396039604,
+        "regular": -3.9603960396039604,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x3A4DB73E5F4EaE89A9760eB273079813F5f542d9",
+        "blitz": 3.9250357754206306,
+        "regular": -3.9250357754206306,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x9aaEf91578844d1AE19Ef8625e5A7AbB291B7E36",
+        "blitz": 4.906055304291901,
+        "regular": -4.906055304291901,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x39C8627191638611AD8DBAA0f70BeD6c483a5399",
+        "blitz": 4.9061181018500255,
+        "regular": -4.9061181018500255,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xDEE94459baAB6D268Bb813D26FB3111d9A3Ae613",
+        "blitz": 4.9061181018500255,
+        "regular": -4.9061181018500255,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0xb4818C7ACa08A9CE33b7837C68FdFD6C2Da95cA8",
+        "blitz": 4.9061181018500255,
+        "regular": -4.9061181018500255,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xfD211f11489af981b214b661fA053082268A4d32",
+        "blitz": 4.906118104110729,
+        "regular": -4.906118104110729,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x200B612A4c040dCAce6b88fA8e079b79377802a7",
+        "blitz": 4.906118106371432,
+        "regular": -4.906118106371432,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x284B3ab1EcfcaEA66991F599dea2B33415738a81",
+        "blitz": 4.907954939908243,
+        "regular": -4.907954939908243,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x5Cf91eBeF24B9b7b003Ee5a81EC478Aaa44343E5",
+        "blitz": 5.396723632203858,
+        "regular": -5.396723632203858,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x30e05CE90164ba90268ACAa2898405035d14575c",
+        "blitz": 5.9405940594059405,
+        "regular": -5.9405940594059405,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x2867911ed77E82187e7c6545AdAF2b60e1687b89",
+        "blitz": 7.873267326732673,
+        "regular": -7.873267326732673,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x89E09872d1adb397B535109819DDD7583F7F800e",
+        "blitz": 8.831310874305881,
+        "regular": -8.831310874305881,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x419C2ded1f339D5D8a8AcF3195438498857BE4f4",
+        "blitz": 9.812173404383575,
+        "regular": -9.812173404383575,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x5E425C06a9b8dF6eabfC4Db7Eb3186445b01a202",
+        "blitz": 9.812173404383575,
+        "regular": -9.812173404383575,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xb299400224C96212109Cf757DF5f7a0926EA79e2",
+        "blitz": 9.812236203700051,
+        "regular": -9.812236203700051,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0xeEcAa50cF16993167d5FFf155b5c494cd57ac5de",
+        "blitz": 9.900990099009901,
+        "regular": -9.900990099009901,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xd7ee0c15ad9fB76aC52fa4d5e45ec0e5E4a1e0d9",
+        "blitz": 10.793334227697855,
+        "regular": -10.793334227697855,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x8b784e15fdA0a79Fb5e2e7D0Fa24bcCd86142299",
+        "blitz": 10.793397025758352,
+        "regular": -10.793397025758352,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xC9ae1998445c8c8999905dF4143cAca27Dd16B2d",
+        "blitz": 21.58685684882365,
+        "regular": -21.58685684882365,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x8BFCD811b67383a7a90691A3ef2cBc46ebc3E36E",
+        "blitz": 23.549319786880865,
+        "regular": -23.549319786880865,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x044f457963D8716db2A361AB5846585A52aCbc03",
+        "blitz": 24.530449211290442,
+        "regular": -24.530449211290442,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xcEfA1b7CF2c6aD6Ad68c51cA5bdD97876FEa8a26",
+        "blitz": 24.531014406143374,
+        "regular": -24.531014406143374,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x9a589826e5f7a28fF9f4d1A8963eF454562Be3A2",
+        "blitz": 29.43670861110012,
+        "regular": -29.43670861110012,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
       },
       {
         "address": "0x66544aCf5d062e57f84d3dCb032880F9ACb27718",

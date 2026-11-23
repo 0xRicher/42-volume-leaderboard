@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T08:02:20Z",
+  "updated_at": "2026-11-23T08:27:37Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
@@ -31,26 +31,26 @@
       "pointsStatus": "not_distributed",
       "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
       "totals": {
-        "traders": 595,
-        "total_volume": 20449793.93091099,
-        "mm_share_pct": 63.33379790406052,
-        "mm_volume": 12951631.16,
-        "mm_count": 6,
-        "retail_volume": 7498162.770910978,
-        "retail_share_pct": 36.66620209593942,
-        "retail_count": 589,
-        "points_traders": null,
-        "total_distributed_points": null,
-        "agent_volume": 4092049.3120235577,
+        "traders": 822,
+        "total_volume": 22838468.759054307,
+        "mm_share_pct": 0.0,
+        "mm_volume": 0.0,
+        "mm_count": 0,
+        "retail_volume": 4643021.993880075,
+        "retail_share_pct": 20.32983052788664,
+        "retail_count": 813,
+        "agent_volume": 4340828.55517423,
         "agent_count": 3,
-        "seed_volume": 12951631.16,
-        "seed_count": 6
+        "seed_volume": 13854618.209999999,
+        "seed_count": 6,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
         "fetchedAt": "2026-11-23T07:44:56Z",
-        "total": 20210930.436914485,
-        "regular": 3134756.5316607505,
+        "total": 22838468.759054307,
+        "regular": 5762294.853800572,
         "blitzTotal": 12987886.90443618,
         "blitzReal": 36255.74443617944,
         "blitzSeed": 12951631.16,
@@ -61,7 +61,7 @@
           "grok": 1361543.8434758242
         },
         "reconciled": true,
-        "note": "codex 的挖矿成交量与排行榜成交量不一致（挖矿 1345515.4618894348，排行榜 1347566.431147591）。拆分使用挖矿差额。 claude 的挖矿成交量与排行榜成交量不一致（挖矿 1381227.6954522952，排行榜 1382939.0374001425）。拆分使用挖矿差额。 真实玩家 Blitz 还有 2.94 没有落到具体钱包。"
+        "note": "codex 的挖矿成交量与排行榜成交量不一致（挖矿 1345515.4618894348，排行榜 1347566.431147591）。拆分使用挖矿差额。 claude 的挖矿成交量与排行榜成交量不一致（挖矿 1381227.6954522952，排行榜 1382939.0374001425）。拆分使用挖矿差额。 真实玩家 Blitz 还有 2.94 没有落到具体钱包。 Blitz 与 Agent 沿用一小时内的结果；普通交易按最新总成交量重算。"
       }
     },
     {
@@ -86,16 +86,16 @@
         "retail_volume": 6210715.057349783,
         "retail_share_pct": 35.28089339345139,
         "retail_count": 730,
-        "points_traders": 722,
-        "total_distributed_points": 1470000.0,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": 722,
+        "total_distributed_points": 1470000.0
       },
       "breakdown": {
         "status": "partial",
-        "fetchedAt": "2026-11-23T07:49:22Z",
+        "fetchedAt": "2026-11-23T08:27:33Z",
         "total": 17603621.847349748,
         "regular": 6169625.043778561,
         "blitzTotal": 11433996.803571187,
@@ -108,7 +108,7 @@
           "grok": 0.0
         },
         "reconciled": true,
-        "note": "本轮每钱包 Blitz 已到约 5 分钟上限，下次运行从缓存继续。 真实玩家 Blitz 还有 3464.41 没有落到具体钱包。 种子 Blitz 还有 11392906.79 没有落到具体钱包。 3 个 Blitz 请求失败。失败的钱包不填 0。"
+        "note": "本轮每钱包 Blitz 已到约 5 分钟上限，下次运行从缓存继续。 真实玩家 Blitz 还有 669.69 没有落到具体钱包。 种子 Blitz 还有 11392906.79 没有落到具体钱包。 3 个 Blitz 请求失败。失败的钱包不填 0。"
       }
     },
     {
@@ -127,18 +127,18 @@
       "totals": {
         "traders": 595,
         "total_volume": 15194766.481910102,
-        "mm_share_pct": 93.7913969142289,
-        "mm_volume": 14251383.741238518,
-        "mm_count": 6,
+        "mm_share_pct": 3.830770349960011e-16,
+        "mm_volume": 5.820766091346741e-11,
+        "mm_count": 0,
         "retail_volume": 943382.7406715791,
         "retail_share_pct": 6.208603085771072,
         "retail_count": 589,
-        "points_traders": 578,
-        "total_distributed_points": 1470000.0,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 14251383.74123852,
-        "seed_count": 6
+        "seed_count": 6,
+        "points_traders": 578,
+        "total_distributed_points": 1470000.0
       },
       "breakdown": {
         "status": "ok",
@@ -180,12 +180,12 @@
         "retail_volume": 166754.32290707284,
         "retail_share_pct": 1.1908938553630481,
         "retail_count": 439,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -227,12 +227,12 @@
         "retail_volume": 549416.3127931227,
         "retail_share_pct": 1.6714113814963183,
         "retail_count": 832,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -274,12 +274,12 @@
         "retail_volume": 430546.2998034521,
         "retail_share_pct": 1.1937203412480404,
         "retail_count": 722,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -321,12 +321,12 @@
         "retail_volume": 558503.8800972917,
         "retail_share_pct": 1.4835450740130465,
         "retail_count": 770,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -368,12 +368,12 @@
         "retail_volume": 445738.2533334013,
         "retail_share_pct": 1.240734071251527,
         "retail_count": 922,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -415,12 +415,12 @@
         "retail_volume": 684167.295111203,
         "retail_share_pct": 1.5011614396776485,
         "retail_count": 1234,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -462,12 +462,12 @@
         "retail_volume": 4380838.140232296,
         "retail_share_pct": 8.742822709297904,
         "retail_count": 1371,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -509,12 +509,12 @@
         "retail_volume": 4523122.255370404,
         "retail_share_pct": 15.53392009054543,
         "retail_count": 452,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -556,12 +556,12 @@
         "retail_volume": 14231911.04651088,
         "retail_share_pct": 21.35717330107763,
         "retail_count": 45036,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -603,12 +603,12 @@
         "retail_volume": 520433.12031362107,
         "retail_share_pct": 53.54878352468402,
         "retail_count": 1316,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -650,12 +650,12 @@
         "retail_volume": 424595.1372845108,
         "retail_share_pct": 60.08624253147439,
         "retail_count": 1551,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -697,12 +697,12 @@
         "retail_volume": 876120.087838296,
         "retail_share_pct": 88.19705435572776,
         "retail_count": 1513,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -744,12 +744,12 @@
         "retail_volume": 880361.6324709709,
         "retail_share_pct": 82.69055564746878,
         "retail_count": 1271,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -791,12 +791,12 @@
         "retail_volume": 1362298.8434397136,
         "retail_share_pct": 88.61375868400002,
         "retail_count": 1008,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -838,12 +838,12 @@
         "retail_volume": 2836836.2608294543,
         "retail_share_pct": 96.77581968012451,
         "retail_count": 1490,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -885,12 +885,12 @@
         "retail_volume": 8088586.404038544,
         "retail_share_pct": 100.0,
         "retail_count": 4806,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -932,12 +932,12 @@
         "retail_volume": 23160867.82538774,
         "retail_share_pct": 100.0,
         "retail_count": 5277,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -979,12 +979,12 @@
         "retail_volume": 18364169.28966423,
         "retail_share_pct": 100.0,
         "retail_count": 5540,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1026,12 +1026,12 @@
         "retail_volume": 16865414.588394817,
         "retail_share_pct": 100.0,
         "retail_count": 4529,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1073,12 +1073,12 @@
         "retail_volume": 28028946.436241254,
         "retail_share_pct": 100.0,
         "retail_count": 3675,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1120,12 +1120,12 @@
         "retail_volume": 11299765.533716407,
         "retail_share_pct": 100.0,
         "retail_count": 1717,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1167,12 +1167,12 @@
         "retail_volume": 916077.2410332306,
         "retail_share_pct": 100.0,
         "retail_count": 983,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1214,12 +1214,12 @@
         "retail_volume": 754688.1253658924,
         "retail_share_pct": 100.0,
         "retail_count": 1619,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1261,12 +1261,12 @@
         "retail_volume": 1326386.8295251534,
         "retail_share_pct": 100.0,
         "retail_count": 2108,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1308,12 +1308,12 @@
         "retail_volume": 309904.1944473487,
         "retail_share_pct": 100.0,
         "retail_count": 168,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1355,12 +1355,12 @@
         "retail_volume": 220627.88440301674,
         "retail_share_pct": 100.0,
         "retail_count": 182,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1402,12 +1402,12 @@
         "retail_volume": 185457.78217083143,
         "retail_share_pct": 100.0,
         "retail_count": 132,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1449,12 +1449,12 @@
         "retail_volume": 68656.85326409792,
         "retail_share_pct": 100.0,
         "retail_count": 115,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1496,12 +1496,12 @@
         "retail_volume": 38709.868368620286,
         "retail_share_pct": 100.0,
         "retail_count": 100,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1543,12 +1543,12 @@
         "retail_volume": 81440.34797752327,
         "retail_share_pct": 100.0,
         "retail_count": 90,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1590,12 +1590,12 @@
         "retail_volume": 167766.81318967542,
         "retail_share_pct": 100.0,
         "retail_count": 95,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1637,12 +1637,12 @@
         "retail_volume": 111261.51656268227,
         "retail_share_pct": 100.0,
         "retail_count": 118,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1684,12 +1684,12 @@
         "retail_volume": 95713.14031452576,
         "retail_share_pct": 100.0,
         "retail_count": 112,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1731,12 +1731,12 @@
         "retail_volume": 138803.4346143772,
         "retail_share_pct": 100.0,
         "retail_count": 102,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1778,12 +1778,12 @@
         "retail_volume": 159685.98281515125,
         "retail_share_pct": 100.0,
         "retail_count": 137,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1825,12 +1825,12 @@
         "retail_volume": 144054.43771070318,
         "retail_share_pct": 100.0,
         "retail_count": 174,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1872,12 +1872,12 @@
         "retail_volume": 15941.512714847737,
         "retail_share_pct": 100.0,
         "retail_count": 75,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1919,12 +1919,12 @@
         "retail_volume": 25608.811376498,
         "retail_share_pct": 100.0,
         "retail_count": 72,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -1966,12 +1966,12 @@
         "retail_volume": 33043.77666894977,
         "retail_share_pct": 100.0,
         "retail_count": 53,
-        "points_traders": null,
-        "total_distributed_points": null,
         "agent_volume": 0.0,
         "agent_count": 0,
         "seed_volume": 0.0,
-        "seed_count": 0
+        "seed_count": 0,
+        "points_traders": null,
+        "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
@@ -2001,28 +2001,28 @@
     "0x28aedaf59d20903c51989dcc94be57b99b0784b3"
   ],
   "agentsNow": {
-    "fetched_at": "2026-11-23T07:44:56Z",
+    "fetched_at": "2026-11-23T08:27:38Z",
     "agents": [
       {
         "agent": "codex",
-        "minted": 597,
+        "minted": 601,
         "supply": 2000,
-        "volume": 1397714.456357029,
-        "snapshotAt": "2026-11-23T07:00:00Z"
+        "volume": 1407359.7995942777,
+        "snapshotAt": "2026-11-23T08:00:00Z"
       },
       {
         "agent": "claude",
-        "minted": 591,
+        "minted": 597,
         "supply": 2000,
-        "volume": 1475523.7892362764,
-        "snapshotAt": "2026-11-23T07:00:00Z"
+        "volume": 1489987.3112867407,
+        "snapshotAt": "2026-11-23T08:00:00Z"
       },
       {
         "agent": "grok",
-        "minted": 612,
+        "minted": 616,
         "supply": 2000,
-        "volume": 1414550.5546516273,
-        "snapshotAt": "2026-11-23T07:00:00Z"
+        "volume": 1429015.644365969,
+        "snapshotAt": "2026-11-23T08:00:00Z"
       }
     ]
   }
