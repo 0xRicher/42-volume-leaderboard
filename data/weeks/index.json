@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T08:40:05Z",
+  "updated_at": "2026-11-23T14:33:09Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
@@ -31,37 +31,37 @@
       "pointsStatus": "not_distributed",
       "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
       "totals": {
-        "traders": 822,
-        "total_volume": 22918236.66500611,
+        "traders": 1050,
+        "total_volume": 25962946.449877273,
         "mm_share_pct": 0.0,
         "mm_volume": 0.0,
         "mm_count": 0,
-        "retail_volume": 4671539.434025317,
-        "retail_share_pct": 20.383502894698257,
-        "retail_count": 813,
-        "agent_volume": 4350470.4209807925,
+        "retail_volume": 6306656.97219182,
+        "retail_share_pct": 24.290990948839827,
+        "retail_count": 1041,
+        "agent_volume": 4572056.707685496,
         "agent_count": 3,
-        "seed_volume": 13896226.809999999,
+        "seed_volume": 15084232.770000001,
         "seed_count": 6,
         "points_traders": null,
         "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
-        "fetchedAt": "2026-11-23T07:44:56Z",
-        "total": 22918236.66500611,
-        "regular": 5842062.759752374,
-        "blitzTotal": 12987886.90443618,
-        "blitzReal": 36255.74443617944,
-        "blitzSeed": 12951631.16,
-        "agents": 4088287.000817554,
+        "fetchedAt": "2026-11-23T14:33:09Z",
+        "total": 25962946.449877273,
+        "regular": 6279583.241569972,
+        "blitzTotal": 15125642.116494887,
+        "blitzReal": 41409.34649488659,
+        "blitzSeed": 15084232.77,
+        "agents": 4557721.091812415,
         "agentsDetail": {
-          "codex": 1345515.4618894348,
-          "claude": 1381227.6954522952,
-          "grok": 1361543.8434758242
+          "codex": 1479658.1641303152,
+          "claude": 1562292.5454601666,
+          "grok": 1515770.3822219332
         },
         "reconciled": true,
-        "note": "codex 的挖矿成交量与排行榜成交量不一致（挖矿 1345515.4618894348，排行榜 1347566.431147591）。拆分使用挖矿差额。 claude 的挖矿成交量与排行榜成交量不一致（挖矿 1381227.6954522952，排行榜 1382939.0374001425）。拆分使用挖矿差额。 真实玩家 Blitz 还有 2.94 没有落到具体钱包。 Blitz 与 Agent 沿用一小时内的结果；普通交易按最新总成交量重算。"
+        "note": "codex 的挖矿成交量与排行榜成交量不一致（挖矿 1345515.4618894348，排行榜 1347566.431147591）。拆分使用挖矿差额。 claude 的挖矿成交量与排行榜成交量不一致（挖矿 1381227.6954522952，排行榜 1382939.0374001425）。拆分使用挖矿差额。 真实玩家 Blitz 还有 2.94 没有落到具体钱包。 Blitz 与 Agent 沿用一小时内的结果；普通交易按最新总成交量重算。 全平台拆分已更新；每钱包数字沿用已查到的结果。"
       }
     },
     {
@@ -95,7 +95,7 @@
       },
       "breakdown": {
         "status": "partial",
-        "fetchedAt": "2026-11-23T08:40:02Z",
+        "fetchedAt": "2026-11-23T14:32:36Z",
         "total": 17603621.847349748,
         "regular": 6169625.043778561,
         "blitzTotal": 11433996.803571187,
@@ -108,7 +108,7 @@
           "grok": 0.0
         },
         "reconciled": true,
-        "note": "本轮每钱包 Blitz 已到约 5 分钟上限，下次运行从缓存继续。 真实玩家 Blitz 还有 13827.84 没有落到具体钱包。 种子 Blitz 还有 11392906.79 没有落到具体钱包。 3 个 Blitz 请求失败。失败的钱包不填 0。"
+        "note": "本轮每钱包 Blitz 已到约 5 分钟上限，下次运行从缓存继续。 真实玩家 Blitz 还有 22302.48 没有落到具体钱包。 种子 Blitz 还有 11392906.79 没有落到具体钱包。 3 个 Blitz 请求失败。失败的钱包不填 0。"
       }
     },
     {
@@ -2001,28 +2001,28 @@
     "0x28aedaf59d20903c51989dcc94be57b99b0784b3"
   ],
   "agentsNow": {
-    "fetched_at": "2026-11-23T08:40:05Z",
+    "fetched_at": "2026-11-23T14:33:09Z",
     "agents": [
       {
         "agent": "codex",
-        "minted": 601,
+        "minted": 639,
         "supply": 2000,
-        "volume": 1407359.7995942777,
-        "snapshotAt": "2026-11-23T08:00:00Z"
+        "volume": 1479658.1641303152,
+        "snapshotAt": "2026-11-23T14:00:00Z"
       },
       {
         "agent": "claude",
-        "minted": 598,
+        "minted": 636,
         "supply": 2000,
-        "volume": 1489987.3112867407,
-        "snapshotAt": "2026-11-23T08:00:00Z"
+        "volume": 1562292.5454601666,
+        "snapshotAt": "2026-11-23T14:00:00Z"
       },
       {
         "agent": "grok",
-        "minted": 616,
+        "minted": 654,
         "supply": 2000,
-        "volume": 1429015.644365969,
-        "snapshotAt": "2026-11-23T08:00:00Z"
+        "volume": 1515770.3822219332,
+        "snapshotAt": "2026-11-23T14:00:00Z"
       }
     ]
   }
