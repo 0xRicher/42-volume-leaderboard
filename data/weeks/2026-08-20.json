@@ -38,7 +38,10 @@
         "losing_predictions": 12862,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 282047.7137176938,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 2,
@@ -54,7 +57,10 @@
         "losing_predictions": 4158,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 31995.497017892645,
+        "regular_volume": 4679.502923352637,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 3,
@@ -70,7 +76,10 @@
         "losing_predictions": 3611,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 26912.10536779324,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 4,
@@ -86,7 +95,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 20892.449532508777,
+        "pool_role": "trader"
       },
       {
         "rank": 5,
@@ -102,7 +114,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 20833.213029085207,
+        "pool_role": "trader"
       },
       {
         "rank": 6,
@@ -118,7 +133,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 20401.4335062017,
+        "pool_role": "trader"
       },
       {
         "rank": 7,
@@ -134,7 +152,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 20233.53114848219,
+        "pool_role": "trader"
       },
       {
         "rank": 8,
@@ -150,7 +171,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 20136.073898902105,
+        "pool_role": "trader"
       },
       {
         "rank": 9,
@@ -166,7 +190,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 19948.693214931554,
+        "pool_role": "trader"
       },
       {
         "rank": 10,
@@ -182,7 +209,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 19921.326477502254,
+        "pool_role": "trader"
       },
       {
         "rank": 11,
@@ -198,7 +228,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 19636.91628870401,
+        "pool_role": "trader"
       },
       {
         "rank": 12,
@@ -214,7 +247,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 19543.392338654394,
+        "pool_role": "trader"
       },
       {
         "rank": 13,
@@ -230,7 +266,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 19539.525071658492,
+        "pool_role": "trader"
       },
       {
         "rank": 14,
@@ -246,7 +285,10 @@
         "losing_predictions": 1119,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 13911.046719681908,
+        "regular_volume": 1546.7332504000697,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 15,
@@ -262,7 +304,10 @@
         "losing_predictions": 1033,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 12231.832007952285,
+        "regular_volume": 358.3343564491079,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 16,
@@ -278,7 +323,10 @@
         "losing_predictions": 711,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 12460.570576540755,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 17,
@@ -294,7 +342,10 @@
         "losing_predictions": 1285,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 7123.033667384964,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 18,
@@ -310,7 +361,10 @@
         "losing_predictions": 2241,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 6323.658051689861,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 19,
@@ -326,7 +380,10 @@
         "losing_predictions": 562,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 4531.790258449304,
+        "regular_volume": 1688.213676353671,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 20,
@@ -342,7 +399,10 @@
         "losing_predictions": 123,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 5866.180914512923,
+        "regular_volume": 9.920436417198289,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 21,
@@ -358,7 +418,10 @@
         "losing_predictions": 360,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 4662.709741550696,
+        "regular_volume": 13.888115370885316,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 22,
@@ -374,7 +437,10 @@
         "losing_predictions": 896,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 4353.4443339960235,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 23,
@@ -390,7 +456,10 @@
         "losing_predictions": 347,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 4223.511928429423,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 24,
@@ -406,7 +475,10 @@
         "losing_predictions": 170,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 3879.9324055666,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 25,
@@ -422,7 +494,10 @@
         "losing_predictions": 265,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 3631.538767395626,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 26,
@@ -438,7 +513,10 @@
         "losing_predictions": 9,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 3479.0235040998814,
+        "pool_role": "trader"
       },
       {
         "rank": 27,
@@ -454,7 +532,10 @@
         "losing_predictions": 292,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 3127.25886590349,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 28,
@@ -470,7 +551,10 @@
         "losing_predictions": 215,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 3110.9433399602385,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 29,
@@ -486,7 +570,10 @@
         "losing_predictions": 356,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 2335.8011928429423,
+        "regular_volume": 449.57812534286677,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 30,
@@ -502,7 +589,10 @@
         "losing_predictions": 481,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1567.7127236580518,
+        "regular_volume": 294.17614660713116,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 31,
@@ -518,7 +608,10 @@
         "losing_predictions": 244,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1853.6222664015904,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 32,
@@ -534,7 +627,10 @@
         "losing_predictions": 883,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1801.541018517884,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 33,
@@ -550,7 +646,10 @@
         "losing_predictions": 122,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1712.635279343808,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 34,
@@ -566,7 +665,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 1599.8056835151,
+        "pool_role": "trader"
       },
       {
         "rank": 35,
@@ -582,7 +684,10 @@
         "losing_predictions": 322,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1556.2063824599438,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 36,
@@ -598,7 +703,10 @@
         "losing_predictions": 377,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1469.824901385171,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 37,
@@ -614,7 +722,10 @@
         "losing_predictions": 24,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1408.7109170003562,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 38,
@@ -630,7 +741,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 1405.3403017619646,
+        "pool_role": "trader"
       },
       {
         "rank": 39,
@@ -646,7 +760,10 @@
         "losing_predictions": 109,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1235.5834990059643,
+        "regular_volume": 25.792804406868072,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 40,
@@ -662,7 +779,10 @@
         "losing_predictions": 50,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1242.4794355438087,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 41,
@@ -678,7 +798,10 @@
         "losing_predictions": 10,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1131.4039602216856,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 42,
@@ -694,7 +817,10 @@
         "losing_predictions": 57,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1130.8272399483615,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 43,
@@ -710,7 +836,10 @@
         "losing_predictions": 33,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 975.2266401590457,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 44,
@@ -726,7 +855,10 @@
         "losing_predictions": 9,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 832.7227021364588,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 45,
@@ -742,7 +874,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 825.1134093241751,
+        "pool_role": "trader"
       },
       {
         "rank": 46,
@@ -758,7 +893,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 738.6302493518917,
+        "pool_role": "trader"
       },
       {
         "rank": 47,
@@ -774,7 +912,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 688.2322937683501,
+        "pool_role": "trader"
       },
       {
         "rank": 48,
@@ -790,7 +931,10 @@
         "losing_predictions": 128,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 677.3230616302187,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 49,
@@ -806,7 +950,10 @@
         "losing_predictions": 134,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 669.9032238271457,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 50,
@@ -822,7 +969,10 @@
         "losing_predictions": 55,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 659.5377733598409,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 51,
@@ -838,7 +988,10 @@
         "losing_predictions": 274,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 659.0545334697566,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 52,
@@ -854,7 +1007,10 @@
         "losing_predictions": 293,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 636.1739562624255,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 53,
@@ -870,7 +1026,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 629.9997566273032,
+        "pool_role": "trader"
       },
       {
         "rank": 54,
@@ -886,7 +1045,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 236.42731435050737,
+        "regular_volume": 381.6929267853874,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 55,
@@ -902,7 +1064,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 610.419512592378,
+        "pool_role": "trader"
       },
       {
         "rank": 56,
@@ -918,7 +1083,10 @@
         "losing_predictions": 5,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 600.9225794462178,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 57,
@@ -934,7 +1102,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 570.747646468619,
+        "pool_role": "trader"
       },
       {
         "rank": 58,
@@ -950,7 +1121,10 @@
         "losing_predictions": 109,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 492.0596421471173,
+        "regular_volume": 63.15284041385007,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 59,
@@ -966,7 +1140,10 @@
         "losing_predictions": 66,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 543.1337201018112,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 60,
@@ -982,7 +1159,10 @@
         "losing_predictions": 53,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 528.0223708971711,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 61,
@@ -998,7 +1178,10 @@
         "losing_predictions": 104,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 526.4816181561094,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 62,
@@ -1014,7 +1197,10 @@
         "losing_predictions": 27,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 512.2617765768202,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 63,
@@ -1030,7 +1216,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 492.5432157873536,
+        "pool_role": "trader"
       },
       {
         "rank": 64,
@@ -1046,7 +1235,10 @@
         "losing_predictions": 12,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 482.7120111808194,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 65,
@@ -1062,7 +1254,10 @@
         "losing_predictions": 31,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 72.90169046869175,
+        "regular_volume": 376.6372334093387,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 66,
@@ -1078,7 +1273,10 @@
         "losing_predictions": 12,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 433.45398132394865,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 67,
@@ -1094,7 +1292,10 @@
         "losing_predictions": 40,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 371.5149105367793,
+        "regular_volume": 44.63949732199046,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 68,
@@ -1110,7 +1311,10 @@
         "losing_predictions": 179,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 399.18091451292247,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 69,
@@ -1126,7 +1330,10 @@
         "losing_predictions": 19,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 398.9106731694733,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 70,
@@ -1142,7 +1349,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 386.164470577245,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 71,
@@ -1158,7 +1368,10 @@
         "losing_predictions": 51,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 381.0238568588469,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 72,
@@ -1174,7 +1387,10 @@
         "losing_predictions": 154,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 377.9373757455268,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 73,
@@ -1190,7 +1406,10 @@
         "losing_predictions": 100,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 365.4840501234536,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 74,
@@ -1206,7 +1425,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 361.8299406491046,
+        "pool_role": "trader"
       },
       {
         "rank": 75,
@@ -1222,7 +1444,10 @@
         "losing_predictions": 20,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 354.19383697813123,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 76,
@@ -1238,7 +1463,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 350.529890389104,
+        "pool_role": "trader"
       },
       {
         "rank": 77,
@@ -1254,7 +1482,10 @@
         "losing_predictions": 39,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 339.8665726744832,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 78,
@@ -1270,7 +1501,10 @@
         "losing_predictions": 34,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 325.04193903762,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 79,
@@ -1286,7 +1520,10 @@
         "losing_predictions": 34,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 324.10484124040164,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 80,
@@ -1302,7 +1539,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 68.95771712355354,
+        "regular_volume": 246.27342447778244,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 81,
@@ -1318,7 +1558,10 @@
         "losing_predictions": 12,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 305.3851075658239,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 82,
@@ -1334,7 +1577,10 @@
         "losing_predictions": 19,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 304.40448934164795,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 83,
@@ -1350,7 +1596,10 @@
         "losing_predictions": 126,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 227.25646123260438,
+        "regular_volume": 69.05310821902921,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 84,
@@ -1366,7 +1615,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 295.5258882844276,
+        "pool_role": "trader"
       },
       {
         "rank": 85,
@@ -1382,7 +1634,10 @@
         "losing_predictions": 23,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 293.4572564612326,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 86,
@@ -1398,7 +1653,10 @@
         "losing_predictions": 79,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 273.86582916627657,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 87,
@@ -1414,7 +1672,10 @@
         "losing_predictions": 88,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 271.8966662648326,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 88,
@@ -1430,7 +1691,10 @@
         "losing_predictions": 38,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 261.06113028406355,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 89,
@@ -1446,7 +1710,10 @@
         "losing_predictions": 94,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 241.36103367000814,
+        "regular_volume": 17.73414071029501,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 90,
@@ -1462,7 +1729,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 197.02363978063187,
+        "regular_volume": 49.255553251542295,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 91,
@@ -1478,7 +1748,10 @@
         "losing_predictions": 9,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 246.27905404253232,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 92,
@@ -1494,7 +1767,10 @@
         "losing_predictions": 53,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 245.29782761928377,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 93,
@@ -1510,7 +1786,10 @@
         "losing_predictions": 96,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 236.43544597793448,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 94,
@@ -1526,7 +1805,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 231.6473462003035,
+        "pool_role": "trader"
       },
       {
         "rank": 95,
@@ -1542,7 +1824,10 @@
         "losing_predictions": 16,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 226.57629522022944,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 96,
@@ -1558,7 +1843,10 @@
         "losing_predictions": 151,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 223.62661212038847,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 97,
@@ -1574,7 +1862,10 @@
         "losing_predictions": 10,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 167.0127436365027,
+        "regular_volume": 51.812665235873084,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 98,
@@ -1590,7 +1881,10 @@
         "losing_predictions": 140,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 216.73332071553392,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 99,
@@ -1606,7 +1900,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 216.72816951616605,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 100,
@@ -1622,7 +1919,10 @@
         "losing_predictions": 5,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 216.72463885704062,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 101,
@@ -1638,7 +1938,10 @@
         "losing_predictions": 140,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 201.95188628190135,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 102,
@@ -1654,7 +1957,10 @@
         "losing_predictions": 70,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 201.8215387612195,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 103,
@@ -1670,7 +1976,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 197.02212098399153,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 104,
@@ -1686,7 +1995,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 197.02056377144814,
+        "pool_role": "trader"
       },
       {
         "rank": 105,
@@ -1702,7 +2014,10 @@
         "losing_predictions": 174,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 146.7286282306163,
+        "regular_volume": 45.7679004748519,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 106,
@@ -1718,7 +2033,10 @@
         "losing_predictions": 10,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 188.15662550996362,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 107,
@@ -1734,7 +2052,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 187.17285590742142,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 108,
@@ -1750,7 +2071,10 @@
         "losing_predictions": 129,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 186.19143657262302,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 109,
@@ -1766,7 +2090,10 @@
         "losing_predictions": 35,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 184.4234418414568,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 110,
@@ -1782,7 +2109,10 @@
         "losing_predictions": 123,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 179.2936202509888,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 111,
@@ -1798,7 +2128,10 @@
         "losing_predictions": 43,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 178.30972474442117,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 112,
@@ -1814,7 +2147,10 @@
         "losing_predictions": 118,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 177.32544549636424,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 113,
@@ -1830,7 +2166,10 @@
         "losing_predictions": 47,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 176.3707753479125,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 114,
@@ -1846,7 +2185,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 172.41538362184315,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 115,
@@ -1862,7 +2204,10 @@
         "losing_predictions": 45,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 171.4114058060755,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 116,
@@ -1878,7 +2223,10 @@
         "losing_predictions": 92,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 169.44312598603048,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 117,
@@ -1894,7 +2242,10 @@
         "losing_predictions": 10,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 167.4695026733534,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 118,
@@ -1910,7 +2261,10 @@
         "losing_predictions": 61,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 165.5055805347972,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 119,
@@ -1926,7 +2280,10 @@
         "losing_predictions": 17,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 162.54496478119674,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 120,
@@ -1942,7 +2299,10 @@
         "losing_predictions": 15,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 161.55986866721383,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 121,
@@ -1958,7 +2318,10 @@
         "losing_predictions": 88,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 126.47316103379721,
+        "regular_volume": 30.03431918174472,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 122,
@@ -1974,7 +2337,10 @@
         "losing_predictions": 16,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 155.64963507562453,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 123,
@@ -1990,7 +2356,10 @@
         "losing_predictions": 100,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 149.74010019758168,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 124,
@@ -2006,7 +2375,10 @@
         "losing_predictions": 8,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 147.76862403042648,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 125,
@@ -2022,7 +2394,10 @@
         "losing_predictions": 11,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 147.76848208891678,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 126,
@@ -2038,7 +2413,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 147.76799006569772,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 127,
@@ -2054,7 +2432,10 @@
         "losing_predictions": 9,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 147.76789267142513,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 128,
@@ -2070,7 +2451,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 147.76734730904576,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 129,
@@ -2086,7 +2470,10 @@
         "losing_predictions": 12,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 147.6809619293423,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 130,
@@ -2102,7 +2489,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 145.94639447015567,
+        "pool_role": "trader"
       },
       {
         "rank": 131,
@@ -2118,7 +2508,10 @@
         "losing_predictions": 18,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 144.81350743444068,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 132,
@@ -2134,7 +2527,10 @@
         "losing_predictions": 71,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 142.77634194831015,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 133,
@@ -2150,7 +2546,10 @@
         "losing_predictions": 92,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 141.85968515886975,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 134,
@@ -2166,7 +2565,10 @@
         "losing_predictions": 19,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 140.61524178372008,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 135,
@@ -2182,7 +2584,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 137.91825895329194,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 136,
@@ -2198,7 +2603,10 @@
         "losing_predictions": 33,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 131.02182681216948,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 137,
@@ -2214,7 +2622,10 @@
         "losing_predictions": 83,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 130.03759199321138,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 138,
@@ -2230,7 +2641,10 @@
         "losing_predictions": 28,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 125.11037895317925,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 139,
@@ -2246,7 +2660,10 @@
         "losing_predictions": 74,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 82.50397614314116,
+        "regular_volume": 41.19776017873133,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 140,
@@ -2262,7 +2679,10 @@
         "losing_predictions": 41,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 119.12595585219375,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 141,
@@ -2278,7 +2698,10 @@
         "losing_predictions": 5,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 9.851251058372021,
+        "regular_volume": 108.363936439046,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 142,
@@ -2294,7 +2717,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 118.21375174940731,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 143,
@@ -2310,7 +2736,10 @@
         "losing_predictions": 56,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 115.54632381417795,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 144,
@@ -2326,7 +2755,10 @@
         "losing_predictions": 74,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 113.29151371008112,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 145,
@@ -2342,7 +2774,10 @@
         "losing_predictions": 9,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 98.51239989345214,
+        "regular_volume": 9.850839450271948,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 146,
@@ -2358,7 +2793,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 108.36284740940691,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 147,
@@ -2374,7 +2812,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 108.36248492343468,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 148,
@@ -2390,7 +2831,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 108.26403865585803,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 149,
@@ -2406,7 +2850,10 @@
         "losing_predictions": 33,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 107.38129667491238,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 150,
@@ -2422,7 +2869,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 106.44478465324269,
+        "pool_role": "trader"
       },
       {
         "rank": 151,
@@ -2438,7 +2888,10 @@
         "losing_predictions": 27,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 104.73558648111332,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 152,
@@ -2454,7 +2907,10 @@
         "losing_predictions": 66,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 100.48368671373768,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 153,
@@ -2470,7 +2926,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 99.85429422734337,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 154,
@@ -2486,7 +2945,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 99.49695793442957,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 155,
@@ -2502,7 +2964,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 98.51211654376529,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 156,
@@ -2518,7 +2983,10 @@
         "losing_predictions": 111,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 97.81908548707753,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 157,
@@ -2534,7 +3002,10 @@
         "losing_predictions": 10,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 93.5865030195322,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 158,
@@ -2550,7 +3021,10 @@
         "losing_predictions": 27,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 90.62027437711966,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 159,
@@ -2566,7 +3040,10 @@
         "losing_predictions": 75,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 89.42047713717695,
+        "regular_volume": 0.98912126601914,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 160,
@@ -2582,7 +3059,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 90.11913817185263,
+        "pool_role": "trader"
       },
       {
         "rank": 161,
@@ -2598,7 +3078,10 @@
         "losing_predictions": 62,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 89.64716438445997,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 162,
@@ -2614,7 +3097,10 @@
         "losing_predictions": 22,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 88.66139318828796,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 163,
@@ -2630,7 +3116,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 88.66016398507057,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 164,
@@ -2646,7 +3135,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 88.66012916239492,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 165,
@@ -2662,7 +3154,10 @@
         "losing_predictions": 16,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 88.52409361861012,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 166,
@@ -2678,7 +3173,10 @@
         "losing_predictions": 42,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 85.70785437342023,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 167,
@@ -2694,7 +3192,10 @@
         "losing_predictions": 18,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 84.72046741588944,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 168,
@@ -2710,7 +3211,10 @@
         "losing_predictions": 21,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 84.71872373704157,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 169,
@@ -2726,7 +3230,10 @@
         "losing_predictions": 11,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 83.98608349900596,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 170,
@@ -2742,7 +3249,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 82.77702277543314,
+        "pool_role": "trader"
       },
       {
         "rank": 171,
@@ -2758,7 +3268,10 @@
         "losing_predictions": 10,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 81.61558037655082,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 172,
@@ -2774,7 +3287,10 @@
         "losing_predictions": 36,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 80.78306432473819,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 173,
@@ -2790,7 +3306,10 @@
         "losing_predictions": 23,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 80.78079458817183,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 174,
@@ -2806,7 +3325,10 @@
         "losing_predictions": 29,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 79.796560862417,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 175,
@@ -2822,7 +3344,10 @@
         "losing_predictions": 49,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 78.81037598313233,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 176,
@@ -2838,7 +3363,10 @@
         "losing_predictions": 16,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 78.8102606695952,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 177,
@@ -2854,7 +3382,10 @@
         "losing_predictions": 25,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 73.88138474195097,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 178,
@@ -2870,7 +3401,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 69.54209332586716,
+        "pool_role": "trader"
       },
       {
         "rank": 179,
@@ -2886,7 +3420,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 69.10157039012651,
+        "pool_role": "trader"
       },
       {
         "rank": 180,
@@ -2902,7 +3439,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 68.9585052549096,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 181,
@@ -2918,7 +3458,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 68.95826879109109,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 182,
@@ -2934,7 +3477,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 68.83072286445922,
+        "pool_role": "trader"
       },
       {
         "rank": 183,
@@ -2950,7 +3496,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 68.13145604949837,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 184,
@@ -2966,7 +3515,10 @@
         "losing_predictions": 30,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 67.97466925860245,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 185,
@@ -2982,7 +3534,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 67.97328505526583,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 186,
@@ -2998,7 +3553,10 @@
         "losing_predictions": 20,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 67.97322249818762,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 187,
@@ -3014,7 +3572,10 @@
         "losing_predictions": 71,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 67.32719681908549,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 188,
@@ -3030,7 +3591,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 65.01800152878364,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 189,
@@ -3046,7 +3610,10 @@
         "losing_predictions": 15,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 65.00265785659117,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 190,
@@ -3062,7 +3629,10 @@
         "losing_predictions": 8,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 64.03245410860403,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 191,
@@ -3078,7 +3648,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 59.1071438277237,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 192,
@@ -3094,7 +3667,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 59.09128746534092,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 193,
@@ -3110,7 +3686,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 59.06588282120003,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 194,
@@ -3126,7 +3705,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 58.64536034642895,
+        "pool_role": "trader"
       },
       {
         "rank": 195,
@@ -3142,7 +3724,10 @@
         "losing_predictions": 11,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 58.07009125256914,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 196,
@@ -3158,7 +3743,10 @@
         "losing_predictions": 29,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 57.13906872258784,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 197,
@@ -3174,7 +3762,10 @@
         "losing_predictions": 26,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 56.15287850850026,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 198,
@@ -3190,7 +3781,10 @@
         "losing_predictions": 17,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 54.18220444264792,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 199,
@@ -3206,7 +3800,10 @@
         "losing_predictions": 16,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 52.40849643987407,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 200,
@@ -3222,7 +3819,10 @@
         "losing_predictions": 15,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 52.21177247273332,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       }
     ],
     "aggregate": {
@@ -3262,7 +3862,20 @@
           "volume": 36674.99994124528,
           "rank": 2
         }
-      }
+      },
+      "agent": {
+        "count": 0,
+        "volume": 0.0,
+        "share_pct": 0.0,
+        "addresses": []
+      },
+      "seed": {
+        "count": 0,
+        "volume": 0.0,
+        "share_pct": 0.0,
+        "addresses": []
+      },
+      "pool_adjusted": true
     },
     "from": "2026-08-20",
     "to": "2026-08-26",
@@ -3270,5 +3883,3932 @@
     "end_exclusive": "2026-08-27T00:00:00Z",
     "points_week_start": "Thursday 00:00 UTC",
     "kind": "thursday"
+  },
+  "breakdown": {
+    "status": "ok",
+    "fetched_at": "2026-11-23T04:54:10Z",
+    "formula": "regular = total - blitz_total - agents; blitz_seed = blitz_total - blitz_real",
+    "total": 706642.8510022062,
+    "blitz_total": 489626.56608493003,
+    "blitz_real": 480986.56608493003,
+    "blitz_seed": 8640.0,
+    "agents": {
+      "sum": 0.0,
+      "codex": {
+        "address": "0x66544aCf5d062e57f84d3dCb032880F9ACb27718",
+        "label": "codex",
+        "volume": 0.0,
+        "leaderboard_volume": 0.0,
+        "baseline_volume": 0.0,
+        "end_volume": 0.0,
+        "baseline_hour": null,
+        "end_hour": null,
+        "match": true
+      },
+      "claude": {
+        "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
+        "label": "claude",
+        "volume": 0.0,
+        "leaderboard_volume": 0.0,
+        "baseline_volume": 0.0,
+        "end_volume": 0.0,
+        "baseline_hour": null,
+        "end_hour": null,
+        "match": true
+      },
+      "grok": {
+        "address": "0x583AF2BD8A25B2E5886176B7D5bfA4D209e5b8d4",
+        "label": "grok",
+        "volume": 0.0,
+        "leaderboard_volume": 0.0,
+        "baseline_volume": 0.0,
+        "end_volume": 0.0,
+        "baseline_hour": null,
+        "end_hour": null,
+        "match": true
+      }
+    },
+    "regular": 217016.28491727618,
+    "reconciled": true,
+    "residual": 0.0,
+    "race_count": 7200,
+    "seed_addresses": [],
+    "gaps_closed": false,
+    "note": "种子 Blitz 还有 8640.00 没有落到具体钱包。",
+    "wallet_check": {
+      "real_sum": 480975.72676051577,
+      "real_gap": 10.83932441426441,
+      "seed_sum": 0,
+      "seed_gap": 8640.0,
+      "failed": 0
+    },
+    "sources": {
+      "blitz": "GET /api/v1/token-races/volume?from&to，excludeSeed=true 为真实玩家",
+      "leaderboard": "GET /api/v1/token-races/leaderboard",
+      "agents": "GET /api/v1/mining/history 累计 volume 的窗口差额"
+    },
+    "wallets": [
+      {
+        "address": "0xA19b6dE5100A5407fD67Afbd1C87E47B34c70404",
+        "blitz": 12460.570576540755,
+        "regular": 0.0,
+        "leaderboard": 12460.570576540755,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2189
+      },
+      {
+        "address": "0xaB3edB3789372581c2fcEb0ed305F637553d7838",
+        "blitz": 1242.4794355438087,
+        "regular": 0.0,
+        "leaderboard": 1242.4794355438087,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 244
+      },
+      {
+        "address": "0xe54f66B848076B60FC6dd20e0B5307F372ecB0C9",
+        "blitz": 3879.9324055666,
+        "regular": 0.0,
+        "leaderboard": 3879.9324055666,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 689
+      },
+      {
+        "address": "0x50aeE89e99B0E8cc00d8882b30296946D85228dB",
+        "blitz": 3631.538767395626,
+        "regular": 0.0,
+        "leaderboard": 3631.538767395626,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 971
+      },
+      {
+        "address": "0x98f5a125590b03ba3bA10AC9C7F6114c88d75fF6",
+        "blitz": 399.18091451292247,
+        "regular": 0.0,
+        "leaderboard": 399.18091451292247,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 528
+      },
+      {
+        "address": "0xA47abBAB0AC4b9A407a84F99BDAb6dC805d68d5D",
+        "blitz": 4353.4443339960235,
+        "regular": 0.0,
+        "leaderboard": 4353.4443339960235,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 982
+      },
+      {
+        "address": "0x452EB4fD810B117456Ec2b065501cC7b8129F88F",
+        "blitz": 7123.033667384964,
+        "regular": 0.0,
+        "leaderboard": 7123.033667384964,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1360
+      },
+      {
+        "address": "0x7C33a85E674e263f7cf80406FF256c4a9bf61EBB",
+        "blitz": 6323.658051689861,
+        "regular": 0.0,
+        "leaderboard": 6323.658051689861,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3511
+      },
+      {
+        "address": "0x9213CA3bEB286c35d4300ffD205B09041F959f67",
+        "blitz": 677.3230616302187,
+        "regular": 0.0,
+        "leaderboard": 677.3230616302187,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 362
+      },
+      {
+        "address": "0xce01B1f6c9b550AED459471B379bfb47c5C37A23",
+        "blitz": 13911.046719681908,
+        "regular": 1546.7332504000697,
+        "leaderboard": 15457.779970081978,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1210
+      },
+      {
+        "address": "0xA79E21622DfC0D6DE14Fd658B89369e414dD1077",
+        "blitz": 31995.497017892645,
+        "regular": 4679.502923352637,
+        "leaderboard": 36674.99994124528,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2399
+      },
+      {
+        "address": "0xFF33803B157D3a968dcdF590ee439d035e686EAa",
+        "blitz": 4223.511928429423,
+        "regular": 0.0,
+        "leaderboard": 4223.511928429423,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 942
+      },
+      {
+        "address": "0xe5eF7aC556e80028d4ae5Fb1DE74DA4F2734e5C9",
+        "blitz": 659.0545334697566,
+        "regular": 0.0,
+        "leaderboard": 659.0545334697566,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 349
+      },
+      {
+        "address": "0xa8755DB6F260442A95D90C3EAa4b5243fC304697",
+        "blitz": 125.11037895317925,
+        "regular": 0.0,
+        "leaderboard": 125.11037895317925,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 26
+      },
+      {
+        "address": "0x5CB9Cd26dAfCFA3D486ea9a4b00B4442628cB8AE",
+        "blitz": 97.81908548707753,
+        "regular": 0.0,
+        "leaderboard": 97.81908548707753,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 270
+      },
+      {
+        "address": "0x423E04d1B1869b127B4E2C9C9cf2B1056DC580b9",
+        "blitz": 4662.709741550696,
+        "regular": 13.888115370885316,
+        "leaderboard": 4676.597856921581,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 281
+      },
+      {
+        "address": "0xF54a4C67B716318F39a1D91b3672Ad6DdFbA889E",
+        "blitz": 12231.832007952285,
+        "regular": 358.3343564491079,
+        "leaderboard": 12590.166364401393,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 658
+      },
+      {
+        "address": "0xa852d9e2502FD8e8dd943c9f1De0bE567baf0A5b",
+        "blitz": 354.19383697813123,
+        "regular": 0.0,
+        "leaderboard": 354.19383697813123,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 88
+      },
+      {
+        "address": "0xEe3F71AF51A48D9fa420A2A0829Fb77e5Fa109b7",
+        "blitz": 88.66016398507057,
+        "regular": 0.0,
+        "leaderboard": 88.66016398507057,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0xdF7974d35Cc3f8b80b13B6E2D2303152C034C2af",
+        "blitz": 17.73242055118518,
+        "regular": -17.73242055118518,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 18
+      },
+      {
+        "address": "0xD9A59053e7EaFD0F7Bbf622Ac20c466B01fdA0cE",
+        "blitz": 126.47316103379721,
+        "regular": 30.03431918174472,
+        "leaderboard": 156.50748021554193,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 63
+      },
+      {
+        "address": "0x7beD221FE814870CBd10654427837fBdB93F8C87",
+        "blitz": 636.1739562624255,
+        "regular": 0.0,
+        "leaderboard": 636.1739562624255,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 605
+      },
+      {
+        "address": "0x8aEBb9AE61c5A929e6eE3c8F88B3aa0dFCf73a6a",
+        "blitz": 54.18220444264792,
+        "regular": 0.0,
+        "leaderboard": 54.18220444264792,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 35
+      },
+      {
+        "address": "0x49876839d5f920eC73da43e05C00deB773e107b6",
+        "blitz": 293.4572564612326,
+        "regular": 0.0,
+        "leaderboard": 293.4572564612326,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 63
+      },
+      {
+        "address": "0x4b6564c54Fe961A57C606eAd3fC8F991c2bBD8eE",
+        "blitz": 165.5055805347972,
+        "regular": 0.0,
+        "leaderboard": 165.5055805347972,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 117
+      },
+      {
+        "address": "0x2BDabAED92E4e460a654Fb3C7b0EA06Ba440012F",
+        "blitz": 271.8966662648326,
+        "regular": 0.0,
+        "leaderboard": 271.8966662648326,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 166
+      },
+      {
+        "address": "0x2C0f1018F31cf84FA75C160F5A94bca4ba4b1DA8",
+        "blitz": 325.04193903762,
+        "regular": 0.0,
+        "leaderboard": 325.04193903762,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 53
+      },
+      {
+        "address": "0xfD1c16b33101437694d9348F91a6bc3890b21aF5",
+        "blitz": 2335.8011928429423,
+        "regular": 449.57812534286677,
+        "leaderboard": 2785.379318185809,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 192
+      },
+      {
+        "address": "0x5DC078db5504ABf4cC35e215237AeeaC8E947Eb2",
+        "blitz": 155.64963507562453,
+        "regular": 0.0,
+        "leaderboard": 155.64963507562453,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 35
+      },
+      {
+        "address": "0x1Bc7dF2AA0DBE1a489A7205f2D1fF92C3d51A80b",
+        "blitz": 72.90169046869175,
+        "regular": 376.6372334093387,
+        "leaderboard": 449.53892387803046,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 65
+      },
+      {
+        "address": "0x67506AC99034FEC04aE6f3fdBFDc4ED6fDCDfcE0",
+        "blitz": 38.53479125248509,
+        "regular": -38.53479125248509,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 32
+      },
+      {
+        "address": "0xB0093A0954dfdC1735A59e0509861Aa2aB1b09f9",
+        "blitz": 223.62661212038847,
+        "regular": 0.0,
+        "leaderboard": 223.62661212038847,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 225
+      },
+      {
+        "address": "0x39e5979447433A7a859eFf5E5125451F2c3c0a35",
+        "blitz": 67.32719681908549,
+        "regular": 0.0,
+        "leaderboard": 67.32719681908549,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 58
+      },
+      {
+        "address": "0x81ce2f2D7a58B40C3c37bd16005c251748108316",
+        "blitz": 245.29782761928377,
+        "regular": 0.0,
+        "leaderboard": 245.29782761928377,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 98
+      },
+      {
+        "address": "0x2e29141c2f70C54EcBa3a93Bcbba85Dc4Be59242",
+        "blitz": 140.61524178372008,
+        "regular": 0.0,
+        "leaderboard": 140.61524178372008,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 38
+      },
+      {
+        "address": "0xc214049189C42A928Fd45DCca928b32729D068de",
+        "blitz": 176.3707753479125,
+        "regular": 0.0,
+        "leaderboard": 176.3707753479125,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 84
+      },
+      {
+        "address": "0xfEC61AE80c7026B68de716ffC5c0333C9efdaeeB",
+        "blitz": 492.0596421471173,
+        "regular": 63.15284041385007,
+        "leaderboard": 555.2124825609674,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 192
+      },
+      {
+        "address": "0x88e5E119e9916B32e68A18fd9AB96274d71749C9",
+        "blitz": 1801.541018517884,
+        "regular": 0.0,
+        "leaderboard": 1801.541018517884,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 591
+      },
+      {
+        "address": "0x8F766FC4F5919cE443D3937b4898e26a92245Ca8",
+        "blitz": 26912.10536779324,
+        "regular": 0.0,
+        "leaderboard": 26912.10536779324,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1811
+      },
+      {
+        "address": "0xeF5cA81Dc83A239bb88211B591E300E851355f22",
+        "blitz": 197.02363978063187,
+        "regular": 49.255553251542295,
+        "leaderboard": 246.27919303217416,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 20
+      },
+      {
+        "address": "0xdB4F292e4356DDaD093c977b8fcC07A73c44b4f8",
+        "blitz": 85.70785437342023,
+        "regular": 0.0,
+        "leaderboard": 85.70785437342023,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 77
+      },
+      {
+        "address": "0x8BeCEdD8AE8860864a34eDe626DDE3b0ffD99e6F",
+        "blitz": 216.73332071553392,
+        "regular": 0.0,
+        "leaderboard": 216.73332071553392,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 217
+      },
+      {
+        "address": "0x35d0D3cbb2f57E4676aEdd54388F38a10801a1bb",
+        "blitz": 56.15287850850026,
+        "regular": 0.0,
+        "leaderboard": 56.15287850850026,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 52
+      },
+      {
+        "address": "0xCedaf8BAE164BbeCaf141d04441C973F7E96768C",
+        "blitz": 3110.9433399602385,
+        "regular": 0.0,
+        "leaderboard": 3110.9433399602385,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 109
+      },
+      {
+        "address": "0x80E265Fd2D75602A5c5d71fabD60448b73E6AC37",
+        "blitz": 146.7286282306163,
+        "regular": 45.7679004748519,
+        "leaderboard": 192.4965287054682,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 132
+      },
+      {
+        "address": "0xED30EA1140A79c7D485957D1e08048D81EAC45bd",
+        "blitz": 4531.790258449304,
+        "regular": 1688.213676353671,
+        "leaderboard": 6220.003934802975,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 287
+      },
+      {
+        "address": "0x5Fc49b8bC3EFbb989C38C741406D7cC21F2097C2",
+        "blitz": 141.85968515886975,
+        "regular": 0.0,
+        "leaderboard": 141.85968515886975,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 136
+      },
+      {
+        "address": "0xf3ed6639eacA56D070D1733Ee0a226A682EEEA62",
+        "blitz": 1469.824901385171,
+        "regular": 0.0,
+        "leaderboard": 1469.824901385171,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 562
+      },
+      {
+        "address": "0x6Fc3619B7537e4E27A946294A535BcDB55273B6e",
+        "blitz": 1853.6222664015904,
+        "regular": 0.0,
+        "leaderboard": 1853.6222664015904,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 141
+      },
+      {
+        "address": "0x7589418FAB3d3f6f448ABc620398ca92178323E8",
+        "blitz": 236.43544597793448,
+        "regular": 0.0,
+        "leaderboard": 236.43544597793448,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 163
+      },
+      {
+        "address": "0x053D1062b019D1e2A8Ce0c5fAF15B2D618E26598",
+        "blitz": 43.34598275850744,
+        "regular": -43.34598275850744,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 41
+      },
+      {
+        "address": "0x0962bf6830B06e346C1cdb232Ad83349cdD05eB3",
+        "blitz": 45.28716239310999,
+        "regular": -45.28716239310999,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 37
+      },
+      {
+        "address": "0x756f1D0485b4efCda969e187C3112252a0c12770",
+        "blitz": 4.747996148625224,
+        "regular": -4.747996148625224,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0x0fCC6299893fdC8890E5aC9Bac18F1660245F7B2",
+        "blitz": 113.29151371008112,
+        "regular": 0.0,
+        "leaderboard": 113.29151371008112,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 115
+      },
+      {
+        "address": "0xaBDF989Ac7a4564Cb9d497B827595d6518bfe0AD",
+        "blitz": 130.03759199321138,
+        "regular": 0.0,
+        "leaderboard": 130.03759199321138,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 131
+      },
+      {
+        "address": "0xE6eE5593cFBFbAF6F823D299C965a869937ff594",
+        "blitz": 89.42047713717695,
+        "regular": 0.98912126601914,
+        "leaderboard": 90.40959840319609,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 77
+      },
+      {
+        "address": "0x8a16Ef03C6008fC14fb265BAa96aeE49fF13c6Cd",
+        "blitz": 40.39006629545437,
+        "regular": -40.39006629545437,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 21
+      },
+      {
+        "address": "0x6caf266E4beBf48C6E022F7D03e002e032DA47F1",
+        "blitz": 241.36103367000814,
+        "regular": 17.73414071029501,
+        "leaderboard": 259.09517438030315,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 148
+      },
+      {
+        "address": "0x7a941497f764513528E27Ba1e87010B498c08214",
+        "blitz": 371.5149105367793,
+        "regular": 44.63949732199046,
+        "leaderboard": 416.1544078587698,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 71
+      },
+      {
+        "address": "0x9dC7df1C8035E89dA92a032821DA0B5Ba1c7A8e4",
+        "blitz": 115.54632381417795,
+        "regular": 0.0,
+        "leaderboard": 115.54632381417795,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 77
+      },
+      {
+        "address": "0x1b03E6554b44e6E0dcd69124e372aC8ecbEa755A",
+        "blitz": 1567.7127236580518,
+        "regular": 294.17614660713116,
+        "leaderboard": 1861.888870265183,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 430
+      },
+      {
+        "address": "0x8eeF3Fee943630Ed1aec7f617CD42181B02E900F",
+        "blitz": 142.77634194831015,
+        "regular": 0.0,
+        "leaderboard": 142.77634194831015,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 100
+      },
+      {
+        "address": "0x1BA0dc7D02df337521BCA7859B64246c265FfBCb",
+        "blitz": 169.44312598603048,
+        "regular": 0.0,
+        "leaderboard": 169.44312598603048,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 172
+      },
+      {
+        "address": "0x088Cc97a04DEd0d4fd3c24AC05CAb7d0D734e651",
+        "blitz": 526.4816181561094,
+        "regular": 0.0,
+        "leaderboard": 526.4816181561094,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 150
+      },
+      {
+        "address": "0xE6968C8E9928Ec5A1ecDA28A3736BEBb2C105932",
+        "blitz": 186.19143657262302,
+        "regular": 0.0,
+        "leaderboard": 186.19143657262302,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 189
+      },
+      {
+        "address": "0x3DfAad214427B80a6A4d1D06ba76c9DBae8bE5ab",
+        "blitz": 178.30972474442117,
+        "regular": 0.0,
+        "leaderboard": 178.30972474442117,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 60
+      },
+      {
+        "address": "0xCab7D263860B95ee56e7aC788BC3694AB315C4b1",
+        "blitz": 1556.2063824599438,
+        "regular": 0.0,
+        "leaderboard": 1556.2063824599438,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 489
+      },
+      {
+        "address": "0xaB2683f71B4f17e3A1c17682A98EF8e6da929420",
+        "blitz": 365.4840501234536,
+        "regular": 0.0,
+        "leaderboard": 365.4840501234536,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 156
+      },
+      {
+        "address": "0x58192F0ae70Cc169CC6B5699561321B221A6b141",
+        "blitz": 975.2266401590457,
+        "regular": 0.0,
+        "leaderboard": 975.2266401590457,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 68
+      },
+      {
+        "address": "0x1a9Cf7657c998f33386c2aC1e5BCF98Edc29FA52",
+        "blitz": 543.1337201018112,
+        "regular": 0.0,
+        "leaderboard": 543.1337201018112,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 54
+      },
+      {
+        "address": "0x97282cacd5d5ce318530f50b8E678cD85e695063",
+        "blitz": 3127.25886590349,
+        "regular": 0.0,
+        "leaderboard": 3127.25886590349,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 458
+      },
+      {
+        "address": "0xf5D87EE9B1bE5a6b9dBF733fDe1235A5E6e502AC",
+        "blitz": 669.9032238271457,
+        "regular": 0.0,
+        "leaderboard": 669.9032238271457,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 224
+      },
+      {
+        "address": "0xf54468C041DAFB9E8cDdC9ffdEEc73E525693806",
+        "blitz": 90.62027437711966,
+        "regular": 0.0,
+        "leaderboard": 90.62027437711966,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 48
+      },
+      {
+        "address": "0xBb3B690246f9435CdF436073c9a7454d5801F808",
+        "blitz": 381.0238568588469,
+        "regular": 0.0,
+        "leaderboard": 381.0238568588469,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 43
+      },
+      {
+        "address": "0xc8FEC5f2dCE03D36124F7EaD017B5e7e9a9Dd349",
+        "blitz": 43.742096897815884,
+        "regular": -43.742096897815884,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 37
+      },
+      {
+        "address": "0x2b48A7e639383810BfC1F168DF0616D930fA87C3",
+        "blitz": 25.613936524133283,
+        "regular": -25.613936524133283,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 17
+      },
+      {
+        "address": "0x851EC34465A0383eB4C5B7c6D00e1b530b88b331",
+        "blitz": 7.881174204391885,
+        "regular": -7.881174204391885,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0xA4044904a6A27F512056dbc4C6a4335c17E8D4c8",
+        "blitz": 7.881126942962197,
+        "regular": -7.881126942962197,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0xADf93065F028ca9150b8807dbA9cd7EBb75D06c3",
+        "blitz": 29.70178926441352,
+        "regular": -29.70178926441352,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0xE28915FAe2D3808013bF897971DEd7Ec09582ed9",
+        "blitz": 57.13906872258784,
+        "regular": 0.0,
+        "leaderboard": 57.13906872258784,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 47
+      },
+      {
+        "address": "0x986580f360485287a8E1a100F698778de92Ee5cB",
+        "blitz": 5866.180914512923,
+        "regular": 9.920436417198289,
+        "leaderboard": 5876.101350930121,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 65
+      },
+      {
+        "address": "0xF61a19163f013B5A4517EaAe98ef5f084DAb7D3C",
+        "blitz": 80.78306432473819,
+        "regular": 0.0,
+        "leaderboard": 80.78306432473819,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 46
+      },
+      {
+        "address": "0x1631eE06E681CFd243bdeD0B2631C9C8105b0fca",
+        "blitz": 82.50397614314116,
+        "regular": 41.19776017873133,
+        "leaderboard": 123.70173632187249,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 48
+      },
+      {
+        "address": "0xfa157eE2a5cB654829d23C4c4073a566928BaAFb",
+        "blitz": 108.36284740940691,
+        "regular": 0.0,
+        "leaderboard": 108.36284740940691,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0x71C4E5Dfd9E2FBf23E7B110335175d602d96E1e7",
+        "blitz": 13.791978456058393,
+        "regular": -13.791978456058393,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 11
+      },
+      {
+        "address": "0xbcD0B3847d932fc4dD7A5996E727a8940842440a",
+        "blitz": 377.9373757455268,
+        "regular": 0.0,
+        "leaderboard": 377.9373757455268,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 78
+      },
+      {
+        "address": "0x4075edbe6B170e604235Dbdb6C453A6d6735De73",
+        "blitz": 28.286342961608042,
+        "regular": -28.286342961608042,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 23
+      },
+      {
+        "address": "0x4FCEa3b50f4Bb409D5575a39A7FeE147B81219Ea",
+        "blitz": 15.926604804206427,
+        "regular": -15.926604804206427,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 29
+      },
+      {
+        "address": "0xcd8E7645EA4cB766b93Bf8710c8855452dBc23A4",
+        "blitz": 25.61906930844211,
+        "regular": -25.61906930844211,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 23
+      },
+      {
+        "address": "0x220B7f51847262318Ff69a03C5BfE3E680A544A5",
+        "blitz": 44.33395662455974,
+        "regular": -44.33395662455974,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 32
+      },
+      {
+        "address": "0x0B25Ae592b83D13ce0D050ab3660cB7238228bA7",
+        "blitz": 137.91825895329194,
+        "regular": 0.0,
+        "leaderboard": 137.91825895329194,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0x864a3A218003f7a4A18DbC296504581EDed9b9f6",
+        "blitz": 48.276244534548994,
+        "regular": -48.276244534548994,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 42
+      },
+      {
+        "address": "0x66F7ec16f9d526dF43678F1B9F564eCcC7F02675",
+        "blitz": 147.76734730904576,
+        "regular": 0.0,
+        "leaderboard": 147.76734730904576,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 15
+      },
+      {
+        "address": "0x1A585175176A7C60Be88a9C2F5478ADc12476ae9",
+        "blitz": 131.02182681216948,
+        "regular": 0.0,
+        "leaderboard": 131.02182681216948,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 56
+      },
+      {
+        "address": "0xe386141fFd7B3367b81BB16f55770DF5428650B1",
+        "blitz": 58.07009125256914,
+        "regular": 0.0,
+        "leaderboard": 58.07009125256914,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0xF726fE3493840053323Ef92b10dcA48c17F2e668",
+        "blitz": 201.95188628190135,
+        "regular": 0.0,
+        "leaderboard": 201.95188628190135,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 204
+      },
+      {
+        "address": "0xCaEcD6fcd6b9CDFE39082FE2f96afE3671424C04",
+        "blitz": 177.32544549636424,
+        "regular": 0.0,
+        "leaderboard": 177.32544549636424,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 180
+      },
+      {
+        "address": "0x96501444Fc10D42CC3fB1fd09246a4E1E0E1E728",
+        "blitz": 147.76789267142513,
+        "regular": 0.0,
+        "leaderboard": 147.76789267142513,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 15
+      },
+      {
+        "address": "0xC5F3E6243C89e91E5E1def2F4DA2B1cf64D49C54",
+        "blitz": 89.64716438445997,
+        "regular": 0.0,
+        "leaderboard": 89.64716438445997,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 89
+      },
+      {
+        "address": "0xFD55Af17377901f8517aF398327914d459dB0D48",
+        "blitz": 149.74010019758168,
+        "regular": 0.0,
+        "leaderboard": 149.74010019758168,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 146
+      },
+      {
+        "address": "0x57a855028B624A861aC793d131de6D5C4640cB98",
+        "blitz": 104.73558648111332,
+        "regular": 0.0,
+        "leaderboard": 104.73558648111332,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 45
+      },
+      {
+        "address": "0x369A90011194b5Ec501F1381dB57f2009e5c60C7",
+        "blitz": 1235.5834990059643,
+        "regular": 25.792804406868072,
+        "leaderboard": 1261.3763034128324,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 61
+      },
+      {
+        "address": "0xF775a5ecb2B17A2fCc0c32C00Ffd4900bfEE128b",
+        "blitz": 273.86582916627657,
+        "regular": 0.0,
+        "leaderboard": 273.86582916627657,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 76
+      },
+      {
+        "address": "0xed9eCA4aeF6e187Ce3acf563E2D626c73E37E4d7",
+        "blitz": 147.76799006569772,
+        "regular": 0.0,
+        "leaderboard": 147.76799006569772,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0xE13A0b098c4DdaDE421fe06548627826D88EdFB1",
+        "blitz": 188.15662550996362,
+        "regular": 0.0,
+        "leaderboard": 188.15662550996362,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 17
+      },
+      {
+        "address": "0xCb36Ad5eb04e49EE9C751dd6B5D7053F407961a7",
+        "blitz": 512.2617765768202,
+        "regular": 0.0,
+        "leaderboard": 512.2617765768202,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 21
+      },
+      {
+        "address": "0x0373Ce8AA61BfD0CE6532aFB4dA2a08560731586",
+        "blitz": 1712.635279343808,
+        "regular": 0.0,
+        "leaderboard": 1712.635279343808,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 174
+      },
+      {
+        "address": "0x9e6bAc8e51346add738Df666A8bf5fe5E8ffcB0e",
+        "blitz": 43.34518941821517,
+        "regular": -43.34518941821517,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x1F05F93afa49A2CdC0bF57BE058BA4D5e1E6854A",
+        "blitz": 26.106188170575226,
+        "regular": -26.106188170575226,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0x8F8648C1881516c452c277C79CA2788E4694Bd4C",
+        "blitz": 2.955564460069242,
+        "regular": -2.955564460069242,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xf8Cb06457d9D38DE80A486F73e461552EC4b8c6f",
+        "blitz": 15.76271080596963,
+        "regular": -15.76271080596963,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 16
+      },
+      {
+        "address": "0x5dCeb0371F3b8a099F267B9e7784dF02844242Ef",
+        "blitz": 67.97466925860245,
+        "regular": 0.0,
+        "leaderboard": 67.97466925860245,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 43
+      },
+      {
+        "address": "0x2B5d1157977eB8a2Ff260217c85A743528e8eA9A",
+        "blitz": 161.55986866721383,
+        "regular": 0.0,
+        "leaderboard": 161.55986866721383,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0x043f557f46693f88818f71D9123366a78CfD80E5",
+        "blitz": 9.851282581871017,
+        "regular": -9.851282581871017,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0x36380B930d39aC52C3242B13760eDb5d89aE6a38",
+        "blitz": 15.759018503934545,
+        "regular": -15.759018503934545,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 15
+      },
+      {
+        "address": "0xb54060301155538A6577889ACF77482b00933da7",
+        "blitz": 22.657877438341117,
+        "regular": -22.657877438341117,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0x60E962722a451cB9FA5733b99D11da79a7184c4E",
+        "blitz": 9.851408680406502,
+        "regular": -9.851408680406502,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x8B80c0cEa1d42829FB00D9EB9D7533E048eAeDC9",
+        "blitz": 162.54496478119674,
+        "regular": 0.0,
+        "leaderboard": 162.54496478119674,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 30
+      },
+      {
+        "address": "0xeE93E1cf94438f88aCfd8D1301eaE1b4A47830B8",
+        "blitz": 13.914021319295568,
+        "regular": -13.914021319295568,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0xB4F6D0E48624101970Cf3c362c86487fE9092d3B",
+        "blitz": 19.702675515443264,
+        "regular": -19.702675515443264,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 20
+      },
+      {
+        "address": "0xd2DEA7B036ac5998D307aE7490b4cac409A43E47",
+        "blitz": 13.790449929521357,
+        "regular": -13.790449929521357,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0x9A16DE7204B967A157ABE68332C342233Da8553B",
+        "blitz": 78.81037598313233,
+        "regular": 0.0,
+        "leaderboard": 78.81037598313233,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 79
+      },
+      {
+        "address": "0x535dC9139638f88939FE1fC09bBA7095a0E83373",
+        "blitz": 398.9106731694733,
+        "regular": 0.0,
+        "leaderboard": 398.9106731694733,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 29
+      },
+      {
+        "address": "0x9E563331eE05F31eB2D46862Ef6bF0c647b793D5",
+        "blitz": 100.48368671373768,
+        "regular": 0.0,
+        "leaderboard": 100.48368671373768,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 101
+      },
+      {
+        "address": "0x45F0864f595669Ec08C4A3E5a4eFd6036D9cb6ec",
+        "blitz": 171.4114058060755,
+        "regular": 0.0,
+        "leaderboard": 171.4114058060755,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 77
+      },
+      {
+        "address": "0x2038a225E1b8fD0028E4D3C43ebEaA49C50C2423",
+        "blitz": 65.00265785659117,
+        "regular": 0.0,
+        "leaderboard": 65.00265785659117,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 23
+      },
+      {
+        "address": "0xbEC0125d5E728c5Dc91272ac9a91056ADCb4B327",
+        "blitz": 88.66139318828796,
+        "regular": 0.0,
+        "leaderboard": 88.66139318828796,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 18
+      },
+      {
+        "address": "0xbf3d1a965E332b6B57cb59ad4a79FdeC225685cF",
+        "blitz": 67.97322249818762,
+        "regular": 0.0,
+        "leaderboard": 67.97322249818762,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 19
+      },
+      {
+        "address": "0xb2dc46C92F1B0b8B5eE07ec7d5c7d329D1cc47Fa",
+        "blitz": 216.72463885704062,
+        "regular": 0.0,
+        "leaderboard": 216.72463885704062,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0x22ca56F56FEBb85C389a0c02F986309A18ee0eC3",
+        "blitz": 88.52409361861012,
+        "regular": 0.0,
+        "leaderboard": 88.52409361861012,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 22
+      },
+      {
+        "address": "0x068E585A9B1f6D06F5d0BB5DcAcA95e5DCB093fe",
+        "blitz": 79.796560862417,
+        "regular": 0.0,
+        "leaderboard": 79.796560862417,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 28
+      },
+      {
+        "address": "0x5042d6c11e3Ae164cF322dc0278d1C88653AF212",
+        "blitz": 179.2936202509888,
+        "regular": 0.0,
+        "leaderboard": 179.2936202509888,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 182
+      },
+      {
+        "address": "0x900aC28166Cfea67290B739F8Db20c09436Ff530",
+        "blitz": 184.4234418414568,
+        "regular": 0.0,
+        "leaderboard": 184.4234418414568,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 49
+      },
+      {
+        "address": "0x2eca8bD32abf6c78BDC5Ffd82998C1ea17d23b44",
+        "blitz": 167.4695026733534,
+        "regular": 0.0,
+        "leaderboard": 167.4695026733534,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 17
+      },
+      {
+        "address": "0xeccd5f157e597598c946c1Da566F31FD0D62B232",
+        "blitz": 201.8215387612195,
+        "regular": 0.0,
+        "leaderboard": 201.8215387612195,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 102
+      },
+      {
+        "address": "0xf9D4420b50d1607Bbe562F92C2886FE46BA1a6E2",
+        "blitz": 216.72816951616605,
+        "regular": 0.0,
+        "leaderboard": 216.72816951616605,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 12
+      },
+      {
+        "address": "0x923C1d829e9c0aeb4EF48c0374F12634a83A87c6",
+        "blitz": 107.38129667491238,
+        "regular": 0.0,
+        "leaderboard": 107.38129667491238,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 49
+      },
+      {
+        "address": "0xfF0F15eAFC91E1CE9fd16610A6046B11A71de506",
+        "blitz": 227.25646123260438,
+        "regular": 69.05310821902921,
+        "leaderboard": 296.3095694516336,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 94
+      },
+      {
+        "address": "0x103dfC5c7BD647EB256c3b187f930f295706e481",
+        "blitz": 119.12595585219375,
+        "regular": 0.0,
+        "leaderboard": 119.12595585219375,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 60
+      },
+      {
+        "address": "0xb10D66D94707df3135cA5e1F29Ee76b95B22cbB1",
+        "blitz": 261.06113028406355,
+        "regular": 0.0,
+        "leaderboard": 261.06113028406355,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 60
+      },
+      {
+        "address": "0xe7ff86c1938DFFb7510A72736240C7A5a10c6b9e",
+        "blitz": 167.0127436365027,
+        "regular": 51.812665235873084,
+        "leaderboard": 218.8254088723758,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 19
+      },
+      {
+        "address": "0xEE386cdA28937e0DCe3e72ae9c56eC1FaD6BC4f6",
+        "blitz": 324.10484124040164,
+        "regular": 0.0,
+        "leaderboard": 324.10484124040164,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 54
+      },
+      {
+        "address": "0xf1eF372bD9d042436f9C857D95A22e0981c0DCe2",
+        "blitz": 339.8665726744832,
+        "regular": 0.0,
+        "leaderboard": 339.8665726744832,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 53
+      },
+      {
+        "address": "0x6e742E7f4D8433421288B4DdEEB0a992cbAa0022",
+        "blitz": 659.5377733598409,
+        "regular": 0.0,
+        "leaderboard": 659.5377733598409,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 77
+      },
+      {
+        "address": "0x6535dd63B67615c72866B744276197ba1BDF8D63",
+        "blitz": 1130.8272399483615,
+        "regular": 0.0,
+        "leaderboard": 1130.8272399483615,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 64
+      },
+      {
+        "address": "0x45c6a72E6DeCb64C7E7C8C631fBbC9C5d271Fd63",
+        "blitz": 528.0223708971711,
+        "regular": 0.0,
+        "leaderboard": 528.0223708971711,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 70
+      },
+      {
+        "address": "0x427c7B8554AE24228e7888f387f14a4B1bf4ceAB",
+        "blitz": 1408.7109170003562,
+        "regular": 0.0,
+        "leaderboard": 1408.7109170003562,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 38
+      },
+      {
+        "address": "0x1C59d3C761f98d463976139475c753A2E3D4f45c",
+        "blitz": 1131.4039602216856,
+        "regular": 0.0,
+        "leaderboard": 1131.4039602216856,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0x3DA25f049cc5A9B773bD5071210cAde09bA9aBfE",
+        "blitz": 832.7227021364588,
+        "regular": 0.0,
+        "leaderboard": 832.7227021364588,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 15
+      },
+      {
+        "address": "0x7b6A127b8bFD002a2A8cc3011AcE62ebC7239500",
+        "blitz": 99.49695793442957,
+        "regular": 0.0,
+        "leaderboard": 99.49695793442957,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0xc788d73BD54243335dfDCc28Db3bB4817f279675",
+        "blitz": 59.06588282120003,
+        "regular": 0.0,
+        "leaderboard": 59.06588282120003,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x52fe2Eeafa2bAEe83c66eA9A7ac6F484Aae3436e",
+        "blitz": 19.70095922874456,
+        "regular": -19.70095922874456,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xa1364697377D14003546f896c052E2EE4e6F47dd",
+        "blitz": 7.569465754736403,
+        "regular": -7.569465754736403,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xD728CB8000A685BF9A1bbaAA222280d1d5246a02",
+        "blitz": 9.85203914685588,
+        "regular": -9.85203914685588,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xB60aCe5A068e1E31e99d4FF0216bd2C873f4Cf29",
+        "blitz": 88.66012916239492,
+        "regular": 0.0,
+        "leaderboard": 88.66012916239492,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x03b200c84614e176F59Cf6303C1ED7066DCecf1f",
+        "blitz": 8.863005109022076,
+        "regular": -8.863005109022076,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x498DA6C393d07868d2FaD54d4aa7f373E488c4F1",
+        "blitz": 19.70221840273106,
+        "regular": -19.70221840273106,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x43be94D74287F0b6441f6f5D186999Ce5Ae288e9",
+        "blitz": 40.38986140604259,
+        "regular": -40.38986140604259,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0x1a86f783505f5f194380Eb6C4A3251DEadf1C884",
+        "blitz": 3.940752613761923,
+        "regular": -3.940752613761923,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x85E51794Fe328864f5E18Ec2d454cb9E666D8A4F",
+        "blitz": 7.881032056005192,
+        "regular": -7.881032056005192,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x40983Ea7f47e7EEF830d2FF12bb6F0fe48FFd0c5",
+        "blitz": 16.7408795775078,
+        "regular": -16.7408795775078,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 12
+      },
+      {
+        "address": "0x5B5e4253f75a1d29EC4fD0304c881D30781b779D",
+        "blitz": 2.9554068250210364,
+        "regular": -2.9554068250210364,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xE5dfec5232C66dd2e395b7718c6Dd9Bb3a232DD3",
+        "blitz": 8.16362123249473,
+        "regular": -8.16362123249473,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xD72D6C609c4cd21c43f68d8EFdfC64EA508fFA60",
+        "blitz": 5.910971310209185,
+        "regular": -5.910971310209185,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x4689039E59A11DB8e5e122511E0DE288408E35dA",
+        "blitz": 13.797619895722782,
+        "regular": -13.797619895722782,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0xeDA11E04a2Ba85148AD49C3f0475DC0aE52d9d1c",
+        "blitz": 4.925672815947652,
+        "regular": -4.925672815947652,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xC7D564850d7EaB15ddDF818b149e861E83C2d13A",
+        "blitz": 1.4840954274353877,
+        "regular": -1.4840954274353877,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xF01aE577c213E8c1E9be6dc318A7F1A5b67B0fd2",
+        "blitz": 8.865063140392149,
+        "regular": -8.865063140392149,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x12018385906a7170C4Df0fd409d12b7Cfed2804F",
+        "blitz": 9.851518907305346,
+        "regular": -9.851518907305346,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x4CBBA616E2A4044BfD4308adb8b09C4ce4667534",
+        "blitz": 9.851251058372021,
+        "regular": 108.363936439046,
+        "leaderboard": 118.21518749741803,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x4aD97b14139C2d7f0bEE670D67B018533B93C25e",
+        "blitz": 9.851251059380767,
+        "regular": -9.851251059380767,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x9AA79F52e9Ca2492eEE76E47F16E54FFE0CF9D82",
+        "blitz": 10.374751491053678,
+        "regular": -10.374751491053678,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x45612b9831e3a58eDF202496dD2212D57BDF468A",
+        "blitz": 24.627812408418016,
+        "regular": -24.627812408418016,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x91bd48f16A420a79dABa0C9Cc8D6214564178845",
+        "blitz": 3.9374249764923346,
+        "regular": -3.9374249764923346,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x53218Da96f5609cD43f314e3a39A7c202F1cC261",
+        "blitz": 10.834010146964289,
+        "regular": -10.834010146964289,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 11
+      },
+      {
+        "address": "0x59f64681FeFb09F4F583A473b492b90d69f1E3e6",
+        "blitz": 15.762742503036328,
+        "regular": -15.762742503036328,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 16
+      },
+      {
+        "address": "0xd4C44f804A6b90965dFB58970c80AdC14d257306",
+        "blitz": 39.404720520988135,
+        "regular": -39.404720520988135,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x9e6b9Cc64ec96E68fB50A27d48A5B94E42947B30",
+        "blitz": 7.881000847504613,
+        "regular": -7.881000847504613,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0x633bB0AF219E52Cf8fAED9671254731d229873DF",
+        "blitz": 26.599156380478192,
+        "regular": -26.599156380478192,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 20
+      },
+      {
+        "address": "0xdc3Ee5C256f1d90A4E74A891851A456e49fdB247",
+        "blitz": 37.43475402564681,
+        "regular": -37.43475402564681,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0xe03DBc17F494682eD05B88F0554f29C8230a7274",
+        "blitz": 21.672768093396098,
+        "regular": -21.672768093396098,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x0B083E6c0a1615Ba91dD987a750a6A217Cf58Efe",
+        "blitz": 16.945427435387675,
+        "regular": -16.945427435387675,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0xeaEeE5def170d2EF4C8F85c0D5B1eF4ca2352979",
+        "blitz": 15.40755467196819,
+        "regular": -15.40755467196819,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 31
+      },
+      {
+        "address": "0xcAc9437f1202E97251D04847455303274CFB85A7",
+        "blitz": 26.599006765661677,
+        "regular": -26.599006765661677,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 20
+      },
+      {
+        "address": "0x1F8E4AE3ca2FacAb20A7a55801F56366a293E9f9",
+        "blitz": 10.83637616985826,
+        "regular": -10.83637616985826,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0x760DB8b973aA633F30552ab0F53A1B9cC5d5Bff1",
+        "blitz": 52.11512243764777,
+        "regular": -52.11512243764777,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 47
+      },
+      {
+        "address": "0x377A93CEDd45cc6369Fbd1A01dCAaF6Ca22dA9Ab",
+        "blitz": 29.553327604096538,
+        "regular": -29.553327604096538,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xa0Bb074bD766190ecBC6b4C8021955bCa01756CA",
+        "blitz": 36.45034906697031,
+        "regular": -36.45034906697031,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 33
+      },
+      {
+        "address": "0x8aeAc507CA281A494A6511585D5e0F4200d8D8D4",
+        "blitz": 39.40472052630307,
+        "regular": -39.40472052630307,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xEf224F46BB4925074C6063173393b3b0425547ED",
+        "blitz": 80.78079458817183,
+        "regular": 0.0,
+        "leaderboard": 80.78079458817183,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 32
+      },
+      {
+        "address": "0x5bC201FBe398A9D09b1471fB06c99B5884A4EA57",
+        "blitz": 118.21375174940731,
+        "regular": 0.0,
+        "leaderboard": 118.21375174940731,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 11
+      },
+      {
+        "address": "0x4D354a5BFAC61E3798c123ABda253570694cF50E",
+        "blitz": 84.72046741588944,
+        "regular": 0.0,
+        "leaderboard": 84.72046741588944,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 25
+      },
+      {
+        "address": "0xe28BD36CAC1B1caEb97001646E5b066Fe0eF3A2A",
+        "blitz": 44.33062097803775,
+        "regular": -44.33062097803775,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0x589426A68Ee795C5308cf9481c81A52D6DEE7A38",
+        "blitz": 39.40591633486639,
+        "regular": -39.40591633486639,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 15
+      },
+      {
+        "address": "0xA1D99c6f3090ddb122B6960cE1cADDD14EA92196",
+        "blitz": 73.88138474195097,
+        "regular": 0.0,
+        "leaderboard": 73.88138474195097,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 40
+      },
+      {
+        "address": "0xC619f7edAba598A8E502c030D154170826A28c19",
+        "blitz": 52.21177247273332,
+        "regular": 0.0,
+        "leaderboard": 52.21177247273332,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 22
+      },
+      {
+        "address": "0x0E2D0Bf2b703E12E11030D46c595B0045232BeDD",
+        "blitz": 35.46472441904703,
+        "regular": -35.46472441904703,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0xcE5269026E51389ce66d807e9D44748FA9910271",
+        "blitz": 81.61558037655082,
+        "regular": 0.0,
+        "leaderboard": 81.61558037655082,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0xe2e5EF3F87fB59629c88256aEcEF57aD40E2eB60",
+        "blitz": 65.01800152878364,
+        "regular": 0.0,
+        "leaderboard": 65.01800152878364,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 12
+      },
+      {
+        "address": "0x180cB30fA03f9596ACB1A0a98D3D24f24A77c90A",
+        "blitz": 52.40849643987407,
+        "regular": 0.0,
+        "leaderboard": 52.40849643987407,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 23
+      },
+      {
+        "address": "0xADdd9Eba77B49807F80d322C88D6aEf8ff825Ffd",
+        "blitz": 93.5865030195322,
+        "regular": 0.0,
+        "leaderboard": 93.5865030195322,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0x7348f6EdfB113bd313deea51D7Fc5Baa17Df36b1",
+        "blitz": 83.98608349900596,
+        "regular": 0.0,
+        "leaderboard": 83.98608349900596,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 17
+      },
+      {
+        "address": "0xFA02758a035E009709092C88038Ec081b97032bd",
+        "blitz": 305.3851075658239,
+        "regular": 0.0,
+        "leaderboard": 305.3851075658239,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 21
+      },
+      {
+        "address": "0x1E718b96f7C78DeF3FD09799939e44b21a3Ac5BA",
+        "blitz": 108.36248492343468,
+        "regular": 0.0,
+        "leaderboard": 108.36248492343468,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 11
+      },
+      {
+        "address": "0xaA832374A71962FefF12cE504E57fC1fA5330A4c",
+        "blitz": 84.71872373704157,
+        "regular": 0.0,
+        "leaderboard": 84.71872373704157,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 21
+      },
+      {
+        "address": "0xaF3d04E8c241ef9084c0D626cbfb93D06c359ca2",
+        "blitz": 78.8102606695952,
+        "regular": 0.0,
+        "leaderboard": 78.8102606695952,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 20
+      },
+      {
+        "address": "0x29a66C535bFcc800731742388A0117f23a140074",
+        "blitz": 147.76848208891678,
+        "regular": 0.0,
+        "leaderboard": 147.76848208891678,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 15
+      },
+      {
+        "address": "0xf73d9D13A781C4646454Ba0342F97d965454B4b5",
+        "blitz": 147.76862403042648,
+        "regular": 0.0,
+        "leaderboard": 147.76862403042648,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x84F2d3CE132252316e551e398c560D99e62c0F63",
+        "blitz": 246.27905404253232,
+        "regular": 0.0,
+        "leaderboard": 246.27905404253232,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0x5282d86A872F008244d31B1eb629764F12bcA562",
+        "blitz": 226.57629522022944,
+        "regular": 0.0,
+        "leaderboard": 226.57629522022944,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 22
+      },
+      {
+        "address": "0x3D77446D672C0877E7960a836eb9ac350236d597",
+        "blitz": 304.40448934164795,
+        "regular": 0.0,
+        "leaderboard": 304.40448934164795,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 22
+      },
+      {
+        "address": "0xf25524B26F8f914550Fb98BCf1f221801BA70e3e",
+        "blitz": 236.42731435050737,
+        "regular": 381.6929267853874,
+        "leaderboard": 618.1202411358947,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0x96aeb56955AFF956E51460c8033070b54b706f27",
+        "blitz": 433.45398132394865,
+        "regular": 0.0,
+        "leaderboard": 433.45398132394865,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 17
+      },
+      {
+        "address": "0x36A1735Ad7949f4B201c3a664F4ee38b9EBAE4FA",
+        "blitz": 9.85110920136552,
+        "regular": -9.85110920136552,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xfdB35064801a70031013686fc2e61b3c7235a4Ed",
+        "blitz": 29.553642842365104,
+        "regular": -29.553642842365104,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x38a84C85Bc926e6Fea70A2141937b646342E4Bff",
+        "blitz": 19.702391782984318,
+        "regular": -19.702391782984318,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xe6e15A1bE9BE112C93795d89effeC78c89CEeB8d",
+        "blitz": 31.812909053805303,
+        "regular": -31.812909053805303,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x497EcC0ee19BcCbdb6CB7f918E98225b2dFFCe27",
+        "blitz": 9.851109202122077,
+        "regular": -9.851109202122077,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xE7F4dae9d78d43b9429A6D22204f44178Ad90331",
+        "blitz": 9.851172249372276,
+        "regular": -9.851172249372276,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x212fbfdfDC89430016DEE96cEeC17baF8B19DD79",
+        "blitz": 9.851140725368902,
+        "regular": -9.851140725368902,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x803FE999B8396218b8CfA35D2eE46B968b1c3D2a",
+        "blitz": 49.25549872082247,
+        "regular": -49.25549872082247,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x90448400821Ce042bF9bAB4ECeC155cFF64F15c4",
+        "blitz": 9.851251059380747,
+        "regular": -9.851251059380747,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x4C5CE2bB66D637cc7465A94Af0E86663Cd8f014D",
+        "blitz": 29.553611319118225,
+        "regular": -29.553611319118225,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x6d540e20f1678B7d8E4fE2f8F0e4e4F69f447F91",
+        "blitz": 19.70234449874457,
+        "regular": -19.70234449874457,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xB68DA430427D7140fF7CCCE37F519be7e7788BE2",
+        "blitz": 9.844976158188107,
+        "regular": -9.844976158188107,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xA1c22064f6e58711752bd9c32a82209d060b0635",
+        "blitz": 13.509360363877812,
+        "regular": -13.509360363877812,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x7f95d7977CD557131D4b5A32199881825514fcea",
+        "blitz": 9.851251059380767,
+        "regular": -9.851251059380767,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x16b83d2536E6f2Ad0790F0e13036339B478043b5",
+        "blitz": 5.910908256401958,
+        "regular": -5.910908256401958,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xBbF92116e2F9Ca623A635E8b957c57ce669190EA",
+        "blitz": 2.95537531781423,
+        "regular": -2.95537531781423,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x701228817373B5F254F435006bE0363C659944Cd",
+        "blitz": 9.85140867586703,
+        "regular": -9.85140867586703,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x839707ef5a80e441e8C222Ec882B28F2F114831c",
+        "blitz": 29.553343371646367,
+        "regular": -29.553343371646367,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x87737472EC569D306B332d89eD91B6879D11Ab03",
+        "blitz": 19.702803282651757,
+        "regular": -19.702803282651757,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x8Ab02d4368604E789f3751a0484658fC944D6f95",
+        "blitz": 22.658019292069078,
+        "regular": -22.658019292069078,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0x5247D13044d1A27863895874811dD22F53aD9DE9",
+        "blitz": 4.922400486706913,
+        "regular": -4.922400486706913,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xFc9bf110e452d8DFdfD27aEF19Fbf62c46349A34",
+        "blitz": 3.9406107572597757,
+        "regular": -3.9406107572597757,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x3eE5873a732546ea89cb350E828B146B49084671",
+        "blitz": 29.553532508857618,
+        "regular": -29.553532508857618,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x7fD4578d351B98DB0A3C8033A5D9DDF39b7881c7",
+        "blitz": 2.955375320083922,
+        "regular": -2.955375320083922,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xae80bB743CEBCE78F224b766a610d8be78E5340f",
+        "blitz": 1.3610196854035723,
+        "regular": -1.3610196854035723,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xb0dEFa47bd075035C2E5610Fe0dE3cAf693082dF",
+        "blitz": 4.118657683271447,
+        "regular": -4.118657683271447,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x8a103C89e77661B776fccF9fc8ECDc98cFf28B18",
+        "blitz": 3.9405004237523067,
+        "regular": -3.9405004237523067,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x2Ae256b097f2B98993C179B1e92D37938534bAd4",
+        "blitz": 7.881113276159508,
+        "regular": -7.881113276159508,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xaD2398b0cF5D656710e3912dA74f0499227F4548",
+        "blitz": 2.9553437986024886,
+        "regular": -2.9553437986024886,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xdB00AdED56748440C18e5fb4Bf9AB95E524AEdfa",
+        "blitz": 1.9740852363944843,
+        "regular": -1.9740852363944843,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x8B95b87598960e7dFc629292bf1648E63e01140d",
+        "blitz": 2.9553674366872866,
+        "regular": -2.9553674366872866,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x0BBed76426CD491e6aD004c626E08A70A5458BbA",
+        "blitz": 14.777600828896068,
+        "regular": -14.777600828896068,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 15
+      },
+      {
+        "address": "0xF6E00Ad50c96d54a375C97A4fd52E86Aa290740F",
+        "blitz": 1.9702502118761533,
+        "regular": -1.9702502118761533,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xF44a1c74122434767A44376FE7c75595E5D5bBbf",
+        "blitz": 19.702502118761497,
+        "regular": -19.702502118761497,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x0c59E5B15b38469673397606fd4F44d4dE18E62A",
+        "blitz": 19.70223416598261,
+        "regular": -19.70223416598261,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x948552EB1a65E194ECe4EC3fcD00a15574cBfE47",
+        "blitz": 8.892644135188867,
+        "regular": -8.892644135188867,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x3D4D0cd4f26c3C5Fc8A37Ab4017BE2Cfc0039409",
+        "blitz": 2.7878117424674964,
+        "regular": -2.7878117424674964,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xA8aACEdecB2f6E2c093f87F865dbaE442a127be7",
+        "blitz": 4.925704339698859,
+        "regular": -4.925704339698859,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x8340f32Df2388b0C2F19066C73192DCbA5d95B00",
+        "blitz": 2.5917862906831117,
+        "regular": -2.5917862906831117,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xFAd4866957b9fC719b00ce0D52Fcc0667F122Aeb",
+        "blitz": 1.4821073558648112,
+        "regular": -1.4821073558648112,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x2F2a8fcd0F834eb1b00BDBaE74107D7218Ef29FA",
+        "blitz": 1.9704266357729237,
+        "regular": -1.9704266357729237,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xD92ed9510d3E455C44078Ed17918Da3E337A3d28",
+        "blitz": 2.9555486980675187,
+        "regular": -2.9555486980675187,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xD7dd8d5553eC78cC7dF62b319ecdAE4fb64979Ce",
+        "blitz": 1.9702502079632604,
+        "regular": -1.9702502079632604,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x5329Cd3DFc96746328BAfa1B8B574483F2B16dE6",
+        "blitz": 7.881000840637714,
+        "regular": -7.881000840637714,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0x71E0bd61909214ca8d6E3a91AEC33BC0d8D61d8D",
+        "blitz": 4.164026066971463,
+        "regular": -4.164026066971463,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x65cCF7b2b4121BB47F8442b80181A6E8D26e9926",
+        "blitz": 4.925761084864293,
+        "regular": -4.925761084864293,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x8c34232D21F088c428598f5572619f59B25DF66D",
+        "blitz": 5.910719111120686,
+        "regular": -5.910719111120686,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x8d110f7E74baD51B9ee17DDB7cc0D3ac185D59a4",
+        "blitz": 2.9553753183186426,
+        "regular": -2.9553753183186426,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xFEB2eb5cA418005F8e22f58cA849b24BD595eBC0",
+        "blitz": 6.895852098690089,
+        "regular": -6.895852098690089,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0xAdd3D9Ba52438132724Df4FF5380C7f043b526E2",
+        "blitz": 4.925672816452033,
+        "regular": -4.925672816452033,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x657aB604333939b05512c555d2b366809449Dc74",
+        "blitz": 3.947492256275053,
+        "regular": -3.947492256275053,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x3AB5Eb1Dd1D235ee6A62E1664F943b31b898e598",
+        "blitz": 14.821073558648111,
+        "regular": -14.821073558648111,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x14E47F76B9D3Da21C160d32c8640Ced89B4Ab911",
+        "blitz": 19.70221840273107,
+        "regular": -19.70221840273107,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x09d0C77f4FC4BCc53d5D281B2015dBf025bf6b19",
+        "blitz": 4.925657053189398,
+        "regular": -4.925657053189398,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x84E289a0d4F07c788009BebaC3f5ED87FCc366a7",
+        "blitz": 3.9405004237523067,
+        "regular": -3.9405004237523067,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x260C909EBE2ae25CFdff0f3D9683c1e9fd7aca38",
+        "blitz": 5.91075063562846,
+        "regular": -5.91075063562846,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0xC96543CC8E67832dEB043D80E9aaD237bD43e2aa",
+        "blitz": 9.844981704353103,
+        "regular": -9.844981704353103,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x6b57484Fb0e8BF4823eEB2AcD2e5E0d183DA847e",
+        "blitz": 7.881000847504613,
+        "regular": -7.881000847504613,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x5960ee439c185EFe0E73c2ada72458Db432697e3",
+        "blitz": 5.910734873626765,
+        "regular": -5.910734873626765,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x39fe391298a7Ef595f502F651d5B13D68f4DeBDC",
+        "blitz": 19.70228145250312,
+        "regular": -19.70228145250312,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x9dB10b6ddB9470828A0e274d7aEb66f8767809bF",
+        "blitz": 6.123421666240079,
+        "regular": -6.123421666240079,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xE185B9fd5B36C0a5283dB674AF8f94e2A2F04770",
+        "blitz": 7.88101778716248,
+        "regular": -7.88101778716248,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xEa8aF272C242532B6c9D03a1ac77beD98847dBd7",
+        "blitz": 6.961577016680782,
+        "regular": -6.961577016680782,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x24158060AE922dA8Bd3877C230bc3e4769112351",
+        "blitz": 6.892753171918942,
+        "regular": -6.892753171918942,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x70Dc04e06501038Dc8cF549CF197CB6D9f3fc2E3",
+        "blitz": 7.881032371507995,
+        "regular": -7.881032371507995,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0xFB95b1018A319eC2AA17d9766a6C6CbBD55fA596",
+        "blitz": 23.643065595008196,
+        "regular": -23.643065595008196,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 11
+      },
+      {
+        "address": "0x046051e9A7FBafc5Cab588921201331a05372517",
+        "blitz": 24.62799227861901,
+        "regular": -24.62799227861901,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xc7b83cE9acAf63562ef09D6e033621dAb6E580BA",
+        "blitz": 11.822626290843091,
+        "regular": -11.822626290843091,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 12
+      },
+      {
+        "address": "0x4556b5809E52029D9E3DC563dfF6aa0e7e02D9E6",
+        "blitz": 9.851440203401243,
+        "regular": -9.851440203401243,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x2eca735b859431DC18a1682c9d6e8881DD71f552",
+        "blitz": 10.374751491053678,
+        "regular": -10.374751491053678,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x387AbeaAad174209735d088A819412E2831B7710",
+        "blitz": 19.70272032391625,
+        "regular": -19.70272032391625,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x59b9ee27854b978377E9143E80CDABF14FcA38F0",
+        "blitz": 20.558627915583585,
+        "regular": -20.558627915583585,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x48fc8196aeE310f35eE4b0FB30E38AA308ed0BE2",
+        "blitz": 10.868787276341948,
+        "regular": -10.868787276341948,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x08fAdF82266262f8644bB2cfDeCD3259FdE31F59",
+        "blitz": 39.40464171097971,
+        "regular": -39.40464171097971,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xbdd3043BE1bA29a18bA7358B58AaD2C620Bb81Be",
+        "blitz": 16.725397190209257,
+        "regular": -16.725397190209257,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x159de026f3889816ead238087F05A3F0bA564302",
+        "blitz": 24.616002119359734,
+        "regular": -24.616002119359734,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0xF936A95Cb664704D174ced71e5Ff648d977A8193",
+        "blitz": 14.776718968549833,
+        "regular": -14.776718968549833,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xF53bE42C40D806EDbb8EadE734D5a3dB3A1345db",
+        "blitz": 11.821769225790092,
+        "regular": -11.821769225790092,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0x1Dd534eC58Ffc6B14B7d92275a3470f01929C3c2",
+        "blitz": 33.327061095207156,
+        "regular": -33.327061095207156,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x2747ad71ff7532c9a6d66f51C7490f8505Da5a1d",
+        "blitz": 32.706750913122725,
+        "regular": -32.706750913122725,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0x49256e9AFD34C29590169eA80b014569A8E86cD9",
+        "blitz": 10.828339378576748,
+        "regular": -10.828339378576748,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xD91E7C27c8078A20Fd48235Ace03E7b6C0046175",
+        "blitz": 24.628048837182483,
+        "regular": -24.628048837182483,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x0426786d8f87C410c7CAb020f013521EdCBe240F",
+        "blitz": 12.59560211859938,
+        "regular": -12.59560211859938,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x5cc7584602C84d5aDFD273abBfF845Fb22bFC71e",
+        "blitz": 10.836391927824895,
+        "regular": -10.836391927824895,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x1fB955Cf28E2f2927C552275Ab47aEc8c511Fef1",
+        "blitz": 19.698936787092833,
+        "regular": -19.698936787092833,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x5FBcac591a1B34F512088442fe096d03d6Ad6baD",
+        "blitz": 59.09128746534092,
+        "regular": 0.0,
+        "leaderboard": 59.09128746534092,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x43123a108Db05702745eBd1295bBfCcadFC66918",
+        "blitz": 33.01555791586766,
+        "regular": -33.01555791586766,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0x8d588e18b7eBB863CA9B7b557Df30eda4B90e9C5",
+        "blitz": 34.4159858262801,
+        "regular": -34.4159858262801,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0x76a5006784cAF0e8d88f42b68E8d9CB58DE4Fa7d",
+        "blitz": 68.95826879109109,
+        "regular": 0.0,
+        "leaderboard": 68.95826879109109,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x63Ba1f59ADa322Ac81Ee7BE7a680AEd557F6a559",
+        "blitz": 15.14491767301179,
+        "regular": -15.14491767301179,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x0602FFCa2090918ce2B7e91A29eE4fC087EABb6c",
+        "blitz": 29.55332760863592,
+        "regular": -29.55332760863592,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x7040546CeC08EC6F7FFcDAAfa52b4715407477C9",
+        "blitz": 29.55332760510329,
+        "regular": -29.55332760510329,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xB14807935271852c7B96e7940bfcD7738B87BD8e",
+        "blitz": 16.747179329093168,
+        "regular": -16.747179329093168,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xae4B95aE69786455d45edcfe857235E824e27643",
+        "blitz": 34.47889008578019,
+        "regular": -34.47889008578019,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0xe5D9177947D09cb5C1ba5ec479e6E90bdfE482a9",
+        "blitz": 29.553481382861246,
+        "regular": -29.553481382861246,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xc92922bf40bCA3b7640Cd7498AAE7D1165310AaD",
+        "blitz": 39.404578665746996,
+        "regular": -39.404578665746996,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x46363307FfB52E88255f4F707268d00f7637548f",
+        "blitz": 39.40443681000167,
+        "regular": -39.40443681000167,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x7065c31b3B86AA096E30573F7Aa0EB7bfDA30081",
+        "blitz": 38.40827409048814,
+        "regular": -38.40827409048814,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 11
+      },
+      {
+        "address": "0xd62eFc6D0a452Db4FFe59E4f35aA00fD636F4a80",
+        "blitz": 39.40446833577015,
+        "regular": -39.40446833577015,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0xA3071852923a993fEc2eD10ceD62C7077ce827E9",
+        "blitz": 144.81350743444068,
+        "regular": 0.0,
+        "leaderboard": 144.81350743444068,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 17
+      },
+      {
+        "address": "0x77f09aC375EE6aE113f44f6e028be4A7d288E358",
+        "blitz": 49.2561764846256,
+        "regular": -49.2561764846256,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xCC0c2f50f7737DA7926031f4AcC1dD8836fe22A4",
+        "blitz": 99.85429422734337,
+        "regular": 0.0,
+        "leaderboard": 99.85429422734337,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x5a9052796FbecffD7649fc2382d7D68c1D050680",
+        "blitz": 67.97328505526583,
+        "regular": 0.0,
+        "leaderboard": 67.97328505526583,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0xeDf9a902E97E58b846ece8d83C654D58D70Bdf6F",
+        "blitz": 64.03245410860403,
+        "regular": 0.0,
+        "leaderboard": 64.03245410860403,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0x7AE0dE4D973DEfA5A7231f48fEb521735D674d26",
+        "blitz": 47.286138971880675,
+        "regular": -47.286138971880675,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 17
+      },
+      {
+        "address": "0xDe55Ec7b202EB1E2fb49DB173b6702606385D23E",
+        "blitz": 108.26403865585803,
+        "regular": 0.0,
+        "leaderboard": 108.26403865585803,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xa21295823B14c9bd6d89Bb9E749CEb12DAA5b1F2",
+        "blitz": 68.9585052549096,
+        "regular": 0.0,
+        "leaderboard": 68.9585052549096,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0x250Be68AED9fd0B986bAcBd5299dF2cC0a9eFeba",
+        "blitz": 98.51211654376529,
+        "regular": 0.0,
+        "leaderboard": 98.51211654376529,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x09a315DE6FB05595a640134F716d3ca18ED14CF6",
+        "blitz": 172.41538362184315,
+        "regular": 0.0,
+        "leaderboard": 172.41538362184315,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x6bE2205074d1f9CcF623B30B70c997a57E06500B",
+        "blitz": 98.51239989345214,
+        "regular": 9.850839450271948,
+        "leaderboard": 108.36323934372409,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x49e7945dEFF2eD96adaDd5ED67111a5c5f5c9124",
+        "blitz": 147.6809619293423,
+        "regular": 0.0,
+        "leaderboard": 147.6809619293423,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 12
+      },
+      {
+        "address": "0xbB395D7276B3c05a3832b9630dc990240fAad60C",
+        "blitz": 197.02212098399153,
+        "regular": 0.0,
+        "leaderboard": 197.02212098399153,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 8
+      },
+      {
+        "address": "0x4D542Ef64273956B18124d7415Cc939Ec21E30E8",
+        "blitz": 386.164470577245,
+        "regular": 0.0,
+        "leaderboard": 386.164470577245,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0xbEA72bcf3Bb0b74680c90BF5205383649487d1fA",
+        "blitz": 482.7120111808194,
+        "regular": 0.0,
+        "leaderboard": 482.7120111808194,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0xeA7E9FA3C154d8725F6737BB7292481095810069",
+        "blitz": 600.9225794462178,
+        "regular": 0.0,
+        "leaderboard": 600.9225794462178,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0xff27509e414429475926E08767C2C8Bc4EBcfa45",
+        "blitz": 1.9761431411530814,
+        "regular": -1.9761431411530814,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xEBb93f4280ab91808c69AAB750239fE1b6AF6968",
+        "blitz": 1.360109903211099,
+        "regular": -1.360109903211099,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x816976D25845dfAd6dda1124030Dc24eb27274d7",
+        "blitz": 1.9702344498744584,
+        "regular": -1.9702344498744584,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x0eF65E44b76Cd519c841A5b36b59C2dD84c5A583",
+        "blitz": 1.9702502118761533,
+        "regular": -1.9702502118761533,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xa58346922c5fa7d9c33a4F24568799bA1acCbE4F",
+        "blitz": 1.9702502118761775,
+        "regular": -1.9702502118761775,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xe8a39AC6BB8B177f3fb4c2E22fA83Be40CaA0354",
+        "blitz": 1.9703920676216802,
+        "regular": -1.9703920676216802,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xB61265683AA87Ec019265F1CC2e4a02D883FB34e",
+        "blitz": 2.955359555560339,
+        "regular": -2.955359555560339,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xA75E42Ff6eaa5F37201600aC47C584379E5C6c68",
+        "blitz": 2.95537531781423,
+        "regular": -2.95537531781423,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x80dD04c63eeD402A801CAe40f0E5A92Fc87fD610",
+        "blitz": 3.4215501003024764,
+        "regular": -3.4215501003024764,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x83e774344ffe4Cd011a11A0E60c33c703Ad4054B",
+        "blitz": 3.940531948260091,
+        "regular": -3.940531948260091,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x492C1d079E643a0cb8CC819dd20D4831Ba50049e",
+        "blitz": 4.049961216082856,
+        "regular": -4.049961216082856,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x9858bEea6153b4335173933354Ec45189A94FB93",
+        "blitz": 4.816131877013614,
+        "regular": -4.816131877013614,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xb2463046B4Ab16cf4aEf4930c88bc48851189731",
+        "blitz": 4.925625529690383,
+        "regular": -4.925625529690383,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xF5FFc2d2aF889B585680b2780eEf3103c0d73A19",
+        "blitz": 4.925704339699576,
+        "regular": -4.925704339699576,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x7E12c59fb85094E2f4E2AC185A268e34A64b3EbF",
+        "blitz": 6.91960709648156,
+        "regular": -6.91960709648156,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x7a77B44B8CcBe0A801C981449CD6777a18F9429a",
+        "blitz": 6.937840010924007,
+        "regular": -6.937840010924007,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xf53b02296D7f42f52224F2D641C1a9DD85A6894E",
+        "blitz": 6.944611728399966,
+        "regular": -6.944611728399966,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x9E6c275EBFFe599B29b842cD00bc815113e8FA39",
+        "blitz": 8.866173238943427,
+        "regular": -8.866173238943427,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xd001D298b06dbC16f0CD15A896E53e6d967d912f",
+        "blitz": 9.852109000510316,
+        "regular": -9.852109000510316,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x94DaD926804D66FDbb442dd5E55AaCC7c535829E",
+        "blitz": 9.851109201365512,
+        "regular": -9.851109201365512,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xea96890B169e7b1948D8FB25Bf4d294D5598E409",
+        "blitz": 9.851109201365512,
+        "regular": -9.851109201365512,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xcc6cfbc01117b05d8Af48a76096eb65711aDdc7a",
+        "blitz": 9.8511092016177,
+        "regular": -9.8511092016177,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x02d49aa9b5ae05993168A204fe2188009192a500",
+        "blitz": 9.851140725368895,
+        "regular": -9.851140725368895,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x0B1943980cfea0604d23b39171F9588C86DAB975",
+        "blitz": 9.851140725368902,
+        "regular": -9.851140725368902,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xbe30C8C02F3B4699b4c0DfBCF5cA1e4Aef904967",
+        "blitz": 9.851140725368902,
+        "regular": -9.851140725368902,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x3D5B6939ED835e6322d04F08ADAbaA1b4A6C6Cc2",
+        "blitz": 9.851140725541566,
+        "regular": -9.851140725541566,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xd88853aD0f8BD5Ef0B9CE857B9c1A1beE21087eb",
+        "blitz": 9.851172088112335,
+        "regular": -9.851172088112335,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xEAF60Ea38dea88E208c60E3B83796baD1001517F",
+        "blitz": 9.851172249372292,
+        "regular": -9.851172249372292,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xf0A105aF806937c9B5AB898FFa65AE634D68ff00",
+        "blitz": 9.851172250633224,
+        "regular": -9.851172250633224,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x10595d71452B44A691Ee646e22365Dbb9057a1b5",
+        "blitz": 9.851201437937394,
+        "regular": -9.851201437937394,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xC14Dc1aFF68e38c080626EE3CaDac5A96917e7EA",
+        "blitz": 9.851251059379878,
+        "regular": -9.851251059379878,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xD4270e71C11A68B976Ae83ae76399fF321c13926",
+        "blitz": 9.851291643734745,
+        "regular": -9.851291643734745,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xd13a268CB295a66296F3e60deDD62c5061AF6Dd3",
+        "blitz": 10.270769814594336,
+        "regular": -10.270769814594336,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xb8cb3a8FAee8cb30f491E5Ac59703d3F685FC761",
+        "blitz": 10.837679743518091,
+        "regular": -10.837679743518091,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x972722992806BC5D54Ed2FA05E81b5fC90727D28",
+        "blitz": 10.836234307303588,
+        "regular": -10.836234307303588,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x89E2Cd7EcFf6eE3d14bC8a5891848b5DE600C520",
+        "blitz": 12.671149827776526,
+        "regular": -12.671149827776526,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x54f605Bed129696530100B8C01caA5fce68e6Eb0",
+        "blitz": 14.658627307226947,
+        "regular": -14.658627307226947,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xE677fE562e878A8a01AC4193BE32b518125FbC7b",
+        "blitz": 14.776876589071135,
+        "regular": -14.776876589071135,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xf8b891c5f1DE56F10735cD19755551B4851543d1",
+        "blitz": 19.058806402787873,
+        "regular": -19.058806402787873,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x3C16A40109B6a1Fc53722ED3D68f7ebB0f5cAd64",
+        "blitz": 19.699153947659386,
+        "regular": -19.699153947659386,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xeDC94c55Ed49Df3DbDe56e78Cd4F37BacB38B788",
+        "blitz": 19.702218403235417,
+        "regular": -19.702218403235417,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x15337f0C40B8F40550d66F894a5d1361c4C29ea3",
+        "blitz": 19.702234158390496,
+        "regular": -19.702234158390496,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x93fBBd931D954EAE4c5A981283D4F1239a4C421e",
+        "blitz": 19.70228145199876,
+        "regular": -19.70228145199876,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xA0ee4cceb4671CEd84B436cE657aeCfffae4646D",
+        "blitz": 19.702360258477533,
+        "regular": -19.702360258477533,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xD4DaBA95C7399fEA56537E7D44f05419302435ec",
+        "blitz": 19.702366956135954,
+        "regular": -19.702366956135954,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xD6B716a6421C4E6151386c34eDFcC9Ee9902683a",
+        "blitz": 19.702376022495784,
+        "regular": -19.702376022495784,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xA3a2555377389CCd18F5207bF8f2c036C871fCC7",
+        "blitz": 19.702391778706435,
+        "regular": -19.702391778706435,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xA01AD8B7383800C74A82aeC2Ac333A36Cc7bcE04",
+        "blitz": 19.702391782984325,
+        "regular": -19.702391782984325,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x40cA3D5A190b59b276991Bd0741ef033f414d9aF",
+        "blitz": 20.686406900951397,
+        "regular": -20.686406900951397,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x735DCA91fb4a78aed80d65B9435616298d5F84e0",
+        "blitz": 29.532329298009667,
+        "regular": -29.532329298009667,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xe8a6674B2363D20e2e9E3fb3D63120833284bcC9",
+        "blitz": 29.5534694598421,
+        "regular": -29.5534694598421,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x15CA2Ae933697e0e40551E73535718F618c58778",
+        "blitz": 29.553500983845446,
+        "regular": -29.553500983845446,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xEa02a05bBEcc87542984DBE5E7532d92ce253D49",
+        "blitz": 29.553611317857282,
+        "regular": -29.553611317857282,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xbc650b5Db5867bB43445d133b82C52ff9DE6b6A8",
+        "blitz": 29.553611317857282,
+        "regular": -29.553611317857282,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x2Ab58f01D1Ee917a1480a84f344d7EaDAdfb9d0F",
+        "blitz": 34.27545876686088,
+        "regular": -34.27545876686088,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x136A70260707FcD651EFF566938d831e7555975E",
+        "blitz": 39.40457866347734,
+        "regular": -39.40457866347734,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x3f4ab14939124DA7Dbe04ca02AB1dF1907e08dF0",
+        "blitz": 43.27628323442376,
+        "regular": -43.27628323442376,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0xE9BBf996974914056ea2910DB84718CA36d14EAB",
+        "blitz": 49.255695489425634,
+        "regular": -49.255695489425634,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x50671Cd04763B0CF5693cf56B7b39d121f719199",
+        "blitz": 49.255750911336534,
+        "regular": -49.255750911336534,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x07CE268F1B9339bb67de0ae3BB619dee3E6d5eE6",
+        "blitz": 49.25597841345892,
+        "regular": -49.25597841345892,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x37c7bc12c01A36FEAe4dB47B0626964db77aba64",
+        "blitz": 59.1071438277237,
+        "regular": 0.0,
+        "leaderboard": 59.1071438277237,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xd2f4f24DE2C172B787b5978eaC80F8Eb739c2B6B",
+        "blitz": 68.13145604949837,
+        "regular": 0.0,
+        "leaderboard": 68.13145604949837,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0xB46ec1DB0fA4B0C139C048C01A6a15bA925a97f5",
+        "blitz": 68.95771712355354,
+        "regular": 246.27342447778244,
+        "leaderboard": 315.231141601336,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x82c9636467308dBEFcF883ad014eD03ac19D5ecf",
+        "blitz": 187.17285590742142,
+        "regular": 0.0,
+        "leaderboard": 187.17285590742142,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0xe1838c8da07dd68483fd1929d08dabf942d987e1",
+        "blitz": 282047.7137176938,
+        "regular": 0.0,
+        "leaderboard": 282047.7137176938,
+        "agent": null,
+        "role": "blitz_real",
+        "races": null
+      },
+      {
+        "address": "0x284bd660B4Fe32B3d04C123751495bF296786A1b",
+        "blitz": 0.0,
+        "regular": 20892.449532508777,
+        "leaderboard": 20892.449532508777,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xA8b8080f9257B50c723C7D4C98F217c921b04a13",
+        "blitz": 0.0,
+        "regular": 20833.213029085207,
+        "leaderboard": 20833.213029085207,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x22d4b8640bC77C213acc2C5603FCD6Ac9dcc5091",
+        "blitz": 0.0,
+        "regular": 20401.4335062017,
+        "leaderboard": 20401.4335062017,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xb00B58e14c7F63329F0064CA5eBa3c3d789A3429",
+        "blitz": 0.0,
+        "regular": 20233.53114848219,
+        "leaderboard": 20233.53114848219,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x060C80Dd7F6019496e9Deb83F87A2E3D6B299988",
+        "blitz": 0.0,
+        "regular": 20136.073898902105,
+        "leaderboard": 20136.073898902105,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x658C6dCF53b30E174E51d4bbCb4F302F486F4Bc1",
+        "blitz": 0.0,
+        "regular": 19948.693214931554,
+        "leaderboard": 19948.693214931554,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x024341A8f7bAd4C24384a3e66D4683059eEa177C",
+        "blitz": 0.0,
+        "regular": 19921.326477502254,
+        "leaderboard": 19921.326477502254,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xacb8F2c634AA9A7f2d4b5Fbf22207E06662d501a",
+        "blitz": 0.0,
+        "regular": 19636.91628870401,
+        "leaderboard": 19636.91628870401,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xDb6848a11C3314D5827e5215DC83467aDe273030",
+        "blitz": 0.0,
+        "regular": 19543.392338654394,
+        "leaderboard": 19543.392338654394,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xf7B3F25dECA7a703bf7EAE1ac7992f150E5f12a5",
+        "blitz": 0.0,
+        "regular": 19539.525071658492,
+        "leaderboard": 19539.525071658492,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x31BE33d4f3218894dD11179463Fc0F7601305765",
+        "blitz": 0.0,
+        "regular": 3479.0235040998814,
+        "leaderboard": 3479.0235040998814,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x977c7e99f40d7442C8Ce243255cfE4e93347DDC3",
+        "blitz": 0.0,
+        "regular": 1599.8056835151,
+        "leaderboard": 1599.8056835151,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xe9982585E83E4b481F50FFe5eA8E2b896D461082",
+        "blitz": 0.0,
+        "regular": 1405.3403017619646,
+        "leaderboard": 1405.3403017619646,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x62ce7460ab55d9c5f61dB5641a1EAcdd2E417dAA",
+        "blitz": 0.0,
+        "regular": 825.1134093241751,
+        "leaderboard": 825.1134093241751,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x9A3065D7d7Bb0147A832bb0A2051eDAa460d6358",
+        "blitz": 0.0,
+        "regular": 738.6302493518917,
+        "leaderboard": 738.6302493518917,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xA55cCfeB5e4261bfBcf1d12F917Fc1F97EbEa03e",
+        "blitz": 0.0,
+        "regular": 688.2322937683501,
+        "leaderboard": 688.2322937683501,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xd0C1EB7F2848fa878523562604344c486bE2b60e",
+        "blitz": 0.0,
+        "regular": 629.9997566273032,
+        "leaderboard": 629.9997566273032,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x24404D701Ea758DCC3288E36F1b2ED452f1FE4A6",
+        "blitz": 0.0,
+        "regular": 610.419512592378,
+        "leaderboard": 610.419512592378,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xF133db943654c689A8Bdaf39141415Fa965D33bA",
+        "blitz": 0.0,
+        "regular": 570.747646468619,
+        "leaderboard": 570.747646468619,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x8FDb71584eB11B4D7240612a94aA6F3cF29Ce3fE",
+        "blitz": 0.0,
+        "regular": 492.5432157873536,
+        "leaderboard": 492.5432157873536,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xC9Ad939aAAF30e6eaA4deB3e1a465e1e3d4c0465",
+        "blitz": 0.0,
+        "regular": 361.8299406491046,
+        "leaderboard": 361.8299406491046,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x8453a44A7Db564DD5F39C64Ce354e13DE85F0546",
+        "blitz": 0.0,
+        "regular": 350.529890389104,
+        "leaderboard": 350.529890389104,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xC1B83B7Df454DD98150f255A9A6a9b2432FDD301",
+        "blitz": 0.0,
+        "regular": 295.5258882844276,
+        "leaderboard": 295.5258882844276,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xd93a5974619A1e21E982847473C531271Eb641f0",
+        "blitz": 0.0,
+        "regular": 231.6473462003035,
+        "leaderboard": 231.6473462003035,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xfC8a36670c9DcAe275c6e22B43170D978E485B3a",
+        "blitz": 0.0,
+        "regular": 197.02056377144814,
+        "leaderboard": 197.02056377144814,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x2D4c677136b4F8c5Df0fbdAC2C3C10Fc662482Ef",
+        "blitz": 0.0,
+        "regular": 145.94639447015567,
+        "leaderboard": 145.94639447015567,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x80A0aaaEe61128b5Fa1a513Da07FD92631148C9b",
+        "blitz": 0.0,
+        "regular": 106.44478465324269,
+        "leaderboard": 106.44478465324269,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xecE03423b3f18775390B17cCbdA280C3fBbed875",
+        "blitz": 0.0,
+        "regular": 90.11913817185263,
+        "leaderboard": 90.11913817185263,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x64F1C899a65b8F251B98401235cd353B3E9A2E3E",
+        "blitz": 0.0,
+        "regular": 82.77702277543314,
+        "leaderboard": 82.77702277543314,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x448Acdd5925084462E9544b2B2037f9369758e63",
+        "blitz": 0.0,
+        "regular": 69.54209332586716,
+        "leaderboard": 69.54209332586716,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x97b491e72F44ae8af2Db1774d62F3798087eAce1",
+        "blitz": 0.0,
+        "regular": 69.10157039012651,
+        "leaderboard": 69.10157039012651,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x943b67Caf739f5a5bEB13b8EC2D4c25420eC205a",
+        "blitz": 0.0,
+        "regular": 68.83072286445922,
+        "leaderboard": 68.83072286445922,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x2537584aeD7E52a760C3fa2c6eE41b6D0c0b719e",
+        "blitz": 0.0,
+        "regular": 58.64536034642895,
+        "leaderboard": 58.64536034642895,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x66544aCf5d062e57f84d3dCb032880F9ACb27718",
+        "blitz": 0.0,
+        "regular": 0.0,
+        "leaderboard": 0.0,
+        "agent": 0.0,
+        "role": "agent",
+        "races": null
+      },
+      {
+        "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
+        "blitz": 0.0,
+        "regular": 0.0,
+        "leaderboard": 0.0,
+        "agent": 0.0,
+        "role": "agent",
+        "races": null
+      },
+      {
+        "address": "0x583AF2BD8A25B2E5886176B7D5bfA4D209e5b8d4",
+        "blitz": 0.0,
+        "regular": 0.0,
+        "leaderboard": 0.0,
+        "agent": 0.0,
+        "role": "agent",
+        "races": null
+      }
+    ]
   }
 }

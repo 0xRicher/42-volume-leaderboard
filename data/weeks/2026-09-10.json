@@ -38,7 +38,10 @@
         "losing_predictions": 15575,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 2,
@@ -54,7 +57,10 @@
         "losing_predictions": 3662,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 3,
@@ -70,7 +76,10 @@
         "losing_predictions": 2944,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 4,
@@ -86,7 +95,10 @@
         "losing_predictions": 2656,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 5,
@@ -102,7 +114,10 @@
         "losing_predictions": 2241,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 6,
@@ -118,7 +133,10 @@
         "losing_predictions": 2121,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 7,
@@ -134,7 +152,10 @@
         "losing_predictions": 1426,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 8,
@@ -150,7 +171,10 @@
         "losing_predictions": 576,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 9,
@@ -166,7 +190,10 @@
         "losing_predictions": 21,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 10,
@@ -182,7 +209,10 @@
         "losing_predictions": 40,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 11,
@@ -198,7 +228,10 @@
         "losing_predictions": 25,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 12,
@@ -214,7 +247,10 @@
         "losing_predictions": 20,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 13,
@@ -230,7 +266,10 @@
         "losing_predictions": 24,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 14,
@@ -246,7 +285,10 @@
         "losing_predictions": 45,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 15,
@@ -262,7 +304,10 @@
         "losing_predictions": 40,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 16,
@@ -278,7 +323,10 @@
         "losing_predictions": 17,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 17,
@@ -294,7 +342,10 @@
         "losing_predictions": 15,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 18,
@@ -310,7 +361,10 @@
         "losing_predictions": 222,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 19,
@@ -326,7 +380,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 20,
@@ -342,7 +399,10 @@
         "losing_predictions": 14,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 21,
@@ -358,7 +418,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 22,
@@ -374,7 +437,10 @@
         "losing_predictions": 64,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 23,
@@ -390,7 +456,10 @@
         "losing_predictions": 121,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 24,
@@ -406,7 +475,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 25,
@@ -422,7 +494,10 @@
         "losing_predictions": 299,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 26,
@@ -438,7 +513,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 27,
@@ -454,7 +532,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 28,
@@ -470,7 +551,10 @@
         "losing_predictions": 164,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 29,
@@ -486,7 +570,10 @@
         "losing_predictions": 88,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 30,
@@ -502,7 +589,10 @@
         "losing_predictions": 164,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 31,
@@ -518,7 +608,10 @@
         "losing_predictions": 153,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 32,
@@ -534,7 +627,10 @@
         "losing_predictions": 15,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 33,
@@ -550,7 +646,10 @@
         "losing_predictions": 112,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 34,
@@ -566,7 +665,10 @@
         "losing_predictions": 162,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 35,
@@ -582,7 +684,10 @@
         "losing_predictions": 160,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 36,
@@ -598,7 +703,10 @@
         "losing_predictions": 161,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 37,
@@ -614,7 +722,10 @@
         "losing_predictions": 140,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 38,
@@ -630,7 +741,10 @@
         "losing_predictions": 141,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 39,
@@ -646,7 +760,10 @@
         "losing_predictions": 136,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 40,
@@ -662,7 +779,10 @@
         "losing_predictions": 9,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 41,
@@ -678,7 +798,10 @@
         "losing_predictions": 5,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 42,
@@ -694,7 +817,10 @@
         "losing_predictions": 34,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 43,
@@ -710,7 +836,10 @@
         "losing_predictions": 28,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 44,
@@ -726,7 +855,10 @@
         "losing_predictions": 31,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 45,
@@ -742,7 +874,10 @@
         "losing_predictions": 27,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 46,
@@ -758,7 +893,10 @@
         "losing_predictions": 31,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 47,
@@ -774,7 +912,10 @@
         "losing_predictions": 20,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 48,
@@ -790,7 +931,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 49,
@@ -806,7 +950,10 @@
         "losing_predictions": 25,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 50,
@@ -822,7 +969,10 @@
         "losing_predictions": 30,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 51,
@@ -838,7 +988,10 @@
         "losing_predictions": 52,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 52,
@@ -854,7 +1007,10 @@
         "losing_predictions": 24,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 53,
@@ -870,7 +1026,10 @@
         "losing_predictions": 27,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 54,
@@ -886,7 +1045,10 @@
         "losing_predictions": 17,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 55,
@@ -902,7 +1064,10 @@
         "losing_predictions": 18,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 56,
@@ -918,7 +1083,10 @@
         "losing_predictions": 23,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 57,
@@ -934,7 +1102,10 @@
         "losing_predictions": 17,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 58,
@@ -950,7 +1121,10 @@
         "losing_predictions": 28,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 59,
@@ -966,7 +1140,10 @@
         "losing_predictions": 33,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 60,
@@ -982,7 +1159,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 61,
@@ -998,7 +1178,10 @@
         "losing_predictions": 15,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 62,
@@ -1014,7 +1197,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 63,
@@ -1030,7 +1216,10 @@
         "losing_predictions": 198,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 64,
@@ -1046,7 +1235,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 65,
@@ -1062,7 +1254,10 @@
         "losing_predictions": 10,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 66,
@@ -1078,7 +1273,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 67,
@@ -1094,7 +1292,10 @@
         "losing_predictions": 109,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 68,
@@ -1110,7 +1311,10 @@
         "losing_predictions": 12,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 69,
@@ -1126,7 +1330,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 70,
@@ -1142,7 +1349,10 @@
         "losing_predictions": 44,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 71,
@@ -1158,7 +1368,10 @@
         "losing_predictions": 28,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 72,
@@ -1174,7 +1387,10 @@
         "losing_predictions": 11,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 73,
@@ -1190,7 +1406,10 @@
         "losing_predictions": 16,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 74,
@@ -1206,7 +1425,10 @@
         "losing_predictions": 67,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 75,
@@ -1222,7 +1444,10 @@
         "losing_predictions": 22,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 76,
@@ -1238,7 +1463,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 77,
@@ -1254,7 +1482,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 78,
@@ -1270,7 +1501,10 @@
         "losing_predictions": 24,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 79,
@@ -1286,7 +1520,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 80,
@@ -1302,7 +1539,10 @@
         "losing_predictions": 37,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 81,
@@ -1318,7 +1558,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 82,
@@ -1334,7 +1577,10 @@
         "losing_predictions": 112,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 83,
@@ -1350,7 +1596,10 @@
         "losing_predictions": 44,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 84,
@@ -1366,7 +1615,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 85,
@@ -1382,7 +1634,10 @@
         "losing_predictions": 22,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 86,
@@ -1398,7 +1653,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 87,
@@ -1414,7 +1672,10 @@
         "losing_predictions": 18,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 88,
@@ -1430,7 +1691,10 @@
         "losing_predictions": 18,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 89,
@@ -1446,7 +1710,10 @@
         "losing_predictions": 24,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 90,
@@ -1462,7 +1729,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 91,
@@ -1478,7 +1748,10 @@
         "losing_predictions": 17,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 92,
@@ -1494,7 +1767,10 @@
         "losing_predictions": 14,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 93,
@@ -1510,7 +1786,10 @@
         "losing_predictions": 20,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 94,
@@ -1526,7 +1805,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 95,
@@ -1542,7 +1824,10 @@
         "losing_predictions": 11,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 96,
@@ -1558,7 +1843,10 @@
         "losing_predictions": 14,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 97,
@@ -1574,7 +1862,10 @@
         "losing_predictions": 140,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 98,
@@ -1590,7 +1881,10 @@
         "losing_predictions": 8,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 99,
@@ -1606,7 +1900,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 100,
@@ -1622,7 +1919,10 @@
         "losing_predictions": 17,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 101,
@@ -1638,7 +1938,10 @@
         "losing_predictions": 54,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 102,
@@ -1654,7 +1957,10 @@
         "losing_predictions": 31,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 103,
@@ -1670,7 +1976,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 104,
@@ -1686,7 +1995,10 @@
         "losing_predictions": 45,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 105,
@@ -1702,7 +2014,10 @@
         "losing_predictions": 41,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 106,
@@ -1718,7 +2033,10 @@
         "losing_predictions": 38,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 107,
@@ -1734,7 +2052,10 @@
         "losing_predictions": 13,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 108,
@@ -1750,7 +2071,10 @@
         "losing_predictions": 5,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 109,
@@ -1766,7 +2090,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 110,
@@ -1782,7 +2109,10 @@
         "losing_predictions": 24,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 111,
@@ -1798,7 +2128,10 @@
         "losing_predictions": 82,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 112,
@@ -1814,7 +2147,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 113,
@@ -1830,7 +2166,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 114,
@@ -1846,7 +2185,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 115,
@@ -1862,7 +2204,10 @@
         "losing_predictions": 32,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 116,
@@ -1878,7 +2223,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 117,
@@ -1894,7 +2242,10 @@
         "losing_predictions": 102,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 118,
@@ -1910,7 +2261,10 @@
         "losing_predictions": 22,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 119,
@@ -1926,7 +2280,10 @@
         "losing_predictions": 1432,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 120,
@@ -1942,7 +2299,10 @@
         "losing_predictions": 1433,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 121,
@@ -1958,7 +2318,10 @@
         "losing_predictions": 1437,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 122,
@@ -1974,7 +2337,10 @@
         "losing_predictions": 1437,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 123,
@@ -1990,7 +2356,10 @@
         "losing_predictions": 1432,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 124,
@@ -2006,7 +2375,10 @@
         "losing_predictions": 1458,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 125,
@@ -2022,7 +2394,10 @@
         "losing_predictions": 1428,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 126,
@@ -2038,7 +2413,10 @@
         "losing_predictions": 75,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 127,
@@ -2054,7 +2432,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 128,
@@ -2070,7 +2451,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 129,
@@ -2086,7 +2470,10 @@
         "losing_predictions": 8,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 130,
@@ -2102,7 +2489,10 @@
         "losing_predictions": 1327,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 131,
@@ -2118,7 +2508,10 @@
         "losing_predictions": 1334,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 132,
@@ -2134,7 +2527,10 @@
         "losing_predictions": 1325,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 133,
@@ -2150,7 +2546,10 @@
         "losing_predictions": 12,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 134,
@@ -2166,7 +2565,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 135,
@@ -2182,7 +2584,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 136,
@@ -2198,7 +2603,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 137,
@@ -2214,7 +2622,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 138,
@@ -2230,7 +2641,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 139,
@@ -2246,7 +2660,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 140,
@@ -2262,7 +2679,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 141,
@@ -2278,7 +2698,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 142,
@@ -2294,7 +2717,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 143,
@@ -2310,7 +2736,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 144,
@@ -2326,7 +2755,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 145,
@@ -2342,7 +2774,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 146,
@@ -2358,7 +2793,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 147,
@@ -2374,7 +2812,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 148,
@@ -2390,7 +2831,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 149,
@@ -2406,7 +2850,10 @@
         "losing_predictions": 1131,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 150,
@@ -2422,7 +2869,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 151,
@@ -2438,7 +2888,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 152,
@@ -2454,7 +2907,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 153,
@@ -2470,7 +2926,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 154,
@@ -2486,7 +2945,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 155,
@@ -2502,7 +2964,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 156,
@@ -2518,7 +2983,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 157,
@@ -2534,7 +3002,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 158,
@@ -2550,7 +3021,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 159,
@@ -2566,7 +3040,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 160,
@@ -2582,7 +3059,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 161,
@@ -2598,7 +3078,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 162,
@@ -2614,7 +3097,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 163,
@@ -2630,7 +3116,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 164,
@@ -2646,7 +3135,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 165,
@@ -2662,7 +3154,10 @@
         "losing_predictions": 1113,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 166,
@@ -2678,7 +3173,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 167,
@@ -2694,7 +3192,10 @@
         "losing_predictions": 113,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 168,
@@ -2710,7 +3211,10 @@
         "losing_predictions": 1100,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 169,
@@ -2726,7 +3230,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 170,
@@ -2742,7 +3249,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 171,
@@ -2758,7 +3268,10 @@
         "losing_predictions": 29,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 172,
@@ -2774,7 +3287,10 @@
         "losing_predictions": 1080,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 173,
@@ -2790,7 +3306,10 @@
         "losing_predictions": 89,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 174,
@@ -2806,7 +3325,10 @@
         "losing_predictions": 99,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 175,
@@ -2822,7 +3344,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 176,
@@ -2838,7 +3363,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 177,
@@ -2854,7 +3382,10 @@
         "losing_predictions": 30,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 178,
@@ -2870,7 +3401,10 @@
         "losing_predictions": 28,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 179,
@@ -2886,7 +3420,10 @@
         "losing_predictions": 944,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 180,
@@ -2902,7 +3439,10 @@
         "losing_predictions": 33,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 181,
@@ -2918,7 +3458,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 182,
@@ -2934,7 +3477,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 183,
@@ -2950,7 +3496,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 184,
@@ -2966,7 +3515,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 185,
@@ -2982,7 +3534,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 186,
@@ -2998,7 +3553,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 187,
@@ -3014,7 +3572,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 188,
@@ -3030,7 +3591,10 @@
         "losing_predictions": 14,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 189,
@@ -3046,7 +3610,10 @@
         "losing_predictions": 37,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 190,
@@ -3062,7 +3629,10 @@
         "losing_predictions": 26,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 191,
@@ -3078,7 +3648,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 192,
@@ -3094,7 +3667,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 193,
@@ -3110,7 +3686,10 @@
         "losing_predictions": 15,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 194,
@@ -3126,7 +3705,10 @@
         "losing_predictions": 8,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 195,
@@ -3142,7 +3724,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 196,
@@ -3158,7 +3743,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 197,
@@ -3174,7 +3762,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 198,
@@ -3190,7 +3781,10 @@
         "losing_predictions": 15,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 199,
@@ -3206,7 +3800,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 200,
@@ -3222,7 +3819,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       }
     ],
     "aggregate": {
@@ -3262,7 +3862,20 @@
           "volume": 4384154.2199,
           "rank": 4
         }
-      }
+      },
+      "agent": {
+        "count": 0,
+        "volume": 0.0,
+        "share_pct": 0.0,
+        "addresses": []
+      },
+      "seed": {
+        "count": 0,
+        "volume": 0.0,
+        "share_pct": 0.0,
+        "addresses": []
+      },
+      "pool_adjusted": true
     },
     "from": "2026-09-10",
     "to": "2026-09-16",
@@ -3270,5 +3883,70 @@
     "end_exclusive": "2026-09-17T00:00:00Z",
     "points_week_start": "Thursday 00:00 UTC",
     "kind": "thursday"
+  },
+  "breakdown": {
+    "status": "ok",
+    "fetched_at": "2026-11-23T07:39:21Z",
+    "formula": "regular = total - blitz_total - agents; blitz_seed = blitz_total - blitz_real",
+    "total": 29117712.90830418,
+    "blitz_total": 29098517.023410104,
+    "blitz_real": 119772.15057630764,
+    "blitz_seed": 28978744.872833796,
+    "agents": {
+      "sum": 0.0,
+      "codex": {
+        "address": "0x66544aCf5d062e57f84d3dCb032880F9ACb27718",
+        "label": "codex",
+        "volume": 0.0,
+        "leaderboard_volume": 0.0,
+        "baseline_volume": 0.0,
+        "end_volume": 0.0,
+        "baseline_hour": null,
+        "end_hour": null,
+        "match": true
+      },
+      "claude": {
+        "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
+        "label": "claude",
+        "volume": 0.0,
+        "leaderboard_volume": 0.0,
+        "baseline_volume": 0.0,
+        "end_volume": 0.0,
+        "baseline_hour": null,
+        "end_hour": null,
+        "match": true
+      },
+      "grok": {
+        "address": "0x583AF2BD8A25B2E5886176B7D5bfA4D209e5b8d4",
+        "label": "grok",
+        "volume": 0.0,
+        "leaderboard_volume": 0.0,
+        "baseline_volume": 0.0,
+        "end_volume": 0.0,
+        "baseline_hour": null,
+        "end_hour": null,
+        "match": true
+      }
+    },
+    "regular": 19195.884894076735,
+    "reconciled": true,
+    "residual": 0.0,
+    "race_count": 10003,
+    "seed_addresses": [],
+    "gaps_closed": false,
+    "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。",
+    "wallet_check": {
+      "real_sum": 0.0,
+      "real_gap": null,
+      "seed_sum": 0.0,
+      "seed_gap": null,
+      "failed": 0
+    },
+    "sources": {
+      "blitz": "GET /api/v1/token-races/volume?from&to，excludeSeed=true 为真实玩家",
+      "leaderboard": "GET /api/v1/token-races/leaderboard",
+      "agents": "GET /api/v1/mining/history 累计 volume 的窗口差额"
+    },
+    "wallets": []
   }
 }

@@ -23,7 +23,7 @@
       "label": "疑似官方做市",
       "tone": "a",
       "group": "mm",
-      "tooltip": "竞速榜已排除。官方文档称竞速榜会排除部署配置的做市钱包；这些地址在官方 Blitz 盘大量交易却被竞速榜排除，并非官方公布名单。",
+      "tooltip": "竞速榜已排除。官方文档称竞速榜会排除部署配置的做市钱包；这些地址在官方 Blitz 盘大量交易却被竞速榜排除，并非官方公布名单。某一周若被 Blitz 成交量接口算进种子（excludeSeed 后该地址成交为 0、不排除时不为 0），页面改标为「42 Blitz 种子钱包（无积分）」，不再计入做市。",
       "source": "https://docs.42.space/for-developers/rest-api-alpha/leaderboard/get-race-leaderboard",
       "addresses": [
         "0xe1838C8DA07Dd68483FD1929d08dABf942d987e1",
@@ -55,6 +55,82 @@
       "addresses": []
     }
   ],
+  "groups": {
+    "agent": {
+      "id": "agent",
+      "label": "Agent",
+      "tooltip": "NFT / Agent 池的三个 Agent 钱包。不计入散户，也不计入做市。Agent 本身不拿交易积分，这一池按已铸造的 Pass 分配。",
+      "addresses": [
+        {
+          "id": "codex",
+          "label": "codex",
+          "address": "0x66544aCf5d062e57f84d3dCb032880F9ACb27718"
+        },
+        {
+          "id": "claude",
+          "label": "claude",
+          "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de"
+        },
+        {
+          "id": "grok",
+          "label": "grok",
+          "address": "0x583AF2BD8A25B2E5886176B7D5bfA4D209e5b8d4"
+        }
+      ]
+    }
+  },
+  "pointsPools": {
+    "official": {
+      "label": "官方",
+      "source": "https://www.42.space/agentic-mining",
+      "sourceLabel": "Agentic Mining",
+      "items": [
+        {
+          "name": "交易",
+          "share": "70%",
+          "note": "交易积分池。Agent 钱包不拿交易积分。"
+        },
+        {
+          "name": "NFT（Agent）池",
+          "share": "20%",
+          "note": "按已铸造的 Pass 分配。第1–2周这一池固定 420,000 分。"
+        },
+        {
+          "name": "NFT Pass 排行榜",
+          "share": "10%",
+          "note": "第3周起。按单张 Pass 积分的前 300 名，不是按成交量。"
+        }
+      ]
+    },
+    "inferred": {
+      "label": "推断",
+      "source": "https://x.com/42space/status/2123678749585514534",
+      "sourceLabel": "42space 2026-11-20",
+      "items": [
+        {
+          "name": "普通交易",
+          "share": "55%",
+          "note": "把官方 70% 交易池扣掉下面的 Token Race 之后剩下的比例。这是推断，不是官方公布的拆分。"
+        },
+        {
+          "name": "Token Race",
+          "share": "15%",
+          "note": "2026-11-20 宣布，从交易池里划出。没用完的部分回到交易池。"
+        }
+      ],
+      "eligibility": "Token Race 计分资格（宣布）：单轮至少 $1，每天 10 轮，每周 3 天，单钱包有上限；没用完回到交易池。42 系统/种子钱包不计积分。"
+    },
+    "docs": [
+      {
+        "name": "Blitz",
+        "url": "https://docs.42.space/getting-started/publish-your-docs/blitz"
+      },
+      {
+        "name": "42 Points",
+        "url": "https://docs.42.space/getting-started/42-points/42-points"
+      }
+    ]
+  },
   "identities": [
     {
       "id": "team",

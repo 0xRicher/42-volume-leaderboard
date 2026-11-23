@@ -48,7 +48,7 @@
     code { font-family: var(--mono); font-size: 0.92em; }
 
     .wrap {
-      max-width: 1180px;
+      max-width: 1280px;
       margin: 0 auto;
       padding: 28px 20px 64px;
     }
@@ -334,7 +334,10 @@
     .splitbar span { display: block; height: 100%; }
     .splitbar .seg-retail { background: var(--accent); }
     .splitbar .seg-mm { background: var(--accent-2); }
-    .splitbar .seg-c { background: var(--cyan); }
+    .splitbar .seg-c { background: #3dd6ff; }
+    .splitbar .seg-seed { background: var(--gold); }
+    .splitbar .seg-agent { background: #ff8bd2; }
+    .splitbar .seg-real { background: #7aa2ff; }
     .split-legend {
       display: flex;
       flex-wrap: wrap;
@@ -349,6 +352,83 @@
       border-radius: 2px;
       margin-right: 5px;
     }
+
+    .pool-card {
+      margin: 0 0 14px;
+      padding: 16px 18px 14px;
+      background: var(--bg-elev);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .pool-card[hidden] { display: none; }
+    .pool-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: baseline;
+      margin-bottom: 10px;
+    }
+    .pool-head h2 { margin: 0; font-size: 16px; }
+    .pool-head span { color: var(--dim); font-size: 12px; }
+    .pool-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+    @media (max-width: 900px) {
+      .pool-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .pool-stat {
+      padding: 8px 10px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+    }
+    .pool-stat .k {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .pool-stat .k i {
+      width: 8px; height: 8px; border-radius: 2px; display: inline-block;
+    }
+    .pool-stat .v {
+      margin-top: 4px;
+      font-family: var(--mono);
+      font-size: 15px;
+    }
+    .pool-stat .s { margin-top: 4px; color: var(--dim); font-size: 11.5px; line-height: 1.45; }
+    .pool-note { margin: 10px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
+    .pool-columns {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+    @media (max-width: 800px) {
+      .pool-columns { grid-template-columns: 1fr; }
+    }
+    .pool-columns h3 {
+      margin: 0 0 6px;
+      font-size: 13px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .pool-tag {
+      border-radius: 999px;
+      padding: 1px 7px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .pool-tag.official { color: var(--accent); background: rgba(200, 255, 61, 0.1); border: 1px solid rgba(200, 255, 61, 0.28); }
+    .pool-tag.inferred { color: var(--gold); background: rgba(240, 193, 75, 0.1); border: 1px solid rgba(240, 193, 75, 0.35); }
+    .pool-columns ul { margin: 0; padding-left: 16px; color: var(--muted); font-size: 12.5px; line-height: 1.55; }
+    .pool-columns p { margin: 6px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.55; }
 
     .scope-note {
       margin: 0 0 14px;
@@ -399,6 +479,10 @@
     tbody tr.row-a:hover { background: rgba(240, 193, 75, 0.16); }
     tbody tr.row-b:hover { background: rgba(139, 125, 255, 0.2); }
     tbody tr.row-c:hover { background: rgba(61, 214, 255, 0.16); }
+    tbody tr.row-seed { background: rgba(240, 193, 75, 0.08); box-shadow: inset 3px 0 0 var(--gold); }
+    tbody tr.row-agent { background: rgba(255, 139, 210, 0.08); box-shadow: inset 3px 0 0 #ff8bd2; }
+    tbody tr.row-seed:hover { background: rgba(240, 193, 75, 0.14); }
+    tbody tr.row-agent:hover { background: rgba(255, 139, 210, 0.14); }
     tbody tr:last-child td { border-bottom: 0; }
 
     .rank { font-family: var(--mono); font-weight: 700; color: var(--muted); min-width: 48px; }
@@ -444,6 +528,8 @@
     .badge-team { color: #dfffa4; background: rgba(200, 255, 61, 0.1); border: 1px solid rgba(200, 255, 61, 0.28); }
     .badge-mod { color: #c5dcff; background: rgba(120, 170, 255, 0.12); border: 1px solid rgba(120, 170, 255, 0.35); }
     .badge-treasury { color: #f6d78a; background: rgba(240, 193, 75, 0.08); border: 1px solid rgba(240, 193, 75, 0.28); }
+    .badge-agent { color: #ffd0ea; background: rgba(255, 139, 210, 0.12); border: 1px solid rgba(255, 139, 210, 0.45); }
+    .badge-seed { color: #f6d78a; background: rgba(240, 193, 75, 0.16); border: 1px solid rgba(240, 193, 75, 0.5); }
 
     .floating-tip {
       position: fixed;
@@ -592,7 +678,7 @@
       <article class="stat">
         <div class="label">散户成交量及占比</div>
         <div class="value" id="stat-retail">--</div>
-        <div class="sub" id="stat-retail-sub">身份徽章（Team / Mod / Treasury）计入散户</div>
+        <div class="sub" id="stat-retail-sub">不含 Agent，不含 42 Blitz 种子。身份徽章（Team / Mod / Treasury）计入散户</div>
       </article>
       <article class="stat" id="stat-points-card" hidden>
         <div class="label">总发放积分</div>
@@ -605,13 +691,24 @@
         <span class="seg-retail" id="seg-retail" style="width:0"></span>
         <span class="seg-mm" id="seg-mm" style="width:0"></span>
         <span class="seg-c" id="seg-c" style="width:0"></span>
+        <span class="seg-seed" id="seg-seed" style="width:0"></span>
+        <span class="seg-agent" id="seg-agent" style="width:0"></span>
       </div>
       <div class="split-legend">
         <span><i style="background:var(--accent)"></i>散户</span>
-        <span><i style="background:var(--accent-2)"></i>做市/机器人（不含高频）</span>
-        <span><i style="background:var(--cyan)"></i>疑似高频机器人</span>
+        <span><i style="background:var(--accent-2)"></i>做市/机器人（不含高频、不含种子）</span>
+        <span><i style="background:#3dd6ff"></i>疑似高频机器人</span>
+        <span><i style="background:var(--gold)"></i>42 Blitz 种子</span>
+        <span><i style="background:#ff8bd2"></i>Agent</span>
       </div>
     </div>
+    <section class="pool-card" id="pool-card" hidden>
+      <div class="pool-head">
+        <h2 id="pool-title">成交量拆分</h2>
+        <span id="pool-updated"></span>
+      </div>
+      <div id="pool-body"></div>
+    </section>
     <p class="scope-note" id="scope-note"></p>
 
     <section class="board">
@@ -625,6 +722,8 @@
               <th class="sortable" data-key="trader">交易者<span class="arrow"></span></th>
               <th class="sortable num week-only" data-key="points" hidden><span class="hlabel">积分</span><span class="arrow"></span></th>
               <th class="sortable num" data-key="volume"><span class="hlabel">成交量 (USDT)</span><span class="arrow"></span></th>
+              <th class="sortable num pool-only" data-key="blitz_volume" hidden>Blitz 成交量<span class="arrow"></span></th>
+              <th class="sortable num pool-only" data-key="regular_volume" hidden>普通成交量<span class="arrow"></span></th>
               <th class="sortable num" data-key="pnl">已实现盈亏<span class="arrow"></span></th>
               <th class="sortable num hide-sm" data-key="pnl_pct">盈亏比例<span class="arrow"></span></th>
               <th class="sortable num" data-key="trade_count">笔数<span class="arrow"></span></th>
@@ -735,6 +834,12 @@
       segRetail: document.getElementById("seg-retail"),
       segMm: document.getElementById("seg-mm"),
       segC: document.getElementById("seg-c"),
+      segSeed: document.getElementById("seg-seed"),
+      segAgent: document.getElementById("seg-agent"),
+      poolCard: document.getElementById("pool-card"),
+      poolTitle: document.getElementById("pool-title"),
+      poolUpdated: document.getElementById("pool-updated"),
+      poolBody: document.getElementById("pool-body"),
     };
 
     function shortAddr(addr) {
@@ -911,7 +1016,21 @@
       if (!labels.heuristics?.tierB || !labels.heuristics?.tierC) {
         throw new Error("wallet-labels.json 缺少启发式规则");
       }
-      return { listed, tiers, identities, heuristics: labels.heuristics };
+      const agents = new Map();
+      const agentGroup = labels.groups?.agent;
+      for (const item of agentGroup?.addresses || []) {
+        const entry = typeof item === "string"
+          ? { address: item, id: "agent", label: "Agent", tooltip: agentGroup?.tooltip || "" }
+          : item;
+        if (!entry?.address) continue;
+        agents.set(String(entry.address).toLowerCase(), {
+          id: entry.id || "agent",
+          label: entry.label || entry.id || "Agent",
+          tooltip: entry.tooltip || agentGroup?.tooltip || "",
+          address: entry.address,
+        });
+      }
+      return { listed, tiers, identities, agents, heuristics: labels.heuristics };
     }
 
     function allows(periods, window) {
@@ -937,8 +1056,37 @@
       return pnl >= Number(rule.pnlPctMin) && pnl <= Number(rule.pnlPctMax);
     }
 
+    function activeSeedSet() {
+      if (state.period === "week" && state.weekDoc?.breakdown) {
+        return new Set((state.weekDoc.breakdown.seed_addresses || []).map((addr) => String(addr).toLowerCase()));
+      }
+      return new Set((state.weekIndex?.blitzSeedWallets || []).map((addr) => String(addr).toLowerCase()));
+    }
+
+    function listedTier(addr, window) {
+      const entries = state.compiled.listed.get(addr) || [];
+      for (const tierId of ["A", "B", "C"]) {
+        if (entries.some((entry) => entry.tier === tierId && allows(entry.periods, window))) return tierId;
+      }
+      return null;
+    }
+
+    function isRetail(row) {
+      const tag = row.tag || {};
+      return !tag.tier && tag.source !== "agent" && tag.source !== "seed";
+    }
+
+    function isMm(row) {
+      return Boolean(row.tag?.tier);
+    }
+
     function classify(row, window) {
       const addr = String(row.trader || "").toLowerCase();
+      const agent = state.compiled.agents?.get(addr);
+      if (agent) return { tier: null, source: "agent", identity: null, agent };
+      if (state.seedSet?.has(addr)) {
+        return { tier: null, source: "seed", identity: null, listedTier: listedTier(addr, window) };
+      }
       const entries = state.compiled.listed.get(addr) || [];
       const restricted = entries.some((entry) => entry.periods);
       for (const tierId of ["A", "B", "C"]) {
@@ -955,12 +1103,13 @@
     }
 
     function decorate(rows, window) {
+      state.seedSet = activeSeedSet();
       for (const row of rows) row.tag = classify(row, window);
       const retail = rows
-        .filter((row) => !row.tag.tier)
+        .filter((row) => isRetail(row))
         .sort((a, b) => b.volume - a.volume || a.rank - b.rank || a.trader.localeCompare(b.trader));
       retail.forEach((row, index) => { row.retail_rank = index + 1; });
-      for (const row of rows) if (row.tag.tier) row.retail_rank = null;
+      for (const row of rows) if (!isRetail(row)) row.retail_rank = null;
       return rows;
     }
 
@@ -979,10 +1128,21 @@
       let retailCount = 0;
       let retailVolume = 0;
       let top = null;
+      let agentCount = 0;
+      let agentVolume = 0;
+      let seedCount = 0;
+      let seedVolume = 0;
       for (const row of rows) {
         totalVolume += row.volume || 0;
         const tier = row.tag?.tier;
-        if (tier && buckets[tier]) {
+        const source = row.tag?.source;
+        if (source === "agent") {
+          agentCount += 1;
+          agentVolume += row.volume || 0;
+        } else if (source === "seed") {
+          seedCount += 1;
+          seedVolume += row.volume || 0;
+        } else if (tier && buckets[tier]) {
           buckets[tier].count += 1;
           buckets[tier].volume += row.volume || 0;
           if (tier === "C") {
@@ -1028,6 +1188,16 @@
           share_pct: shareOf(retailVolume, totalVolume),
           top,
         },
+        agent: {
+          count: agentCount,
+          volume: agentVolume,
+          share_pct: shareOf(agentVolume, totalVolume),
+        },
+        seed: {
+          count: seedCount,
+          volume: seedVolume,
+          share_pct: shareOf(seedVolume, totalVolume),
+        },
       };
     }
 
@@ -1047,6 +1217,9 @@
         points: row.points == null ? null : Number(row.points),
         points_rank: row.points_rank == null ? null : Number(row.points_rank),
         name: row.name || null,
+        blitz_volume: row.blitz_volume == null ? null : Number(row.blitz_volume),
+        regular_volume: row.regular_volume == null ? null : Number(row.regular_volume),
+        pool_role: row.pool_role || null,
       }));
     }
 
@@ -1104,6 +1277,9 @@
         losing_predictions: Number(item.losing_predictions) || 0,
         points: Number(item.points) || 0,
         points_rank: item.rank == null ? null : Number(item.rank),
+        blitz_volume: item.blitz_volume == null ? null : Number(item.blitz_volume),
+        regular_volume: item.regular_volume == null ? null : Number(item.regular_volume),
+        pool_role: item.pool_role || null,
       }));
     }
 
@@ -1166,6 +1342,7 @@
     function syncWeekColumns() {
       const on = state.period === "week";
       document.querySelectorAll(".week-only").forEach((el) => { el.hidden = !on; });
+      document.querySelectorAll(".pool-only").forEach((el) => { el.hidden = !on; });
       if (els.weekTools) els.weekTools.hidden = !on;
       if (els.weekBoardTabs) els.weekBoardTabs.hidden = !on || state.cumulative;
       setHeaderLabel("rank", on ? "成交量排名" : "排名");
@@ -1284,7 +1461,10 @@
       const seq = ++loadSeq;
       const week = currentPointsWeek(new Date(), state.labels.pointsWeekStart);
       state.week = week;
-      if (!state.selectedWeekStart) state.selectedWeekStart = week.from;
+      if (!state.selectedWeekStart) {
+        const requested = new URLSearchParams(location.search).get("week");
+        state.selectedWeekStart = requested || week.from;
+      }
       syncWeekColumns();
       paintWeek();
       if (period === "week") {
@@ -1397,6 +1577,7 @@
         const cols = visibleColumnCount();
         els.tbody.innerHTML = `<tr><td colspan="${cols}" class="error-banner">${escapeHtml(String(err))}</td></tr>`;
         renderSummary();
+        renderPool();
         return;
       }
       if (seq !== loadSeq) return;
@@ -1405,8 +1586,8 @@
       state.weekPointsNote = doc.points?.note || "";
       paintWeek();
       const map = pointsMap(doc.points?.rows);
-      const volumeRows = decorate(attachPoints(normalizeApiRows(doc.volume?.rows), map), "all");
-      const pointsRows = decorate(pointsBoardRows(doc.points?.rows), "all");
+      const volumeRows = attachPool(decorate(attachPoints(normalizeApiRows(doc.volume?.rows), map), "all"));
+      const pointsRows = attachPool(decorate(pointsBoardRows(doc.points?.rows), "all"));
       const seen = new Set(pointsRows.map((row) => String(row.trader || "").toLowerCase()));
       const union = pointsRows.concat(volumeRows.filter((row) => !seen.has(String(row.trader || "").toLowerCase())));
       state.volumeRows = volumeRows;
@@ -1464,10 +1645,11 @@
           const cols = visibleColumnCount();
           els.tbody.innerHTML = `<tr><td colspan="${cols}" class="error-banner">还没有 ${escapeHtml(start)} 的周数据。先运行 <code>python3 fetch.py</code>。</td></tr>`;
           renderSummary();
+          renderPool();
           return;
         }
-        const volumeRows = decorate(attachPoints(normalizeApiRows(block.rows), map), "week");
-        const pointsRows = decorate(pointRows, "week");
+        const volumeRows = attachPool(decorate(attachPoints(normalizeApiRows(block.rows), map), "week"));
+        const pointsRows = attachPool(decorate(pointRows, "week"));
         rememberWeekRows(volumeRows, pointsRows);
         applyData({
           rows: state.rows,
@@ -1490,8 +1672,8 @@
       try {
         const live = await fetchWindow({ from: current.from, to: current.to, onProgress: progress });
         if (seq !== loadSeq) return;
-        const volumeRows = decorate(attachPoints(live.rows, map), "week");
-        const pointsRows = decorate(pointRows, "week");
+        const volumeRows = attachPool(decorate(attachPoints(live.rows, map), "week"));
+        const pointsRows = attachPool(decorate(pointRows, "week"));
         rememberWeekRows(volumeRows, pointsRows);
         applyData({
           rows: state.rows,
@@ -1506,8 +1688,8 @@
         if (seq !== loadSeq) return;
         const block = state.weekDoc?.volume;
         if (block && Array.isArray(block.rows) && block.from === current.from) {
-          const volumeRows = decorate(attachPoints(normalizeApiRows(block.rows), map), "week");
-          const pointsRows = decorate(pointRows, "week");
+          const volumeRows = attachPool(decorate(attachPoints(normalizeApiRows(block.rows), map), "week"));
+          const pointsRows = attachPool(decorate(pointRows, "week"));
           rememberWeekRows(volumeRows, pointsRows);
           applyData({
             rows: state.rows,
@@ -1690,7 +1872,14 @@
     function badgesFor(row) {
       const tag = row.tag || {};
       const parts = [];
-      if (tag.tier) {
+      if (tag.source === "seed") {
+        const listed = tag.listedTier ? state.compiled.tiers.get(tag.listedTier) : null;
+        const tip = "42 Blitz 种子钱包（无积分）。系统钱包按规则不获得积分。"
+          + (listed ? " 原标签仍留在配置里：" + listed.label + "。" : "");
+        parts.push(badgeButton("badge-seed", "42 系统/种子", tip));
+      } else if (tag.source === "agent" && tag.agent) {
+        parts.push(badgeButton("badge-agent", "Agent · " + tag.agent.label, tag.agent.tooltip || "Agent"));
+      } else if (tag.tier) {
         const tier = state.compiled.tiers.get(tag.tier);
         parts.push(badgeButton("badge-" + (tier?.tone || tag.tier.toLowerCase()), tier?.label || tag.tier, tipFor(tag)));
       }
@@ -1702,8 +1891,8 @@
 
     function sortedView() {
       let rows = state.rows.slice();
-      if (state.filter === "retail") rows = rows.filter((row) => !row.tag?.tier);
-      else if (state.filter === "mm") rows = rows.filter((row) => row.tag?.tier);
+      if (state.filter === "retail") rows = rows.filter((row) => isRetail(row));
+      else if (state.filter === "mm") rows = rows.filter((row) => isMm(row));
       const poolSize = rows.length;
       const q = state.query.trim().toLowerCase();
       if (q) {
@@ -1766,6 +1955,8 @@
         els.segRetail.style.width = "0";
         els.segMm.style.width = "0";
         els.segC.style.width = "0";
+        if (els.segSeed) els.segSeed.style.width = "0";
+        if (els.segAgent) els.segAgent.style.width = "0";
         els.scope.textContent = state.period === "all"
           ? "全部时间的全平台合计需要 data/leaderboard.json 里的 aggregate。表格仍然可以显示实时前 200 名。"
           : "";
@@ -1782,22 +1973,32 @@
       const scannedNote = agg.scanned_traders !== agg.total_traders
         ? `成交量按已扫描的 ${formatInt(agg.scanned_traders)} 人合计。`
         : "已覆盖该窗口的全部交易者。";
-      els.tradersSub.innerHTML = `散户 <strong>${formatInt(agg.retail?.count)}</strong> · 做市/机器人 <strong>${formatInt(agg.mm?.count)}</strong><br>${scannedNote}`;
+      const agentCount = Number(agg.agent?.count) || 0;
+      const seedCount = Number(agg.seed?.count) || 0;
+      const extraGroups = [
+        agentCount ? `Agent <strong>${formatInt(agentCount)}</strong>` : "",
+        seedCount ? `42 种子 <strong>${formatInt(seedCount)}</strong>` : "",
+      ].filter(Boolean).join(" · ");
+      els.tradersSub.innerHTML = `散户 <strong>${formatInt(agg.retail?.count)}</strong> · 做市/机器人 <strong>${formatInt(agg.mm?.count)}</strong>${extraGroups ? " · " + extraGroups : ""}<br>${scannedNote}`;
       els.volume.textContent = formatUsd(total);
       els.volumeSub.innerHTML = marketSubtitle(total);
       els.mm.textContent = formatUsd(mmVolume);
-      els.mmSub.innerHTML = `${formatInt(agg.mm?.count)} 人 · 占全平台 <strong>${formatShare(agg.mm?.share_pct)}</strong><br>疑似官方 ${formatInt(tierA.count)} · 疑似做市 ${formatInt(tierB.count)}<br><span class="c-accent">其中高频机器人 ${formatInt(tierC.count)} 人 · ${formatUsd(tierC.volume)} · 占全平台 ${formatShare(tierC.share_pct)}</span>`;
+      els.mmSub.innerHTML = `${formatInt(agg.mm?.count)} 人 · 占全平台 <strong>${formatShare(agg.mm?.share_pct)}</strong><br>疑似官方 ${formatInt(tierA.count)} · 疑似做市 ${formatInt(tierB.count)}<br><span class="c-accent">其中高频机器人 ${formatInt(tierC.count)} 人 · ${formatUsd(tierC.volume)} · 占全平台 ${formatShare(tierC.share_pct)}</span><br>不含 42 Blitz 种子钱包。`;
       const top = agg.retail?.top;
       els.retail.textContent = formatUsd(agg.retail?.volume) + " · " + formatShare(agg.retail?.share_pct);
       els.retailSub.innerHTML = top
-        ? `${formatInt(agg.retail.count)} 人<br>成交量最高 <a href="${explorerUrl(top.trader)}" target="_blank" rel="noopener">${escapeHtml(shortAddr(top.trader))}</a> ${formatUsd(top.volume)}`
-        : `${formatInt(agg.retail?.count)} 人`;
+        ? `${formatInt(agg.retail.count)} 人 · 不含 Agent 与 42 种子<br>成交量最高 <a href="${explorerUrl(top.trader)}" target="_blank" rel="noopener">${escapeHtml(shortAddr(top.trader))}</a> ${formatUsd(top.volume)}`
+        : `${formatInt(agg.retail?.count)} 人 · 不含 Agent 与 42 种子`;
       const retailW = shareOf(agg.retail?.volume, total);
       const mmW = shareOf(otherMm, total);
       const cW = shareOf(tierC.volume, total);
+      const seedW = shareOf(agg.seed?.volume, total);
+      const agentW = shareOf(agg.agent?.volume, total);
       els.segRetail.style.width = retailW + "%";
       els.segMm.style.width = mmW + "%";
       els.segC.style.width = cW + "%";
+      if (els.segSeed) els.segSeed.style.width = seedW + "%";
+      if (els.segAgent) els.segAgent.style.width = agentW + "%";
       paintScope(agg);
     }
 
@@ -1861,6 +2062,130 @@
       return `<td class="num rank ${rankClass}">${medalText}${value}</td>`;
     }
 
+    function formatPoolAmount(n) {
+      if (n == null || Number.isNaN(Number(n))) return "暂无数据";
+      return formatUsd(n);
+    }
+
+    function attachPool(rows) {
+      if (state.period !== "week") return rows;
+      const breakdown = state.weekDoc?.breakdown;
+      if (!breakdown) {
+        for (const row of rows) {
+          if (row.blitz_volume == null) row.blitz_volume = null;
+          if (row.regular_volume == null) row.regular_volume = null;
+        }
+        return rows;
+      }
+      const map = new Map(
+        (breakdown.wallets || []).map((item) => [String(item.address || "").toLowerCase(), item]),
+      );
+      const gaps = Boolean(breakdown.gaps_closed) && breakdown.status !== "unavailable";
+      for (const row of rows) {
+        const item = map.get(String(row.trader || "").toLowerCase());
+        if (item && item.blitz != null) {
+          const blitz = Number(item.blitz);
+          const agentPart = item.role === "agent" && item.agent != null ? Number(item.agent) : 0;
+          row.blitz_volume = blitz;
+          row.regular_volume = Number(row.volume || 0) - blitz - agentPart;
+          row.pool_role = item.role || row.pool_role;
+          continue;
+        }
+        if (item && item.role === "agent") {
+          row.blitz_volume = item.blitz == null ? null : Number(item.blitz);
+          row.regular_volume = item.regular == null ? null : Number(row.volume || 0) - Number(item.blitz || 0) - Number(item.agent || 0);
+          row.pool_role = "agent";
+          continue;
+        }
+        if (gaps && row.blitz_volume == null) {
+          row.blitz_volume = 0;
+          row.regular_volume = Number(row.volume || 0);
+          row.pool_role = row.pool_role || "trader";
+        }
+      }
+      return rows;
+    }
+
+    function poolStat(label, value, color, sub) {
+      return `<div class="pool-stat"><div class="k"><i style="background:${color}"></i>${escapeHtml(label)}</div><div class="v">${value == null ? "暂无数据" : formatUsd(value)}</div><div class="s">${sub}</div></div>`;
+    }
+
+    function renderPool() {
+      if (!els.poolCard) return;
+      const show = state.period === "week";
+      els.poolCard.hidden = !show;
+      if (!show) return;
+      els.poolTitle.textContent = state.cumulative ? "总榜成交量拆分" : "本周成交量拆分";
+      const breakdown = state.weekDoc?.breakdown;
+      if (!breakdown || breakdown.status === "unavailable" || breakdown.blitz_total == null) {
+        els.poolUpdated.textContent = breakdown?.fetched_at ? "更新于 " + formatTime(breakdown.fetched_at) : "";
+        els.poolBody.innerHTML = `<p class="pool-note">${escapeHtml(breakdown?.note || "暂无数据")}</p>${poolLegend()}`;
+        return;
+      }
+      const total = Number(breakdown.total);
+      const agents = breakdown.agents || {};
+      const agentSum = agents.sum == null ? null : Number(agents.sum);
+      const parts = [
+        { label: "普通交易", value: breakdown.regular == null ? null : Number(breakdown.regular), color: "var(--accent)" },
+        { label: "Blitz 真实玩家", value: breakdown.blitz_real == null ? null : Number(breakdown.blitz_real), color: "#7aa2ff" },
+        { label: "Blitz 42 种子", value: breakdown.blitz_seed == null ? null : Number(breakdown.blitz_seed), color: "var(--gold)" },
+        { label: "Agent", value: agentSum, color: "#ff8bd2" },
+      ];
+      const agentLines = ["codex", "claude", "grok"].map((id) => {
+        const entry = agents[id];
+        const volume = entry && typeof entry === "object" ? entry.volume : null;
+        const share = volume == null || !(total > 0) ? "" : " · " + formatShare(volume / total * 100);
+        return `${id} ${volume == null ? "暂无数据" : formatUsd(volume)}${share}`;
+      }).join("<br>");
+      const known = parts.every((part) => part.value != null && part.value >= 0);
+      const whole = parts.reduce((sum, part) => sum + (Number(part.value) || 0), 0);
+      const bar = known && whole > 0
+        ? `<div class="splitbar" aria-hidden="true">${parts.map((part) => `<span class="seg-real" style="width:${(part.value / whole) * 100}%;background:${part.color}"></span>`).join("")}</div>`
+        : "";
+      const cards = parts.map((part) => {
+        const pct = part.value == null || !(total > 0) ? "暂无数据" : formatShare(part.value / total * 100);
+        const sub = part.label === "Agent" ? agentLines : pct + (part.label === "普通交易" ? "<br>总成交量 − Blitz − Agent" : "");
+        return poolStat(part.label, part.value, part.color, sub);
+      }).join("");
+      const when = breakdown.fetched_at ? "拆分更新于 " + formatTime(breakdown.fetched_at) : "";
+      els.poolUpdated.textContent = when;
+      const races = breakdown.race_count == null ? "" : `本窗口 Blitz ${formatInt(breakdown.race_count)} 轮。`;
+      const note = [breakdown.note, races].filter(Boolean).join(" ");
+      els.poolBody.innerHTML = `${bar}<div class="pool-grid">${cards}</div><p class="pool-note">${escapeHtml(note)}</p>${poolLegend()}`;
+    }
+
+    function poolLegend() {
+      const pools = state.labels?.pointsPools || {};
+      const official = pools.official || {};
+      const inferred = pools.inferred || {};
+      const items = (list) => (list || []).map((item) => (
+        `<li><strong>${escapeHtml(item.share || "")}</strong> ${escapeHtml(item.name || "")}。${escapeHtml(item.note || "")}</li>`
+      )).join("");
+      const docs = (pools.docs || []).map((item) => (
+        `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.name)}</a>`
+      )).join(" · ");
+      const minted = (state.weekIndex?.agentsNow?.agents || []).map((agent) => (
+        `${escapeHtml(agent.agent || "")} ${agent.minted == null ? "暂无数据" : formatInt(agent.minted)}/${agent.supply == null ? "?" : formatInt(agent.supply)}`
+      )).join(" · ");
+      const mintedLine = minted
+        ? `<p>当前已铸造 Pass（不是某一周的历史值）：${minted}。</p>`
+        : "";
+      return `<div class="pool-columns">
+        <div>
+          <h3>积分池 <span class="pool-tag official">${escapeHtml(official.label || "官方")}</span></h3>
+          <ul>${items(official.items)}</ul>
+          ${official.source ? `<p><a href="${escapeHtml(official.source)}" target="_blank" rel="noopener">${escapeHtml(official.sourceLabel || official.source)}</a></p>` : ""}
+          ${mintedLine}
+        </div>
+        <div>
+          <h3>交易池里的 Token Race <span class="pool-tag inferred">${escapeHtml(inferred.label || "推断")}</span></h3>
+          <ul>${items(inferred.items)}</ul>
+          <p>${escapeHtml(inferred.eligibility || "")}</p>
+          ${inferred.source ? `<p><a href="${escapeHtml(inferred.source)}" target="_blank" rel="noopener">${escapeHtml(inferred.sourceLabel || "宣布帖")}</a>${docs ? " · " + docs : ""}</p>` : ""}
+        </div>
+      </div>`;
+    }
+
     function render() {
       if (state.filter !== "retail" && state.sortKey === "retail_rank") {
         state.sortKey = "volume";
@@ -1876,6 +2201,7 @@
         el.hidden = state.filter !== "retail";
       });
       renderSummary();
+      renderPool();
       const view = sortedView();
       const cols = visibleColumnCount();
       document.querySelectorAll("thead th.sortable").forEach((th) => {
@@ -1911,7 +2237,12 @@
 
       els.tbody.innerHTML = view.rows.map((row) => {
         const tier = row.tag?.tier;
-        const rowClass = tier ? `row-${tier.toLowerCase()}` : "";
+        const source = row.tag?.source;
+        const rowClass = source === "seed"
+          ? "row-seed"
+          : source === "agent"
+            ? "row-agent"
+            : tier ? `row-${tier.toLowerCase()}` : "";
         const useRetailMedal = state.filter === "retail" && !pointsMode;
         const medalRank = useRetailMedal ? row.retail_rank : row.rank;
         const rankClass = medalRank === 1 ? "r1" : medalRank === 2 ? "r2" : medalRank === 3 ? "r3" : "";
@@ -1943,6 +2274,7 @@
           </td>
           ${pointsCell}
           <td class="num" title="${(row.volume || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}">${formatUsd(row.volume)}</td>
+          ${state.period === "week" ? `<td class="num">${formatPoolAmount(row.blitz_volume)}</td><td class="num">${formatPoolAmount(row.regular_volume)}</td>` : ""}
           <td class="num ${pnlClass(row.pnl)}" title="${(row.pnl || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}">${formatUsd(row.pnl)}</td>
           <td class="num hide-sm ${pnlClass(row.pnl_pct)}">${formatPct(row.pnl_pct)}</td>
           <td class="num">${formatInt(row.trade_count)}</td>
@@ -2009,6 +2341,10 @@
           <li>盈亏比例在 ${c.pnlPctMin}% 和 ${c.pnlPctMax}% 之间，含两端</li>
         </ul>
         <p>这一档用单独的颜色，算进做市/机器人，并且在那张卡片里单列人数和成交量，不计入散户。若一个地址同时符合两套启发式，记为高频机器人。身份徽章（${identities}）一律当散户。写明了适用窗口的地址，在其他窗口不会被启发式重新标上。</p>
+        <h3>Agent 与 42 Blitz 种子</h3>
+        <p>三个 Agent 钱包（codex、claude、grok）单独成组，徽章是 Agent。它们不进散户，也不进做市。42 Blitz 种子钱包是成交量接口 <code>excludeSeed=true</code> 排除掉的系统钱包：不排除时有 Blitz 成交，排除后为 0。页面标成「42 系统/种子」，提示「42 Blitz 种子钱包（无积分）」。原有做市标签留在配置里，只改展示。种子钱包同样不进散户和做市。</p>
+        <h3>成交量拆分</h3>
+        <p>每一周和总榜有一张拆分：普通交易、Blitz 真实玩家、Blitz 42 种子、Agent（codex / claude / grok）。Blitz 用 <code>/token-races/volume</code>，Agent 用挖矿历史的累计成交差额。普通交易是总成交量减去 Blitz 再减去 Agent，不是另一套接口。取不到的数字显示「暂无数据」，不用 0 填。积分池比例里，交易 70%、NFT 池 20%、Pass 榜 10% 是官方口径；普通交易 55% 和 Token Race 15% 标成「推断」。</p>
         <div id="tier-c-live"></div>
         <h3>全平台合计</h3>
         <p>四个卡片统计的是该窗口里每一个交易者，用排行榜接口分页拉完（<code>limit=500</code>）。「全部」大约有六万名交易者，浏览器不每 30 秒扫一遍；<code>fetch.py</code> 在 GitHub Actions 里扫完，把合计和高频机器人地址写进快照，页面注明那次扫描的更新时间。表格始终只放成交量前 ${TABLE_CAP} 名。</p>
@@ -2024,8 +2360,20 @@
       `;
     }
 
+    function syncWeekQuery() {
+      const url = new URL(location.href);
+      const current = state.week?.from;
+      if (state.selectedWeekStart && state.selectedWeekStart !== current) {
+        url.searchParams.set("week", state.selectedWeekStart);
+      } else {
+        url.searchParams.delete("week");
+      }
+      history.replaceState(null, "", url);
+    }
+
     els.weekSelect.addEventListener("change", () => {
       state.selectedWeekStart = els.weekSelect.value;
+      syncWeekQuery();
       load("week");
     });
 
@@ -2033,6 +2381,7 @@
       const older = previousInGroup(state.selectedWeekStart || state.week?.from);
       if (!older) return;
       state.selectedWeekStart = older.start;
+      syncWeekQuery();
       load("week");
     });
 
@@ -2040,6 +2389,7 @@
       const current = state.weekIndex?.current_start || state.week?.from;
       if (!current || current === state.selectedWeekStart) return;
       state.selectedWeekStart = current;
+      syncWeekQuery();
       load("week");
     });
 
