@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T08:27:37Z",
+  "updated_at": "2026-11-23T08:40:05Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
@@ -32,16 +32,16 @@
       "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
       "totals": {
         "traders": 822,
-        "total_volume": 22838468.759054307,
+        "total_volume": 22918236.66500611,
         "mm_share_pct": 0.0,
         "mm_volume": 0.0,
         "mm_count": 0,
-        "retail_volume": 4643021.993880075,
-        "retail_share_pct": 20.32983052788664,
+        "retail_volume": 4671539.434025317,
+        "retail_share_pct": 20.383502894698257,
         "retail_count": 813,
-        "agent_volume": 4340828.55517423,
+        "agent_volume": 4350470.4209807925,
         "agent_count": 3,
-        "seed_volume": 13854618.209999999,
+        "seed_volume": 13896226.809999999,
         "seed_count": 6,
         "points_traders": null,
         "total_distributed_points": null
@@ -49,8 +49,8 @@
       "breakdown": {
         "status": "ok",
         "fetchedAt": "2026-11-23T07:44:56Z",
-        "total": 22838468.759054307,
-        "regular": 5762294.853800572,
+        "total": 22918236.66500611,
+        "regular": 5842062.759752374,
         "blitzTotal": 12987886.90443618,
         "blitzReal": 36255.74443617944,
         "blitzSeed": 12951631.16,
@@ -95,7 +95,7 @@
       },
       "breakdown": {
         "status": "partial",
-        "fetchedAt": "2026-11-23T08:27:33Z",
+        "fetchedAt": "2026-11-23T08:40:02Z",
         "total": 17603621.847349748,
         "regular": 6169625.043778561,
         "blitzTotal": 11433996.803571187,
@@ -108,7 +108,7 @@
           "grok": 0.0
         },
         "reconciled": true,
-        "note": "本轮每钱包 Blitz 已到约 5 分钟上限，下次运行从缓存继续。 真实玩家 Blitz 还有 669.69 没有落到具体钱包。 种子 Blitz 还有 11392906.79 没有落到具体钱包。 3 个 Blitz 请求失败。失败的钱包不填 0。"
+        "note": "本轮每钱包 Blitz 已到约 5 分钟上限，下次运行从缓存继续。 真实玩家 Blitz 还有 13827.84 没有落到具体钱包。 种子 Blitz 还有 11392906.79 没有落到具体钱包。 3 个 Blitz 请求失败。失败的钱包不填 0。"
       }
     },
     {
@@ -2001,7 +2001,7 @@
     "0x28aedaf59d20903c51989dcc94be57b99b0784b3"
   ],
   "agentsNow": {
-    "fetched_at": "2026-11-23T08:27:38Z",
+    "fetched_at": "2026-11-23T08:40:05Z",
     "agents": [
       {
         "agent": "codex",
@@ -2012,7 +2012,7 @@
       },
       {
         "agent": "claude",
-        "minted": 597,
+        "minted": 598,
         "supply": 2000,
         "volume": 1489987.3112867407,
         "snapshotAt": "2026-11-23T08:00:00Z"

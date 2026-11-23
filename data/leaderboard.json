@@ -4,13 +4,13 @@
   "sort_by": "volume",
   "unit": "USDT",
   "note": "Per-trader trading volume from the public 42.space Market API. Rolling windows use period=1d|7d|30d|all. The points week uses from/to UTC calendar dates. Each block keeps the top 200 rows for the table. aggregate covers every trader returned for that window, including heuristic market-maker and bot detection. Labels come from wallet-labels.json.",
-  "updated_at": "2026-11-23T08:21:25Z",
-  "fetched_at": "2026-11-23T08:15:51Z",
+  "updated_at": "2026-11-23T08:33:39Z",
+  "fetched_at": "2026-11-23T08:30:00Z",
   "labels_file": "wallet-labels.json",
   "points_week_start": "Thursday 00:00 UTC",
   "points_api": {
     "source": "https://www.42.space/api/points/leaderboard",
-    "fetched_at": "2026-11-23T08:21:25Z",
+    "fetched_at": "2026-11-23T08:33:39Z",
     "snapshot_id": "14",
     "updated_at": "2026-11-19T07:37:14.947435+00:00",
     "period": {
@@ -29,45 +29,45 @@
   },
   "markets": {
     "source": "https://rest.ft.42.space/api/v1/markets",
-    "fetched_at": "2026-11-23T08:21:24Z",
+    "fetched_at": "2026-11-23T08:33:38Z",
     "market_count": 2893,
     "reported_markets": 2893,
-    "total_volume": 137251023.35900733,
+    "total_volume": 137289642.21657088,
     "note": "Sum of the volume field on every market returned by GET /api/v1/markets. This is a lifetime market notional, not a windowed total, so it is only compared with the all-time trader sum.",
-    "all_time_trader_volume": 905050404.0424596,
-    "difference_pct": -84.83498568190592,
+    "all_time_trader_volume": 905195264.0895506,
+    "difference_pct": -84.83314621020942,
     "consistent": false,
     "consistent_threshold_pct": 1.0
   },
   "periods": {
     "1d": {
       "period": "1d",
-      "total_traders": 345,
+      "total_traders": 346,
       "returned": 200,
       "rows": [
         {
           "rank": 1,
           "trader": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-          "volume": 830000.0,
-          "pnl": -8091.578304803732,
-          "pnl_pct": -0.9748889523859918,
+          "volume": 876000.0,
+          "pnl": -8561.627019831836,
+          "pnl_pct": -0.977354682629205,
           "win_rate": 0.0,
-          "trade_count": 1242,
+          "trade_count": 1311,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 414,
-          "losing_predictions": 828
+          "winning_predictions": 437,
+          "losing_predictions": 874
         },
         {
           "rank": 2,
           "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-          "volume": 200903.05930888306,
-          "pnl": -3297.901950435972,
-          "pnl_pct": -1.6415389401141653,
-          "win_rate": 0.0001966955153422502,
-          "trade_count": 5084,
+          "volume": 209942.24045877694,
+          "pnl": -3438.959652608632,
+          "pnl_pct": -1.638050372851902,
+          "win_rate": 0.0001880759826970096,
+          "trade_count": 5317,
           "profitable_sells": 1,
-          "losing_sells": 5083,
+          "losing_sells": 5316,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -100,13 +100,13 @@
         {
           "rank": 5,
           "trader": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
-          "volume": 108759.61583444546,
-          "pnl": -4001.8858373480907,
-          "pnl_pct": -3.6795696699037492,
+          "volume": 113583.11408660004,
+          "pnl": -4174.749009959801,
+          "pnl_pct": -3.6755014541834234,
           "win_rate": 0.0,
-          "trade_count": 27,
+          "trade_count": 28,
           "profitable_sells": 0,
-          "losing_sells": 27,
+          "losing_sells": 28,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -151,6 +151,19 @@
         },
         {
           "rank": 9,
+          "trader": "0xF970C59Cb5C8DEeBc6de332904E99e7726A8209D",
+          "volume": 13011.439283927484,
+          "pnl": -129.35386150191104,
+          "pnl_pct": -0.9941549023073623,
+          "win_rate": 0.0030211480362537764,
+          "trade_count": 331,
+          "profitable_sells": 1,
+          "losing_sells": 330,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 10,
           "trader": "0x582d404F3A81E4A3F17B38e187dC7946cEe63dCB",
           "volume": 12896.893026355987,
           "pnl": -161.55204847506835,
@@ -163,7 +176,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 10,
+          "rank": 11,
           "trader": "0xB9d6AD5332BF0446ED4C22739fd7b02586783b32",
           "volume": 12313.730264261942,
           "pnl": -168.45820790192744,
@@ -176,7 +189,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 11,
+          "rank": 12,
           "trader": "0x199F920f7256dF50735218b85519791C756F5f2d",
           "volume": 11683.753088871692,
           "pnl": -155.25198661368617,
@@ -189,7 +202,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 12,
+          "rank": 13,
+          "trader": "0x6EDC5Af2920061a4c3C5051005Ba96512c73005a",
+          "volume": 11233.235591348292,
+          "pnl": -124.8575954550594,
+          "pnl_pct": -1.1115016189211173,
+          "win_rate": 0.003484320557491289,
+          "trade_count": 287,
+          "profitable_sells": 1,
+          "losing_sells": 286,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 14,
           "trader": "0xC9804f5775164A0161B9Fd35Fa43B27BC6Fe1Bd3",
           "volume": 10630.993117666027,
           "pnl": -157.04172396630662,
@@ -202,7 +228,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 13,
+          "rank": 15,
           "trader": "0x526972E2fAF16D296495067db766d297803DF3b0",
           "volume": 10611.006873831231,
           "pnl": -138.15711664010203,
@@ -215,7 +241,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 14,
+          "rank": 16,
           "trader": "0x38DBBb4aF8022838D5663F369b183bf02b085406",
           "volume": 10044.35942093954,
           "pnl": -128.85067818940848,
@@ -228,7 +254,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 15,
+          "rank": 17,
           "trader": "0x61970D6CbE14Ac509865aBdB34621B6c5ca378Bc",
           "volume": 10006.489045923237,
           "pnl": -125.34124688918362,
@@ -241,7 +267,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 16,
+          "rank": 18,
           "trader": "0x1E041F4b782ef9DB966BF254e741b9bB18a1b275",
           "volume": 9971.65465509933,
           "pnl": -145.24931067373498,
@@ -254,7 +280,33 @@
           "losing_predictions": 0
         },
         {
-          "rank": 17,
+          "rank": 19,
+          "trader": "0x931ac0D5F1ba68376398D2fE212BEC513C7575f3",
+          "volume": 9932.64094164024,
+          "pnl": -148.14550754654866,
+          "pnl_pct": -1.4915016904062621,
+          "win_rate": 0.0,
+          "trade_count": 256,
+          "profitable_sells": 0,
+          "losing_sells": 256,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 20,
+          "trader": "0xC26C4E7283C906B830653aA5BD4D5fd0A008fce1",
+          "volume": 9894.048913024551,
+          "pnl": -147.09707538319253,
+          "pnl_pct": -1.4867227428960206,
+          "win_rate": 0.0,
+          "trade_count": 255,
+          "profitable_sells": 0,
+          "losing_sells": 255,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 21,
           "trader": "0xe4E6E78BE7e6ccB1Fcf4D0bc1DDc6D68988eB6aF",
           "volume": 9571.85634775156,
           "pnl": -124.87503306472902,
@@ -267,7 +319,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 18,
+          "rank": 22,
           "trader": "0x3812D088c17100904625550e95c7932E5CE6C9f5",
           "volume": 9389.614371659329,
           "pnl": -139.32246362366232,
@@ -280,7 +332,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 19,
+          "rank": 23,
+          "trader": "0x6f43FB23e7D26ebc177578FF5c34aD65a640F1C1",
+          "volume": 9350.559666953943,
+          "pnl": -138.6482455706978,
+          "pnl_pct": -1.4827801811767292,
+          "win_rate": 0.0,
+          "trade_count": 241,
+          "profitable_sells": 0,
+          "losing_sells": 241,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 24,
           "trader": "0x13bEa44Ef7F21c0E9fCbd9BA762918A90De0C31e",
           "volume": 9311.922760458763,
           "pnl": -138.53632902300535,
@@ -293,20 +358,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 20,
-          "trader": "0x6f43FB23e7D26ebc177578FF5c34aD65a640F1C1",
-          "volume": 9311.76181510462,
-          "pnl": -138.0294182638777,
-          "pnl_pct": -1.4823125956677714,
-          "win_rate": 0.0,
-          "trade_count": 240,
-          "profitable_sells": 0,
-          "losing_sells": 240,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 21,
+          "rank": 25,
           "trader": "0x449d95208DAB893EED0E9FCB9DB19c284bF5b1f1",
           "volume": 9195.116934932767,
           "pnl": -138.8697913521203,
@@ -319,20 +371,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 22,
-          "trader": "0xC26C4E7283C906B830653aA5BD4D5fd0A008fce1",
-          "volume": 9118.110134579372,
-          "pnl": -135.15858703535747,
-          "pnl_pct": -1.4823092180339459,
-          "win_rate": 0.0,
-          "trade_count": 235,
-          "profitable_sells": 0,
-          "losing_sells": 235,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 23,
+          "rank": 26,
           "trader": "0x4540Dc82A409B809A0a00C1B67239FB1A0E42863",
           "volume": 9105.848835138286,
           "pnl": -111.28797677221002,
@@ -345,7 +384,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 24,
+          "rank": 27,
+          "trader": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
+          "volume": 9088.59,
+          "pnl": -175.56078293487747,
+          "pnl_pct": -1.9316613791014607,
+          "win_rate": 0.0,
+          "trade_count": 339,
+          "profitable_sells": 0,
+          "losing_sells": 0,
+          "winning_predictions": 113,
+          "losing_predictions": 226
+        },
+        {
+          "rank": 28,
           "trader": "0x2B169655C4d3d664F94464edCbd60Be62de3a775",
           "volume": 9078.78363459575,
           "pnl": -137.86615181652058,
@@ -358,7 +410,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 25,
+          "rank": 29,
           "trader": "0xA69Acd6f339BF46fbF62e863cba3f0cE26212EE0",
           "volume": 9040.40971004066,
           "pnl": -133.49939312893187,
@@ -371,33 +423,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 26,
-          "trader": "0xF970C59Cb5C8DEeBc6de332904E99e7726A8209D",
-          "volume": 9000.669946936274,
-          "pnl": -141.20215855005793,
-          "pnl_pct": -1.5687960938743404,
-          "win_rate": 0.0,
-          "trade_count": 232,
-          "profitable_sells": 0,
-          "losing_sells": 232,
+          "rank": 30,
+          "trader": "0x3c2721502aAfa83E253ef118d74cb8502Fb5dF21",
+          "volume": 8834.598696461502,
+          "pnl": -103.35605954263966,
+          "pnl_pct": -1.169901011848298,
+          "win_rate": 0.004424778761061947,
+          "trade_count": 226,
+          "profitable_sells": 1,
+          "losing_sells": 225,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
         {
-          "rank": 27,
-          "trader": "0x931ac0D5F1ba68376398D2fE212BEC513C7575f3",
-          "volume": 8923.927720424766,
-          "pnl": -132.55392875645603,
-          "pnl_pct": -1.4853765394476621,
-          "win_rate": 0.0,
-          "trade_count": 230,
-          "profitable_sells": 0,
-          "losing_sells": 230,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 28,
+          "rank": 31,
           "trader": "0x19f4e84EA08F216906688D236142fF86Ab7bcD2D",
           "volume": 8730.029337867454,
           "pnl": -130.4432761499017,
@@ -410,7 +449,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 29,
+          "rank": 32,
+          "trader": "0xBF0a766D87BaD6Bda7096163269e242e6eE9a149",
+          "volume": 8729.899279857002,
+          "pnl": -130.08952416329072,
+          "pnl_pct": -1.4901606535536298,
+          "win_rate": 0.0,
+          "trade_count": 225,
+          "profitable_sells": 0,
+          "losing_sells": 225,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 33,
           "trader": "0x1eE117E7DB326cA3dF714728a5052CbF6Ba4c636",
           "volume": 8691.430731594228,
           "pnl": -128.19794274335715,
@@ -423,33 +475,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 30,
-          "trader": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-          "volume": 8686.44,
-          "pnl": -174.90542702724497,
-          "pnl_pct": -2.01354556098062,
+          "rank": 34,
+          "trader": "0x3DDfB3a911C936BE1d89a7FDb241fB15129f1f0a",
+          "volume": 8690.587884977196,
+          "pnl": -132.5227463166745,
+          "pnl_pct": -1.5248996738846308,
           "win_rate": 0.0,
-          "trade_count": 324,
+          "trade_count": 224,
           "profitable_sells": 0,
-          "losing_sells": 0,
-          "winning_predictions": 108,
-          "losing_predictions": 216
-        },
-        {
-          "rank": 31,
-          "trader": "0xBF0a766D87BaD6Bda7096163269e242e6eE9a149",
-          "volume": 8652.305362238014,
-          "pnl": -128.85634586874298,
-          "pnl_pct": -1.489271823797639,
-          "win_rate": 0.0,
-          "trade_count": 223,
-          "profitable_sells": 0,
-          "losing_sells": 223,
+          "losing_sells": 224,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
         {
-          "rank": 32,
+          "rank": 35,
           "trader": "0x229bc5DfA86662Aa94E46f2fA9ab4fcfAd1F6FEb",
           "volume": 8613.882031459547,
           "pnl": -126.71035803554534,
@@ -462,7 +501,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 33,
+          "rank": 36,
           "trader": "0xa2885fc84FdAc31b577048Ae7cc2cE8636cC5951",
           "volume": 8574.717606680813,
           "pnl": -127.8560177981871,
@@ -475,7 +514,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 34,
+          "rank": 37,
           "trader": "0x368e3BDf88e2C99a3139dB9471BBF75Dd5C59007",
           "volume": 8574.392733164606,
           "pnl": -130.38535301240077,
@@ -488,7 +527,33 @@
           "losing_predictions": 0
         },
         {
-          "rank": 35,
+          "rank": 38,
+          "trader": "0x57ed286b6ec0B7CE5dD5e447398645c640dcAdb7",
+          "volume": 8536.059169187314,
+          "pnl": -128.00646684084063,
+          "pnl_pct": -1.499596761265511,
+          "win_rate": 0.0,
+          "trade_count": 220,
+          "profitable_sells": 0,
+          "losing_sells": 220,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 39,
+          "trader": "0x69335FeFF15E6097127fe0e61E02B0dD02369d4b",
+          "volume": 8496.948849312847,
+          "pnl": -127.56778734044764,
+          "pnl_pct": -1.501336416197964,
+          "win_rate": 0.0,
+          "trade_count": 219,
+          "profitable_sells": 0,
+          "losing_sells": 219,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 40,
           "trader": "0x3779E71C9442012cb073dCDE1C80117068342219",
           "volume": 8472.177428819617,
           "pnl": -113.72011615244314,
@@ -501,7 +566,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 36,
+          "rank": 41,
+          "trader": "0xe48C7F45b6e251eb70133D28a2b6dF8588F30f02",
+          "volume": 8403.411876411426,
+          "pnl": -96.48775462801768,
+          "pnl_pct": -1.1481973756262152,
+          "win_rate": 0.004651162790697674,
+          "trade_count": 215,
+          "profitable_sells": 1,
+          "losing_sells": 214,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 42,
           "trader": "0x4DA3b718776e1a46c2911910931c31CC94d907bF",
           "volume": 8302.892771883144,
           "pnl": -124.27503221643907,
@@ -514,7 +592,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 37,
+          "rank": 43,
           "trader": "0x1d8faF6b8f8258079bd4E42CFE4c8F80f806D945",
           "volume": 8271.598966518437,
           "pnl": -117.31855084541606,
@@ -527,7 +605,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 38,
+          "rank": 44,
           "trader": "0x6959452CB22b746eeA4357A0c0a7E50178c76E44",
           "volume": 8264.089886099076,
           "pnl": -123.37064891719518,
@@ -540,11 +618,11 @@
           "losing_predictions": 0
         },
         {
-          "rank": 39,
-          "trader": "0x3c2721502aAfa83E253ef118d74cb8502Fb5dF21",
-          "volume": 8175.053240115979,
-          "pnl": -93.19553973527125,
-          "pnl_pct": -1.1399991779619174,
+          "rank": 45,
+          "trader": "0x809b3bDf06C1588A9264fa175207bd4135c8eC29",
+          "volume": 8166.239029539827,
+          "pnl": -96.74595123002882,
+          "pnl_pct": -1.1847063364183759,
           "win_rate": 0.004784688995215311,
           "trade_count": 209,
           "profitable_sells": 1,
@@ -553,7 +631,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 40,
+          "rank": 46,
           "trader": "0xe8F3fbfC7891fa4196b2d51c5B8eBACE9e08Fe73",
           "volume": 8156.463245241403,
           "pnl": -112.30217692422131,
@@ -566,7 +644,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 41,
+          "rank": 47,
+          "trader": "0x013AefaF35044dfB6F4926aFcfa3714C6C2374d8",
+          "volume": 8131.029792529474,
+          "pnl": -81.01867133525161,
+          "pnl_pct": -0.996413411369971,
+          "win_rate": 0.004830917874396135,
+          "trade_count": 207,
+          "profitable_sells": 1,
+          "losing_sells": 206,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 48,
           "trader": "0xbaD6D508161947E8E9251973E08d683380C8Cb56",
           "volume": 8075.831741855516,
           "pnl": -114.43259479109928,
@@ -579,7 +670,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 42,
+          "rank": 49,
           "trader": "0xdfa2A306440D8C2770377f359Fc75A92FC468495",
           "volume": 8031.721090829427,
           "pnl": -120.08253102977295,
@@ -592,7 +683,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 43,
+          "rank": 50,
           "trader": "0x492403B37813f6737E659986eF5E62Fd97A652F6",
           "volume": 8031.479295942409,
           "pnl": -118.61356443420054,
@@ -605,7 +696,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 44,
+          "rank": 51,
           "trader": "0xC0283522ff161d72D300B185D21820bc41B5Cbb0",
           "volume": 8009.198517371219,
           "pnl": -115.45380708717018,
@@ -618,7 +709,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 45,
+          "rank": 52,
           "trader": "0x881E49eE0a59379e86616dB9Fe9Cc1B74F1Ff281",
           "volume": 7993.035591799575,
           "pnl": -118.32591309172165,
@@ -631,7 +722,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 46,
+          "rank": 53,
           "trader": "0xEAaB0334007b101E4367Bd095063A6f8DA3c20F3",
           "volume": 7992.609908009097,
           "pnl": -119.25611055309277,
@@ -644,7 +735,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 47,
+          "rank": 54,
           "trader": "0x39FB178d58fbDd61786da0A54189162967Fa44de",
           "volume": 7953.884678196176,
           "pnl": -118.36412582579882,
@@ -657,7 +748,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 48,
+          "rank": 55,
           "trader": "0x353c64205904B4DaAe3565E6f282896bac345586",
           "volume": 7915.495755799604,
           "pnl": -117.18073791791953,
@@ -670,7 +761,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 49,
+          "rank": 56,
           "trader": "0xDd7dB4305aca8D844E3d0198E547658837430dd0",
           "volume": 7915.414029792985,
           "pnl": -117.08397870062589,
@@ -683,20 +774,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 50,
-          "trader": "0x57ed286b6ec0B7CE5dD5e447398645c640dcAdb7",
-          "volume": 7915.3042479075275,
-          "pnl": -118.45462068511749,
-          "pnl_pct": -1.4965264375836456,
-          "win_rate": 0.0,
-          "trade_count": 204,
-          "profitable_sells": 0,
-          "losing_sells": 204,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 51,
+          "rank": 57,
           "trader": "0xFa80231960b1B06d885498623FA33fE73b41bc99",
           "volume": 7876.350995072103,
           "pnl": -115.55305484522877,
@@ -709,7 +787,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 52,
+          "rank": 58,
+          "trader": "0xA890eA17e22dF453463ba5b74aBF8503ff886283",
+          "volume": 7871.876056125278,
+          "pnl": -82.50656801901651,
+          "pnl_pct": -1.0481182304034926,
+          "win_rate": 0.004975124378109453,
+          "trade_count": 201,
+          "profitable_sells": 1,
+          "losing_sells": 200,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 59,
           "trader": "0x62462e9Da9f2eDb336A65Ff43A1A87d7B97EC572",
           "volume": 7837.45384523367,
           "pnl": -117.14144742931538,
@@ -722,7 +813,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 53,
+          "rank": 60,
           "trader": "0x2B8544EE3c33afa74719A7ee8d5A1bEb0daC6B82",
           "volume": 7804.5773358670485,
           "pnl": -105.48509194931147,
@@ -735,20 +826,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 54,
-          "trader": "0x69335FeFF15E6097127fe0e61E02B0dD02369d4b",
-          "volume": 7682.2160284185675,
-          "pnl": -115.04663226682074,
-          "pnl_pct": -1.497570907160545,
-          "win_rate": 0.0,
-          "trade_count": 198,
-          "profitable_sells": 0,
-          "losing_sells": 198,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 55,
+          "rank": 61,
           "trader": "0xC3d00F2cD9224DE007e1653D570b2a8c695E46AF",
           "volume": 7643.274051838376,
           "pnl": -114.61643135269482,
@@ -761,7 +839,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 56,
+          "rank": 62,
           "trader": "0x03b820741322D6CaE2D90F110fcF3330f4191393",
           "volume": 7609.039661682349,
           "pnl": -102.12055750752917,
@@ -774,7 +852,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 57,
+          "rank": 63,
           "trader": "0xBECef3dAfF18a5Ab7b9fa0578CAB71812F4B5b6f",
           "volume": 7449.342908932863,
           "pnl": -112.6790365501834,
@@ -787,7 +865,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 58,
+          "rank": 64,
           "trader": "0xF8ACB6A0dd0D2e8b0d07d0B9e0C7b88e959Ee4f9",
           "volume": 7371.9426548638185,
           "pnl": -110.72830107098675,
@@ -800,7 +878,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 59,
+          "rank": 65,
           "trader": "0x06eA47231AecDC199984D533e1ad233B8442fEb8",
           "volume": 7294.561446051902,
           "pnl": -108.66092361718405,
@@ -813,7 +891,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 60,
+          "rank": 66,
+          "trader": "0x2EEddBE186399b7c993bD08309218ADD8c85fD48",
+          "volume": 7294.3190866098075,
+          "pnl": -110.0509597138364,
+          "pnl_pct": -1.5087214914392368,
+          "win_rate": 0.0,
+          "trade_count": 188,
+          "profitable_sells": 0,
+          "losing_sells": 188,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 67,
           "trader": "0xEb6c27E50A18daf62F45972Dfe33217bCd9eF89e",
           "volume": 7258.456374030436,
           "pnl": -92.9464719873566,
@@ -826,7 +917,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 61,
+          "rank": 68,
           "trader": "0xeD0481a94c19ADfC868bdbA90d153Ea60F6fDeA6",
           "volume": 7178.13935030689,
           "pnl": -107.1415228294178,
@@ -839,20 +930,46 @@
           "losing_predictions": 0
         },
         {
-          "rank": 62,
-          "trader": "0x2EEddBE186399b7c993bD08309218ADD8c85fD48",
-          "volume": 7022.734582526591,
-          "pnl": -105.78041874834219,
-          "pnl_pct": -1.506256822115086,
+          "rank": 69,
+          "trader": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
+          "volume": 7158.27,
+          "pnl": -137.7509978454155,
+          "pnl_pct": -1.9243615824132856,
           "win_rate": 0.0,
-          "trade_count": 181,
+          "trade_count": 264,
           "profitable_sells": 0,
-          "losing_sells": 181,
+          "losing_sells": 0,
+          "winning_predictions": 88,
+          "losing_predictions": 176
+        },
+        {
+          "rank": 70,
+          "trader": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
+          "volume": 7077.84,
+          "pnl": -57.01375208168781,
+          "pnl_pct": -0.8055247375143803,
+          "win_rate": 0.0,
+          "trade_count": 264,
+          "profitable_sells": 0,
+          "losing_sells": 0,
+          "winning_predictions": 88,
+          "losing_predictions": 176
+        },
+        {
+          "rank": 71,
+          "trader": "0x4874810Cc9aeAAC5b9450c67F2c2113addD45427",
+          "volume": 7021.274775546069,
+          "pnl": -72.40951005011412,
+          "pnl_pct": -1.0312872286711297,
+          "win_rate": 0.00558659217877095,
+          "trade_count": 179,
+          "profitable_sells": 1,
+          "losing_sells": 178,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
         {
-          "rank": 63,
+          "rank": 72,
           "trader": "0x67b40F4eC729f8dDE64E2fbFB03c708a95CF907a",
           "volume": 6983.353969195804,
           "pnl": -90.90060555884428,
@@ -865,20 +982,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 64,
-          "trader": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-          "volume": 6916.98,
-          "pnl": -54.53817791272652,
-          "pnl_pct": -0.7884680584984562,
-          "win_rate": 0.0,
-          "trade_count": 258,
-          "profitable_sells": 0,
-          "losing_sells": 0,
-          "winning_predictions": 86,
-          "losing_predictions": 172
-        },
-        {
-          "rank": 65,
+          "rank": 73,
           "trader": "0x1aEC9e1DE425241ee7C75b2CEcA13394B34e7554",
           "volume": 6868.539146531164,
           "pnl": -98.31697777751042,
@@ -891,7 +995,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 66,
+          "rank": 74,
           "trader": "0xC1Eb3e996f5b477862D64e2Cb6758DB9340f1347",
           "volume": 6865.265925961502,
           "pnl": -89.2919467564231,
@@ -904,7 +1008,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 67,
+          "rank": 75,
           "trader": "0x0eC378907c12a47c78D085CdC26505dD4C1b07c0",
           "volume": 6829.145947219103,
           "pnl": -100.72135091817049,
@@ -917,7 +1021,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 68,
+          "rank": 76,
           "trader": "0x7566C26A390F07F5F280B4a3b2887c4e8D6a2433",
           "volume": 6828.863855671858,
           "pnl": -101.55130307678658,
@@ -930,7 +1034,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 69,
+          "rank": 77,
           "trader": "0x8Ea7AF1742ddC60B9715B1212757ae8D2F3E5Ed7",
           "volume": 6790.2876804390735,
           "pnl": -100.44141866210693,
@@ -943,7 +1047,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 70,
+          "rank": 78,
           "trader": "0x9f7e6639e4BFcdC80c7BA48fd1603014c3B2d90f",
           "volume": 6789.801816827792,
           "pnl": -102.24928498923147,
@@ -956,20 +1060,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 71,
-          "trader": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-          "volume": 6756.12,
-          "pnl": -121.18548225412377,
-          "pnl_pct": -1.7937141769850709,
-          "win_rate": 0.0,
-          "trade_count": 249,
-          "profitable_sells": 0,
-          "losing_sells": 0,
-          "winning_predictions": 83,
-          "losing_predictions": 166
+          "rank": 79,
+          "trader": "0xA6e97c0dE2C31F6Fd42385119315D677FAe1a047",
+          "volume": 6778.548066318123,
+          "pnl": -61.120657759910586,
+          "pnl_pct": -0.9016777215700891,
+          "win_rate": 0.005813953488372093,
+          "trade_count": 172,
+          "profitable_sells": 1,
+          "losing_sells": 171,
+          "winning_predictions": 0,
+          "losing_predictions": 0
         },
         {
-          "rank": 72,
+          "rank": 80,
           "trader": "0x22487EB76eCe97Aaa3C0DcC8d0f8cC63d4171f3F",
           "volume": 6751.24288258095,
           "pnl": -101.70482001795685,
@@ -982,7 +1086,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 73,
+          "rank": 81,
           "trader": "0x67B29E3809C33092a277D24F9467fD6049073BcC",
           "volume": 6634.610113104416,
           "pnl": -100.83739428972333,
@@ -995,33 +1099,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 74,
-          "trader": "0xA6e97c0dE2C31F6Fd42385119315D677FAe1a047",
-          "volume": 6596.449708285242,
-          "pnl": -98.1041151734174,
-          "pnl_pct": -1.4872260005286955,
-          "win_rate": 0.0,
-          "trade_count": 170,
-          "profitable_sells": 0,
-          "losing_sells": 170,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 75,
-          "trader": "0x013AefaF35044dfB6F4926aFcfa3714C6C2374d8",
-          "volume": 6540.371381933469,
-          "pnl": -56.379052685207895,
-          "pnl_pct": -0.8620160751260135,
-          "win_rate": 0.006024096385542169,
-          "trade_count": 166,
-          "profitable_sells": 1,
-          "losing_sells": 165,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 76,
+          "rank": 82,
           "trader": "0xB3B4e485c5a1c1524f1e11602bc456BFc65f83B7",
           "volume": 6518.345516336971,
           "pnl": -96.78538827898946,
@@ -1034,7 +1112,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 77,
+          "rank": 83,
           "trader": "0x83691Ca3e6879962e7f52aA4ee0F84B35610A847",
           "volume": 6517.823622653373,
           "pnl": -99.71154932674251,
@@ -1047,7 +1125,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 78,
+          "rank": 84,
           "trader": "0x8ba0298108c11FCC3e9B52B88fD9e46df424dc1b",
           "volume": 6486.248283990682,
           "pnl": -73.83162738078745,
@@ -1060,7 +1138,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 79,
+          "rank": 85,
           "trader": "0x5480C2aF4c8a0603d3DE5A1E0aD31d7E1f6E16a4",
           "volume": 6479.858426639893,
           "pnl": -96.55623171412331,
@@ -1073,7 +1151,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 80,
+          "rank": 86,
           "trader": "0x7c006d1F0c2E0E9Db170be87FBD4C3Eb06C08143",
           "volume": 6479.699369966296,
           "pnl": -97.8806924394431,
@@ -1086,7 +1164,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 81,
+          "rank": 87,
           "trader": "0x97ADc079B2e47256090448F579D1debB77422D5D",
           "volume": 6477.717142323679,
           "pnl": -90.83274257176308,
@@ -1099,7 +1177,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 82,
+          "rank": 88,
           "trader": "0x48df948Ac77Baea2995C5AE7DBfB1f47CBd4608c",
           "volume": 6458.847670828816,
           "pnl": -90.25417455526143,
@@ -1112,7 +1190,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 83,
+          "rank": 89,
           "trader": "0xbD45e327a722B74D440242C0A8fD55A40277D041",
           "volume": 6440.698592145235,
           "pnl": -96.35237705345399,
@@ -1125,7 +1203,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 84,
+          "rank": 90,
           "trader": "0xeAb129F0be75F99f2F7dA0B6a61557d66cBDF359",
           "volume": 6402.115395567826,
           "pnl": -96.30016993502497,
@@ -1138,7 +1216,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 85,
+          "rank": 91,
           "trader": "0x59Eb6faCBE7EBE7FE310dCf9b3307FdF84De4F9b",
           "volume": 6401.964288017591,
           "pnl": -95.93567491682384,
@@ -1151,20 +1229,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 86,
-          "trader": "0x3DDfB3a911C936BE1d89a7FDb241fB15129f1f0a",
-          "volume": 6401.80883037769,
-          "pnl": -96.80433189300112,
-          "pnl_pct": -1.5121403099956345,
-          "win_rate": 0.0,
-          "trade_count": 165,
-          "profitable_sells": 0,
-          "losing_sells": 165,
+          "rank": 92,
+          "trader": "0x84E41e522d38aD861FF06cA7F039e4f9913136Aa",
+          "volume": 6387.103352491716,
+          "pnl": -78.63368902135903,
+          "pnl_pct": -1.2311322469939794,
+          "win_rate": 0.006097560975609756,
+          "trade_count": 164,
+          "profitable_sells": 1,
+          "losing_sells": 163,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
         {
-          "rank": 87,
+          "rank": 93,
           "trader": "0x03F665683e88Dbc1b9E194dc8E2Cd02367D8e187",
           "volume": 6329.259394382552,
           "pnl": -70.93118429151038,
@@ -1177,7 +1255,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 88,
+          "rank": 94,
           "trader": "0x90cDdD74C9299B5D5BB334d308684E1D69349a82",
           "volume": 6285.698954890381,
           "pnl": -94.28395678099395,
@@ -1190,7 +1268,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 89,
+          "rank": 95,
+          "trader": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
+          "volume": 6273.54,
+          "pnl": -93.46073369087992,
+          "pnl_pct": -1.489760704337263,
+          "win_rate": 0.0,
+          "trade_count": 234,
+          "profitable_sells": 0,
+          "losing_sells": 0,
+          "winning_predictions": 78,
+          "losing_predictions": 156
+        },
+        {
+          "rank": 96,
           "trader": "0xdC816bAF8271D1d6563879aAbE88b9FdD8C5E572",
           "volume": 6052.800291152486,
           "pnl": -90.82026873071845,
@@ -1203,7 +1294,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 90,
+          "rank": 97,
           "trader": "0xc4B6d9a08b265d77C9E50c03b76cDB54828a09ab",
           "volume": 6052.786572675395,
           "pnl": -90.01616099384874,
@@ -1216,7 +1307,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 91,
+          "rank": 98,
           "trader": "0x125D67B85e84AFf412d152e1C65F2155De339B22",
           "volume": 5998.490662453314,
           "pnl": -83.85373921995728,
@@ -1229,7 +1320,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 92,
+          "rank": 99,
           "trader": "0xAC6d149BFD4d40c1388ccA8Bbe996cee8095c91c",
           "volume": 5974.8963854661515,
           "pnl": -90.52243244667305,
@@ -1242,7 +1333,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 93,
+          "rank": 100,
           "trader": "0x447D027BE0d4D6AEE559657E20db0964F5B8D077",
           "volume": 5937.264890429857,
           "pnl": -86.30046740189543,
@@ -1255,7 +1346,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 94,
+          "rank": 101,
           "trader": "0xE799b96A5163640fb9Fca5522Ed6a0474c99f7a5",
           "volume": 5919.738757411398,
           "pnl": -83.34173885903867,
@@ -1268,7 +1359,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 95,
+          "rank": 102,
           "trader": "0x3A61f078eEEF9dDC6425bcE21D69617b2BB2dA0f",
           "volume": 5880.027005564381,
           "pnl": -83.01557291198553,
@@ -1281,20 +1372,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 96,
-          "trader": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-          "volume": 5871.39,
-          "pnl": -94.11827593509233,
-          "pnl_pct": -1.6029981986393738,
-          "win_rate": 0.0,
-          "trade_count": 219,
-          "profitable_sells": 0,
-          "losing_sells": 0,
-          "winning_predictions": 73,
-          "losing_predictions": 146
-        },
-        {
-          "rank": 97,
+          "rank": 103,
           "trader": "0xde5b8252A20aDed329bB27BDa254Dcff0bE3b224",
           "volume": 5858.965653971166,
           "pnl": -87.31836405968633,
@@ -1307,7 +1385,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 98,
+          "rank": 104,
           "trader": "0x95AD57C1B6bDBfaCD867f975A6c5bFC1DE0bb3C9",
           "volume": 5849.082849274572,
           "pnl": -69.72453653323215,
@@ -1320,7 +1398,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 99,
+          "rank": 105,
           "trader": "0xdCcd2CA071B360634bB0BA346462B47C3f85cDd4",
           "volume": 5841.649002388175,
           "pnl": -81.99301398022297,
@@ -1333,20 +1411,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 100,
-          "trader": "0x6EDC5Af2920061a4c3C5051005Ba96512c73005a",
-          "volume": 5820.751660336663,
-          "pnl": -83.28460125294312,
-          "pnl_pct": -1.4308221019023182,
-          "win_rate": 0.0,
-          "trade_count": 150,
-          "profitable_sells": 0,
-          "losing_sells": 150,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 101,
+          "rank": 106,
           "trader": "0x6beA59D8a100a8872E31e3D139bC0f29E1B44CC5",
           "volume": 5820.071265941959,
           "pnl": -86.93647675212341,
@@ -1359,7 +1424,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 102,
+          "rank": 107,
           "trader": "0x4f2B65fdb21D1143B4773971426a53930bf84D80",
           "volume": 5742.601012069517,
           "pnl": -85.77410690396191,
@@ -1372,7 +1437,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 103,
+          "rank": 108,
           "trader": "0x618348b2A1cC6b971418c9e4497Cc40054E2c2Ff",
           "volume": 5742.5356376338805,
           "pnl": -85.71978851577735,
@@ -1385,7 +1450,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 104,
+          "rank": 109,
+          "trader": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
+          "volume": 5710.53,
+          "pnl": -75.82261588228043,
+          "pnl_pct": -1.3277684537561387,
+          "win_rate": 0.0,
+          "trade_count": 210,
+          "profitable_sells": 0,
+          "losing_sells": 0,
+          "winning_predictions": 70,
+          "losing_predictions": 140
+        },
+        {
+          "rank": 110,
           "trader": "0x4712280937460bc967DA63C7A7DaA261b95Dd429",
           "volume": 5703.857109696365,
           "pnl": -84.67633893222262,
@@ -1398,7 +1476,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 105,
+          "rank": 111,
           "trader": "0x0a79827AEcb8Bf4243D31330e3C8E38dAE544F25",
           "volume": 5665.11045959021,
           "pnl": -83.98033597181448,
@@ -1411,7 +1489,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 106,
+          "rank": 112,
+          "trader": "0x0003Fa5bB8643f57C5807DC576d3f305513f64C4",
+          "volume": 5664.64423575748,
+          "pnl": -86.34200672977317,
+          "pnl_pct": -1.5242264674760722,
+          "win_rate": 0.0,
+          "trade_count": 146,
+          "profitable_sells": 0,
+          "losing_sells": 146,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 113,
           "trader": "0x7b8969260F9daDC50847f90BeFB40372AD662e56",
           "volume": 5587.541757295996,
           "pnl": -82.86866820476729,
@@ -1424,7 +1515,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 107,
+          "rank": 114,
           "trader": "0xd3545cDEB69D365475C54C67694F477A4921f912",
           "volume": 5470.793036810405,
           "pnl": -81.8646459066393,
@@ -1437,7 +1528,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 108,
+          "rank": 115,
           "trader": "0x3827f0257480AfD297d3444124ad800a4637753D",
           "volume": 5431.924219441923,
           "pnl": -81.17539436657604,
@@ -1450,7 +1541,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 109,
+          "rank": 116,
           "trader": "0xA2501828f6b89CB9cfF116bDdC76dc015142cba1",
           "volume": 5409.949604520599,
           "pnl": -76.11461888260081,
@@ -1463,7 +1554,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 110,
+          "rank": 117,
           "trader": "0xeFD75d783B71F27594cAB39205475c8b6D6D25B5",
           "volume": 5393.375788759229,
           "pnl": -80.61676916067749,
@@ -1476,7 +1567,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 111,
+          "rank": 118,
           "trader": "0xfF1F9d7fE54009B265FB1129d6Ec895D21073727",
           "volume": 5354.837946509516,
           "pnl": -80.09731016809137,
@@ -1489,7 +1580,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 112,
+          "rank": 119,
           "trader": "0x98c4afe51a0fd05dcd903C5a91fD7403D3DfCdAF",
           "volume": 5354.506064005586,
           "pnl": -80.65557074027022,
@@ -1502,7 +1593,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 113,
+          "rank": 120,
           "trader": "0x92431D8F3bF6bBc6C32A4A4dDE4297ac966001CD",
           "volume": 5354.500173395616,
           "pnl": -81.34261143483877,
@@ -1515,20 +1606,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 114,
-          "trader": "0x0003Fa5bB8643f57C5807DC576d3f305513f64C4",
-          "volume": 5354.263705492829,
-          "pnl": -81.5027922515398,
-          "pnl_pct": -1.5222035509369434,
-          "win_rate": 0.0,
-          "trade_count": 138,
-          "profitable_sells": 0,
-          "losing_sells": 138,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 115,
+          "rank": 121,
           "trader": "0xeeD5037Ad034c401D0F8ca4fFc80c84464869fc4",
           "volume": 5315.651291742104,
           "pnl": -80.3278366076947,
@@ -1541,7 +1619,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 116,
+          "rank": 122,
           "trader": "0xD6C54ea3aD8aEeAe27CEBF92eabeeB06fB2cb13C",
           "volume": 5315.619162259293,
           "pnl": -79.74676032986953,
@@ -1554,7 +1632,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 117,
+          "rank": 123,
           "trader": "0xfaA8DAa143c7eb019b43982efE1caD535d9F026A",
           "volume": 5237.821162637672,
           "pnl": -79.37174029536138,
@@ -1567,33 +1645,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 118,
-          "trader": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-          "volume": 5227.95,
-          "pnl": -55.7765753942458,
-          "pnl_pct": -1.0668919058951558,
-          "win_rate": 0.0,
-          "trade_count": 192,
-          "profitable_sells": 0,
-          "losing_sells": 0,
-          "winning_predictions": 64,
-          "losing_predictions": 128
-        },
-        {
-          "rank": 119,
-          "trader": "0x4874810Cc9aeAAC5b9450c67F2c2113addD45427",
-          "volume": 5199.770308591797,
-          "pnl": -76.73927358510943,
-          "pnl_pct": -1.47582045034393,
-          "win_rate": 0.0,
-          "trade_count": 134,
-          "profitable_sells": 0,
-          "losing_sells": 134,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 120,
+          "rank": 124,
           "trader": "0x1FbF819A352380c76a972B6432eCF6650624761f",
           "volume": 5199.25778553841,
           "pnl": -78.58452101133015,
@@ -1606,7 +1658,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 121,
+          "rank": 125,
           "trader": "0x25Ac2Ce9d219c2c1E1CD81326E5cB7616ec4Af4a",
           "volume": 5160.44778839434,
           "pnl": -77.44351471221016,
@@ -1619,7 +1671,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 122,
+          "rank": 126,
           "trader": "0xd0b12e2512D077102d3aC9EDCbBAD94F606575B3",
           "volume": 5160.44156211324,
           "pnl": -77.84255827976956,
@@ -1632,7 +1684,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 123,
+          "rank": 127,
           "trader": "0xC2A89C05FfceF4182081f9Fa774Ba98cBF9Fd963",
           "volume": 5097.083155119135,
           "pnl": -70.85390783742011,
@@ -1645,7 +1697,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 124,
+          "rank": 128,
           "trader": "0xDc37638C3FC3D663a340AC784b82440f2468dA38",
           "volume": 5082.656259505909,
           "pnl": -76.74145495310005,
@@ -1658,7 +1710,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 125,
+          "rank": 129,
           "trader": "0xB542a6788c367cb8425Ec0Bf839f0413f6BC2B5D",
           "volume": 4927.884983751365,
           "pnl": -73.41477838142208,
@@ -1671,7 +1723,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 126,
+          "rank": 130,
           "trader": "0x5567D2c491d6647489Bd570f7AB07755F3aa2e7f",
           "volume": 4811.386968938909,
           "pnl": -72.43723095315063,
@@ -1684,7 +1736,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 127,
+          "rank": 131,
           "trader": "0x532aa397195fAf211232eaF3e880C1bEE5024dC0",
           "volume": 4811.329920860275,
           "pnl": -72.5319016220465,
@@ -1697,7 +1749,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 128,
+          "rank": 132,
           "trader": "0xf6bFe890eFd3538b33452fAC9cdD5BBa0155E642",
           "volume": 4811.236124122366,
           "pnl": -72.19659758682222,
@@ -1710,20 +1762,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 129,
-          "trader": "0xA890eA17e22dF453463ba5b74aBF8503ff886283",
-          "volume": 4811.15092483869,
-          "pnl": -73.28763810904526,
-          "pnl_pct": -1.5232870316056957,
-          "win_rate": 0.0,
-          "trade_count": 124,
-          "profitable_sells": 0,
-          "losing_sells": 124,
+          "rank": 133,
+          "trader": "0x233634902A78907819462e2bd9005C26186263FE",
+          "volume": 4791.932637537768,
+          "pnl": -53.23819393756466,
+          "pnl_pct": -1.110996292404477,
+          "win_rate": 0.008130081300813009,
+          "trade_count": 123,
+          "profitable_sells": 1,
+          "losing_sells": 122,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
         {
-          "rank": 130,
+          "rank": 134,
           "trader": "0x7e2C31298E238468fD63580C60dae698631bA8Cf",
           "volume": 4733.612751784578,
           "pnl": -72.0736500052114,
@@ -1736,7 +1788,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 131,
+          "rank": 135,
           "trader": "0x0C3eb2a5885F1c548fA1774eE6606d597E8DDd1F",
           "volume": 4694.947609343333,
           "pnl": -70.59825602789614,
@@ -1749,7 +1801,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 132,
+          "rank": 136,
           "trader": "0x2E41853C69F6eD5cd8d68e5523DF6D959bD1dE9D",
           "volume": 4655.8064028731005,
           "pnl": -70.55082966348964,
@@ -1762,7 +1814,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 133,
+          "rank": 137,
           "trader": "0x849cE1D3dab0e0FF6229F545B70F7143e8eD2049",
           "volume": 4578.669203632503,
           "pnl": -68.4259006676599,
@@ -1775,7 +1827,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 134,
+          "rank": 138,
           "trader": "0xbE9560659Fa011579BeC31850a96ad45174d46A8",
           "volume": 4539.707995229249,
           "pnl": -68.7418046354808,
@@ -1788,20 +1840,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 135,
-          "trader": "0xe48C7F45b6e251eb70133D28a2b6dF8588F30f02",
-          "volume": 4523.9952237694715,
-          "pnl": -36.28697604018493,
-          "pnl_pct": -0.8021002287873769,
-          "win_rate": 0.008695652173913044,
-          "trade_count": 115,
-          "profitable_sells": 1,
-          "losing_sells": 114,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 136,
+          "rank": 139,
           "trader": "0x8F1fF68747204dBd668C11Af3c83DFe28fF53627",
           "volume": 4470.095202783368,
           "pnl": -62.075277090768694,
@@ -1814,7 +1853,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 137,
+          "rank": 140,
           "trader": "0x89674556340A271a0dB00A07659293A93c9eEBA8",
           "volume": 4462.165299636546,
           "pnl": -66.81533454503113,
@@ -1827,7 +1866,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 138,
+          "rank": 141,
           "trader": "0xFA7377e04014b60821335c558Ac35b75fD55E404",
           "volume": 4430.499248810647,
           "pnl": -61.66214402898575,
@@ -1840,7 +1879,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 139,
+          "rank": 142,
           "trader": "0xe399407Ff43E6FC98e86635249217E797AAf761A",
           "volume": 4423.254126837418,
           "pnl": -67.0703416989672,
@@ -1853,20 +1892,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 140,
-          "trader": "0x809b3bDf06C1588A9264fa175207bd4135c8eC29",
-          "volume": 4384.928811544287,
-          "pnl": -65.31655108817276,
-          "pnl_pct": -1.489569247195362,
-          "win_rate": 0.0,
-          "trade_count": 113,
-          "profitable_sells": 0,
-          "losing_sells": 113,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 141,
+          "rank": 143,
           "trader": "0x675b1805E21c246b788c37711eb7203615C0DcAa",
           "volume": 4355.014751105896,
           "pnl": -55.93222174233934,
@@ -1879,7 +1905,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 142,
+          "rank": 144,
           "trader": "0x4Bb6a2c1f4FA2d65A26b0e3508BBDD197Ff6c599",
           "volume": 4345.81382788225,
           "pnl": -65.21404842925133,
@@ -1892,20 +1918,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 143,
-          "trader": "0x84E41e522d38aD861FF06cA7F039e4f9913136Aa",
-          "volume": 4292.189881680275,
-          "pnl": -46.14776153409257,
-          "pnl_pct": -1.075156570566887,
-          "win_rate": 0.00909090909090909,
-          "trade_count": 110,
-          "profitable_sells": 1,
-          "losing_sells": 109,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 144,
+          "rank": 145,
           "trader": "0xAbAeace459b568CF9e2f6CE0B6Cb684d42300355",
           "volume": 4268.0867063864625,
           "pnl": -64.79834074606,
@@ -1918,7 +1931,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 145,
+          "rank": 146,
           "trader": "0xEAeA87BCcf3BeCe970901F735cCF93D320803daC",
           "volume": 4268.041670175412,
           "pnl": -64.90997637180354,
@@ -1931,7 +1944,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 146,
+          "rank": 147,
           "trader": "0x36A92A0B7979D6936d3784164Dc37dDD0410Ee4D",
           "volume": 4229.238476083038,
           "pnl": -63.708783893192816,
@@ -1944,7 +1957,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 147,
+          "rank": 148,
           "trader": "0x1570816C02304b8F44A87d3Ad7a1c9c00160ff86",
           "volume": 4197.358406916679,
           "pnl": -55.475933940173185,
@@ -1957,7 +1970,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 148,
+          "rank": 149,
           "trader": "0x44748f056ac1d56fafE5c88A35d2BA17437AE147",
           "volume": 4190.589428824508,
           "pnl": -63.21216575726379,
@@ -1970,7 +1983,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 149,
+          "rank": 150,
           "trader": "0xe7f0958cc5EE30f91387A01cdf80Ba1D9700f865",
           "volume": 4151.876517699545,
           "pnl": -62.3139122320454,
@@ -1983,7 +1996,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 150,
+          "rank": 151,
           "trader": "0x409F269254F5F10e4Eb92a39E65b92704248C6A7",
           "volume": 4081.8416841418043,
           "pnl": -49.844902719589626,
@@ -1996,7 +2009,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 151,
+          "rank": 152,
           "trader": "0x6f47CFd2B23aC50C374163d1F7676785Fb6A929f",
           "volume": 4035.119508362007,
           "pnl": -61.30419447181194,
@@ -2009,7 +2022,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 152,
+          "rank": 153,
           "trader": "0xAf334B1759C10CDc75Bc65f4c07F833237F1892f",
           "volume": 3802.593673712486,
           "pnl": -57.210451448414524,
@@ -2022,7 +2035,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 153,
+          "rank": 154,
           "trader": "0x90d0d0bc9C5FAc886D7F4AcB5134688bF6b2cf4f",
           "volume": 3802.567745291573,
           "pnl": -57.46381157697355,
@@ -2035,20 +2048,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 154,
+          "rank": 155,
           "trader": "0xD75beC354A848e9AaB3c83b15B73ee7e6dd039BB",
-          "volume": 3767.3693870923416,
-          "pnl": -59.43505700940467,
-          "pnl_pct": -1.5776275406664249,
+          "volume": 3771.3297831319455,
+          "pnl": -58.43741291133228,
+          "pnl_pct": -1.5495174453505958,
           "win_rate": 0.0,
-          "trade_count": 38,
+          "trade_count": 42,
           "profitable_sells": 0,
           "losing_sells": 32,
-          "winning_predictions": 2,
-          "losing_predictions": 4
+          "winning_predictions": 4,
+          "losing_predictions": 6
         },
         {
-          "rank": 155,
+          "rank": 156,
           "trader": "0x4387F80Fd02b1ff93280Bc35b0c74bAD909f4D8e",
           "volume": 3763.6344182193716,
           "pnl": -56.78960721016411,
@@ -2061,7 +2074,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 156,
+          "rank": 157,
           "trader": "0x5AEcF9D5d4AA284696444B4582Bb4806389b4ACe",
           "volume": 3763.613137485249,
           "pnl": -57.003243302556974,
@@ -2074,7 +2087,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 157,
+          "rank": 158,
           "trader": "0x0BfCCb70fc789fB282F3f5207AFD7B27f33CA86E",
           "volume": 3686.1576598274996,
           "pnl": -55.827723505595856,
@@ -2087,7 +2100,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 158,
+          "rank": 159,
           "trader": "0x2dD984f6E96b760971001924dfd6b2aC8Dc2e125",
           "volume": 3686.122987405854,
           "pnl": -55.56841853193025,
@@ -2100,7 +2113,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 159,
+          "rank": 160,
           "trader": "0x674F4cB2f0A33d3cEA0632F2d4ccfd631CA4ae11",
           "volume": 3569.712189718229,
           "pnl": -53.943479506208,
@@ -2113,7 +2126,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 160,
+          "rank": 161,
           "trader": "0xAF7e70B795ACF34D937DC8780DB048BF54Afa8b4",
           "volume": 3569.689714558474,
           "pnl": -54.139122749285654,
@@ -2126,7 +2139,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 161,
+          "rank": 162,
           "trader": "0xb092cFFE019C756CFCf4515Bf98fa59A387DDDCC",
           "volume": 3569.6375017247406,
           "pnl": -53.94968777089984,
@@ -2139,7 +2152,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 162,
+          "rank": 163,
           "trader": "0x19e7983E1ADb532AdDc6164B5d7631E821980A25",
           "volume": 3530.944704423692,
           "pnl": -54.07947593698737,
@@ -2152,7 +2165,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 163,
+          "rank": 164,
           "trader": "0x4A5cdCc19678F9079528CFF400E814fADEd072f4",
           "volume": 3530.5976953414925,
           "pnl": -54.03963591927552,
@@ -2165,7 +2178,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 164,
+          "rank": 165,
           "trader": "0x47Cc5A2E50444E2dB2Ca0C40Cb661A4C3871E8d9",
           "volume": 3492.117241977998,
           "pnl": -52.932558246615535,
@@ -2178,7 +2191,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 165,
+          "rank": 166,
           "trader": "0x2486B11E1f820C7AE06DBD96a2a3B50da50D1d55",
           "volume": 3451.340595797529,
           "pnl": -46.33403393497676,
@@ -2191,7 +2204,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 166,
+          "rank": 167,
           "trader": "0xBFA177036C666c966f1aE6658C21C79243Cebcb1",
           "volume": 3414.485575184952,
           "pnl": -51.64767909536021,
@@ -2204,7 +2217,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 167,
+          "rank": 168,
           "trader": "0x2019423eBEEF8fcF92f2703a4bdCD7966EA0D0f9",
           "volume": 3375.7956460288483,
           "pnl": -50.90826402341575,
@@ -2217,7 +2230,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 168,
+          "rank": 169,
           "trader": "0x81554661eF5Bd25516917487293536b0034Ff3dd",
           "volume": 3230.243056923912,
           "pnl": -49.71858891255549,
@@ -2230,7 +2243,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 169,
+          "rank": 170,
           "trader": "0x4Ba82200E7062a8522a791157D740513B772aCEa",
           "volume": 3220.478776574064,
           "pnl": -49.03251141169351,
@@ -2243,7 +2256,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 170,
+          "rank": 171,
           "trader": "0x5B58C3BB38108983174FF7C390af812a044BbC25",
           "volume": 3181.695139591986,
           "pnl": -48.0858179379067,
@@ -2256,7 +2269,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 171,
+          "rank": 172,
           "trader": "0xDcB9CE11FB04F09Be39cFB218a8F97E6bD5a0ABA",
           "volume": 3142.771387817798,
           "pnl": -48.060924290270826,
@@ -2269,7 +2282,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 172,
+          "rank": 173,
           "trader": "0x02888ff9B08855Ddd244805C34CF8b82f6605c25",
           "volume": 3104.1434547343847,
           "pnl": -47.22045762995593,
@@ -2282,7 +2295,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 173,
+          "rank": 174,
           "trader": "0x7343d5832aeEef4E4d8E7E592e32B734f4f459Ec",
           "volume": 2987.441668328515,
           "pnl": -45.686462407025196,
@@ -2295,7 +2308,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 174,
+          "rank": 175,
           "trader": "0xcBe9f1Ee4fF8212aC2dAf4801Ffd33759Ea3C2E3",
           "volume": 2948.8896050476774,
           "pnl": -44.6485388842863,
@@ -2308,7 +2321,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 175,
+          "rank": 176,
           "trader": "0xe5878F4Cde5382cFcB00Dc4b921961591001cb8c",
           "volume": 2832.88127719177,
           "pnl": -42.07777061393305,
@@ -2321,7 +2334,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 176,
+          "rank": 177,
           "trader": "0x0336FC048038cBCbEC507Ff21ebb23f04d475D04",
           "volume": 2832.478456558955,
           "pnl": -43.094026191981314,
@@ -2334,7 +2347,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 177,
+          "rank": 178,
           "trader": "0xFa05387f5Db0938517FD1De831137f0EaA4e246b",
           "volume": 2754.807830308216,
           "pnl": -41.95853714962493,
@@ -2347,7 +2360,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 178,
+          "rank": 179,
           "trader": "0xC6F1fc8cf384b0e0c942a16D49Bd87da7ED2Ed48",
           "volume": 2754.658284775097,
           "pnl": -42.163554192079495,
@@ -2360,7 +2373,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 179,
+          "rank": 180,
           "trader": "0x683a5F48FC95b50041d621Df0F85a474a5BcBa87",
           "volume": 2677.307739743129,
           "pnl": -40.69588231424177,
@@ -2373,7 +2386,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 180,
+          "rank": 181,
           "trader": "0xf70dFbe1fDFA62Ad912753A5e43102428727862c",
           "volume": 2666.04805561736,
           "pnl": -37.74751166006727,
@@ -2386,7 +2399,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 181,
+          "rank": 182,
           "trader": "0x29eD4e4c3E62B6b09f313DDbdd0ED90cF950c9aF",
           "volume": 2638.2443188549323,
           "pnl": -40.5044965144937,
@@ -2399,24 +2412,11 @@
           "losing_predictions": 0
         },
         {
-          "rank": 182,
+          "rank": 183,
           "trader": "0x56d02e3F3A5f7A11f54C858A99E24066d3E0f497",
           "volume": 2483.244037102434,
           "pnl": -38.1255456653377,
           "pnl_pct": -1.5353120795096875,
-          "win_rate": 0.0,
-          "trade_count": 64,
-          "profitable_sells": 0,
-          "losing_sells": 64,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 183,
-          "trader": "0x233634902A78907819462e2bd9005C26186263FE",
-          "volume": 2483.208495377645,
-          "pnl": -38.01016173541774,
-          "pnl_pct": -1.530687487827605,
           "win_rate": 0.0,
           "trade_count": 64,
           "profitable_sells": 0,
@@ -2648,9 +2648,9 @@
       ],
       "aggregate": {
         "complete": true,
-        "scanned_traders": 345,
-        "total_traders": 345,
-        "total_volume": 2684339.380458673,
+        "scanned_traders": 346,
+        "total_traders": 346,
+        "total_volume": 2782583.5421521803,
         "mm": {
           "count": 0,
           "volume": 0.0,
@@ -2675,25 +2675,25 @@
           }
         },
         "retail": {
-          "count": 336,
-          "volume": 1568792.3614716483,
-          "share_pct": 58.442400126156514,
+          "count": 337,
+          "volume": 1614363.1349130028,
+          "share_pct": 58.01669960515826,
           "top": {
             "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-            "volume": 200903.05930888306,
+            "volume": 209942.24045877694,
             "rank": 2
           }
         },
         "agent": {
           "count": 3,
-          "volume": 252088.13898701535,
-          "share_pct": 9.391068090054286,
+          "volume": 256911.63723916994,
+          "share_pct": 9.232845423949517,
           "addresses": [
             {
               "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
               "id": "claude",
               "label": "claude",
-              "volume": 108759.615834,
+              "volume": 113583.114087,
               "rank": 5
             },
             {
@@ -2714,43 +2714,43 @@
         },
         "seed": {
           "count": 6,
-          "volume": 863458.8799999999,
-          "share_pct": 32.166531783788855,
+          "volume": 911308.77,
+          "share_pct": 32.75045497089195,
           "addresses": [
             {
               "address": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-              "volume": 830000.0,
+              "volume": 876000.0,
               "rank": 1,
               "listed_tier": "A"
             },
             {
               "address": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-              "volume": 8686.44,
-              "rank": 30,
-              "listed_tier": "B"
-            },
-            {
-              "address": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-              "volume": 6916.98,
-              "rank": 64,
+              "volume": 9088.59,
+              "rank": 27,
               "listed_tier": "B"
             },
             {
               "address": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-              "volume": 6756.12,
-              "rank": 71,
+              "volume": 7158.27,
+              "rank": 69,
+              "listed_tier": "B"
+            },
+            {
+              "address": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
+              "volume": 7077.84,
+              "rank": 70,
               "listed_tier": "B"
             },
             {
               "address": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-              "volume": 5871.39,
-              "rank": 96,
+              "volume": 6273.54,
+              "rank": 95,
               "listed_tier": "B"
             },
             {
               "address": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-              "volume": 5227.95,
-              "rank": 118,
+              "volume": 5710.53,
+              "rank": 109,
               "listed_tier": "B"
             }
           ]
@@ -2765,26 +2765,26 @@
         {
           "rank": 1,
           "trader": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-          "volume": 16396000.0,
-          "pnl": -157410.8294606218,
-          "pnl_pct": -0.9600562909284082,
+          "volume": 16442000.0,
+          "pnl": -157880.8781756499,
+          "pnl_pct": -0.960229158105157,
           "win_rate": 0.0,
-          "trade_count": 29262,
+          "trade_count": 29331,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 9754,
-          "losing_predictions": 19508
+          "winning_predictions": 9777,
+          "losing_predictions": 19554
         },
         {
           "rank": 2,
           "trader": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
-          "volume": 1489987.3112867407,
-          "pnl": -54506.64993321865,
-          "pnl_pct": -3.658195577930604,
+          "volume": 1494810.8095388953,
+          "pnl": -54679.51310583036,
+          "pnl_pct": -3.657955425322176,
           "win_rate": 0.0,
-          "trade_count": 394,
+          "trade_count": 395,
           "profitable_sells": 0,
-          "losing_sells": 394,
+          "losing_sells": 395,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -2817,13 +2817,13 @@
         {
           "rank": 5,
           "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-          "volume": 414610.4253532951,
-          "pnl": -6442.7871106599605,
-          "pnl_pct": -1.5539375560009074,
-          "win_rate": 0.00018975332068311195,
-          "trade_count": 10540,
+          "volume": 423610.80982213985,
+          "pnl": -6583.230121498354,
+          "pnl_pct": -1.5540751012143514,
+          "win_rate": 0.0001856665428889714,
+          "trade_count": 10772,
           "profitable_sells": 2,
-          "losing_sells": 10538,
+          "losing_sells": 10770,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -2895,54 +2895,54 @@
         {
           "rank": 11,
           "trader": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-          "volume": 181771.8,
-          "pnl": -1729.1867440790145,
-          "pnl_pct": -0.9512953846960939,
+          "volume": 181932.66,
+          "pnl": -1731.6623182479757,
+          "pnl_pct": -0.9518149837681567,
           "win_rate": 0.0,
-          "trade_count": 6780,
+          "trade_count": 6786,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 2260,
-          "losing_predictions": 4520
+          "winning_predictions": 2262,
+          "losing_predictions": 4524
         },
         {
           "rank": 12,
           "trader": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-          "volume": 173809.23,
-          "pnl": -1691.188065670428,
-          "pnl_pct": -0.973013956549044,
+          "volume": 174211.38,
+          "pnl": -1691.8434215780605,
+          "pnl_pct": -0.9711440329432328,
           "win_rate": 0.0,
-          "trade_count": 6483,
+          "trade_count": 6498,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 2161,
-          "losing_predictions": 4322
+          "winning_predictions": 2166,
+          "losing_predictions": 4332
         },
         {
           "rank": 13,
           "trader": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-          "volume": 161583.87,
-          "pnl": -1676.8018791355937,
-          "pnl_pct": -1.0377285054105918,
+          "volume": 161986.02,
+          "pnl": -1693.3673947268853,
+          "pnl_pct": -1.045378727575926,
           "win_rate": 0.0,
-          "trade_count": 6024,
+          "trade_count": 6039,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 2008,
-          "losing_predictions": 4016
+          "winning_predictions": 2013,
+          "losing_predictions": 4026
         },
         {
           "rank": 14,
           "trader": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-          "volume": 144854.43,
-          "pnl": -1627.5590205263004,
-          "pnl_pct": -1.1235824962524794,
+          "volume": 145337.01,
+          "pnl": -1647.6050610143352,
+          "pnl_pct": -1.1336445279934788,
           "win_rate": 0.0,
-          "trade_count": 5400,
+          "trade_count": 5418,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 1800,
-          "losing_predictions": 3600
+          "winning_predictions": 1806,
+          "losing_predictions": 3612
         },
         {
           "rank": 15,
@@ -2960,15 +2960,15 @@
         {
           "rank": 16,
           "trader": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-          "volume": 118955.97,
-          "pnl": -1737.0528854300615,
-          "pnl_pct": -1.4602485990657397,
+          "volume": 119358.12,
+          "pnl": -1736.395343185849,
+          "pnl_pct": -1.4547777253745695,
           "win_rate": 0.0,
-          "trade_count": 4437,
+          "trade_count": 4452,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 1479,
-          "losing_predictions": 2958
+          "winning_predictions": 1484,
+          "losing_predictions": 2968
         },
         {
           "rank": 17,
@@ -4741,15 +4741,15 @@
         {
           "rank": 153,
           "trader": "0xD75beC354A848e9AaB3c83b15B73ee7e6dd039BB",
-          "volume": 17361.10382188957,
-          "pnl": -289.9446340570785,
-          "pnl_pct": -1.670081793367912,
+          "volume": 17364.074118919274,
+          "pnl": -288.93708896890706,
+          "pnl_pct": -1.6639936399147914,
           "win_rate": 0.006024096385542169,
-          "trade_count": 193,
+          "trade_count": 197,
           "profitable_sells": 1,
           "losing_sells": 165,
-          "winning_predictions": 9,
-          "losing_predictions": 18
+          "winning_predictions": 11,
+          "losing_predictions": 20
         },
         {
           "rank": 154,
@@ -5247,6 +5247,19 @@
         },
         {
           "rank": 192,
+          "trader": "0xF970C59Cb5C8DEeBc6de332904E99e7726A8209D",
+          "volume": 13011.439283927484,
+          "pnl": -129.35386150191104,
+          "pnl_pct": -0.9941549023073623,
+          "win_rate": 0.0030211480362537764,
+          "trade_count": 331,
+          "profitable_sells": 1,
+          "losing_sells": 330,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 193,
           "trader": "0x582d404F3A81E4A3F17B38e187dC7946cEe63dCB",
           "volume": 12896.893026355987,
           "pnl": -161.55204847506835,
@@ -5259,7 +5272,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 193,
+          "rank": 194,
           "trader": "0x4F9a1cD25Fc8ECfb1053E70b252E578324229A9b",
           "volume": 12791.892887899223,
           "pnl": -207.4338979992799,
@@ -5272,7 +5285,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 194,
+          "rank": 195,
           "trader": "0x038dba567D9b17Aabac4c55be6647e724c2f6620",
           "volume": 12491.625015976875,
           "pnl": -227.54554634779242,
@@ -5285,7 +5298,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 195,
+          "rank": 196,
           "trader": "0x2f625f52f45a31ee2a9B8ec77555E97b85A32b3e",
           "volume": 12359.013741659566,
           "pnl": -200.34612988474564,
@@ -5298,7 +5311,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 196,
+          "rank": 197,
           "trader": "0xB9d6AD5332BF0446ED4C22739fd7b02586783b32",
           "volume": 12313.730264261942,
           "pnl": -168.45820790192744,
@@ -5311,7 +5324,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 197,
+          "rank": 198,
           "trader": "0xD064beF957Dd663Ff39AD24d325aF01adb7B55D7",
           "volume": 12280.175508442171,
           "pnl": -194.73381192457978,
@@ -5324,7 +5337,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 198,
+          "rank": 199,
           "trader": "0x7CAaB0A5F7B7DCf6DC2045c42f5e170961a9B13E",
           "volume": 12172.212235101417,
           "pnl": -186.6782166891788,
@@ -5337,7 +5350,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 199,
+          "rank": 200,
           "trader": "0xefc644B4858BE7ADc44bf9dBeCBFfF85B00652e2",
           "volume": 12161.584186563412,
           "pnl": -197.12002221748722,
@@ -5348,26 +5361,13 @@
           "losing_sells": 303,
           "winning_predictions": 0,
           "losing_predictions": 0
-        },
-        {
-          "rank": 200,
-          "trader": "0xFBB51608b2F4EB8F56AF3D2B1473B1137b30ed77",
-          "volume": 12096.71313333181,
-          "pnl": -222.431372742046,
-          "pnl_pct": -1.8387752961517199,
-          "win_rate": 0.006389776357827476,
-          "trade_count": 313,
-          "profitable_sells": 2,
-          "losing_sells": 311,
-          "winning_predictions": 0,
-          "losing_predictions": 0
         }
       ],
       "aggregate": {
         "complete": true,
         "scanned_traders": 954,
         "total_traders": 954,
-        "total_volume": 31239488.89614899,
+        "total_volume": 31337072.503978513,
         "mm": {
           "count": 0,
           "volume": 0.0,
@@ -5393,24 +5393,24 @@
         },
         "retail": {
           "count": 945,
-          "volume": 9726508.539226916,
-          "share_pct": 31.135299849370902,
+          "volume": 9771418.758804288,
+          "share_pct": 31.18165794703293,
           "top": {
             "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-            "volume": 414610.4253532951,
+            "volume": 423610.80982213985,
             "rank": 5
           }
         },
         "agent": {
           "count": 3,
-          "volume": 4336005.056922075,
-          "share_pct": 13.879884755273928,
+          "volume": 4340828.55517423,
+          "share_pct": 13.852055116581564,
           "addresses": [
             {
               "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
               "id": "claude",
               "label": "claude",
-              "volume": 1489987.311287,
+              "volume": 1494810.809539,
               "rank": 2
             },
             {
@@ -5431,42 +5431,42 @@
         },
         "seed": {
           "count": 6,
-          "volume": 17176975.3,
-          "share_pct": 54.98481539535518,
+          "volume": 17224825.19,
+          "share_pct": 54.96628693638552,
           "addresses": [
             {
               "address": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-              "volume": 16396000.0,
+              "volume": 16442000.0,
               "rank": 1,
               "listed_tier": "A"
             },
             {
               "address": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-              "volume": 181771.8,
+              "volume": 181932.66,
               "rank": 11,
               "listed_tier": "B"
             },
             {
               "address": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-              "volume": 173809.23,
+              "volume": 174211.38,
               "rank": 12,
               "listed_tier": "B"
             },
             {
               "address": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-              "volume": 161583.87,
+              "volume": 161986.02,
               "rank": 13,
               "listed_tier": "B"
             },
             {
               "address": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-              "volume": 144854.43,
+              "volume": 145337.01,
               "rank": 14,
               "listed_tier": "B"
             },
             {
               "address": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-              "volume": 118955.97,
+              "volume": 119358.12,
               "rank": 16,
               "listed_tier": "B"
             }
@@ -5482,80 +5482,80 @@
         {
           "rank": 1,
           "trader": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-          "volume": 42708231.73771229,
-          "pnl": -397307.20675848087,
-          "pnl_pct": -0.9302825019740868,
+          "volume": 42754231.73771229,
+          "pnl": -397777.25547350897,
+          "pnl_pct": -0.9303810156472558,
           "win_rate": 0.0,
-          "trade_count": 103185,
+          "trade_count": 103254,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 34423,
-          "losing_predictions": 68762
+          "winning_predictions": 34446,
+          "losing_predictions": 68808
         },
         {
           "rank": 2,
           "trader": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-          "volume": 5276479.895,
-          "pnl": -37826.929123368434,
-          "pnl_pct": -0.7168970578133593,
+          "volume": 5276882.045,
+          "pnl": -37827.58447927606,
+          "pnl_pct": -0.7168548426266,
           "win_rate": 0.0,
-          "trade_count": 29151,
+          "trade_count": 29166,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 9739,
-          "losing_predictions": 19412
+          "winning_predictions": 9744,
+          "losing_predictions": 19422
         },
         {
           "rank": 3,
           "trader": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-          "volume": 5001781.523695652,
-          "pnl": -43199.672098156836,
-          "pnl_pct": -0.8636857066527371,
+          "volume": 5002183.673695652,
+          "pnl": -43216.237613748126,
+          "pnl_pct": -0.8639474364166967,
           "win_rate": 0.0,
-          "trade_count": 27717,
+          "trade_count": 27732,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 9246,
-          "losing_predictions": 18471
+          "winning_predictions": 9251,
+          "losing_predictions": 18481
         },
         {
           "rank": 4,
           "trader": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-          "volume": 4955022.595,
-          "pnl": -46873.09383684632,
-          "pnl_pct": -0.9459713439883177,
+          "volume": 4955183.455,
+          "pnl": -46875.56941101528,
+          "pnl_pct": -0.9459905942274599,
           "win_rate": 0.0,
-          "trade_count": 29067,
+          "trade_count": 29073,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 9699,
-          "losing_predictions": 19368
+          "winning_predictions": 9701,
+          "losing_predictions": 19372
         },
         {
           "rank": 5,
           "trader": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-          "volume": 4637535.175,
-          "pnl": -47419.1719930413,
-          "pnl_pct": -1.022508082497537,
+          "volume": 4638017.755,
+          "pnl": -47439.21803352933,
+          "pnl_pct": -1.0228339031774434,
           "win_rate": 0.0,
-          "trade_count": 24075,
+          "trade_count": 24093,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 8029,
-          "losing_predictions": 16046
+          "winning_predictions": 8035,
+          "losing_predictions": 16058
         },
         {
           "rank": 6,
           "trader": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-          "volume": 4135902.853695652,
-          "pnl": -36062.58880665511,
-          "pnl_pct": -0.8719399386866944,
+          "volume": 4136305.0036956524,
+          "pnl": -36061.9312644109,
+          "pnl_pct": -0.8718392679502782,
           "win_rate": 0.0,
-          "trade_count": 25104,
+          "trade_count": 25119,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 8384,
-          "losing_predictions": 16720
+          "winning_predictions": 8389,
+          "losing_predictions": 16730
         },
         {
           "rank": 7,
@@ -5573,13 +5573,13 @@
         {
           "rank": 8,
           "trader": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
-          "volume": 1489987.3112867407,
-          "pnl": -54506.64993321865,
-          "pnl_pct": -3.658195577930604,
+          "volume": 1494810.8095388953,
+          "pnl": -54679.51310583036,
+          "pnl_pct": -3.657955425322176,
           "win_rate": 0.0,
-          "trade_count": 394,
+          "trade_count": 395,
           "profitable_sells": 0,
-          "losing_sells": 394,
+          "losing_sells": 395,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -5625,13 +5625,13 @@
         {
           "rank": 12,
           "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-          "volume": 414610.4253532951,
-          "pnl": -6442.7871106599605,
-          "pnl_pct": -1.5539375560009074,
-          "win_rate": 0.00018975332068311195,
-          "trade_count": 10540,
+          "volume": 423649.60480356944,
+          "pnl": -6583.862179286899,
+          "pnl_pct": -1.5540819829962054,
+          "win_rate": 0.000185649308456326,
+          "trade_count": 10773,
           "profitable_sells": 2,
-          "losing_sells": 10538,
+          "losing_sells": 10771,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -7640,15 +7640,15 @@
         {
           "rank": 167,
           "trader": "0xD75beC354A848e9AaB3c83b15B73ee7e6dd039BB",
-          "volume": 20322.482179418526,
-          "pnl": -338.51501501686545,
-          "pnl_pct": -1.66571687468224,
+          "volume": 20325.45247644823,
+          "pnl": -337.50746992869404,
+          "pnl_pct": -1.6605163910607896,
           "win_rate": 0.0021413276231263384,
-          "trade_count": 494,
+          "trade_count": 498,
           "profitable_sells": 1,
           "losing_sells": 466,
-          "winning_predictions": 9,
-          "losing_predictions": 18
+          "winning_predictions": 11,
+          "losing_predictions": 20
         },
         {
           "rank": 168,
@@ -8084,16 +8084,16 @@
         "complete": true,
         "scanned_traders": 2245,
         "total_traders": 2245,
-        "total_volume": 85943880.46017532,
+        "total_volume": 86041677.4418423,
         "mm": {
           "count": 2,
           "volume": 2672944.0333507033,
-          "share_pct": 3.110103964399527,
+          "share_pct": 3.1065689475398854,
           "tiers": {
             "A": {
               "count": 2,
               "volume": 2672944.0333507033,
-              "share_pct": 3.110103964399527
+              "share_pct": 3.1065689475398854
             },
             "B": {
               "count": 0,
@@ -8110,24 +8110,24 @@
         },
         "retail": {
           "count": 2234,
-          "volume": 12219977.589798726,
-          "share_pct": 14.218554624678855,
+          "volume": 12265101.18321362,
+          "share_pct": 14.254837362397895,
           "top": {
             "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-            "volume": 414610.4253532951,
+            "volume": 423649.60480356944,
             "rank": 12
           }
         },
         "agent": {
           "count": 3,
-          "volume": 4336005.056922075,
-          "share_pct": 5.045158577557239,
+          "volume": 4340828.55517423,
+          "share_pct": 5.045030134504645,
           "addresses": [
             {
               "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
               "id": "claude",
               "label": "claude",
-              "volume": 1489987.311287,
+              "volume": 1494810.809539,
               "rank": 8
             },
             {
@@ -8148,42 +8148,42 @@
         },
         "seed": {
           "count": 6,
-          "volume": 66714953.780103594,
-          "share_pct": 77.62618283336413,
+          "volume": 66762803.670103595,
+          "share_pct": 77.59356355555738,
           "addresses": [
             {
               "address": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-              "volume": 42708231.737712,
+              "volume": 42754231.737712,
               "rank": 1,
               "listed_tier": "A"
             },
             {
               "address": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-              "volume": 5276479.895,
+              "volume": 5276882.045,
               "rank": 2,
               "listed_tier": "B"
             },
             {
               "address": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-              "volume": 5001781.523696,
+              "volume": 5002183.673696,
               "rank": 3,
               "listed_tier": "B"
             },
             {
               "address": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-              "volume": 4955022.595,
+              "volume": 4955183.455,
               "rank": 4,
               "listed_tier": "B"
             },
             {
               "address": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-              "volume": 4637535.175,
+              "volume": 4638017.755,
               "rank": 5,
               "listed_tier": "B"
             },
             {
               "address": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-              "volume": 4135902.853696,
+              "volume": 4136305.003696,
               "rank": 6,
               "listed_tier": "B"
             }
@@ -8199,80 +8199,80 @@
         {
           "rank": 1,
           "trader": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-          "volume": 136227027.75032616,
-          "pnl": -563799.3326954903,
-          "pnl_pct": -0.41386745494352933,
+          "volume": 136227835.41647026,
+          "pnl": -563799.988051398,
+          "pnl_pct": -0.4138654822839777,
           "win_rate": 0.0,
-          "trade_count": 153922,
+          "trade_count": 153952,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 25676,
-          "losing_predictions": 51271
+          "winning_predictions": 25681,
+          "losing_predictions": 51281
         },
         {
           "rank": 2,
           "trader": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-          "volume": 130337587.64995448,
-          "pnl": -556922.85289828,
-          "pnl_pct": -0.4272925891447359,
+          "volume": 130337908.5029803,
+          "pnl": -556925.328472449,
+          "pnl_pct": -0.427293436628772,
           "win_rate": 0.0,
-          "trade_count": 149786,
+          "trade_count": 149798,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 24973,
-          "losing_predictions": 49910
+          "winning_predictions": 24975,
+          "losing_predictions": 49914
         },
         {
           "rank": 3,
           "trader": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-          "volume": 121858159.91373996,
-          "pnl": -562146.2387443822,
-          "pnl_pct": -0.46131193770061035,
+          "volume": 121859109.85349947,
+          "pnl": -562166.2847848702,
+          "pnl_pct": -0.4613247917703596,
           "win_rate": 0.0,
-          "trade_count": 135393,
+          "trade_count": 135429,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 22573,
-          "losing_predictions": 45113
+          "winning_predictions": 22579,
+          "losing_predictions": 45125
         },
         {
           "rank": 4,
           "trader": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-          "volume": 110745597.31663273,
-          "pnl": -503118.06867243425,
-          "pnl_pct": -0.45430074049261704,
+          "volume": 110746406.29567496,
+          "pnl": -503117.41113019007,
+          "pnl_pct": -0.4542968281850592,
           "win_rate": 0.0,
-          "trade_count": 123288,
+          "trade_count": 123318,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 20567,
-          "losing_predictions": 41077
+          "winning_predictions": 20572,
+          "losing_predictions": 41087
         },
         {
           "rank": 5,
           "trader": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-          "volume": 85444238.58604321,
-          "pnl": -397307.20675848087,
-          "pnl_pct": -0.464990048870748,
+          "volume": 85536228.53732818,
+          "pnl": -397777.25547350897,
+          "pnl_pct": -0.4650395069732565,
           "win_rate": 0.0,
-          "trade_count": 206373,
+          "trade_count": 206511,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 34423,
-          "losing_predictions": 68762
+          "winning_predictions": 34446,
+          "losing_predictions": 68808
         },
         {
           "rank": 6,
           "trader": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-          "volume": 71477154.64208157,
-          "pnl": -353995.56194669474,
-          "pnl_pct": -0.49525693030075213,
+          "volume": 71477946.39806597,
+          "pnl": -354012.12746228604,
+          "pnl_pct": -0.4952746200775919,
           "win_rate": 0.0,
-          "trade_count": 104703,
+          "trade_count": 104733,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 17461,
-          "losing_predictions": 34889
+          "winning_predictions": 17466,
+          "losing_predictions": 34899
         },
         {
           "rank": 7,
@@ -8511,13 +8511,13 @@
         {
           "rank": 25,
           "trader": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
-          "volume": 1489987.3112867407,
-          "pnl": -54506.64993321865,
-          "pnl_pct": -3.658195577930604,
+          "volume": 1494810.8095388953,
+          "pnl": -54679.51310583036,
+          "pnl_pct": -3.657955425322176,
           "win_rate": 0.0,
-          "trade_count": 788,
+          "trade_count": 790,
           "profitable_sells": 0,
-          "losing_sells": 394,
+          "losing_sells": 395,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -8836,13 +8836,13 @@
         {
           "rank": 50,
           "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-          "volume": 414688.01744327287,
-          "pnl": -6444.00328591224,
-          "pnl_pct": -1.5539400741893261,
-          "win_rate": 0.00018971732119142478,
-          "trade_count": 21077,
+          "volume": 423727.19553108874,
+          "pnl": -6585.118264355091,
+          "pnl_pct": -1.554093844767616,
+          "win_rate": 0.00018561484918793505,
+          "trade_count": 21543,
           "profitable_sells": 2,
-          "losing_sells": 10540,
+          "losing_sells": 10773,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -10801,26 +10801,26 @@
         "complete": true,
         "scanned_traders": 65425,
         "total_traders": 65425,
-        "total_volume": 905050404.0424596,
+        "total_volume": 905195264.0895506,
         "mm": {
           "count": 26,
-          "volume": 152688230.01652437,
-          "share_pct": 16.870688011908907,
+          "volume": 152697269.1946122,
+          "share_pct": 16.868986753724986,
           "tiers": {
             "A": {
               "count": 2,
               "volume": 65340355.66769527,
-              "share_pct": 7.219526710981931
+              "share_pct": 7.218371356970684
             },
             "B": {
               "count": 1,
               "volume": 34768506.81840816,
-              "share_pct": 3.8416099990799
+              "share_pct": 3.840995219233552
             },
             "C": {
               "count": 23,
-              "volume": 52579367.530420944,
-              "share_pct": 5.809551301847078,
+              "volume": 52588406.70850876,
+              "share_pct": 5.809620177520749,
               "addresses": [
                 {
                   "address": "0x606c1C33dab2F355AE34de72dbe67F7b93A06976",
@@ -10914,11 +10914,11 @@
                 },
                 {
                   "address": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-                  "volume": 414688.017443,
+                  "volume": 423727.195531,
                   "rank": 50,
-                  "trade_count": 21077,
-                  "pnl_pct": -1.5539400741893261,
-                  "win_rate": 0.00018971732119142478,
+                  "trade_count": 21543,
+                  "pnl_pct": -1.554093844767616,
+                  "win_rate": 0.00018561484918793505,
                   "source": "heuristic"
                 },
                 {
@@ -11035,8 +11035,8 @@
         },
         "retail": {
           "count": 65390,
-          "volume": 91936403.11024074,
-          "share_pct": 10.158152816638887,
+          "volume": 91971731.3357508,
+          "share_pct": 10.160430018185785,
           "top": {
             "trader": "0x57bE489ACaDD776E2fff99cCa0ABbbF68C820143",
             "volume": 2869854.389964815,
@@ -11045,14 +11045,14 @@
         },
         "agent": {
           "count": 3,
-          "volume": 4336005.056922075,
-          "share_pct": 0.47908989792779055,
+          "volume": 4340828.55517423,
+          "share_pct": 0.47954609655854247,
           "addresses": [
             {
               "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
               "id": "claude",
               "label": "claude",
-              "volume": 1489987.311287,
+              "volume": 1494810.809539,
               "rank": 25
             },
             {
@@ -11073,42 +11073,42 @@
         },
         "seed": {
           "count": 6,
-          "volume": 656089765.8587782,
-          "share_pct": 72.49206927352506,
+          "volume": 656185435.0040191,
+          "share_pct": 72.49103713153133,
           "addresses": [
             {
               "address": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-              "volume": 136227027.750326,
+              "volume": 136227835.41647,
               "rank": 1,
               "listed_tier": "B"
             },
             {
               "address": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-              "volume": 130337587.649954,
+              "volume": 130337908.50298,
               "rank": 2,
               "listed_tier": "B"
             },
             {
               "address": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-              "volume": 121858159.91374,
+              "volume": 121859109.853499,
               "rank": 3,
               "listed_tier": "B"
             },
             {
               "address": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-              "volume": 110745597.316633,
+              "volume": 110746406.295675,
               "rank": 4,
               "listed_tier": "B"
             },
             {
               "address": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-              "volume": 85444238.586043,
+              "volume": 85536228.537328,
               "rank": 5,
               "listed_tier": "A"
             },
             {
               "address": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-              "volume": 71477154.642082,
+              "volume": 71477946.398066,
               "rank": 6,
               "listed_tier": "B"
             }
@@ -11124,15 +11124,15 @@
         {
           "rank": 1,
           "trader": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-          "volume": 13296000.0,
-          "pnl": -128039.54365842539,
-          "pnl_pct": -0.9629929577198059,
+          "volume": 13338000.0,
+          "pnl": -128479.03171573998,
+          "pnl_pct": -0.9632555984086069,
           "win_rate": 0.0,
-          "trade_count": 19941,
+          "trade_count": 20004,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 6647,
-          "losing_predictions": 13294
+          "winning_predictions": 6668,
+          "losing_predictions": 13336
         },
         {
           "rank": 2,
@@ -11163,26 +11163,26 @@
         {
           "rank": 4,
           "trader": "0x66544aCf5d062e57f84d3dCb032880F9ACb27718",
-          "volume": 1412178.3230900073,
-          "pnl": -51665.412630239516,
-          "pnl_pct": -3.658561513477257,
+          "volume": 1417001.6654008408,
+          "pnl": -51838.314566075525,
+          "pnl_pct": -3.6583100663760706,
           "win_rate": 0.0,
-          "trade_count": 391,
+          "trade_count": 392,
           "profitable_sells": 0,
-          "losing_sells": 391,
+          "losing_sells": 392,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
         {
           "rank": 5,
           "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-          "volume": 417481.298391285,
-          "pnl": -6488.067678661308,
-          "pnl_pct": -1.5540978011859004,
-          "win_rate": 0.0001884303749764462,
-          "trade_count": 10614,
+          "volume": 425860.937161306,
+          "pnl": -6625.221845387299,
+          "pnl_pct": -1.5557242440571213,
+          "win_rate": 0.00018467220683287164,
+          "trade_count": 10830,
           "profitable_sells": 2,
-          "losing_sells": 10612,
+          "losing_sells": 10828,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -11202,13 +11202,13 @@
         {
           "rank": 7,
           "trader": "0x366f1621e0F1617f0cAA6549115D56a6E905d8AC",
-          "volume": 249332.504920072,
-          "pnl": -3922.1674470731814,
-          "pnl_pct": -1.5730670368592743,
-          "win_rate": 0.02628679364079962,
-          "trade_count": 6353,
-          "profitable_sells": 167,
-          "losing_sells": 6186,
+          "volume": 251984.38111325237,
+          "pnl": -3848.19723976144,
+          "pnl_pct": -1.527157049480737,
+          "win_rate": 0.02625,
+          "trade_count": 6400,
+          "profitable_sells": 168,
+          "losing_sells": 6232,
           "winning_predictions": 0,
           "losing_predictions": 0
         },
@@ -11228,67 +11228,67 @@
         {
           "rank": 9,
           "trader": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-          "volume": 121690.59,
-          "pnl": -1372.8203594380775,
-          "pnl_pct": -1.1281236777947066,
+          "volume": 121851.45,
+          "pnl": -1371.911132171166,
+          "pnl_pct": -1.1258882287992191,
           "win_rate": 0.0,
-          "trade_count": 4539,
+          "trade_count": 4545,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 1513,
-          "losing_predictions": 3026
+          "winning_predictions": 1515,
+          "losing_predictions": 3030
         },
         {
           "rank": 10,
           "trader": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-          "volume": 119760.27,
-          "pnl": -1327.4953368837544,
-          "pnl_pct": -1.1084605411158095,
+          "volume": 120162.42,
+          "pnl": -1340.2304334199,
+          "pnl_pct": -1.1153490695509463,
           "win_rate": 0.0,
-          "trade_count": 4467,
+          "trade_count": 4482,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 1489,
-          "losing_predictions": 2978
+          "winning_predictions": 1494,
+          "losing_predictions": 2988
         },
         {
           "rank": 11,
           "trader": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-          "volume": 115014.9,
-          "pnl": -1270.1626841328534,
-          "pnl_pct": -1.1043462056940914,
+          "volume": 115417.05,
+          "pnl": -1271.0937669430207,
+          "pnl_pct": -1.1013050211758322,
           "win_rate": 0.0,
-          "trade_count": 4290,
+          "trade_count": 4302,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 1430,
-          "losing_predictions": 2860
+          "winning_predictions": 1434,
+          "losing_predictions": 2868
         },
         {
           "rank": 12,
           "trader": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-          "volume": 106730.61,
-          "pnl": -1209.3111457455284,
-          "pnl_pct": -1.133049971086578,
+          "volume": 107132.76,
+          "pnl": -1220.7855831278086,
+          "pnl_pct": -1.1395072647505848,
           "win_rate": 0.0,
-          "trade_count": 3978,
+          "trade_count": 3993,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 1326,
-          "losing_predictions": 2652
+          "winning_predictions": 1331,
+          "losing_predictions": 2662
         },
         {
           "rank": 13,
           "trader": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-          "volume": 70456.68,
-          "pnl": -1253.5924181728603,
-          "pnl_pct": -1.7792385593145466,
+          "volume": 70778.4,
+          "pnl": -1251.1308332341603,
+          "pnl_pct": -1.7676732353855982,
           "win_rate": 0.0,
-          "trade_count": 2625,
+          "trade_count": 2640,
           "profitable_sells": 0,
           "losing_sells": 0,
-          "winning_predictions": 875,
-          "losing_predictions": 1750
+          "winning_predictions": 880,
+          "losing_predictions": 1760
         },
         {
           "rank": 14,
@@ -12280,6 +12280,19 @@
         },
         {
           "rank": 90,
+          "trader": "0xF970C59Cb5C8DEeBc6de332904E99e7726A8209D",
+          "volume": 13011.439283927484,
+          "pnl": -129.35386150191104,
+          "pnl_pct": -0.9941549023073623,
+          "win_rate": 0.0030211480362537764,
+          "trade_count": 331,
+          "profitable_sells": 1,
+          "losing_sells": 330,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 91,
           "trader": "0x582d404F3A81E4A3F17B38e187dC7946cEe63dCB",
           "volume": 12896.893026355987,
           "pnl": -161.55204847506835,
@@ -12292,7 +12305,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 91,
+          "rank": 92,
           "trader": "0x47633B5738bA5a7194BB8108D5fD9A0db18507C4",
           "volume": 12651.974328673441,
           "pnl": -231.09511694186406,
@@ -12305,7 +12318,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 92,
+          "rank": 93,
           "trader": "0xcf7CafbA1fFaC335f72d22aBd6f42cA5c3441038",
           "volume": 12616.359207429414,
           "pnl": -267.5745740200581,
@@ -12318,7 +12331,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 93,
+          "rank": 94,
           "trader": "0x8b4057e9397fb069c1d388F3bE53C784791B26b1",
           "volume": 12385.08722949086,
           "pnl": -138.47983713718605,
@@ -12331,7 +12344,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 94,
+          "rank": 95,
           "trader": "0x2f625f52f45a31ee2a9B8ec77555E97b85A32b3e",
           "volume": 12359.013741659566,
           "pnl": -200.34612988474564,
@@ -12344,7 +12357,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 95,
+          "rank": 96,
           "trader": "0xB9d6AD5332BF0446ED4C22739fd7b02586783b32",
           "volume": 12313.730264261942,
           "pnl": -168.45820790192744,
@@ -12357,7 +12370,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 96,
+          "rank": 97,
           "trader": "0x6b7f67e8985f5323483928b80A3f084b3bB70d00",
           "volume": 11980.91613895203,
           "pnl": -219.08764937199257,
@@ -12370,7 +12383,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 97,
+          "rank": 98,
           "trader": "0x060A283b881B1362bE2c65c888382478e97ff038",
           "volume": 11936.870642290229,
           "pnl": -163.2542360844913,
@@ -12383,7 +12396,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 98,
+          "rank": 99,
           "trader": "0x69F3991946A898BD660880b77192a698a91B783B",
           "volume": 11794.516302416458,
           "pnl": -234.55422977310926,
@@ -12396,7 +12409,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 99,
+          "rank": 100,
           "trader": "0x7b8DfE73B0ac85B672059aFcaCA384b5e648B4D5",
           "volume": 11733.099140072181,
           "pnl": -257.0314705570852,
@@ -12409,7 +12422,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 100,
+          "rank": 101,
           "trader": "0x199F920f7256dF50735218b85519791C756F5f2d",
           "volume": 11683.753088871692,
           "pnl": -155.25198661368617,
@@ -12422,7 +12435,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 101,
+          "rank": 102,
           "trader": "0x166461a18A148815535e0Ae1a5645A7ed6456ad8",
           "volume": 11658.42327280861,
           "pnl": -180.71395321075832,
@@ -12435,7 +12448,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 102,
+          "rank": 103,
           "trader": "0xe9cE5bb223142C8c92A8ba8Fa6B30B5DCf08b5cc",
           "volume": 11595.340246172822,
           "pnl": -192.87716999348518,
@@ -12448,7 +12461,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 103,
+          "rank": 104,
           "trader": "0x4e6a9DEa2F67a590181Bfd0D8571d450716B3Cee",
           "volume": 11304.826090952645,
           "pnl": -143.14241223791882,
@@ -12461,7 +12474,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 104,
+          "rank": 105,
+          "trader": "0x6EDC5Af2920061a4c3C5051005Ba96512c73005a",
+          "volume": 11233.235591348292,
+          "pnl": -124.8575954550594,
+          "pnl_pct": -1.1115016189211173,
+          "win_rate": 0.003484320557491289,
+          "trade_count": 287,
+          "profitable_sells": 1,
+          "losing_sells": 286,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 106,
           "trader": "0x6A8ca83bB394b9a82034ea5fF37eF6bb9926217B",
           "volume": 11193.001498519,
           "pnl": -130.31469978826803,
@@ -12474,7 +12500,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 105,
+          "rank": 107,
           "trader": "0x7c1D78fBD54c434Fa57a57aC6f292F4e4D7c61bc",
           "volume": 11142.057126680018,
           "pnl": -220.57743966542,
@@ -12487,7 +12513,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 106,
+          "rank": 108,
           "trader": "0x2AA73f65Db7965B7FC917Cd0b350d9a14d1136DA",
           "volume": 11066.394570365777,
           "pnl": -170.77370018444492,
@@ -12500,7 +12526,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 107,
+          "rank": 109,
           "trader": "0x238D8f5439f29B013D225193162daD8DB886c630",
           "volume": 10751.252150014267,
           "pnl": -143.51898937032607,
@@ -12513,7 +12539,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 108,
+          "rank": 110,
           "trader": "0xC9804f5775164A0161B9Fd35Fa43B27BC6Fe1Bd3",
           "volume": 10630.993117666027,
           "pnl": -157.04172396630662,
@@ -12526,7 +12552,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 109,
+          "rank": 111,
           "trader": "0x526972E2fAF16D296495067db766d297803DF3b0",
           "volume": 10611.006873831231,
           "pnl": -138.15711664010203,
@@ -12539,7 +12565,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 110,
+          "rank": 112,
           "trader": "0xDf17448b2dAF04A1ee52a99482b4Ee59166b086f",
           "volume": 10544.374033072965,
           "pnl": -169.1275778632777,
@@ -12552,7 +12578,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 111,
+          "rank": 113,
           "trader": "0x00d52077ebb66923c69b41e72a6Fc8a279d83713",
           "volume": 10540.494361115356,
           "pnl": -215.32658410102155,
@@ -12565,7 +12591,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 112,
+          "rank": 114,
           "trader": "0x58dC01e2e7f5414AdcA8F1dbD5EDC2636Df7b40E",
           "volume": 10515.354435862897,
           "pnl": -162.16738800495418,
@@ -12578,7 +12604,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 113,
+          "rank": 115,
           "trader": "0xB9725FCa5355d7789bf20717c23A5e0dbD188C66",
           "volume": 10213.985543529916,
           "pnl": -156.1078417360782,
@@ -12591,7 +12617,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 114,
+          "rank": 116,
           "trader": "0xba4eCb63975DC3A863f5CeE50a3CF176490fF41C",
           "volume": 10206.435499082532,
           "pnl": -153.16630904493323,
@@ -12604,7 +12630,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 115,
+          "rank": 117,
           "trader": "0xbbBD169376ccD219C8bA115711c7dD58C43aB2a3",
           "volume": 10175.527456902593,
           "pnl": -149.88611739636056,
@@ -12617,7 +12643,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 116,
+          "rank": 118,
           "trader": "0x396c985aED885D59C520cAd9c0a43d9dE0a8350C",
           "volume": 10088.691624402229,
           "pnl": -195.50636368087572,
@@ -12630,7 +12656,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 117,
+          "rank": 119,
           "trader": "0x4aB6DCf8942D78c91c66b044693A35b9cA251019",
           "volume": 10075.94502254848,
           "pnl": -123.20692290534632,
@@ -12643,7 +12669,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 118,
+          "rank": 120,
           "trader": "0x38DBBb4aF8022838D5663F369b183bf02b085406",
           "volume": 10044.35942093954,
           "pnl": -128.85067818940848,
@@ -12656,7 +12682,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 119,
+          "rank": 121,
           "trader": "0x61970D6CbE14Ac509865aBdB34621B6c5ca378Bc",
           "volume": 10006.489045923237,
           "pnl": -125.34124688918362,
@@ -12669,7 +12695,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 120,
+          "rank": 122,
           "trader": "0x1E041F4b782ef9DB966BF254e741b9bB18a1b275",
           "volume": 9971.65465509933,
           "pnl": -145.24931067373498,
@@ -12682,7 +12708,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 121,
+          "rank": 123,
           "trader": "0x22CbCe92f587063319098A8a205b4E8a7F9dC751",
           "volume": 9947.58646845106,
           "pnl": -153.68104086508447,
@@ -12695,7 +12721,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 122,
+          "rank": 124,
           "trader": "0x931ac0D5F1ba68376398D2fE212BEC513C7575f3",
           "volume": 9932.64094164024,
           "pnl": -148.14550754654866,
@@ -12708,7 +12734,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 123,
+          "rank": 125,
           "trader": "0xC26C4E7283C906B830653aA5BD4D5fd0A008fce1",
           "volume": 9894.048913024551,
           "pnl": -147.09707538319253,
@@ -12721,7 +12747,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 124,
+          "rank": 126,
           "trader": "0xC758aeB71BBB2f8D3E9BF12E3F9c370D5efa601c",
           "volume": 9881.667273419875,
           "pnl": -206.57342344149407,
@@ -12734,7 +12760,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 125,
+          "rank": 127,
           "trader": "0x1C5CF7F184880301e2373795058A1958abbe2C22",
           "volume": 9851.664446883788,
           "pnl": -139.98115968691843,
@@ -12747,7 +12773,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 126,
+          "rank": 128,
           "trader": "0xEdE6e91ff0777c9A986B7d7D865a68Bda4030306",
           "volume": 9816.060250554392,
           "pnl": -172.26699707499577,
@@ -12760,20 +12786,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 127,
-          "trader": "0xF970C59Cb5C8DEeBc6de332904E99e7726A8209D",
-          "volume": 9752.59664626918,
-          "pnl": -78.91993634107268,
-          "pnl_pct": -0.8092197309448169,
-          "win_rate": 0.004048582995951417,
-          "trade_count": 247,
-          "profitable_sells": 1,
-          "losing_sells": 246,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 128,
+          "rank": 129,
           "trader": "0xe52d2A644e41E1fa88D0bBe3632363c7724458EA",
           "volume": 9749.133221860062,
           "pnl": -203.18646071681127,
@@ -12786,7 +12799,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 129,
+          "rank": 130,
           "trader": "0xA76AaD52548cfF2eFa65686602209b5C9370b9C1",
           "volume": 9740.54388647103,
           "pnl": -177.8005037641461,
@@ -12799,7 +12812,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 130,
+          "rank": 131,
           "trader": "0x0814630af5a54117330f08603A96593366a6633f",
           "volume": 9726.47813482533,
           "pnl": -208.10399674817907,
@@ -12812,7 +12825,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 131,
+          "rank": 132,
           "trader": "0x83755473fD792Fa47287705169eAaeA0bd100B46",
           "volume": 9703.89757524781,
           "pnl": -189.93633215578726,
@@ -12825,7 +12838,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 132,
+          "rank": 133,
           "trader": "0x2FC7D3C70A2ebb8f4411224d50e5760EcF10C92E",
           "volume": 9631.700468908983,
           "pnl": -166.34267636240293,
@@ -12838,7 +12851,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 133,
+          "rank": 134,
           "trader": "0xe4E6E78BE7e6ccB1Fcf4D0bc1DDc6D68988eB6aF",
           "volume": 9571.85634775156,
           "pnl": -124.87503306472902,
@@ -12851,7 +12864,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 134,
+          "rank": 135,
           "trader": "0x7eA0A14012663b311A40362A8FF9C817C2D09C86",
           "volume": 9438.0975951561,
           "pnl": -174.36404299786543,
@@ -12864,7 +12877,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 135,
+          "rank": 136,
           "trader": "0x3812D088c17100904625550e95c7932E5CE6C9f5",
           "volume": 9389.614371659329,
           "pnl": -139.32246362366232,
@@ -12877,7 +12890,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 136,
+          "rank": 137,
           "trader": "0xDF4aa01A21c96180d1435FC91c0781fab1dc6b82",
           "volume": 9359.207946164679,
           "pnl": -193.8706210024637,
@@ -12890,7 +12903,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 137,
+          "rank": 138,
           "trader": "0x6f43FB23e7D26ebc177578FF5c34aD65a640F1C1",
           "volume": 9350.559666953943,
           "pnl": -138.6482455706978,
@@ -12903,7 +12916,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 138,
+          "rank": 139,
           "trader": "0x37D18C490c4FEf082BCBAb64E26468A23af5F341",
           "volume": 9317.652933150033,
           "pnl": -160.26860322766183,
@@ -12916,7 +12929,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 139,
+          "rank": 140,
           "trader": "0x13bEa44Ef7F21c0E9fCbd9BA762918A90De0C31e",
           "volume": 9311.922760458763,
           "pnl": -138.53632902300535,
@@ -12929,7 +12942,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 140,
+          "rank": 141,
           "trader": "0x81918a44c121EA052CCBB3e2534d90F75a23b00E",
           "volume": 9298.767179533801,
           "pnl": -164.27251839282766,
@@ -12942,7 +12955,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 141,
+          "rank": 142,
+          "trader": "0x4874810Cc9aeAAC5b9450c67F2c2113addD45427",
+          "volume": 9232.184022742134,
+          "pnl": -107.144101646471,
+          "pnl_pct": -1.1605498913641366,
+          "win_rate": 0.00423728813559322,
+          "trade_count": 236,
+          "profitable_sells": 1,
+          "losing_sells": 235,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 143,
           "trader": "0x449d95208DAB893EED0E9FCB9DB19c284bF5b1f1",
           "volume": 9195.116934932767,
           "pnl": -138.8697913521203,
@@ -12955,7 +12981,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 142,
+          "rank": 144,
           "trader": "0x4540Dc82A409B809A0a00C1B67239FB1A0E42863",
           "volume": 9105.848835138286,
           "pnl": -111.28797677221002,
@@ -12968,7 +12994,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 143,
+          "rank": 145,
           "trader": "0x2B169655C4d3d664F94464edCbd60Be62de3a775",
           "volume": 9078.78363459575,
           "pnl": -137.86615181652058,
@@ -12981,7 +13007,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 144,
+          "rank": 146,
+          "trader": "0xA6e97c0dE2C31F6Fd42385119315D677FAe1a047",
+          "volume": 9067.050895660643,
+          "pnl": -96.5661501400473,
+          "pnl_pct": -1.0650226986843367,
+          "win_rate": 0.004329004329004329,
+          "trade_count": 231,
+          "profitable_sells": 1,
+          "losing_sells": 230,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 147,
           "trader": "0xA69Acd6f339BF46fbF62e863cba3f0cE26212EE0",
           "volume": 9040.40971004066,
           "pnl": -133.49939312893187,
@@ -12994,7 +13033,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 145,
+          "rank": 148,
           "trader": "0xFBB51608b2F4EB8F56AF3D2B1473B1137b30ed77",
           "volume": 8978.32089803889,
           "pnl": -175.61161848451147,
@@ -13007,7 +13046,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 146,
+          "rank": 149,
           "trader": "0x038dba567D9b17Aabac4c55be6647e724c2f6620",
           "volume": 8966.796331097139,
           "pnl": -182.9586581529576,
@@ -13020,7 +13059,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 147,
+          "rank": 150,
           "trader": "0x39554Fde8b1c8cE2A4Ea84215B0f0b0BC3cE830F",
           "volume": 8962.626631367813,
           "pnl": -158.36812476895477,
@@ -13033,7 +13072,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 148,
+          "rank": 151,
           "trader": "0x2Bd11c076fD7fc427dA5264e8b06f76b382141b4",
           "volume": 8898.014883556443,
           "pnl": -141.78985869828477,
@@ -13046,7 +13085,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 149,
+          "rank": 152,
           "trader": "0x67436D6f6aa32F1D8f727a87e8A9Fe5972441181",
           "volume": 8865.038648023497,
           "pnl": -131.16291360491124,
@@ -13059,7 +13098,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 150,
+          "rank": 153,
           "trader": "0x3c2721502aAfa83E253ef118d74cb8502Fb5dF21",
           "volume": 8834.598696461502,
           "pnl": -103.35605954263966,
@@ -13072,7 +13111,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 151,
+          "rank": 154,
           "trader": "0xAd88a43Cd8C7498A0805c4d1127724F549B60D15",
           "volume": 8812.571381305734,
           "pnl": -170.01034008390533,
@@ -13085,7 +13124,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 152,
+          "rank": 155,
           "trader": "0x19f4e84EA08F216906688D236142fF86Ab7bcD2D",
           "volume": 8730.029337867454,
           "pnl": -130.4432761499017,
@@ -13098,7 +13137,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 153,
+          "rank": 156,
           "trader": "0xBF0a766D87BaD6Bda7096163269e242e6eE9a149",
           "volume": 8729.899279857002,
           "pnl": -130.08952416329072,
@@ -13111,7 +13150,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 154,
+          "rank": 157,
           "trader": "0x9d53d8363842121d8BD60AfD44f93c4971796612",
           "volume": 8701.437954202534,
           "pnl": -132.6400581663074,
@@ -13124,7 +13163,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 155,
+          "rank": 158,
           "trader": "0x1eE117E7DB326cA3dF714728a5052CbF6Ba4c636",
           "volume": 8691.430731594228,
           "pnl": -128.19794274335715,
@@ -13137,7 +13176,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 156,
+          "rank": 159,
           "trader": "0x3DDfB3a911C936BE1d89a7FDb241fB15129f1f0a",
           "volume": 8690.587884977196,
           "pnl": -132.5227463166745,
@@ -13150,7 +13189,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 157,
+          "rank": 160,
           "trader": "0x8A8C5b9edA19c45a541E32ED617faF32Ce3e2c82",
           "volume": 8670.174792773161,
           "pnl": -128.65497294150285,
@@ -13163,7 +13202,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 158,
+          "rank": 161,
           "trader": "0x229bc5DfA86662Aa94E46f2fA9ab4fcfAd1F6FEb",
           "volume": 8613.882031459547,
           "pnl": -126.71035803554534,
@@ -13176,7 +13215,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 159,
+          "rank": 162,
           "trader": "0x1928f6d8C612062ADE2dC681681c328eb8588828",
           "volume": 8601.305308603718,
           "pnl": -176.93173570154678,
@@ -13189,7 +13228,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 160,
+          "rank": 163,
           "trader": "0xa69eD93f80efa0a23A0c1Ea9fb573B2eC841bf81",
           "volume": 8584.28386646526,
           "pnl": -175.35675450217533,
@@ -13202,7 +13241,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 161,
+          "rank": 164,
           "trader": "0xa2885fc84FdAc31b577048Ae7cc2cE8636cC5951",
           "volume": 8574.717606680813,
           "pnl": -127.8560177981871,
@@ -13215,7 +13254,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 162,
+          "rank": 165,
           "trader": "0x368e3BDf88e2C99a3139dB9471BBF75Dd5C59007",
           "volume": 8574.392733164606,
           "pnl": -130.38535301240077,
@@ -13228,7 +13267,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 163,
+          "rank": 166,
           "trader": "0x57ed286b6ec0B7CE5dD5e447398645c640dcAdb7",
           "volume": 8536.059169187314,
           "pnl": -128.00646684084063,
@@ -13241,7 +13280,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 164,
+          "rank": 167,
           "trader": "0x69335FeFF15E6097127fe0e61E02B0dD02369d4b",
           "volume": 8496.948849312847,
           "pnl": -127.56778734044764,
@@ -13254,7 +13293,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 165,
+          "rank": 168,
           "trader": "0x3779E71C9442012cb073dCDE1C80117068342219",
           "volume": 8472.177428819617,
           "pnl": -113.72011615244314,
@@ -13267,7 +13306,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 166,
+          "rank": 169,
           "trader": "0x7222a0cF78e1836ba611f92ea127cBAaF07554C7",
           "volume": 8415.344202384755,
           "pnl": -91.95406882566257,
@@ -13280,7 +13319,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 167,
+          "rank": 170,
+          "trader": "0xe48C7F45b6e251eb70133D28a2b6dF8588F30f02",
+          "volume": 8403.411876411426,
+          "pnl": -96.48775462801768,
+          "pnl_pct": -1.1481973756262152,
+          "win_rate": 0.004651162790697674,
+          "trade_count": 215,
+          "profitable_sells": 1,
+          "losing_sells": 214,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 171,
           "trader": "0x4DA3b718776e1a46c2911910931c31CC94d907bF",
           "volume": 8302.892771883144,
           "pnl": -124.27503221643907,
@@ -13293,7 +13345,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 168,
+          "rank": 172,
           "trader": "0x426A47cE6fbD64e9D0b1C6f3aFb9b64bAE93A000",
           "volume": 8276.724952191793,
           "pnl": -121.82225671757352,
@@ -13306,7 +13358,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 169,
+          "rank": 173,
           "trader": "0x1d8faF6b8f8258079bd4E42CFE4c8F80f806D945",
           "volume": 8271.598966518437,
           "pnl": -117.31855084541606,
@@ -13319,7 +13371,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 170,
+          "rank": 174,
           "trader": "0x6959452CB22b746eeA4357A0c0a7E50178c76E44",
           "volume": 8264.089886099076,
           "pnl": -123.37064891719518,
@@ -13332,7 +13384,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 171,
+          "rank": 175,
+          "trader": "0x809b3bDf06C1588A9264fa175207bd4135c8eC29",
+          "volume": 8205.03457739888,
+          "pnl": -97.34988916832407,
+          "pnl_pct": -1.186465312851679,
+          "win_rate": 0.004761904761904762,
+          "trade_count": 210,
+          "profitable_sells": 1,
+          "losing_sells": 209,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 176,
           "trader": "0x3E0601065a275E835ed8018c35a282e44171bBA1",
           "volume": 8198.972068951445,
           "pnl": -155.70082814559242,
@@ -13345,7 +13410,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 172,
+          "rank": 177,
           "trader": "0xF6C2B6A082E4Ed5d72CF0B72C9635C726D567B4c",
           "volume": 8157.576913054756,
           "pnl": -101.18721919273055,
@@ -13358,7 +13423,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 173,
+          "rank": 178,
           "trader": "0xe8F3fbfC7891fa4196b2d51c5B8eBACE9e08Fe73",
           "volume": 8156.463245241403,
           "pnl": -112.30217692422131,
@@ -13371,7 +13436,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 174,
+          "rank": 179,
           "trader": "0x013AefaF35044dfB6F4926aFcfa3714C6C2374d8",
           "volume": 8131.029792529474,
           "pnl": -81.01867133525161,
@@ -13384,7 +13449,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 175,
+          "rank": 180,
           "trader": "0xbaD6D508161947E8E9251973E08d683380C8Cb56",
           "volume": 8075.831741855516,
           "pnl": -114.43259479109928,
@@ -13397,7 +13462,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 176,
+          "rank": 181,
           "trader": "0xdfa2A306440D8C2770377f359Fc75A92FC468495",
           "volume": 8031.721090829427,
           "pnl": -120.08253102977295,
@@ -13410,7 +13475,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 177,
+          "rank": 182,
           "trader": "0x492403B37813f6737E659986eF5E62Fd97A652F6",
           "volume": 8031.479295942409,
           "pnl": -118.61356443420054,
@@ -13423,7 +13488,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 178,
+          "rank": 183,
           "trader": "0xC0283522ff161d72D300B185D21820bc41B5Cbb0",
           "volume": 8009.198517371219,
           "pnl": -115.45380708717018,
@@ -13436,7 +13501,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 179,
+          "rank": 184,
           "trader": "0x881E49eE0a59379e86616dB9Fe9Cc1B74F1Ff281",
           "volume": 7993.035591799575,
           "pnl": -118.32591309172165,
@@ -13449,7 +13514,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 180,
+          "rank": 185,
           "trader": "0xEAaB0334007b101E4367Bd095063A6f8DA3c20F3",
           "volume": 7992.609908009097,
           "pnl": -119.25611055309277,
@@ -13462,7 +13527,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 181,
+          "rank": 186,
           "trader": "0x39FB178d58fbDd61786da0A54189162967Fa44de",
           "volume": 7953.884678196176,
           "pnl": -118.36412582579882,
@@ -13475,7 +13540,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 182,
+          "rank": 187,
           "trader": "0x353c64205904B4DaAe3565E6f282896bac345586",
           "volume": 7915.495755799604,
           "pnl": -117.18073791791953,
@@ -13488,7 +13553,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 183,
+          "rank": 188,
           "trader": "0xDd7dB4305aca8D844E3d0198E547658837430dd0",
           "volume": 7915.414029792985,
           "pnl": -117.08397870062589,
@@ -13501,7 +13566,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 184,
+          "rank": 189,
           "trader": "0xFa80231960b1B06d885498623FA33fE73b41bc99",
           "volume": 7876.350995072103,
           "pnl": -115.55305484522877,
@@ -13514,7 +13579,20 @@
           "losing_predictions": 0
         },
         {
-          "rank": 185,
+          "rank": 190,
+          "trader": "0xA890eA17e22dF453463ba5b74aBF8503ff886283",
+          "volume": 7871.876056125278,
+          "pnl": -82.50656801901651,
+          "pnl_pct": -1.0481182304034926,
+          "win_rate": 0.004975124378109453,
+          "trade_count": 201,
+          "profitable_sells": 1,
+          "losing_sells": 200,
+          "winning_predictions": 0,
+          "losing_predictions": 0
+        },
+        {
+          "rank": 191,
           "trader": "0x62462e9Da9f2eDb336A65Ff43A1A87d7B97EC572",
           "volume": 7837.45384523367,
           "pnl": -117.14144742931538,
@@ -13527,7 +13605,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 186,
+          "rank": 192,
           "trader": "0x2B8544EE3c33afa74719A7ee8d5A1bEb0daC6B82",
           "volume": 7804.5773358670485,
           "pnl": -105.48509194931147,
@@ -13540,20 +13618,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 187,
-          "trader": "0x6EDC5Af2920061a4c3C5051005Ba96512c73005a",
-          "volume": 7780.499403837222,
-          "pnl": -71.44590894127542,
-          "pnl_pct": -0.9182689340743267,
-          "win_rate": 0.005050505050505051,
-          "trade_count": 198,
-          "profitable_sells": 1,
-          "losing_sells": 197,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 188,
+          "rank": 193,
           "trader": "0xC3d00F2cD9224DE007e1653D570b2a8c695E46AF",
           "volume": 7643.274051838376,
           "pnl": -114.61643135269482,
@@ -13566,7 +13631,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 189,
+          "rank": 194,
           "trader": "0x83b5947df68499f4482E621255ce573EdB75bCAA",
           "volume": 7642.934422107303,
           "pnl": -116.38718731971406,
@@ -13579,7 +13644,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 190,
+          "rank": 195,
           "trader": "0x03b820741322D6CaE2D90F110fcF3330f4191393",
           "volume": 7609.039661682349,
           "pnl": -102.12055750752917,
@@ -13592,7 +13657,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 191,
+          "rank": 196,
           "trader": "0x2c093dcD5AD1Ed58090Ba7A7586a3A26EC91A6C9",
           "volume": 7602.173661560027,
           "pnl": -115.9301162867312,
@@ -13605,7 +13670,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 192,
+          "rank": 197,
           "trader": "0x0E85398E87B0b4237EE568977275eeB410bF47bF",
           "volume": 7499.990345931273,
           "pnl": -107.44406424514483,
@@ -13618,7 +13683,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 193,
+          "rank": 198,
           "trader": "0xBECef3dAfF18a5Ab7b9fa0578CAB71812F4B5b6f",
           "volume": 7449.342908932863,
           "pnl": -112.6790365501834,
@@ -13631,7 +13696,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 194,
+          "rank": 199,
           "trader": "0xF8ACB6A0dd0D2e8b0d07d0B9e0C7b88e959Ee4f9",
           "volume": 7371.9426548638185,
           "pnl": -110.72830107098675,
@@ -13644,7 +13709,7 @@
           "losing_predictions": 0
         },
         {
-          "rank": 195,
+          "rank": 200,
           "trader": "0x52c018EA0B0F6E5D665dd26c789EF352c9309e0F",
           "volume": 7352.6521377641075,
           "pnl": -126.08988985162726,
@@ -13655,78 +13720,13 @@
           "losing_sells": 191,
           "winning_predictions": 0,
           "losing_predictions": 0
-        },
-        {
-          "rank": 196,
-          "trader": "0x749d0F9400F1C2449ae4d6169AfE5669dcF5da6E",
-          "volume": 7299.546295686575,
-          "pnl": -155.44420588182408,
-          "pnl_pct": -2.129505034767417,
-          "win_rate": 0.13440860215053763,
-          "trade_count": 186,
-          "profitable_sells": 25,
-          "losing_sells": 161,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 197,
-          "trader": "0x06eA47231AecDC199984D533e1ad233B8442fEb8",
-          "volume": 7294.561446051902,
-          "pnl": -108.66092361718405,
-          "pnl_pct": -1.489615577588911,
-          "win_rate": 0.0,
-          "trade_count": 188,
-          "profitable_sells": 0,
-          "losing_sells": 188,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 198,
-          "trader": "0x2EEddBE186399b7c993bD08309218ADD8c85fD48",
-          "volume": 7294.3190866098075,
-          "pnl": -110.0509597138364,
-          "pnl_pct": -1.5087214914392368,
-          "win_rate": 0.0,
-          "trade_count": 188,
-          "profitable_sells": 0,
-          "losing_sells": 188,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 199,
-          "trader": "0xBd9eB99Ff96C5607aC8b56173bE5C6b912327bC7",
-          "volume": 7283.730832807815,
-          "pnl": -113.43947437729342,
-          "pnl_pct": -1.5574363877689243,
-          "win_rate": 0.0,
-          "trade_count": 239,
-          "profitable_sells": 0,
-          "losing_sells": 239,
-          "winning_predictions": 0,
-          "losing_predictions": 0
-        },
-        {
-          "rank": 200,
-          "trader": "0xEb6c27E50A18daf62F45972Dfe33217bCd9eF89e",
-          "volume": 7258.456374030436,
-          "pnl": -92.9464719873566,
-          "pnl_pct": -1.280526701516094,
-          "win_rate": 0.005376344086021506,
-          "trade_count": 186,
-          "profitable_sells": 1,
-          "losing_sells": 185,
-          "winning_predictions": 0,
-          "losing_predictions": 0
         }
       ],
       "aggregate": {
         "complete": true,
         "scanned_traders": 822,
         "total_traders": 822,
-        "total_volume": 22793141.958349496,
+        "total_volume": 22877187.64104596,
         "mm": {
           "count": 0,
           "volume": 0.0,
@@ -13752,18 +13752,18 @@
         },
         "retail": {
           "count": 813,
-          "volume": 4622660.353175264,
-          "share_pct": 20.280926436655253,
+          "volume": 4658193.663560885,
+          "share_pct": 20.361740860153688,
           "top": {
             "trader": "0xfF19090e30d4dFF8813491f0181262B7cE557039",
-            "volume": 417481.298391285,
+            "volume": 425860.937161306,
             "rank": 5
           }
         },
         "agent": {
           "count": 3,
-          "volume": 4340828.55517423,
-          "share_pct": 19.04445013814392,
+          "volume": 4345651.8974850625,
+          "share_pct": 18.995568710937828,
           "addresses": [
             {
               "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
@@ -13783,49 +13783,49 @@
               "address": "0x66544aCf5d062e57f84d3dCb032880F9ACb27718",
               "id": "codex",
               "label": "codex",
-              "volume": 1412178.32309,
+              "volume": 1417001.665401,
               "rank": 4
             }
           ]
         },
         "seed": {
           "count": 6,
-          "volume": 13829653.049999999,
-          "share_pct": 60.674623425200814,
+          "volume": 13873342.08,
+          "share_pct": 60.642690428908416,
           "addresses": [
             {
               "address": "0x76dF1872D1658B439a044269C20F635D5dDF7296",
-              "volume": 13296000.0,
+              "volume": 13338000.0,
               "rank": 1,
               "listed_tier": "A"
             },
             {
               "address": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
-              "volume": 121690.59,
+              "volume": 121851.45,
               "rank": 9,
               "listed_tier": "B"
             },
             {
               "address": "0x28AeDAF59D20903C51989DcC94BE57b99b0784b3",
-              "volume": 119760.27,
+              "volume": 120162.42,
               "rank": 10,
               "listed_tier": "B"
             },
             {
               "address": "0xD620a91E47a31CEfAe93dD761a271Cecbe6eCcD0",
-              "volume": 115014.9,
+              "volume": 115417.05,
               "rank": 11,
               "listed_tier": "B"
             },
             {
               "address": "0xD1D6872BD75cFB0C221D69055D67035A627d341C",
-              "volume": 106730.61,
+              "volume": 107132.76,
               "rank": 12,
               "listed_tier": "B"
             },
             {
               "address": "0xcfc3e5bA5F8432912A369Dc1e04733e5485Fc7e6",
-              "volume": 70456.68,
+              "volume": 70778.4,
               "rank": 13,
               "listed_tier": "B"
             }
