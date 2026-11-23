@@ -38,7 +38,10 @@
         "losing_predictions": 14380,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 184284.29423459244,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 2,
@@ -54,7 +57,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 85169.11954498448,
+        "pool_role": "trader"
       },
       {
         "rank": 3,
@@ -70,7 +76,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 84765.44901022254,
+        "pool_role": "trader"
       },
       {
         "rank": 4,
@@ -86,7 +95,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 83452.32999529314,
+        "pool_role": "trader"
       },
       {
         "rank": 5,
@@ -102,7 +114,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 82267.69614537284,
+        "pool_role": "trader"
       },
       {
         "rank": 6,
@@ -118,7 +133,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 81418.92405327436,
+        "pool_role": "trader"
       },
       {
         "rank": 7,
@@ -134,7 +152,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 80563.89996511098,
+        "pool_role": "trader"
       },
       {
         "rank": 8,
@@ -150,7 +171,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 79239.86476235595,
+        "pool_role": "trader"
       },
       {
         "rank": 9,
@@ -166,7 +190,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 79229.91188607189,
+        "pool_role": "trader"
       },
       {
         "rank": 10,
@@ -182,7 +209,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 79064.16844027842,
+        "pool_role": "trader"
       },
       {
         "rank": 11,
@@ -198,7 +228,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 77861.51652150918,
+        "pool_role": "trader"
       },
       {
         "rank": 12,
@@ -214,7 +247,10 @@
         "losing_predictions": 560,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 9946.926441351889,
+        "regular_volume": 3111.532694961712,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 13,
@@ -230,7 +266,10 @@
         "losing_predictions": 243,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 5902.245526838966,
+        "regular_volume": 18.29096409446811,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 14,
@@ -246,7 +285,10 @@
         "losing_predictions": 211,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1500.8807157057654,
+        "regular_volume": 3685.113220997664,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 15,
@@ -262,7 +304,10 @@
         "losing_predictions": 365,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 3560.5159045725645,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 16,
@@ -278,7 +323,10 @@
         "losing_predictions": 301,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 3114.895626242545,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 17,
@@ -294,7 +342,10 @@
         "losing_predictions": 18,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 3054.623260437376,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 18,
@@ -310,7 +361,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 2958.7863568746125,
+        "pool_role": "trader"
       },
       {
         "rank": 19,
@@ -326,7 +380,10 @@
         "losing_predictions": 96,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1055.7544731610337,
+        "regular_volume": 1072.4666596477573,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 20,
@@ -342,7 +399,10 @@
         "losing_predictions": 24,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 1773.6238860810008,
+        "pool_role": "trader"
       },
       {
         "rank": 21,
@@ -358,7 +418,10 @@
         "losing_predictions": 35,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 49.89761431411531,
+        "regular_volume": 1461.3761192339816,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 22,
@@ -374,7 +437,10 @@
         "losing_predictions": 217,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 1270.741550695825,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 23,
@@ -390,7 +456,10 @@
         "losing_predictions": 124,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 985.1073558648111,
+        "regular_volume": 178.53363760605384,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 24,
@@ -406,7 +475,10 @@
         "losing_predictions": 240,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 613.5685884691849,
+        "regular_volume": 378.5948289458138,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 25,
@@ -422,7 +494,10 @@
         "losing_predictions": 363,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 957.5428096588756,
+        "regular_volume": 0.9850677229804887,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 26,
@@ -438,7 +513,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 861.6831197853281,
+        "pool_role": "trader"
       },
       {
         "rank": 27,
@@ -454,7 +532,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 789.3067009491137,
+        "pool_role": "trader"
       },
       {
         "rank": 28,
@@ -470,7 +551,10 @@
         "losing_predictions": 9,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 761.0569725759232,
+        "pool_role": "trader"
       },
       {
         "rank": 29,
@@ -486,7 +570,10 @@
         "losing_predictions": 329,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 734.1660039761431,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 30,
@@ -502,7 +589,10 @@
         "losing_predictions": 133,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 681.0777335984095,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 31,
@@ -518,7 +608,10 @@
         "losing_predictions": 178,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 647.2291760757926,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 32,
@@ -534,7 +627,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 33,
@@ -550,7 +646,10 @@
         "losing_predictions": 392,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 580.986083499006,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 34,
@@ -566,7 +665,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 550.8512864968694,
+        "pool_role": "trader"
       },
       {
         "rank": 35,
@@ -582,7 +684,10 @@
         "losing_predictions": 289,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 546.2226640159046,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 36,
@@ -598,7 +703,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 541.7972804214403,
+        "pool_role": "trader"
       },
       {
         "rank": 37,
@@ -614,7 +722,10 @@
         "losing_predictions": 255,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 523.8568588469185,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 38,
@@ -630,7 +741,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 198.1083499005964,
+        "regular_volume": 252.90486237187582,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 39,
@@ -646,7 +760,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 424.74183780449505,
+        "pool_role": "trader"
       },
       {
         "rank": 40,
@@ -662,7 +779,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 408.97205318611816,
+        "pool_role": "trader"
       },
       {
         "rank": 41,
@@ -678,7 +798,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 396.7139493507379,
+        "pool_role": "trader"
       },
       {
         "rank": 42,
@@ -694,7 +817,10 @@
         "losing_predictions": 29,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 372.5029821073559,
+        "regular_volume": 22.63533767350964,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 43,
@@ -710,7 +836,10 @@
         "losing_predictions": 19,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 393.80223717126916,
+        "pool_role": "trader"
       },
       {
         "rank": 44,
@@ -726,7 +855,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 383.54533855345755,
+        "pool_role": "trader"
       },
       {
         "rank": 45,
@@ -742,7 +874,10 @@
         "losing_predictions": 370,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 358.62057654075545,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 46,
@@ -758,7 +893,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 334.76723101733944,
+        "pool_role": "trader"
       },
       {
         "rank": 47,
@@ -774,7 +912,10 @@
         "losing_predictions": 124,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 331.00422213183606,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 48,
@@ -790,7 +931,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 315.7800489526454,
+        "pool_role": "trader"
       },
       {
         "rank": 49,
@@ -806,7 +950,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 295.5245378851235,
+        "pool_role": "trader"
       },
       {
         "rank": 50,
@@ -822,7 +969,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 5.928429423459245,
+        "regular_volume": 261.8814603869229,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 51,
@@ -838,7 +988,10 @@
         "losing_predictions": 111,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 253.18598433905115,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 52,
@@ -854,7 +1007,10 @@
         "losing_predictions": 84,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 228.54922271483957,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 53,
@@ -870,7 +1026,10 @@
         "losing_predictions": 23,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 219.35387673956262,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 54,
@@ -886,7 +1045,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 213.6614288127865,
+        "pool_role": "trader"
       },
       {
         "rank": 55,
@@ -902,7 +1064,10 @@
         "losing_predictions": 22,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 82.99801192842942,
+        "regular_volume": 114.81134647899101,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 56,
@@ -918,7 +1083,10 @@
         "losing_predictions": 20,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 197.02456680055042,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 57,
@@ -934,7 +1102,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 185.40263319940937,
+        "pool_role": "trader"
       },
       {
         "rank": 58,
@@ -950,7 +1121,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 166.7447645447585,
+        "pool_role": "trader"
       },
       {
         "rank": 59,
@@ -966,7 +1140,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 166.68794578109595,
+        "pool_role": "trader"
       },
       {
         "rank": 60,
@@ -982,7 +1159,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 161.88347580631134,
+        "pool_role": "trader"
       },
       {
         "rank": 61,
@@ -998,7 +1178,10 @@
         "losing_predictions": 57,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 160.56163021868787,
+        "regular_volume": 0.983898861232916,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 62,
@@ -1014,7 +1197,10 @@
         "losing_predictions": 46,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 159.57355864811134,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 63,
@@ -1030,7 +1216,10 @@
         "losing_predictions": 71,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 91.39662027833002,
+        "regular_volume": 66.59519398322975,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 64,
@@ -1046,7 +1235,10 @@
         "losing_predictions": 10,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 154.13916500994037,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 65,
@@ -1062,7 +1254,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 150.42181557752005,
+        "pool_role": "trader"
       },
       {
         "rank": 66,
@@ -1078,7 +1273,10 @@
         "losing_predictions": 23,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 147.49043737574553,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 67,
@@ -1094,7 +1292,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 145.5437604872817,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 68,
@@ -1110,7 +1311,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 132.5622155796487,
+        "pool_role": "trader"
       },
       {
         "rank": 69,
@@ -1126,7 +1330,10 @@
         "losing_predictions": 112,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 128.4493041749503,
+        "regular_volume": 0.991930257092406,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 70,
@@ -1142,7 +1349,10 @@
         "losing_predictions": 16,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 125.48508946322067,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 71,
@@ -1158,7 +1368,10 @@
         "losing_predictions": 16,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 122.1557723765445,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 72,
@@ -1174,7 +1387,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 121.92685105603739,
+        "pool_role": "trader"
       },
       {
         "rank": 73,
@@ -1190,7 +1406,10 @@
         "losing_predictions": 13,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 121.1375745526839,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 74,
@@ -1206,7 +1425,10 @@
         "losing_predictions": 23,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 119.1991815646228,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 75,
@@ -1222,7 +1444,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 11.377733598409543,
+        "regular_volume": 99.20403636112015,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 76,
@@ -1238,7 +1463,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 103.1655542517874,
+        "pool_role": "trader"
       },
       {
         "rank": 77,
@@ -1254,7 +1482,10 @@
         "losing_predictions": 87,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 101.39165009940358,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 78,
@@ -1270,7 +1501,10 @@
         "losing_predictions": 9,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 99.26321346917186,
+        "pool_role": "trader"
       },
       {
         "rank": 79,
@@ -1286,7 +1520,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 98.13256970182705,
+        "pool_role": "trader"
       },
       {
         "rank": 80,
@@ -1302,7 +1539,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 97.06989037983081,
+        "pool_role": "trader"
       },
       {
         "rank": 81,
@@ -1318,7 +1558,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 91.38792571327502,
+        "pool_role": "trader"
       },
       {
         "rank": 82,
@@ -1334,7 +1577,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 88.10535872258536,
+        "pool_role": "trader"
       },
       {
         "rank": 83,
@@ -1350,7 +1596,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 88.02227913879015,
+        "pool_role": "trader"
       },
       {
         "rank": 84,
@@ -1366,7 +1615,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 87.57987154894637,
+        "pool_role": "trader"
       },
       {
         "rank": 85,
@@ -1382,7 +1634,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 79.43175194011909,
+        "pool_role": "trader"
       },
       {
         "rank": 86,
@@ -1398,7 +1653,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 78.63534515642297,
+        "pool_role": "trader"
       },
       {
         "rank": 87,
@@ -1414,7 +1672,10 @@
         "losing_predictions": 37,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 76.8410661235817,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 88,
@@ -1430,7 +1691,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 76.06041843458654,
+        "pool_role": "trader"
       },
       {
         "rank": 89,
@@ -1446,7 +1710,10 @@
         "losing_predictions": 42,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 65.02046626060374,
+        "regular_volume": 10.80119792376135,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 90,
@@ -1462,7 +1729,10 @@
         "losing_predictions": 28,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 75.17174187343946,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 91,
@@ -1478,7 +1748,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 74.63467300779159,
+        "pool_role": "trader"
       },
       {
         "rank": 92,
@@ -1494,7 +1767,10 @@
         "losing_predictions": 21,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 74.10636182902584,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 93,
@@ -1510,7 +1786,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 74.02255426641887,
+        "pool_role": "trader"
       },
       {
         "rank": 94,
@@ -1526,7 +1805,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 95,
@@ -1542,7 +1824,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 71.23588374577177,
+        "pool_role": "trader"
       },
       {
         "rank": 96,
@@ -1558,7 +1843,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 70.69121891208698,
+        "pool_role": "trader"
       },
       {
         "rank": 97,
@@ -1574,7 +1862,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 65.42962855855012,
+        "pool_role": "trader"
       },
       {
         "rank": 98,
@@ -1590,7 +1881,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 63.776051895844574,
+        "pool_role": "trader"
       },
       {
         "rank": 99,
@@ -1606,7 +1900,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 62.83009787160462,
+        "pool_role": "trader"
       },
       {
         "rank": 100,
@@ -1622,7 +1919,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 59.10671825645207,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 101,
@@ -1638,7 +1938,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 57.91542437095578,
+        "pool_role": "trader"
       },
       {
         "rank": 102,
@@ -1654,7 +1957,10 @@
         "losing_predictions": 6,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 55.97399698423624,
+        "pool_role": "trader"
       },
       {
         "rank": 103,
@@ -1670,7 +1976,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 55.25511986923503,
+        "pool_role": "trader"
       },
       {
         "rank": 104,
@@ -1686,7 +1995,10 @@
         "losing_predictions": 77,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 51.73002972292129,
+        "regular_volume": 0.9888687508497682,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 105,
@@ -1702,7 +2014,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 11.85685884691849,
+        "regular_volume": 38.111408730090666,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 106,
@@ -1718,7 +2033,10 @@
         "losing_predictions": 26,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 47.286988414470066,
+        "regular_volume": 1.970467847134124,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 107,
@@ -1734,7 +2052,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 49.25571938884624,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 108,
@@ -1750,7 +2071,10 @@
         "losing_predictions": 18,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 48.272278691884566,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 109,
@@ -1766,7 +2090,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 47.18710689265463,
+        "pool_role": "trader"
       },
       {
         "rank": 110,
@@ -1782,7 +2109,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 45.73393276899622,
+        "pool_role": "trader"
       },
       {
         "rank": 111,
@@ -1798,7 +2128,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 44.64168731033798,
+        "pool_role": "trader"
       },
       {
         "rank": 112,
@@ -1814,7 +2147,10 @@
         "losing_predictions": 14,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 42.98111332007952,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 113,
@@ -1830,7 +2166,10 @@
         "losing_predictions": 42,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 42.98111332007952,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 114,
@@ -1846,7 +2185,10 @@
         "losing_predictions": 21,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 42.87607687210073,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 115,
@@ -1862,7 +2204,10 @@
         "losing_predictions": 28,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 41.37813245888527,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 116,
@@ -1878,7 +2223,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 36.142748779822234,
+        "pool_role": "trader"
       },
       {
         "rank": 117,
@@ -1894,7 +2242,10 @@
         "losing_predictions": 24,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 35.785288270377734,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 118,
@@ -1910,7 +2261,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 34.07967486642743,
+        "pool_role": "trader"
       },
       {
         "rank": 119,
@@ -1926,7 +2280,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 32.41461416578501,
+        "pool_role": "trader"
       },
       {
         "rank": 120,
@@ -1942,7 +2299,10 @@
         "losing_predictions": 28,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 20.255467196819087,
+        "regular_volume": 11.865177036464932,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 121,
@@ -1958,7 +2318,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 30.4835793202651,
+        "pool_role": "trader"
       },
       {
         "rank": 122,
@@ -1974,7 +2337,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 29.76127809248655,
+        "pool_role": "trader"
       },
       {
         "rank": 123,
@@ -1990,7 +2356,10 @@
         "losing_predictions": 17,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 29.55425755992582,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 124,
@@ -2006,7 +2375,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 29.553974268478523,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 125,
@@ -2022,7 +2394,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 29.553472992026176,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 126,
@@ -2038,7 +2413,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 29.55332760863592,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 127,
@@ -2054,7 +2432,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 29.532150429084396,
+        "pool_role": "trader"
       },
       {
         "rank": 128,
@@ -2070,7 +2451,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 29.081391852158163,
+        "pool_role": "trader"
       },
       {
         "rank": 129,
@@ -2086,7 +2470,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 28.1769625936775,
+        "pool_role": "trader"
       },
       {
         "rank": 130,
@@ -2102,7 +2489,10 @@
         "losing_predictions": 8,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 24.629010316259475,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 131,
@@ -2118,7 +2508,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 24.62720354322094,
+        "pool_role": "trader"
       },
       {
         "rank": 132,
@@ -2134,7 +2527,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 2.470178926441352,
+        "regular_volume": 21.081849994140544,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 133,
@@ -2150,7 +2546,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 21.762083656396985,
+        "pool_role": "trader"
       },
       {
         "rank": 134,
@@ -2166,7 +2565,10 @@
         "losing_predictions": 111,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 16.543798517770984,
+        "regular_volume": 4.626060057528338,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 135,
@@ -2182,7 +2584,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 19.703299939305747,
+        "pool_role": "trader"
       },
       {
         "rank": 136,
@@ -2198,7 +2603,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 19.70255522406347,
+        "pool_role": "trader"
       },
       {
         "rank": 137,
@@ -2214,7 +2622,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 19.702399871140962,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 138,
@@ -2230,7 +2641,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 19.702360258476553,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 139,
@@ -2246,7 +2660,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 19.55527616990745,
+        "pool_role": "trader"
       },
       {
         "rank": 140,
@@ -2262,7 +2679,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 19.270056554545825,
+        "pool_role": "trader"
       },
       {
         "rank": 141,
@@ -2278,7 +2698,10 @@
         "losing_predictions": 28,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 18.872166998011927,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 142,
@@ -2294,7 +2717,10 @@
         "losing_predictions": 11,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 9.79222520646666,
+        "regular_volume": 7.884311992138404,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 143,
@@ -2310,7 +2736,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 16.84046272337541,
+        "pool_role": "trader"
       },
       {
         "rank": 144,
@@ -2326,7 +2755,10 @@
         "losing_predictions": 9,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 16.747095277685652,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 145,
@@ -2342,7 +2774,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 15.136770496939105,
+        "pool_role": "trader"
       },
       {
         "rank": 146,
@@ -2358,7 +2793,10 @@
         "losing_predictions": 5,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 14.77690428817251,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 147,
@@ -2374,7 +2812,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 14.776364739908493,
+        "pool_role": "trader"
       },
       {
         "rank": 148,
@@ -2390,7 +2831,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 13.791857135645916,
+        "pool_role": "trader"
       },
       {
         "rank": 149,
@@ -2406,7 +2850,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 13.242309358164299,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 150,
@@ -2422,7 +2869,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 13.0024304323005,
+        "pool_role": "trader"
       },
       {
         "rank": 151,
@@ -2438,7 +2888,10 @@
         "losing_predictions": 13,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 12.35089463220676,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 152,
@@ -2454,7 +2907,10 @@
         "losing_predictions": 15,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 12.35089463220676,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 153,
@@ -2470,7 +2926,10 @@
         "losing_predictions": 55,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 7.91309063566014,
+        "regular_volume": 4.2024765519574725,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 154,
@@ -2486,7 +2945,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 12.053712968721882,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 155,
@@ -2502,7 +2964,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 11.90314611637296,
+        "pool_role": "trader"
       },
       {
         "rank": 156,
@@ -2518,7 +2983,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 11.805860060468211,
+        "pool_role": "trader"
       },
       {
         "rank": 157,
@@ -2534,7 +3002,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 11.739825727811722,
+        "pool_role": "trader"
       },
       {
         "rank": 158,
@@ -2550,7 +3021,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 11.58396954991003,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 159,
@@ -2566,7 +3040,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 160,
@@ -2582,7 +3059,10 @@
         "losing_predictions": 4,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 10.836527753664072,
+        "pool_role": "trader"
       },
       {
         "rank": 161,
@@ -2598,7 +3078,10 @@
         "losing_predictions": 12,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 9.880715705765407,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 162,
@@ -2614,7 +3097,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 9.854422811842262,
+        "pool_role": "trader"
       },
       {
         "rank": 163,
@@ -2630,7 +3116,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 9.851069564308911,
+        "pool_role": "trader"
       },
       {
         "rank": 164,
@@ -2646,7 +3135,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 9.850904622523968,
+        "pool_role": "trader"
       },
       {
         "rank": 165,
@@ -2662,7 +3154,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 9.85088573906008,
+        "pool_role": "trader"
       },
       {
         "rank": 166,
@@ -2678,7 +3173,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 9.850854779489929,
+        "pool_role": "trader"
       },
       {
         "rank": 167,
@@ -2694,7 +3192,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 9.591410134145248,
+        "pool_role": "trader"
       },
       {
         "rank": 168,
@@ -2710,7 +3211,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 9.070326889610481,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 169,
@@ -2726,7 +3230,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 8.865783013253507,
+        "pool_role": "trader"
       },
       {
         "rank": 170,
@@ -2742,7 +3249,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 8.565423461976495,
+        "pool_role": "trader"
       },
       {
         "rank": 171,
@@ -2758,7 +3268,10 @@
         "losing_predictions": 7,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 7.2542966352725,
+        "regular_volume": 1.1710618321121942,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 172,
@@ -2774,7 +3287,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 8.385751819490885,
+        "pool_role": "trader"
       },
       {
         "rank": 173,
@@ -2790,7 +3306,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 7.19586259718242,
+        "pool_role": "trader"
       },
       {
         "rank": 174,
@@ -2806,7 +3325,10 @@
         "losing_predictions": 5,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 5.911443664446058,
+        "regular_volume": 1.1884542016837507,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 175,
@@ -2822,7 +3344,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 6.895828455561448,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 176,
@@ -2838,7 +3363,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 177,
@@ -2854,7 +3382,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 6.2790517418189715,
+        "pool_role": "trader"
       },
       {
         "rank": 178,
@@ -2870,7 +3401,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 6.100515950496489,
+        "pool_role": "trader"
       },
       {
         "rank": 179,
@@ -2886,7 +3420,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 5.910829374613242,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 180,
@@ -2902,7 +3439,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 5.420126783680715,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 181,
@@ -2918,7 +3458,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 5.148445761052691,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 182,
@@ -2934,7 +3477,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 4.961825885659318,
+        "pool_role": "trader"
       },
       {
         "rank": 183,
@@ -2950,7 +3496,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 4.959315549396019,
+        "pool_role": "trader"
       },
       {
         "rank": 184,
@@ -2966,7 +3515,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 4.9258032711094915,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 185,
@@ -2982,7 +3534,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 4.925662662763978,
+        "pool_role": "trader"
       },
       {
         "rank": 186,
@@ -2998,7 +3553,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 4.925572259103334,
+        "pool_role": "trader"
       },
       {
         "rank": 187,
@@ -3014,7 +3572,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 4.9254320260173845,
+        "pool_role": "trader"
       },
       {
         "rank": 188,
@@ -3030,7 +3591,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 4.899940337965967,
+        "pool_role": "trader"
       },
       {
         "rank": 189,
@@ -3046,7 +3610,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 4.768785226452629,
+        "pool_role": "trader"
       },
       {
         "rank": 190,
@@ -3062,7 +3629,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 4.049013814951094,
+        "pool_role": "trader"
       },
       {
         "rank": 191,
@@ -3078,7 +3648,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 3.9678349484999718,
+        "pool_role": "trader"
       },
       {
         "rank": 192,
@@ -3094,7 +3667,10 @@
         "losing_predictions": 2,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 3.940500423247935,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 193,
@@ -3110,7 +3686,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 2.713164459058039,
+        "pool_role": "trader"
       },
       {
         "rank": 194,
@@ -3126,7 +3705,10 @@
         "losing_predictions": 10,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 2.6710049704770484,
+        "regular_volume": 0.0,
+        "pool_role": "blitz_real"
       },
       {
         "rank": 195,
@@ -3142,7 +3724,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 2.5320192698315904,
+        "pool_role": "trader"
       },
       {
         "rank": 196,
@@ -3158,7 +3743,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": null,
+        "regular_volume": null,
+        "pool_role": null
       },
       {
         "rank": 197,
@@ -3174,7 +3762,10 @@
         "losing_predictions": 3,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 2.0334466595092966,
+        "pool_role": "trader"
       },
       {
         "rank": 198,
@@ -3190,7 +3781,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 1.9838760065458971,
+        "pool_role": "trader"
       },
       {
         "rank": 199,
@@ -3206,7 +3800,10 @@
         "losing_predictions": 0,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 1.9837779595253562,
+        "pool_role": "trader"
       },
       {
         "rank": 200,
@@ -3222,7 +3819,10 @@
         "losing_predictions": 1,
         "points_rank": null,
         "points": null,
-        "name": null
+        "name": null,
+        "blitz_volume": 0.0,
+        "regular_volume": 1.9706834861400842,
+        "pool_role": "trader"
       }
     ],
     "aggregate": {
@@ -3262,7 +3862,20 @@
           "volume": 85169.11954498448,
           "rank": 2
         }
-      }
+      },
+      "agent": {
+        "count": 0,
+        "volume": 0.0,
+        "share_pct": 0.0,
+        "addresses": []
+      },
+      "seed": {
+        "count": 0,
+        "volume": 0.0,
+        "share_pct": 0.0,
+        "addresses": []
+      },
+      "pool_adjusted": true
     },
     "from": "2026-08-06",
     "to": "2026-08-12",
@@ -3270,5 +3883,1889 @@
     "end_exclusive": "2026-08-13T00:00:00Z",
     "points_week_start": "Thursday 00:00 UTC",
     "kind": "thursday"
+  },
+  "breakdown": {
+    "status": "ok",
+    "fetched_at": "2026-11-23T03:59:39Z",
+    "formula": "regular = total - blitz_total - agents; blitz_seed = blitz_total - blitz_real",
+    "total": 1064645.9267055602,
+    "blitz_total": 233685.36072291245,
+    "blitz_real": 225045.36072291245,
+    "blitz_seed": 8640.0,
+    "agents": {
+      "sum": 0.0,
+      "codex": {
+        "address": "0x66544aCf5d062e57f84d3dCb032880F9ACb27718",
+        "label": "codex",
+        "volume": 0.0,
+        "leaderboard_volume": 0.0,
+        "baseline_volume": 0.0,
+        "end_volume": 0.0,
+        "baseline_hour": null,
+        "end_hour": null,
+        "match": true
+      },
+      "claude": {
+        "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
+        "label": "claude",
+        "volume": 0.0,
+        "leaderboard_volume": 0.0,
+        "baseline_volume": 0.0,
+        "end_volume": 0.0,
+        "baseline_hour": null,
+        "end_hour": null,
+        "match": true
+      },
+      "grok": {
+        "address": "0x583AF2BD8A25B2E5886176B7D5bfA4D209e5b8d4",
+        "label": "grok",
+        "volume": 0.0,
+        "leaderboard_volume": 0.0,
+        "baseline_volume": 0.0,
+        "end_volume": 0.0,
+        "baseline_hour": null,
+        "end_hour": null,
+        "match": true
+      }
+    },
+    "regular": 830960.5659826477,
+    "reconciled": true,
+    "residual": 0.0,
+    "race_count": 7200,
+    "seed_addresses": [],
+    "gaps_closed": false,
+    "note": "种子 Blitz 还有 8640.00 没有落到具体钱包。",
+    "wallet_check": {
+      "real_sum": 225035.9839773518,
+      "real_gap": 9.37674556064303,
+      "seed_sum": 0,
+      "seed_gap": 8640.0,
+      "failed": 0
+    },
+    "sources": {
+      "blitz": "GET /api/v1/token-races/volume?from&to，excludeSeed=true 为真实玩家",
+      "leaderboard": "GET /api/v1/token-races/leaderboard",
+      "agents": "GET /api/v1/mining/history 累计 volume 的窗口差额"
+    },
+    "wallets": [
+      {
+        "address": "0xA19b6dE5100A5407fD67Afbd1C87E47B34c70404",
+        "blitz": 3560.5159045725645,
+        "regular": 0.0,
+        "leaderboard": 3560.5159045725645,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1453
+      },
+      {
+        "address": "0xce01B1f6c9b550AED459471B379bfb47c5C37A23",
+        "blitz": 9946.926441351889,
+        "regular": 3111.532694961712,
+        "leaderboard": 13058.4591363136,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1573
+      },
+      {
+        "address": "0xADf93065F028ca9150b8807dbA9cd7EBb75D06c3",
+        "blitz": 1270.741550695825,
+        "regular": 0.0,
+        "leaderboard": 1270.741550695825,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 665
+      },
+      {
+        "address": "0xFF33803B157D3a968dcdF590ee439d035e686EAa",
+        "blitz": 681.0777335984095,
+        "regular": 0.0,
+        "leaderboard": 681.0777335984095,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 346
+      },
+      {
+        "address": "0x8F766FC4F5919cE443D3937b4898e26a92245Ca8",
+        "blitz": 580.986083499006,
+        "regular": 0.0,
+        "leaderboard": 580.986083499006,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 294
+      },
+      {
+        "address": "0x88e5E119e9916B32e68A18fd9AB96274d71749C9",
+        "blitz": 546.2226640159046,
+        "regular": 0.0,
+        "leaderboard": 546.2226640159046,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 618
+      },
+      {
+        "address": "0x1b03E6554b44e6E0dcd69124e372aC8ecbEa755A",
+        "blitz": 613.5685884691849,
+        "regular": 378.5948289458138,
+        "leaderboard": 992.1634174149987,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 561
+      },
+      {
+        "address": "0xF54a4C67B716318F39a1D91b3672Ad6DdFbA889E",
+        "blitz": 1055.7544731610337,
+        "regular": 1072.4666596477573,
+        "leaderboard": 2128.221132808791,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 185
+      },
+      {
+        "address": "0x9213CA3bEB286c35d4300ffD205B09041F959f67",
+        "blitz": 734.1660039761431,
+        "regular": 0.0,
+        "leaderboard": 734.1660039761431,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 712
+      },
+      {
+        "address": "0x98f5a125590b03ba3bA10AC9C7F6114c88d75fF6",
+        "blitz": 159.57355864811134,
+        "regular": 0.0,
+        "leaderboard": 159.57355864811134,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 153
+      },
+      {
+        "address": "0x80E265Fd2D75602A5c5d71fabD60448b73E6AC37",
+        "blitz": 91.39662027833002,
+        "regular": 66.59519398322975,
+        "leaderboard": 157.99181426155977,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 124
+      },
+      {
+        "address": "0x713A2009809f4efD236E1Ff950cB43a0872B730A",
+        "blitz": 228.54922271483957,
+        "regular": 0.0,
+        "leaderboard": 228.54922271483957,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 89
+      },
+      {
+        "address": "0xA79E21622DfC0D6DE14Fd658B89369e414dD1077",
+        "blitz": 1500.8807157057654,
+        "regular": 3685.113220997664,
+        "leaderboard": 5185.993936703429,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 424
+      },
+      {
+        "address": "0x03fAa7be1a08E84d987b6241eac051d2e12343B9",
+        "blitz": 331.00422213183606,
+        "regular": 0.0,
+        "leaderboard": 331.00422213183606,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 101
+      },
+      {
+        "address": "0xeaEeE5def170d2EF4C8F85c0D5B1eF4ca2352979",
+        "blitz": 523.8568588469185,
+        "regular": 0.0,
+        "leaderboard": 523.8568588469185,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 581
+      },
+      {
+        "address": "0x8453a44A7Db564DD5F39C64Ce354e13DE85F0546",
+        "blitz": 985.1073558648111,
+        "regular": 178.53363760605384,
+        "leaderboard": 1163.640993470865,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 98
+      },
+      {
+        "address": "0x9AA79F52e9Ca2492eEE76E47F16E54FFE0CF9D82",
+        "blitz": 198.1083499005964,
+        "regular": 252.90486237187582,
+        "leaderboard": 451.01321227247223,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 19
+      },
+      {
+        "address": "0xE6eE5593cFBFbAF6F823D299C965a869937ff594",
+        "blitz": 128.4493041749503,
+        "regular": 0.991930257092406,
+        "leaderboard": 129.4412344320427,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 190
+      },
+      {
+        "address": "0x0B083E6c0a1615Ba91dD987a750a6A217Cf58Efe",
+        "blitz": 358.62057654075545,
+        "regular": 0.0,
+        "leaderboard": 358.62057654075545,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 287
+      },
+      {
+        "address": "0xB468d7D92A0b027C9F58F258c0d89D9fCf17D394",
+        "blitz": 372.5029821073559,
+        "regular": 22.63533767350964,
+        "leaderboard": 395.1383197808655,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 20
+      },
+      {
+        "address": "0x67506AC99034FEC04aE6f3fdBFDc4ED6fDCDfcE0",
+        "blitz": 160.56163021868787,
+        "regular": 0.983898861232916,
+        "leaderboard": 161.54552907992078,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 92
+      },
+      {
+        "address": "0x7a941497f764513528E27Ba1e87010B498c08214",
+        "blitz": 49.89761431411531,
+        "regular": 1461.3761192339816,
+        "leaderboard": 1511.273733548097,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 41
+      },
+      {
+        "address": "0xD9A59053e7EaFD0F7Bbf622Ac20c466B01fdA0cE",
+        "blitz": 20.255467196819087,
+        "regular": 11.865177036464932,
+        "leaderboard": 32.12064423328402,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 20
+      },
+      {
+        "address": "0x452EB4fD810B117456Ec2b065501cC7b8129F88F",
+        "blitz": 42.87607687210073,
+        "regular": 0.0,
+        "leaderboard": 42.87607687210073,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 44
+      },
+      {
+        "address": "0x7beD221FE814870CBd10654427837fBdB93F8C87",
+        "blitz": 101.39165009940358,
+        "regular": 0.0,
+        "leaderboard": 101.39165009940358,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 181
+      },
+      {
+        "address": "0xAcC13d8C3209A33535948e3BA416f9173215F8c4",
+        "blitz": 253.18598433905115,
+        "regular": 0.0,
+        "leaderboard": 253.18598433905115,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 99
+      },
+      {
+        "address": "0xa8755DB6F260442A95D90C3EAa4b5243fC304697",
+        "blitz": 647.2291760757926,
+        "regular": 0.0,
+        "leaderboard": 647.2291760757926,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 212
+      },
+      {
+        "address": "0x068E585A9B1f6D06F5d0BB5DcAcA95e5DCB093fe",
+        "blitz": 957.5428096588756,
+        "regular": 0.9850677229804887,
+        "leaderboard": 958.5278773818561,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 359
+      },
+      {
+        "address": "0xCedaf8BAE164BbeCaf141d04441C973F7E96768C",
+        "blitz": 3114.895626242545,
+        "regular": 0.0,
+        "leaderboard": 3114.895626242545,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 165
+      },
+      {
+        "address": "0x58192F0ae70Cc169CC6B5699561321B221A6b141",
+        "blitz": 3054.623260437376,
+        "regular": 0.0,
+        "leaderboard": 3054.623260437376,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 53
+      },
+      {
+        "address": "0x986580f360485287a8E1a100F698778de92Ee5cB",
+        "blitz": 5902.245526838966,
+        "regular": 18.29096409446811,
+        "leaderboard": 5920.536490933434,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 171
+      },
+      {
+        "address": "0x2Df17608fC0111F26c502bc46c22d72f5fB87D89",
+        "blitz": 12.35089463220676,
+        "regular": 0.0,
+        "leaderboard": 12.35089463220676,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 25
+      },
+      {
+        "address": "0x70B5987b2c10865881C6Fc69e9AF37678932aFd3",
+        "blitz": 122.1557723765445,
+        "regular": 0.0,
+        "leaderboard": 122.1557723765445,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 33
+      },
+      {
+        "address": "0x07fF93D44ac3C94c950325179fCbEf7E9cE0F94c",
+        "blitz": 42.98111332007952,
+        "regular": 0.0,
+        "leaderboard": 42.98111332007952,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 87
+      },
+      {
+        "address": "0x57a855028B624A861aC793d131de6D5C4640cB98",
+        "blitz": 219.35387673956262,
+        "regular": 0.0,
+        "leaderboard": 219.35387673956262,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 41
+      },
+      {
+        "address": "0x9e6b9Cc64ec96E68fB50A27d48A5B94E42947B30",
+        "blitz": 76.8410661235817,
+        "regular": 0.0,
+        "leaderboard": 76.8410661235817,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 47
+      },
+      {
+        "address": "0xC0c5aaCe309D82a1b0dC544a7495a17b5eE1f75d",
+        "blitz": 5.148445761052691,
+        "regular": 0.0,
+        "leaderboard": 5.148445761052691,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x5CB9Cd26dAfCFA3D486ea9a4b00B4442628cB8AE",
+        "blitz": 18.872166998011927,
+        "regular": 0.0,
+        "leaderboard": 18.872166998011927,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 52
+      },
+      {
+        "address": "0xD895504AD2d317e8176346C42563cdEEc168C226",
+        "blitz": 2.6710049704770484,
+        "regular": 0.0,
+        "leaderboard": 2.6710049704770484,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 13
+      },
+      {
+        "address": "0x2747ad71ff7532c9a6d66f51C7490f8505Da5a1d",
+        "blitz": 65.02046626060374,
+        "regular": 10.80119792376135,
+        "leaderboard": 75.82166418436509,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 28
+      },
+      {
+        "address": "0xE28915FAe2D3808013bF897971DEd7Ec09582ed9",
+        "blitz": 47.286988414470066,
+        "regular": 1.970467847134124,
+        "leaderboard": 49.25745626160419,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 43
+      },
+      {
+        "address": "0x756f1D0485b4efCda969e187C3112252a0c12770",
+        "blitz": 51.73002972292129,
+        "regular": 0.9888687508497682,
+        "leaderboard": 52.718898473771056,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 90
+      },
+      {
+        "address": "0xd9615cC6567bf8bDEbC1716751cE8b91396ED432",
+        "blitz": 48.272278691884566,
+        "regular": 0.0,
+        "leaderboard": 48.272278691884566,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 31
+      },
+      {
+        "address": "0xf2e3FB8C43f4205423f1705C40Bb933454ECC8c6",
+        "blitz": 75.17174187343946,
+        "regular": 0.0,
+        "leaderboard": 75.17174187343946,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 36
+      },
+      {
+        "address": "0xc214049189C42A928Fd45DCca928b32729D068de",
+        "blitz": 125.48508946322067,
+        "regular": 0.0,
+        "leaderboard": 125.48508946322067,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 33
+      },
+      {
+        "address": "0x5a0fF957357382ce7e045E19E44F6Ae2d8FDD31E",
+        "blitz": 197.02456680055042,
+        "regular": 0.0,
+        "leaderboard": 197.02456680055042,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 34
+      },
+      {
+        "address": "0x2D4c677136b4F8c5Df0fbdAC2C3C10Fc662482Ef",
+        "blitz": 5.928429423459245,
+        "regular": 261.8814603869229,
+        "leaderboard": 267.8098898103822,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x0402D2e7129f03b1e64B38dF7a915e9559326eaf",
+        "blitz": 24.629010316259475,
+        "regular": 0.0,
+        "leaderboard": 24.629010316259475,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 15
+      },
+      {
+        "address": "0x2b94A2765aEFF355A7DCe0b23c5665b4f2aDa83c",
+        "blitz": 35.785288270377734,
+        "regular": 0.0,
+        "leaderboard": 35.785288270377734,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 12
+      },
+      {
+        "address": "0x49876839d5f920eC73da43e05C00deB773e107b6",
+        "blitz": 12.35089463220676,
+        "regular": 0.0,
+        "leaderboard": 12.35089463220676,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 22
+      },
+      {
+        "address": "0x3AB5Eb1Dd1D235ee6A62E1664F943b31b898e598",
+        "blitz": 11.377733598409543,
+        "regular": 99.20403636112015,
+        "leaderboard": 110.5817699595297,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 12
+      },
+      {
+        "address": "0x460DaD32141C451AFF2a7a67D9e92a18c646462d",
+        "blitz": 41.37813245888527,
+        "regular": 0.0,
+        "leaderboard": 41.37813245888527,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 39
+      },
+      {
+        "address": "0x7348f6EdfB113bd313deea51D7Fc5Baa17Df36b1",
+        "blitz": 154.13916500994037,
+        "regular": 0.0,
+        "leaderboard": 154.13916500994037,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 24
+      },
+      {
+        "address": "0x4Ff6de41C97302Bb9311a0491D793662CFeC9d1f",
+        "blitz": 119.1991815646228,
+        "regular": 0.0,
+        "leaderboard": 119.1991815646228,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 36
+      },
+      {
+        "address": "0xF1aa748918Cffe663B4F6838A2E130f4C8A77048",
+        "blitz": 74.10636182902584,
+        "regular": 0.0,
+        "leaderboard": 74.10636182902584,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 34
+      },
+      {
+        "address": "0x906948Ea36c0AA629C9fFd04528f7017c4b1Ce2C",
+        "blitz": 147.49043737574553,
+        "regular": 0.0,
+        "leaderboard": 147.49043737574553,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 38
+      },
+      {
+        "address": "0x113DA4cDEb53c10C1224AB36f8FfCB497955De9F",
+        "blitz": 13.242309358164299,
+        "regular": 0.0,
+        "leaderboard": 13.242309358164299,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 9
+      },
+      {
+        "address": "0x02234c32e24625b31F82dFA16fC83b1A671b7127",
+        "blitz": 29.55425755992582,
+        "regular": 0.0,
+        "leaderboard": 29.55425755992582,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 30
+      },
+      {
+        "address": "0x828d0CF8E4003C92a2861B1E9CC72d53F88a5324",
+        "blitz": 11.85685884691849,
+        "regular": 38.111408730090666,
+        "leaderboard": 49.96826757700916,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x4075edbe6B170e604235Dbdb6C453A6d6735De73",
+        "blitz": 1.9702727256108927,
+        "regular": -1.9702727256108927,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x6720Ed856647cF181eDD6b8Fa718252cC4e98D32",
+        "blitz": 9.79222520646666,
+        "regular": 7.884311992138404,
+        "leaderboard": 17.676537198605065,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0xFfa8D351543fc1C0F403Cc530B7A66E4Be8f8c55",
+        "blitz": 6.895828455561448,
+        "regular": 0.0,
+        "leaderboard": 6.895828455561448,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0xc8f964033a59514a60A6bD2eb5B670f0710e317a",
+        "blitz": 145.5437604872817,
+        "regular": 0.0,
+        "leaderboard": 145.5437604872817,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0x7f0e4931d59391B30a2F73d73BefD1FE03AfBF5e",
+        "blitz": 9.880715705765407,
+        "regular": 0.0,
+        "leaderboard": 9.880715705765407,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 19
+      },
+      {
+        "address": "0x5329Cd3DFc96746328BAfa1B8B574483F2B16dE6",
+        "blitz": 16.747095277685652,
+        "regular": 0.0,
+        "leaderboard": 16.747095277685652,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 16
+      },
+      {
+        "address": "0x8036E762b36CaeE47F387d79f2d8D81c63fBFDC2",
+        "blitz": 12.053712968721882,
+        "regular": 0.0,
+        "leaderboard": 12.053712968721882,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0xbde8E511A147a7bEFc8BDf4C1673ccFD8ceca33b",
+        "blitz": 7.91309063566014,
+        "regular": 4.2024765519574725,
+        "leaderboard": 12.115567187617613,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 38
+      },
+      {
+        "address": "0x4FCEa3b50f4Bb409D5575a39A7FeE147B81219Ea",
+        "blitz": 16.543798517770984,
+        "regular": 4.626060057528338,
+        "leaderboard": 21.169858575299322,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 62
+      },
+      {
+        "address": "0xC528dB31508C5DB71D6Ff4394CE4AE3f1E82D167",
+        "blitz": 42.98111332007952,
+        "regular": 0.0,
+        "leaderboard": 42.98111332007952,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 10
+      },
+      {
+        "address": "0x9BdbC21e6E4B6786938169ecaa80899d1F18D4e1",
+        "blitz": 59.10671825645207,
+        "regular": 0.0,
+        "leaderboard": 59.10671825645207,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x369A90011194b5Ec501F1381dB57f2009e5c60C7",
+        "blitz": 82.99801192842942,
+        "regular": 114.81134647899101,
+        "leaderboard": 197.80935840742043,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 14
+      },
+      {
+        "address": "0x72786A22e5Ddc4947CFBC8D9DfB934C605Bb8172",
+        "blitz": 121.1375745526839,
+        "regular": 0.0,
+        "leaderboard": 121.1375745526839,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 21
+      },
+      {
+        "address": "0x0b4cE359C81015A7fF38e01900F978047eBff7aD",
+        "blitz": 29.553974268478523,
+        "regular": 0.0,
+        "leaderboard": 29.553974268478523,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xD230CE1D6fcee44f96739D3289DE7f5c4E486a59",
+        "blitz": 1.9702344496222663,
+        "regular": -1.9702344496222663,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xe6E5854b2C77351166231DF16FC726D2220A5D92",
+        "blitz": 1.9702537810935055,
+        "regular": -1.9702537810935055,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0xFAfcF432E57525225B19d91dDA9E2d7b93F70419",
+        "blitz": 11.58396954991003,
+        "regular": 0.0,
+        "leaderboard": 11.58396954991003,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0xc548EE002B3922f0985577aEE5440ffCfCC5C3f6",
+        "blitz": 5.910829374613242,
+        "regular": 0.0,
+        "leaderboard": 5.910829374613242,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x181403bd64C939F48293f4282A390311052818e2",
+        "blitz": 4.9258032711094915,
+        "regular": 0.0,
+        "leaderboard": 4.9258032711094915,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xE98DDB9B5E5dbc21D4F1b1F1558C076B065E1e93",
+        "blitz": 2.470178926441352,
+        "regular": 21.081849994140544,
+        "leaderboard": 23.552028920581897,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 4
+      },
+      {
+        "address": "0x8B562eB5F312107D4bB9aE92CD3968D65be89b90",
+        "blitz": 5.420126783680715,
+        "regular": 0.0,
+        "leaderboard": 5.420126783680715,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x27afC71de5B8BD088fd4eDE54B444013d4D8F092",
+        "blitz": 5.911443664446058,
+        "regular": 1.1884542016837507,
+        "leaderboard": 7.099897866129809,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0xfeC14550CB29FAd5d8ea8F067320Bf0D66c04209",
+        "blitz": 19.702399871140962,
+        "regular": 0.0,
+        "leaderboard": 19.702399871140962,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x7ED5366478ff7ef40bbe0c6E48f75252528F4fe4",
+        "blitz": 14.77690428817251,
+        "regular": 0.0,
+        "leaderboard": 14.77690428817251,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 7
+      },
+      {
+        "address": "0x8875a0dFe32038161F0De02C350054271De4eA89",
+        "blitz": 29.553472992026176,
+        "regular": 0.0,
+        "leaderboard": 29.553472992026176,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x956AC7Dd72Aa48855fe44F7b42F9d8C911c95391",
+        "blitz": 49.25571938884624,
+        "regular": 0.0,
+        "leaderboard": 49.25571938884624,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 5
+      },
+      {
+        "address": "0x547475d68F125Ff2df530DBd996C630c75404Fe6",
+        "blitz": 19.702360258476553,
+        "regular": 0.0,
+        "leaderboard": 19.702360258476553,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x2f0b497bA723Fa6F733Bc04471C8db9d84888A8c",
+        "blitz": 1.4821073558648112,
+        "regular": -1.4821073558648112,
+        "leaderboard": 0.0,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0x36fBcd407253fDE4355BDD6aB0D35b8FcFb72f91",
+        "blitz": 3.940500423247935,
+        "regular": 0.0,
+        "leaderboard": 3.940500423247935,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 2
+      },
+      {
+        "address": "0x0ACA044A753fc28b848535c65b08ABCC0aF1C9AE",
+        "blitz": 7.2542966352725,
+        "regular": 1.1710618321121942,
+        "leaderboard": 8.425358467384694,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 6
+      },
+      {
+        "address": "0x5EBe1B8DD70a02402697e9E487D14E136608e0F1",
+        "blitz": 9.070326889610481,
+        "regular": 0.0,
+        "leaderboard": 9.070326889610481,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 1
+      },
+      {
+        "address": "0x3c7C7eDf143cC3eC5987eC280B6C04da3718576d",
+        "blitz": 29.55332760863592,
+        "regular": 0.0,
+        "leaderboard": 29.55332760863592,
+        "agent": null,
+        "role": "blitz_real",
+        "races": 3
+      },
+      {
+        "address": "0xe1838c8da07dd68483fd1929d08dabf942d987e1",
+        "blitz": 184284.29423459244,
+        "regular": 0.0,
+        "leaderboard": 184284.29423459244,
+        "agent": null,
+        "role": "blitz_real",
+        "races": null
+      },
+      {
+        "address": "0x060C80Dd7F6019496e9Deb83F87A2E3D6B299988",
+        "blitz": 0.0,
+        "regular": 85169.11954498448,
+        "leaderboard": 85169.11954498448,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xA8b8080f9257B50c723C7D4C98F217c921b04a13",
+        "blitz": 0.0,
+        "regular": 84765.44901022254,
+        "leaderboard": 84765.44901022254,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xb00B58e14c7F63329F0064CA5eBa3c3d789A3429",
+        "blitz": 0.0,
+        "regular": 83452.32999529314,
+        "leaderboard": 83452.32999529314,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x22d4b8640bC77C213acc2C5603FCD6Ac9dcc5091",
+        "blitz": 0.0,
+        "regular": 82267.69614537284,
+        "leaderboard": 82267.69614537284,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xDb6848a11C3314D5827e5215DC83467aDe273030",
+        "blitz": 0.0,
+        "regular": 81418.92405327436,
+        "leaderboard": 81418.92405327436,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xacb8F2c634AA9A7f2d4b5Fbf22207E06662d501a",
+        "blitz": 0.0,
+        "regular": 80563.89996511098,
+        "leaderboard": 80563.89996511098,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x658C6dCF53b30E174E51d4bbCb4F302F486F4Bc1",
+        "blitz": 0.0,
+        "regular": 79239.86476235595,
+        "leaderboard": 79239.86476235595,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xf7B3F25dECA7a703bf7EAE1ac7992f150E5f12a5",
+        "blitz": 0.0,
+        "regular": 79229.91188607189,
+        "leaderboard": 79229.91188607189,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x284bd660B4Fe32B3d04C123751495bF296786A1b",
+        "blitz": 0.0,
+        "regular": 79064.16844027842,
+        "leaderboard": 79064.16844027842,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x024341A8f7bAd4C24384a3e66D4683059eEa177C",
+        "blitz": 0.0,
+        "regular": 77861.51652150918,
+        "leaderboard": 77861.51652150918,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x5543dA1B30BaA80ad1c9Bc3dE20E6d31A30C5C16",
+        "blitz": 0.0,
+        "regular": 2958.7863568746125,
+        "leaderboard": 2958.7863568746125,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xED30EA1140A79c7D485957D1e08048D81EAC45bd",
+        "blitz": 0.0,
+        "regular": 1773.6238860810008,
+        "leaderboard": 1773.6238860810008,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xecE03423b3f18775390B17cCbdA280C3fBbed875",
+        "blitz": 0.0,
+        "regular": 861.6831197853281,
+        "leaderboard": 861.6831197853281,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xe9982585E83E4b481F50FFe5eA8E2b896D461082",
+        "blitz": 0.0,
+        "regular": 789.3067009491137,
+        "leaderboard": 789.3067009491137,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xfb128967147A3ECBF311B5cf2e38f5aA2Af59f03",
+        "blitz": 0.0,
+        "regular": 761.0569725759232,
+        "leaderboard": 761.0569725759232,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xc03EBA7845B3130f143E8949A102a7426eed224E",
+        "blitz": 0.0,
+        "regular": 550.8512864968694,
+        "leaderboard": 550.8512864968694,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xF133db943654c689A8Bdaf39141415Fa965D33bA",
+        "blitz": 0.0,
+        "regular": 541.7972804214403,
+        "leaderboard": 541.7972804214403,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xAe710185c68600Ad0B9071A09bc9544d13781cc0",
+        "blitz": 0.0,
+        "regular": 424.74183780449505,
+        "leaderboard": 424.74183780449505,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xaaD616f93e7812fE82d790e0C4df05213111dAa5",
+        "blitz": 0.0,
+        "regular": 408.97205318611816,
+        "leaderboard": 408.97205318611816,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xC9Ad939aAAF30e6eaA4deB3e1a465e1e3d4c0465",
+        "blitz": 0.0,
+        "regular": 396.7139493507379,
+        "leaderboard": 396.7139493507379,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x3787F745d3807EedA36cCC528e3C404171f96e73",
+        "blitz": 0.0,
+        "regular": 393.80223717126916,
+        "leaderboard": 393.80223717126916,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xd0C1EB7F2848fa878523562604344c486bE2b60e",
+        "blitz": 0.0,
+        "regular": 383.54533855345755,
+        "leaderboard": 383.54533855345755,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xFE48E4176A6E23c101C89F790657e3Ad0E6ca20d",
+        "blitz": 0.0,
+        "regular": 334.76723101733944,
+        "leaderboard": 334.76723101733944,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x840c50516410CD5CAE608ceC51c1921766170945",
+        "blitz": 0.0,
+        "regular": 315.7800489526454,
+        "leaderboard": 315.7800489526454,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xF647462722A84D0e0894D27b19E5C79d508C1D6F",
+        "blitz": 0.0,
+        "regular": 295.5245378851235,
+        "leaderboard": 295.5245378851235,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x1CEb78443B33a78BB3c01fBfadA979027cFde556",
+        "blitz": 0.0,
+        "regular": 213.6614288127865,
+        "leaderboard": 213.6614288127865,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x9D5DF3e0777038dCFF08829d036992404D50fD08",
+        "blitz": 0.0,
+        "regular": 185.40263319940937,
+        "leaderboard": 185.40263319940937,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x62ce7460ab55d9c5f61dB5641a1EAcdd2E417dAA",
+        "blitz": 0.0,
+        "regular": 166.7447645447585,
+        "leaderboard": 166.7447645447585,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xa09dC2522647F94Abc51813401c5c663f56C5148",
+        "blitz": 0.0,
+        "regular": 166.68794578109595,
+        "leaderboard": 166.68794578109595,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xEebB0eCA63bb0363A790126bfC72180890EB8607",
+        "blitz": 0.0,
+        "regular": 161.88347580631134,
+        "leaderboard": 161.88347580631134,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x3808B58bc7b3ec9D350eb32410DAD480761E76B1",
+        "blitz": 0.0,
+        "regular": 150.42181557752005,
+        "leaderboard": 150.42181557752005,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x083E0f9af67CA1E343447505DdB4df66DBe4f73F",
+        "blitz": 0.0,
+        "regular": 132.5622155796487,
+        "leaderboard": 132.5622155796487,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x8335A4a701eAcb5A3b3eCd2CAdCBF92b7eEb45D2",
+        "blitz": 0.0,
+        "regular": 121.92685105603739,
+        "leaderboard": 121.92685105603739,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x1631eE06E681CFd243bdeD0B2631C9C8105b0fca",
+        "blitz": 0.0,
+        "regular": 103.1655542517874,
+        "leaderboard": 103.1655542517874,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xeEEa4bA43041B067756113Fe56A0bD373427307b",
+        "blitz": 0.0,
+        "regular": 99.26321346917186,
+        "leaderboard": 99.26321346917186,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xC60fb66C2D1c217cfF10E91f597bDcFac33cEEBB",
+        "blitz": 0.0,
+        "regular": 98.13256970182705,
+        "leaderboard": 98.13256970182705,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x7DFD3A6e8c011BC5d340965C0497907d6eAA9347",
+        "blitz": 0.0,
+        "regular": 97.06989037983081,
+        "leaderboard": 97.06989037983081,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x6a8fD3a70e9F73d4A3Dd6Ef4a5bAC069a6DD16ad",
+        "blitz": 0.0,
+        "regular": 91.38792571327502,
+        "leaderboard": 91.38792571327502,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x6237716c18E693db40453c37933b3A21E310A79e",
+        "blitz": 0.0,
+        "regular": 88.10535872258536,
+        "leaderboard": 88.10535872258536,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x30AC0bc8e0218D8dD2e02eEFa18d9a887202dB4D",
+        "blitz": 0.0,
+        "regular": 88.02227913879015,
+        "leaderboard": 88.02227913879015,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x29DF08912705c06b14b6390B3Fafdc4B8F44C9Ac",
+        "blitz": 0.0,
+        "regular": 87.57987154894637,
+        "leaderboard": 87.57987154894637,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x3E2C21764076C2f9F4b00Fe46142e8130CA358c5",
+        "blitz": 0.0,
+        "regular": 79.43175194011909,
+        "leaderboard": 79.43175194011909,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xD1b4363b9Fe265Fd737BF12beA10bc5F5966dC62",
+        "blitz": 0.0,
+        "regular": 78.63534515642297,
+        "leaderboard": 78.63534515642297,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x5f138B7f47ACB022644816Ef59fb73a2664b5cA3",
+        "blitz": 0.0,
+        "regular": 76.06041843458654,
+        "leaderboard": 76.06041843458654,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x604F3a2F6Ff65C6291e5D204e0B43f2a367239aE",
+        "blitz": 0.0,
+        "regular": 74.63467300779159,
+        "leaderboard": 74.63467300779159,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x97b491e72F44ae8af2Db1774d62F3798087eAce1",
+        "blitz": 0.0,
+        "regular": 74.02255426641887,
+        "leaderboard": 74.02255426641887,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x31BE33d4f3218894dD11179463Fc0F7601305765",
+        "blitz": 0.0,
+        "regular": 71.23588374577177,
+        "leaderboard": 71.23588374577177,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x64F1C899a65b8F251B98401235cd353B3E9A2E3E",
+        "blitz": 0.0,
+        "regular": 70.69121891208698,
+        "leaderboard": 70.69121891208698,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x8dE3F378de4880AfbcC2b237A6D153Cb3C9Ff5D6",
+        "blitz": 0.0,
+        "regular": 65.42962855855012,
+        "leaderboard": 65.42962855855012,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x583976079AEA0b73e0c6e53603912EB8254b9382",
+        "blitz": 0.0,
+        "regular": 63.776051895844574,
+        "leaderboard": 63.776051895844574,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x77d64aC3b23F8C6577905cFae57b246Dd8C4F38a",
+        "blitz": 0.0,
+        "regular": 62.83009787160462,
+        "leaderboard": 62.83009787160462,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x43558515A2Aa112517561E3cA62fE5E742B740ab",
+        "blitz": 0.0,
+        "regular": 57.91542437095578,
+        "leaderboard": 57.91542437095578,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xD727E5912BC22351EEA446f5E14D9867A0Dcb200",
+        "blitz": 0.0,
+        "regular": 55.97399698423624,
+        "leaderboard": 55.97399698423624,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xA0EeA223201ab8FA258b394837f22154FE8BE7B3",
+        "blitz": 0.0,
+        "regular": 55.25511986923503,
+        "leaderboard": 55.25511986923503,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x91d70a997f570DA6819b610d7630f0ebb79f20c6",
+        "blitz": 0.0,
+        "regular": 47.18710689265463,
+        "leaderboard": 47.18710689265463,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x3748A647Bf8c4694E274D0d29a2a59A36C7412A8",
+        "blitz": 0.0,
+        "regular": 45.73393276899622,
+        "leaderboard": 45.73393276899622,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x0497fe8Bf90fb467A83c8279EF27e63F5d7175CD",
+        "blitz": 0.0,
+        "regular": 44.64168731033798,
+        "leaderboard": 44.64168731033798,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x80b22D1df0769427ed55f8b211D4f776171dD58c",
+        "blitz": 0.0,
+        "regular": 36.142748779822234,
+        "leaderboard": 36.142748779822234,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x46363307FfB52E88255f4F707268d00f7637548f",
+        "blitz": 0.0,
+        "regular": 34.07967486642743,
+        "leaderboard": 34.07967486642743,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xAe38b700bEB0a58e523442fB8B071A350462548B",
+        "blitz": 0.0,
+        "regular": 32.41461416578501,
+        "leaderboard": 32.41461416578501,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x61c5048E8CFE114C96Bd0138D70CE18465c86D6d",
+        "blitz": 0.0,
+        "regular": 30.4835793202651,
+        "leaderboard": 30.4835793202651,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x48F96C689a190ec07539A7aa79E88e69a02274Ab",
+        "blitz": 0.0,
+        "regular": 29.76127809248655,
+        "leaderboard": 29.76127809248655,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x64c7AB079064728927aACF2B145f13d9868E1249",
+        "blitz": 0.0,
+        "regular": 29.532150429084396,
+        "leaderboard": 29.532150429084396,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xaa25B621C0d05a7beeC5CCD6cE22ed85Df4B30d7",
+        "blitz": 0.0,
+        "regular": 29.081391852158163,
+        "leaderboard": 29.081391852158163,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x0d44dA757E0866628e623D21e937aa773eAE8b3C",
+        "blitz": 0.0,
+        "regular": 28.1769625936775,
+        "leaderboard": 28.1769625936775,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xb1eacDb3320a126a340b0A36581fe09D4263c5Db",
+        "blitz": 0.0,
+        "regular": 24.62720354322094,
+        "leaderboard": 24.62720354322094,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x9eBe3777a5bB37A7302DcE400915E591b863E072",
+        "blitz": 0.0,
+        "regular": 21.762083656396985,
+        "leaderboard": 21.762083656396985,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x2df1fc7ab7E6d97448B08B1BEE79da87c73c8713",
+        "blitz": 0.0,
+        "regular": 19.703299939305747,
+        "leaderboard": 19.703299939305747,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x4CBBA616E2A4044BfD4308adb8b09C4ce4667534",
+        "blitz": 0.0,
+        "regular": 19.70255522406347,
+        "leaderboard": 19.70255522406347,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xF27FFd26bEA58715d03eBAB27bBcC45fA95AC0Fe",
+        "blitz": 0.0,
+        "regular": 19.55527616990745,
+        "leaderboard": 19.55527616990745,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xb4dd0B203A0F2aE7acF8eaadCD4c0101085676BD",
+        "blitz": 0.0,
+        "regular": 19.270056554545825,
+        "leaderboard": 19.270056554545825,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xcB647CEd7ac39a31185099543Cc70bEE92cB5D33",
+        "blitz": 0.0,
+        "regular": 16.84046272337541,
+        "leaderboard": 16.84046272337541,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xEE6C2eb782957E2be931904E06fA42BaeBF690A1",
+        "blitz": 0.0,
+        "regular": 15.136770496939105,
+        "leaderboard": 15.136770496939105,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xE55Bd27A3e99D3600F3752A0755388FE91D36CB5",
+        "blitz": 0.0,
+        "regular": 14.776364739908493,
+        "leaderboard": 14.776364739908493,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x66BE389C5e75fEE1Fe165A4eb8483d3BCa991110",
+        "blitz": 0.0,
+        "regular": 13.791857135645916,
+        "leaderboard": 13.791857135645916,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xf4692A240d210f6c45BF97B85462ccdef1261197",
+        "blitz": 0.0,
+        "regular": 13.0024304323005,
+        "leaderboard": 13.0024304323005,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xFa6b8eBA5d3485E1CFd9b69a44F63EAE7702437C",
+        "blitz": 0.0,
+        "regular": 11.90314611637296,
+        "leaderboard": 11.90314611637296,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x3cA4781C957D457aA6Aad1cf0Cdfb367de909cbb",
+        "blitz": 0.0,
+        "regular": 11.805860060468211,
+        "leaderboard": 11.805860060468211,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xe6a752Bac4EE08279B2D52F598DF677F0B0D22f0",
+        "blitz": 0.0,
+        "regular": 11.739825727811722,
+        "leaderboard": 11.739825727811722,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x8b7717c0739Bd7C69D9c7D0913495B12F56b3E03",
+        "blitz": 0.0,
+        "regular": 10.836527753664072,
+        "leaderboard": 10.836527753664072,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x8a5FAc1d5ede60ae9BcEB16e474EF9688c518BC2",
+        "blitz": 0.0,
+        "regular": 9.854422811842262,
+        "leaderboard": 9.854422811842262,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x7413D795AE7888D340B7cfabd7Ea7C31f5f5Af68",
+        "blitz": 0.0,
+        "regular": 9.851069564308911,
+        "leaderboard": 9.851069564308911,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x52e8208e83d5fF365BFdAeeE8f40c2C82eF8a169",
+        "blitz": 0.0,
+        "regular": 9.850904622523968,
+        "leaderboard": 9.850904622523968,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xfC8a36670c9DcAe275c6e22B43170D978E485B3a",
+        "blitz": 0.0,
+        "regular": 9.85088573906008,
+        "leaderboard": 9.85088573906008,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xAB9c5B6150A8F4C6a3D31Eb592981d4fEAB75283",
+        "blitz": 0.0,
+        "regular": 9.850854779489929,
+        "leaderboard": 9.850854779489929,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x70B0245c8Aead2187aD76242381aaaf235b33c23",
+        "blitz": 0.0,
+        "regular": 9.591410134145248,
+        "leaderboard": 9.591410134145248,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x74560c7f0Cf1D4e8098b790b31180E9CCED447B7",
+        "blitz": 0.0,
+        "regular": 8.865783013253507,
+        "leaderboard": 8.865783013253507,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xdEf106F244553F4fCCd45B64A39171De4996EF29",
+        "blitz": 0.0,
+        "regular": 8.565423461976495,
+        "leaderboard": 8.565423461976495,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x4271E93FaC36f4bC36bD34F3BbbB84c914aB1FA3",
+        "blitz": 0.0,
+        "regular": 8.385751819490885,
+        "leaderboard": 8.385751819490885,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xF27C4F745DE95F1e79251afc9f6EC251b2606663",
+        "blitz": 0.0,
+        "regular": 7.19586259718242,
+        "leaderboard": 7.19586259718242,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x22DB6DaFEdf83625c14FbB26Aa3445A832445603",
+        "blitz": 0.0,
+        "regular": 6.2790517418189715,
+        "leaderboard": 6.2790517418189715,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xD8D929a249D3bF5e87D968e19F0e92cfb08AE25e",
+        "blitz": 0.0,
+        "regular": 6.100515950496489,
+        "leaderboard": 6.100515950496489,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xfE903E9500Be797aBd5D1F19DD2C9A6a49B36b6d",
+        "blitz": 0.0,
+        "regular": 4.961825885659318,
+        "leaderboard": 4.961825885659318,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xff27509e414429475926E08767C2C8Bc4EBcfa45",
+        "blitz": 0.0,
+        "regular": 4.959315549396019,
+        "leaderboard": 4.959315549396019,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xE617badb62cDe7ddDA48dDd483689bB7526bEA6d",
+        "blitz": 0.0,
+        "regular": 4.925662662763978,
+        "leaderboard": 4.925662662763978,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x4A67f926CFAB8bA5768cf93523C5964468DE3243",
+        "blitz": 0.0,
+        "regular": 4.925572259103334,
+        "leaderboard": 4.925572259103334,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0xD7dd8d5553eC78cC7dF62b319ecdAE4fb64979Ce",
+        "blitz": 0.0,
+        "regular": 4.9254320260173845,
+        "leaderboard": 4.9254320260173845,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x73E27582dc60A87AA0cBc0eDE799bE03615d932E",
+        "blitz": 0.0,
+        "regular": 4.899940337965967,
+        "leaderboard": 4.899940337965967,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x9e0bAbc5417917D0DeC2E2f7fD6FD494f4Ab4c54",
+        "blitz": 0.0,
+        "regular": 4.768785226452629,
+        "leaderboard": 4.768785226452629,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x0C0De9a69143BbD96D378b6375913982Bf2C5157",
+        "blitz": 0.0,
+        "regular": 4.049013814951094,
+        "leaderboard": 4.049013814951094,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x2cDaE1E0e7a4BcF1815725212221d313b8613130",
+        "blitz": 0.0,
+        "regular": 3.9678349484999718,
+        "leaderboard": 3.9678349484999718,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x617f5888304FF42f50e3Ca031fAAbce8dAd867d3",
+        "blitz": 0.0,
+        "regular": 2.713164459058039,
+        "leaderboard": 2.713164459058039,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x84Cf8287e867a1961d5C46D2ca991ec54021A75c",
+        "blitz": 0.0,
+        "regular": 2.5320192698315904,
+        "leaderboard": 2.5320192698315904,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x29E2d032e6dd80764F3cD047A82D53DA2DEF6727",
+        "blitz": 0.0,
+        "regular": 2.0334466595092966,
+        "leaderboard": 2.0334466595092966,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x94b5271DaCd85e09627C3a5Aeea65DD3D940ab43",
+        "blitz": 0.0,
+        "regular": 1.9838760065458971,
+        "leaderboard": 1.9838760065458971,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x96Dd3B4ab20A51c5B8AD3905229426C5cF5d1BBf",
+        "blitz": 0.0,
+        "regular": 1.9837779595253562,
+        "leaderboard": 1.9837779595253562,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x341366946DA63AC29AB5CBDD108874577B92d720",
+        "blitz": 0.0,
+        "regular": 1.9706834861400842,
+        "leaderboard": 1.9706834861400842,
+        "agent": null,
+        "role": "trader",
+        "races": null
+      },
+      {
+        "address": "0x66544aCf5d062e57f84d3dCb032880F9ACb27718",
+        "blitz": 0.0,
+        "regular": 0.0,
+        "leaderboard": 0.0,
+        "agent": 0.0,
+        "role": "agent",
+        "races": null
+      },
+      {
+        "address": "0x7597540e4AdFa8362cDa673B175f8BdBEA3936de",
+        "blitz": 0.0,
+        "regular": 0.0,
+        "leaderboard": 0.0,
+        "agent": 0.0,
+        "role": "agent",
+        "races": null
+      },
+      {
+        "address": "0x583AF2BD8A25B2E5886176B7D5bfA4D209e5b8d4",
+        "blitz": 0.0,
+        "regular": 0.0,
+        "leaderboard": 0.0,
+        "agent": 0.0,
+        "role": "agent",
+        "races": null
+      }
+    ]
   }
 }

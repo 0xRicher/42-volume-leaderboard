@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T04:00:20Z",
+  "updated_at": "2026-11-23T08:27:37Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
@@ -31,16 +31,37 @@
       "pointsStatus": "not_distributed",
       "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
       "totals": {
-        "traders": 595,
-        "total_volume": 20449793.93091099,
-        "mm_share_pct": 63.33379790406052,
-        "mm_volume": 12951631.16,
-        "mm_count": 6,
-        "retail_volume": 7498162.770910978,
-        "retail_share_pct": 36.66620209593942,
-        "retail_count": 589,
+        "traders": 822,
+        "total_volume": 22838468.759054307,
+        "mm_share_pct": 0.0,
+        "mm_volume": 0.0,
+        "mm_count": 0,
+        "retail_volume": 4643021.993880075,
+        "retail_share_pct": 20.32983052788664,
+        "retail_count": 813,
+        "agent_volume": 4340828.55517423,
+        "agent_count": 3,
+        "seed_volume": 13854618.209999999,
+        "seed_count": 6,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:44:56Z",
+        "total": 22838468.759054307,
+        "regular": 5762294.853800572,
+        "blitzTotal": 12987886.90443618,
+        "blitzReal": 36255.74443617944,
+        "blitzSeed": 12951631.16,
+        "agents": 4088287.000817554,
+        "agentsDetail": {
+          "codex": 1345515.4618894348,
+          "claude": 1381227.6954522952,
+          "grok": 1361543.8434758242
+        },
+        "reconciled": true,
+        "note": "codex 的挖矿成交量与排行榜成交量不一致（挖矿 1345515.4618894348，排行榜 1347566.431147591）。拆分使用挖矿差额。 claude 的挖矿成交量与排行榜成交量不一致（挖矿 1381227.6954522952，排行榜 1382939.0374001425）。拆分使用挖矿差额。 真实玩家 Blitz 还有 2.94 没有落到具体钱包。 Blitz 与 Agent 沿用一小时内的结果；普通交易按最新总成交量重算。"
       }
     },
     {
@@ -65,8 +86,29 @@
         "retail_volume": 6210715.057349783,
         "retail_share_pct": 35.28089339345139,
         "retail_count": 730,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": 722,
         "total_distributed_points": 1470000.0
+      },
+      "breakdown": {
+        "status": "partial",
+        "fetchedAt": "2026-11-23T08:27:33Z",
+        "total": 17603621.847349748,
+        "regular": 6169625.043778561,
+        "blitzTotal": 11433996.803571187,
+        "blitzReal": 41090.0135711865,
+        "blitzSeed": 11392906.790000001,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "本轮每钱包 Blitz 已到约 5 分钟上限，下次运行从缓存继续。 真实玩家 Blitz 还有 669.69 没有落到具体钱包。 种子 Blitz 还有 11392906.79 没有落到具体钱包。 3 个 Blitz 请求失败。失败的钱包不填 0。"
       }
     },
     {
@@ -85,14 +127,35 @@
       "totals": {
         "traders": 595,
         "total_volume": 15194766.481910102,
-        "mm_share_pct": 93.7913969142289,
-        "mm_volume": 14251383.741238518,
-        "mm_count": 6,
+        "mm_share_pct": 3.830770349960011e-16,
+        "mm_volume": 5.820766091346741e-11,
+        "mm_count": 0,
         "retail_volume": 943382.7406715791,
         "retail_share_pct": 6.208603085771072,
         "retail_count": 589,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 14251383.74123852,
+        "seed_count": 6,
         "points_traders": 578,
         "total_distributed_points": 1470000.0
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T02:58:58Z",
+        "total": 15194766.481910102,
+        "regular": 809943.5954369828,
+        "blitzTotal": 14384822.88647312,
+        "blitzReal": 133439.1452346017,
+        "blitzSeed": 14251383.741238518,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "真实玩家 Blitz 还有 17.67 没有落到具体钱包。 Blitz 与 Agent 沿用一小时内的结果；普通交易按最新总成交量重算。"
       }
     },
     {
@@ -117,8 +180,29 @@
         "retail_volume": 166754.32290707284,
         "retail_share_pct": 1.1908938553630481,
         "retail_count": 439,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:40:32Z",
+        "total": 14002450.52538601,
+        "regular": 25564.645778859034,
+        "blitzTotal": 13976885.87960715,
+        "blitzReal": 141189.67712821678,
+        "blitzSeed": 13835696.202478934,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。"
       }
     },
     {
@@ -143,8 +227,29 @@
         "retail_volume": 549416.3127931227,
         "retail_share_pct": 1.6714113814963183,
         "retail_count": 832,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:40:23Z",
+        "total": 32871399.517530028,
+        "regular": 8590.304814282805,
+        "blitzTotal": 32862809.212715745,
+        "blitzReal": 540826.0079789038,
+        "blitzSeed": 32321983.20473684,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。"
       }
     },
     {
@@ -169,8 +274,29 @@
         "retail_volume": 430546.2998034521,
         "retail_share_pct": 1.1937203412480404,
         "retail_count": 722,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:40:08Z",
+        "total": 36067601.84326874,
+        "regular": 3254.6530396938324,
+        "blitzTotal": 36064347.19022904,
+        "blitzReal": 427291.6467636954,
+        "blitzSeed": 35637055.543465346,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。"
       }
     },
     {
@@ -195,8 +321,29 @@
         "retail_volume": 558503.8800972917,
         "retail_share_pct": 1.4835450740130465,
         "retail_count": 770,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:40:02Z",
+        "total": 37646573.05534487,
+        "regular": 4073.485702946782,
+        "blitzTotal": 37642499.569641925,
+        "blitzReal": 554430.3943944025,
+        "blitzSeed": 37088069.17524752,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。"
       }
     },
     {
@@ -221,8 +368,29 @@
         "retail_volume": 445738.2533334013,
         "retail_share_pct": 1.240734071251527,
         "retail_count": 922,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:39:53Z",
+        "total": 35925365.770264186,
+        "regular": 4574.649908542633,
+        "blitzTotal": 35920791.12035564,
+        "blitzReal": 441163.6034249537,
+        "blitzSeed": 35479627.51693069,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。"
       }
     },
     {
@@ -247,8 +415,29 @@
         "retail_volume": 684167.295111203,
         "retail_share_pct": 1.5011614396776485,
         "retail_count": 1234,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:39:46Z",
+        "total": 45575863.92960623,
+        "regular": 6407.707939773798,
+        "blitzTotal": 45569456.221666455,
+        "blitzReal": 677756.8571714077,
+        "blitzSeed": 44891699.36449505,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。"
       }
     },
     {
@@ -273,8 +462,29 @@
         "retail_volume": 4380838.140232296,
         "retail_share_pct": 8.742822709297904,
         "retail_count": 1371,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:39:32Z",
+        "total": 50107823.13557976,
+        "regular": 8544.728753328323,
+        "blitzTotal": 50099278.40682643,
+        "blitzReal": 654975.6714789893,
+        "blitzSeed": 49444302.73534744,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。"
       }
     },
     {
@@ -299,8 +509,29 @@
         "retail_volume": 4523122.255370404,
         "retail_share_pct": 15.53392009054543,
         "retail_count": 452,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:39:21Z",
+        "total": 29117712.90830418,
+        "regular": 19195.884894076735,
+        "blitzTotal": 29098517.023410104,
+        "blitzReal": 119772.15057630764,
+        "blitzSeed": 28978744.872833796,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。"
       }
     },
     {
@@ -325,8 +556,29 @@
         "retail_volume": 14231911.04651088,
         "retail_share_pct": 21.35717330107763,
         "retail_count": 45036,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T07:39:15Z",
+        "total": 66637615.59584654,
+        "regular": 4246661.161030732,
+        "blitzTotal": 62390954.43481581,
+        "blitzReal": 1396860.3597791528,
+        "blitzSeed": 60994094.07503666,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "积分前的周只统计全平台拆分，不逐个钱包查 Blitz。表格里的 Blitz 列没有逐钱包数字。"
       }
     },
     {
@@ -351,8 +603,29 @@
         "retail_volume": 520433.12031362107,
         "retail_share_pct": 53.54878352468402,
         "retail_count": 1316,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T05:36:09Z",
+        "total": 971885.9814503919,
+        "regular": 465280.49512808945,
+        "blitzTotal": 506605.4863223025,
+        "blitzReal": 140568.54725312616,
+        "blitzSeed": 366036.9390691763,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "种子 Blitz 还有 366036.94 没有落到具体钱包。"
       }
     },
     {
@@ -377,8 +650,29 @@
         "retail_volume": 424595.1372845108,
         "retail_share_pct": 60.08624253147439,
         "retail_count": 1551,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T04:54:10Z",
+        "total": 706642.8510022062,
+        "regular": 217016.28491727618,
+        "blitzTotal": 489626.56608493003,
+        "blitzReal": 480986.56608493003,
+        "blitzSeed": 8640.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "种子 Blitz 还有 8640.00 没有落到具体钱包。"
       }
     },
     {
@@ -403,8 +697,29 @@
         "retail_volume": 876120.087838296,
         "retail_share_pct": 88.19705435572776,
         "retail_count": 1513,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T04:29:30Z",
+        "total": 993366.6087130475,
+        "regular": 731686.8612633091,
+        "blitzTotal": 261679.7474497383,
+        "blitzReal": 253044.5474497383,
+        "blitzSeed": 8635.199999999983,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "种子 Blitz 还有 8635.20 没有落到具体钱包。"
       }
     },
     {
@@ -429,8 +744,29 @@
         "retail_volume": 880361.6324709709,
         "retail_share_pct": 82.69055564746878,
         "retail_count": 1271,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:59:39Z",
+        "total": 1064645.9267055602,
+        "regular": 830960.5659826477,
+        "blitzTotal": 233685.36072291245,
+        "blitzReal": 225045.36072291245,
+        "blitzSeed": 8640.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "种子 Blitz 还有 8640.00 没有落到具体钱包。"
       }
     },
     {
@@ -455,8 +791,29 @@
         "retail_volume": 1362298.8434397136,
         "retail_share_pct": 88.61375868400002,
         "retail_count": 1008,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:48:23Z",
+        "total": 1537344.610669007,
+        "regular": 1204639.5858119186,
+        "blitzTotal": 332705.0248570885,
+        "blitzReal": 323035.42485708854,
+        "blitzSeed": 9669.599999999977,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "种子 Blitz 还有 9669.60 没有落到具体钱包。"
       }
     },
     {
@@ -481,8 +838,29 @@
         "retail_volume": 2836836.2608294543,
         "retail_share_pct": 96.77581968012451,
         "retail_count": 1490,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:39:13Z",
+        "total": 2931348.2130206893,
+        "regular": 2712617.90482043,
+        "blitzTotal": 218730.30820025943,
+        "blitzReal": 214100.70820025945,
+        "blitzSeed": 4629.599999999977,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "种子 Blitz 还有 4629.60 没有落到具体钱包。"
       }
     },
     {
@@ -507,8 +885,29 @@
         "retail_volume": 8088586.404038544,
         "retail_share_pct": 100.0,
         "retail_count": 4806,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:39:12Z",
+        "total": 8088586.404038544,
+        "regular": 8086503.173234683,
+        "blitzTotal": 2083.230803859926,
+        "blitzReal": 1856.430803859926,
+        "blitzSeed": 226.79999999999973,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": "种子 Blitz 还有 226.80 没有落到具体钱包。"
       }
     },
     {
@@ -533,8 +932,29 @@
         "retail_volume": 23160867.82538774,
         "retail_share_pct": 100.0,
         "retail_count": 5277,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:09Z",
+        "total": 23160867.82538774,
+        "regular": 23160867.82538774,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -559,8 +979,29 @@
         "retail_volume": 18364169.28966423,
         "retail_share_pct": 100.0,
         "retail_count": 5540,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:08Z",
+        "total": 18364169.28966423,
+        "regular": 18364169.28966423,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -585,8 +1026,29 @@
         "retail_volume": 16865414.588394817,
         "retail_share_pct": 100.0,
         "retail_count": 4529,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:08Z",
+        "total": 16865414.588394817,
+        "regular": 16865414.588394817,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -611,8 +1073,29 @@
         "retail_volume": 28028946.436241254,
         "retail_share_pct": 100.0,
         "retail_count": 3675,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:07Z",
+        "total": 28028946.436241254,
+        "regular": 28028946.436241254,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -637,8 +1120,29 @@
         "retail_volume": 11299765.533716407,
         "retail_share_pct": 100.0,
         "retail_count": 1717,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:05Z",
+        "total": 11299765.533716407,
+        "regular": 11299765.533716407,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -663,8 +1167,29 @@
         "retail_volume": 916077.2410332306,
         "retail_share_pct": 100.0,
         "retail_count": 983,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:04Z",
+        "total": 916077.2410332306,
+        "regular": 916077.2410332306,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -689,8 +1214,29 @@
         "retail_volume": 754688.1253658924,
         "retail_share_pct": 100.0,
         "retail_count": 1619,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:04Z",
+        "total": 754688.1253658924,
+        "regular": 754688.1253658924,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -715,8 +1261,29 @@
         "retail_volume": 1326386.8295251534,
         "retail_share_pct": 100.0,
         "retail_count": 2108,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:03Z",
+        "total": 1326386.8295251534,
+        "regular": 1326386.8295251534,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -741,8 +1308,29 @@
         "retail_volume": 309904.1944473487,
         "retail_share_pct": 100.0,
         "retail_count": 168,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:02Z",
+        "total": 309904.1944473487,
+        "regular": 309904.1944473487,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -767,8 +1355,29 @@
         "retail_volume": 220627.88440301674,
         "retail_share_pct": 100.0,
         "retail_count": 182,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:01Z",
+        "total": 220627.88440301674,
+        "regular": 220627.88440301674,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -793,8 +1402,29 @@
         "retail_volume": 185457.78217083143,
         "retail_share_pct": 100.0,
         "retail_count": 132,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:04:00Z",
+        "total": 185457.78217083143,
+        "regular": 185457.78217083143,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -819,8 +1449,29 @@
         "retail_volume": 68656.85326409792,
         "retail_share_pct": 100.0,
         "retail_count": 115,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:59Z",
+        "total": 68656.85326409792,
+        "regular": 68656.85326409792,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -845,8 +1496,29 @@
         "retail_volume": 38709.868368620286,
         "retail_share_pct": 100.0,
         "retail_count": 100,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:58Z",
+        "total": 38709.868368620286,
+        "regular": 38709.868368620286,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -871,8 +1543,29 @@
         "retail_volume": 81440.34797752327,
         "retail_share_pct": 100.0,
         "retail_count": 90,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:56Z",
+        "total": 81440.34797752327,
+        "regular": 81440.34797752327,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -897,8 +1590,29 @@
         "retail_volume": 167766.81318967542,
         "retail_share_pct": 100.0,
         "retail_count": 95,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:55Z",
+        "total": 167766.81318967542,
+        "regular": 167766.81318967542,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -923,8 +1637,29 @@
         "retail_volume": 111261.51656268227,
         "retail_share_pct": 100.0,
         "retail_count": 118,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:53Z",
+        "total": 111261.51656268227,
+        "regular": 111261.51656268227,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -949,8 +1684,29 @@
         "retail_volume": 95713.14031452576,
         "retail_share_pct": 100.0,
         "retail_count": 112,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:52Z",
+        "total": 95713.14031452576,
+        "regular": 95713.14031452576,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -975,8 +1731,29 @@
         "retail_volume": 138803.4346143772,
         "retail_share_pct": 100.0,
         "retail_count": 102,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:51Z",
+        "total": 138803.4346143772,
+        "regular": 138803.4346143772,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -1001,8 +1778,29 @@
         "retail_volume": 159685.98281515125,
         "retail_share_pct": 100.0,
         "retail_count": 137,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:50Z",
+        "total": 159685.98281515125,
+        "regular": 159685.98281515125,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -1027,8 +1825,29 @@
         "retail_volume": 144054.43771070318,
         "retail_share_pct": 100.0,
         "retail_count": 174,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:49Z",
+        "total": 144054.43771070318,
+        "regular": 144054.43771070318,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -1053,8 +1872,29 @@
         "retail_volume": 15941.512714847737,
         "retail_share_pct": 100.0,
         "retail_count": 75,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:49Z",
+        "total": 15941.512714847737,
+        "regular": 15941.512714847737,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -1079,8 +1919,29 @@
         "retail_volume": 25608.811376498,
         "retail_share_pct": 100.0,
         "retail_count": 72,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:48Z",
+        "total": 25608.811376498,
+        "regular": 25608.811376498,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     },
     {
@@ -1105,9 +1966,64 @@
         "retail_volume": 33043.77666894977,
         "retail_share_pct": 100.0,
         "retail_count": 53,
+        "agent_volume": 0.0,
+        "agent_count": 0,
+        "seed_volume": 0.0,
+        "seed_count": 0,
         "points_traders": null,
         "total_distributed_points": null
+      },
+      "breakdown": {
+        "status": "ok",
+        "fetchedAt": "2026-11-23T03:03:47Z",
+        "total": 33043.77666894977,
+        "regular": 33043.77666894977,
+        "blitzTotal": 0.0,
+        "blitzReal": 0.0,
+        "blitzSeed": 0.0,
+        "agents": 0.0,
+        "agentsDetail": {
+          "codex": 0.0,
+          "claude": 0.0,
+          "grok": 0.0
+        },
+        "reconciled": true,
+        "note": ""
       }
     }
-  ]
+  ],
+  "blitzSeedWallets": [
+    "0x76df1872d1658b439a044269c20f635d5ddf7296",
+    "0xd620a91e47a31cefae93dd761a271cecbe6eccd0",
+    "0xeafaf83fa2fbe239bb01962471cbd05789714e09",
+    "0xd1d6872bd75cfb0c221d69055d67035a627d341c",
+    "0xcfc3e5ba5f8432912a369dc1e04733e5485fc7e6",
+    "0x28aedaf59d20903c51989dcc94be57b99b0784b3"
+  ],
+  "agentsNow": {
+    "fetched_at": "2026-11-23T08:27:38Z",
+    "agents": [
+      {
+        "agent": "codex",
+        "minted": 601,
+        "supply": 2000,
+        "volume": 1407359.7995942777,
+        "snapshotAt": "2026-11-23T08:00:00Z"
+      },
+      {
+        "agent": "claude",
+        "minted": 597,
+        "supply": 2000,
+        "volume": 1489987.3112867407,
+        "snapshotAt": "2026-11-23T08:00:00Z"
+      },
+      {
+        "agent": "grok",
+        "minted": 616,
+        "supply": 2000,
+        "volume": 1429015.644365969,
+        "snapshotAt": "2026-11-23T08:00:00Z"
+      }
+    ]
+  }
 }

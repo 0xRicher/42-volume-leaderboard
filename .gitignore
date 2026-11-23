@@ -5,3 +5,4 @@ __pycache__/
 .vscode/
 data/*.tmp
 data/weeks/*.tmp
+data/weeks/_blitz_cache.jsonl
