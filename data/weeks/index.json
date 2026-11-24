@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T01:57:33Z",
+  "updated_at": "2026-11-24T11:51:11Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
@@ -31,32 +31,32 @@
       "pointsStatus": "not_distributed",
       "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
       "totals": {
-        "traders": 1072,
-        "total_volume": 27658147.852758143,
+        "traders": 1470,
+        "total_volume": 32678927.213020653,
         "mm_share_pct": 0.0,
         "mm_volume": 0.0,
         "mm_count": 0,
-        "retail_volume": 6569035.246777173,
-        "retail_share_pct": 23.750813979838103,
-        "retail_count": 1063,
-        "agent_volume": 4900573.6559810005,
+        "retail_volume": 9981762.333708871,
+        "retail_share_pct": 30.544951089250322,
+        "retail_count": 1461,
+        "agent_volume": 4923989.229311792,
         "agent_count": 3,
-        "seed_volume": 16188538.950000001,
+        "seed_volume": 17773175.65,
         "seed_count": 6,
         "points_traders": null,
         "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
-        "fetchedAt": "2026-11-24T01:57:33Z",
-        "total": 27658147.852758143,
-        "regular": 6529188.246586817,
-        "blitzTotal": 16230526.410493037,
-        "blitzReal": 41987.46049303712,
-        "blitzSeed": 16188538.95,
-        "agents": 4898433.195678289,
+        "fetchedAt": "2026-11-24T11:51:11Z",
+        "total": 32678927.213020653,
+        "regular": 9934167.950896993,
+        "blitzTotal": 17823122.983602453,
+        "blitzReal": 47947.33360245381,
+        "blitzSeed": 17775175.65,
+        "agents": 4921636.278521206,
         "agentsDetail": {
-          "codex": 1591581.1254247574,
+          "codex": 1614784.2082676748,
           "claude": 1656176.9910315466,
           "grok": 1650675.0792219853
         },
@@ -2001,28 +2001,28 @@
     "0x28aedaf59d20903c51989dcc94be57b99b0784b3"
   ],
   "agentsNow": {
-    "fetched_at": "2026-11-24T01:57:34Z",
+    "fetched_at": "2026-11-24T11:51:12Z",
     "agents": [
       {
         "agent": "codex",
-        "minted": 641,
+        "minted": 696,
         "supply": 2000,
-        "volume": 1591581.1254247574,
-        "snapshotAt": "2026-11-24T01:00:00Z"
+        "volume": 1614784.2082676748,
+        "snapshotAt": "2026-11-24T11:00:00Z"
       },
       {
         "agent": "claude",
-        "minted": 638,
+        "minted": 694,
         "supply": 2000,
         "volume": 1656176.9910315466,
-        "snapshotAt": "2026-11-24T01:00:00Z"
+        "snapshotAt": "2026-11-24T11:00:00Z"
       },
       {
         "agent": "grok",
-        "minted": 656,
+        "minted": 712,
         "supply": 2000,
         "volume": 1650675.0792219853,
-        "snapshotAt": "2026-11-24T01:00:00Z"
+        "snapshotAt": "2026-11-24T11:00:00Z"
       }
     ]
   }
