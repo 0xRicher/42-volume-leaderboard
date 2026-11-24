@@ -2,7 +2,10 @@ name: Update volume leaderboard
 
 on:
   schedule:
-    # Every 10 minutes. GitHub cron can drift by a few minutes.
+    # Every 10 minutes. GitHub throttles scheduled workflows, so this cron
+    # often runs hours apart rather than every 10 minutes. The open week's
+    # leaderboard and volume split refresh in the browser; this job is the
+    # snapshot other windows and finished weeks fall back to.
     - cron: "*/10 * * * *"
   workflow_dispatch:
   push:

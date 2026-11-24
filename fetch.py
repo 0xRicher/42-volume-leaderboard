@@ -648,7 +648,22 @@ def probe_trader_count(day_from: str, day_to: str) -> int:
 
 
 def find_earliest_day(now: datetime) -> datetime.date | None:
-    """Earliest UTC day the volume leaderboard has at least one trader."""
+    """Earliest UTC day the volume leaderboard has at least one trader.
+
+    The index already records this. It does not move earlier, so a scheduled
+    run reuses it instead of probing the API again.
+    """
+    index = load_week_file(WEEKS_DIR / "index.json") or {}
+    raw = index.get("earliest_day")
+    if raw:
+        try:
+            cached = datetime.strptime(str(raw)[:10], "%Y-%m-%d").date()
+        except ValueError:
+            cached = None
+        today = now.astimezone(timezone.utc).date()
+        if cached and HISTORY_FLOOR.date() <= cached <= today:
+            print(f"  earliest day={cached.isoformat()} (cached)", flush=True)
+            return cached
     lo = HISTORY_FLOOR.date()
     hi = now.astimezone(timezone.utc).date()
     found: datetime.date | None = None
@@ -1152,8 +1167,30 @@ def update_week_history(
             path.unlink()
             print(f"removed overlapping or stale week {path.name}", flush=True)
 
-    print("fetching agent mining history ...", flush=True)
-    histories = fetch_agent_histories(compiled, AGENT_HISTORY_START, now)
+    history_from = AGENT_HISTORY_START
+    pending_start: datetime | None = None
+    for slot in slots:
+        start = slot["start"]
+        end = slot["end"]
+        path = week_path(start)
+        existing = load_week_file(path)
+        is_current = slot["group"] == "points" and same_instant(start, current_start)
+        frozen = (
+            not is_current
+            and should_skip_week(path, end, now)
+            and (
+                breakdown_fresh((existing or {}).get("breakdown"), now, current=False, kind=slot["kind"])
+                or platform_split_cached((existing or {}).get("breakdown"))
+            )
+        )
+        if frozen:
+            continue
+        if pending_start is None or start < pending_start:
+            pending_start = start
+    if pending_start is not None:
+        history_from = max(AGENT_HISTORY_START, pending_start - timedelta(days=1))
+    print(f"fetching agent mining history from {history_from.date().isoformat()} ...", flush=True)
+    histories = fetch_agent_histories(compiled, history_from, now)
     load_blitz_cache()
     wallet_budget = WalletBudget(PER_WALLET_BUDGET_S)
     documents: list[dict] = []
@@ -1165,8 +1202,13 @@ def update_week_history(
         label = f"{slot['kind']} {start.date().isoformat()}"
         is_current = slot["group"] == "points" and same_instant(start, current_start)
         existing = load_week_file(path)
-        if should_skip_week(path, end, now) and breakdown_fresh(
-            (existing or {}).get("breakdown"), now, current=False, kind=slot["kind"]
+        # Finished weeks keep the platform split already in the file. Wallet
+        # gaps are not re-crawled: the per-wallet cache does not survive a
+        # fresh Actions checkout, so repeating the crawl spends the budget
+        # and never resumes.
+        if should_skip_week(path, end, now) and (
+            breakdown_fresh((existing or {}).get("breakdown"), now, current=False, kind=slot["kind"])
+            or platform_split_cached((existing or {}).get("breakdown"))
         ):
             if not existing:
                 continue
@@ -1592,7 +1634,9 @@ def parallel_map(fn, items: list, workers: int = BLITZ_WORKERS, budget: WalletBu
     if budget is None:
         return _parallel_map(fn, items, workers)
     done: list = []
-    step = 24
+    # One wave of workers. A larger batch keeps running after the deadline
+    # because each Blitz call takes many seconds.
+    step = max(1, workers)
     for offset in range(0, len(items), step):
         if not budget.allow():
             print("    per-wallet budget reached; resume next run", flush=True)
@@ -1797,6 +1841,22 @@ def fetch_mining_agents() -> dict | None:
             }
         )
     return {"fetched_at": iso_now(), "agents": agents}
+
+
+def platform_split_cached(breakdown: dict | None) -> bool:
+    """True when the file already has the four platform numbers.
+
+    That is enough to keep a finished week. Per-wallet Blitz columns stay as
+    stored; a later run does not spend the wallet budget on them.
+    """
+    if not isinstance(breakdown, dict) or breakdown.get("status") == "unavailable":
+        return False
+    if breakdown.get("blitz_total") is None or breakdown.get("blitz_real") is None:
+        return False
+    if breakdown.get("blitz_seed") is None:
+        return False
+    agents = (breakdown.get("agents") or {}).get("sum")
+    return agents is not None
 
 
 def breakdown_fresh(breakdown: dict | None, now: datetime, *, current: bool, kind: str | None = None) -> bool:
@@ -2606,7 +2666,10 @@ def enrich_week_breakdown(
     # Points weeks start at the launch date in wallet-labels.json.
     points_week = str(doc.get("start") or "") >= compiled["points_launch_from"][:10]
     kind = "pre" if not points_week else str(doc.get("kind") or "thursday")
-    if breakdown_fresh(previous, now, current=current, kind=kind):
+    if not current and platform_split_cached(previous):
+        breakdown = retarget_breakdown(previous, doc)
+        print("  finished week split cached; skipping per-wallet", flush=True)
+    elif breakdown_fresh(previous, now, current=current, kind=kind):
         breakdown = retarget_breakdown(previous, doc)
         print(f"  blitz cached fetched_at={breakdown.get('fetched_at')}", flush=True)
     elif (
