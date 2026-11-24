@@ -371,6 +371,8 @@
     }
     .pool-head h2 { margin: 0; font-size: 16px; }
     .pool-head span { color: var(--dim); font-size: 12px; }
+    .pool-head span.live { color: var(--accent); }
+    .pool-head span.snap { color: var(--gold); }
     .pool-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -745,8 +747,10 @@
 
     <p class="hint">
       页面优先直连 <code>https://rest.ft.42.space</code>（该接口允许跨域）。24 小时、7 日、30 日和进行中的积分周会把交易者分页拉完再合计。
+      进行中的一周还会大约每 60 秒重拉成交量拆分（普通交易、Blitz 真实玩家、Blitz 42 种子、Agent）；标签页切到后台时暂停。每钱包的 Blitz 列仍用快照。
       「全部」窗口交易者约 6 万，全量合计由 GitHub Actions 写入 <code>data/leaderboard.json</code>，页面读这份快照，表格前 200 名仍走实时接口。
       已经结束的积分周读 <code>data/weeks/</code>，不再每次重拉。积分接口没有跨域，积分榜也来自这份快照。
+      GitHub 会拖延定时任务，快照往往几小时才更新一次。
       实时接口失败时，整页回退到快照。
       官方积分页 <a href="https://www.42.space/points" target="_blank" rel="noopener">42.space/points</a> 按积分排名。
     </p>
@@ -754,7 +758,8 @@
   <div id="floating-tip" class="floating-tip" hidden></div>
 
   <script>
-    const API = "https://rest.ft.42.space/api/v1/market-data/leaderboard";
+    const API_ROOT = "https://rest.ft.42.space/api/v1";
+    const API = API_ROOT + "/market-data/leaderboard";
     const SNAPSHOT = "./data/leaderboard.json";
     const WEEKS_INDEX = "./data/weeks/index.json";
     const CUMULATIVE_URL = "./data/weeks/cumulative.json";
@@ -763,6 +768,8 @@
     const TABLE_CAP = 200;
     const PAGE_SIZE = 500;
     const REFRESH_MS = 30_000;
+    const OPEN_WEEK_REFRESH_MS = 60_000;
+    const REQUEST_GAP_MS = 150;
     const TZ = "Asia/Tokyo";
     const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
@@ -791,6 +798,8 @@
       weekPointsNote: "",
       volumeRows: null,
       pointsRows: null,
+      liveSplit: null,
+      refreshPending: false,
     };
 
     let loadSeq = 0;
@@ -874,6 +883,22 @@
 
     function formatWinRate(n) {
       return ((Number(n) || 0) * 100).toFixed(1) + "%";
+    }
+
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    function formatClock(date) {
+      const d = date instanceof Date ? date : new Date(date);
+      if (Number.isNaN(d.getTime())) return "--:--:--";
+      return new Intl.DateTimeFormat("en-GB", {
+        timeZone: TZ,
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      }).format(d);
     }
 
     function formatTime(iso) {
@@ -1349,6 +1374,13 @@
       setHeaderLabel("points_rank", state.cumulative ? "总积分排名" : "积分排名");
       setHeaderLabel("points", state.cumulative ? "总积分" : "积分");
       setHeaderLabel("volume", state.cumulative ? "总交易量 (USDT)" : "成交量 (USDT)");
+      const refreshPill = document.getElementById("refresh-pill");
+      if (refreshPill) {
+        const every = isViewingOpenWeek()
+          ? "60 秒"
+          : (state.period === "week" ? "关闭" : "30 秒");
+        refreshPill.textContent = "自动刷新：" + every;
+      }
     }
 
     async function fetchWindow({ period, from, to, maxRows, onProgress }) {
@@ -1382,6 +1414,7 @@
         if (onProgress) onProgress(rows.length, total);
         if (!json.pagination?.hasMore || rows.length >= cap) break;
         offset += json.data.length;
+        await sleep(REQUEST_GAP_MS);
       }
       rows.sort((a, b) => b.volume - a.volume || a.rank - b.rank || a.trader.localeCompare(b.trader));
       return { rows, totalTraders: total || rows.length };
@@ -1457,7 +1490,183 @@
       };
     }
 
+    function finiteNumber(value) {
+      if (value == null || value === "") return null;
+      const n = typeof value === "number" ? value : Number(value);
+      return Number.isFinite(n) ? n : null;
+    }
+
+    function isViewingOpenWeek() {
+      if (state.period !== "week" || state.cumulative) return false;
+      const start = state.selectedWeekStart || state.week?.from;
+      if (!start || !state.week || start !== state.week.from) return false;
+      const kind = state.weekDoc?.kind || selectedWeekMeta()?.kind || "thursday";
+      return kind !== "distribution";
+    }
+
+    function agentIds() {
+      const ids = [];
+      for (const item of state.compiled?.agents?.values() || []) {
+        if (item?.id && !ids.includes(item.id)) ids.push(item.id);
+      }
+      return ids.length ? ids : ["codex", "claude", "grok"];
+    }
+
+    async function fetchJsonLive(url) {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error("live HTTP " + res.status);
+      const json = await res.json();
+      if (!json || typeof json !== "object") throw new Error("live payload invalid");
+      return json;
+    }
+
+    function rfc3339(date) {
+      return date.toISOString().replace(/\.\d{3}Z$/, "Z");
+    }
+
+    async function historyWindowVolume(agentId, bounds) {
+      const start = bounds.start;
+      const end = bounds.end;
+      const asOf = new Date(Math.min(end.getTime(), Date.now()));
+      const params = new URLSearchParams({
+        agent: agentId,
+        from: rfc3339(start),
+        to: rfc3339(asOf),
+      });
+      const payload = await fetchJsonLive(`${API_ROOT}/mining/history?${params}`);
+      const rows = Array.isArray(payload.data) ? payload.data : null;
+      if (!rows) return null;
+      const points = [];
+      for (const row of rows) {
+        if (!row || !row.hour) continue;
+        const hour = new Date(row.hour);
+        const volume = finiteNumber(row.volume);
+        if (Number.isNaN(hour.getTime()) || volume == null) continue;
+        points.push({ hour, volume });
+      }
+      points.sort((a, b) => a.hour.getTime() - b.hour.getTime());
+      if (!points.length) return 0;
+      const atStart = points.filter((point) => point.hour.getTime() <= start.getTime());
+      const upToEnd = points.filter((point) => point.hour.getTime() <= asOf.getTime());
+      let baseline = null;
+      if (atStart.length) baseline = atStart[atStart.length - 1].volume;
+      else if (
+        points[0].hour.getTime() > start.getTime()
+        && (points[0].volume === 0 || points[0].hour.getTime() >= end.getTime())
+      ) baseline = 0;
+      else if (points[0].hour.getTime() > start.getTime() && points[0].volume > 0) return null;
+      else baseline = 0;
+      if (baseline == null) return null;
+      if (!upToEnd.length || upToEnd[upToEnd.length - 1].hour.getTime() < start.getTime()) return 0;
+      return upToEnd[upToEnd.length - 1].volume - baseline;
+    }
+
+    async function agentWeeklyVolumes(bounds) {
+      const ids = agentIds();
+      const cached = state.weekDoc?.breakdown?.agents || {};
+      const baselines = {};
+      let haveBaseline = true;
+      for (const id of ids) {
+        const entry = cached[id];
+        const baseline = entry && typeof entry === "object" ? finiteNumber(entry.baseline_volume) : null;
+        if (baseline == null) haveBaseline = false;
+        else baselines[id] = baseline;
+      }
+      if (haveBaseline) {
+        const payload = await fetchJsonLive(`${API_ROOT}/mining/agents`);
+        const rows = Array.isArray(payload.data) ? payload.data : [];
+        const out = {};
+        for (const id of ids) {
+          const row = rows.find((item) => String(item?.agent || "") === id);
+          const cumulative = finiteNumber(row?.volume);
+          if (cumulative == null) return null;
+          const weekly = cumulative - baselines[id];
+          if (weekly < -1) return null;
+          out[id] = weekly;
+        }
+        return out;
+      }
+      const out = {};
+      for (const id of ids) {
+        const weekly = await historyWindowVolume(id, bounds);
+        if (weekly == null || weekly < -1) return null;
+        out[id] = weekly;
+        await sleep(REQUEST_GAP_MS);
+      }
+      return out;
+    }
+
+    async function fetchLiveSplit(total, bounds) {
+      const frm = Math.floor(bounds.start.getTime() / 1000);
+      const to = Math.floor(bounds.end.getTime() / 1000);
+      if (!Number.isFinite(frm) || !Number.isFinite(to) || !(to > frm)) throw new Error("bad week bounds");
+      if (!Number.isFinite(total)) throw new Error("missing leaderboard total");
+      const plainUrl = `${API_ROOT}/token-races/volume?from=${frm}&to=${to}`;
+      const [plain, real, volumes] = await Promise.all([
+        fetchJsonLive(plainUrl),
+        fetchJsonLive(`${plainUrl}&excludeSeed=true`),
+        agentWeeklyVolumes(bounds),
+      ]);
+      const blitzTotal = finiteNumber(plain?.data?.totalVolume);
+      const blitzReal = finiteNumber(real?.data?.totalVolume);
+      if (blitzTotal == null || blitzReal == null || !volumes) throw new Error("incomplete split");
+      if (blitzReal > blitzTotal + 1) throw new Error("blitz real exceeds total");
+      const blitzSeed = blitzTotal - blitzReal;
+      let agentSum = 0;
+      const agents = { sum: 0 };
+      for (const id of agentIds()) {
+        const volume = finiteNumber(volumes[id]);
+        if (volume == null) throw new Error("missing agent " + id);
+        agents[id] = { volume };
+        agentSum += volume;
+      }
+      agents.sum = agentSum;
+      const regular = total - blitzTotal - agentSum;
+      const parts = regular + blitzReal + blitzSeed + agentSum;
+      if (Math.abs(parts - total) > 1) throw new Error("split does not add up");
+      let note = "每钱包的 Blitz 列仍用快照。普通交易 = 本周排行榜总成交量 − Blitz − Agent。";
+      if (regular < -1) note += " 普通交易差额为负：Blitz 与 Agent 之和大于本周排行榜总成交量。";
+      return {
+        status: "ok",
+        total,
+        regular,
+        blitz_total: blitzTotal,
+        blitz_real: blitzReal,
+        blitz_seed: blitzSeed,
+        agents,
+        race_count: finiteNumber(plain?.data?.raceCount),
+        fetched_at: new Date().toISOString(),
+        note,
+      };
+    }
+
+    async function refreshLiveSplit(total, bounds) {
+      if (!isViewingOpenWeek() || document.hidden) return;
+      const seq = loadSeq;
+      try {
+        const breakdown = await fetchLiveSplit(total, bounds);
+        if (seq !== loadSeq || !isViewingOpenWeek()) return;
+        state.liveSplit = { ok: true, at: new Date(), breakdown };
+      } catch (err) {
+        if (seq !== loadSeq) return;
+        state.liveSplit = { ok: false };
+      }
+      if (seq === loadSeq && state.period === "week") render();
+    }
+
+    function activeBreakdown() {
+      if (isViewingOpenWeek() && state.liveSplit?.ok && state.liveSplit.breakdown) {
+        return { breakdown: state.liveSplit.breakdown, live: true, at: state.liveSplit.at };
+      }
+      const breakdown = state.weekDoc?.breakdown || null;
+      return { breakdown, live: false, at: breakdown?.fetched_at || null };
+    }
+
+    let loadDepth = 0;
     async function load(period, { silent } = {}) {
+      if (silent && loadDepth) return;
+      loadDepth += 1;
+      try {
       const seq = ++loadSeq;
       const week = currentPointsWeek(new Date(), state.labels.pointsWeekStart);
       state.week = week;
@@ -1544,6 +1753,9 @@
           const cols = visibleColumnCount();
           els.tbody.innerHTML = `<tr><td colspan="${cols}" class="error-banner">实时接口与本地快照都不可用。<br>${escapeHtml(String(liveErr))} / ${escapeHtml(String(snapErr))}</td></tr>`;
         }
+      }
+      } finally {
+        loadDepth -= 1;
       }
     }
 
@@ -1638,6 +1850,7 @@
       const map = pointsMap(state.weekDoc?.points?.rows);
 
       if (!isLiveCurrent) {
+        state.liveSplit = null;
         const block = state.weekDoc?.volume;
         if (!block || !Array.isArray(block.rows)) {
           state.aggregate = null;
@@ -1675,17 +1888,25 @@
         const volumeRows = attachPool(decorate(attachPoints(live.rows, map), "week"));
         const pointsRows = attachPool(decorate(pointRows, "week"));
         rememberWeekRows(volumeRows, pointsRows);
+        const aggregate = aggregateRows(volumeRows, live.totalTraders);
         applyData({
           rows: state.rows,
-          aggregate: aggregateRows(volumeRows, live.totalTraders),
+          aggregate,
           aggregateSource: "live",
           totalTraders: live.totalTraders,
           updatedAt: new Date().toISOString(),
           sourceKind: "live",
           sourceText: state.weekHasPoints ? "实时成交量 · 积分来自快照" : "实时全量",
         });
+        if (volumeRows.length) {
+          await refreshLiveSplit(aggregate.total_volume, { start: current.start, end: current.end });
+        } else if (seq === loadSeq) {
+          state.liveSplit = { ok: false };
+          render();
+        }
       } catch (liveErr) {
         if (seq !== loadSeq) return;
+        state.liveSplit = { ok: false };
         const block = state.weekDoc?.volume;
         if (block && Array.isArray(block.rows) && block.from === current.from) {
           const volumeRows = attachPool(decorate(attachPoints(normalizeApiRows(block.rows), map), "week"));
@@ -2027,7 +2248,9 @@
       if (state.period === "week") {
         const bounds = activeWeekBounds();
         const when = bounds.current
-          ? "本周成交量来自刚刚的实时全量分页。"
+          ? (state.liveSplit?.ok
+            ? "本周排行榜和成交量拆分来自刚刚的实时接口。每钱包 Blitz 仍用快照。"
+            : "本周排行榜来自刚刚的实时全量分页。成交量拆分暂时用快照。")
           : "这一周已经结束，成交量和上方合计来自快照，例行更新不会重拉。";
         const status = state.weekDoc?.points?.status || selectedWeekMeta()?.pointsStatus || "";
         const points = state.weekHasPoints
@@ -2110,15 +2333,44 @@
       return `<div class="pool-stat"><div class="k"><i style="background:${color}"></i>${escapeHtml(label)}</div><div class="v">${value == null ? "暂无数据" : formatUsd(value)}</div><div class="s">${sub}</div></div>`;
     }
 
+    function stampPool(breakdown, live, at) {
+      els.poolUpdated.classList.remove("live", "snap");
+      const card = els.poolCard;
+      const clear = () => {
+        ["total", "regular", "blitzReal", "blitzSeed", "agents"].forEach((key) => {
+          delete card.dataset[key];
+        });
+      };
+      if (live && at) {
+        els.poolUpdated.classList.add("live");
+        els.poolUpdated.textContent = "实时 · 更新于 " + formatClock(at) + " (东京时间)";
+        card.dataset.split = "live";
+      } else {
+        els.poolUpdated.classList.add("snap");
+        els.poolUpdated.textContent = at ? "缓存 · 更新于 " + formatTime(at) : "缓存";
+        card.dataset.split = "cache";
+      }
+      if (!breakdown || breakdown.blitz_total == null || breakdown.regular == null) {
+        clear();
+        return;
+      }
+      card.dataset.total = String(breakdown.total);
+      card.dataset.regular = String(breakdown.regular);
+      card.dataset.blitzReal = String(breakdown.blitz_real);
+      card.dataset.blitzSeed = String(breakdown.blitz_seed);
+      card.dataset.agents = String((breakdown.agents || {}).sum);
+    }
+
     function renderPool() {
       if (!els.poolCard) return;
       const show = state.period === "week";
       els.poolCard.hidden = !show;
       if (!show) return;
       els.poolTitle.textContent = state.cumulative ? "总榜成交量拆分" : "本周成交量拆分";
-      const breakdown = state.weekDoc?.breakdown;
+      const view = activeBreakdown();
+      const breakdown = view.breakdown;
       if (!breakdown || breakdown.status === "unavailable" || breakdown.blitz_total == null) {
-        els.poolUpdated.textContent = breakdown?.fetched_at ? "更新于 " + formatTime(breakdown.fetched_at) : "";
+        stampPool(breakdown, false, view.live ? null : view.at);
         els.poolBody.innerHTML = `<p class="pool-note">${escapeHtml(breakdown?.note || "暂无数据")}</p>${poolLegend()}`;
         return;
       }
@@ -2147,8 +2399,7 @@
         const sub = part.label === "Agent" ? agentLines : pct + (part.label === "普通交易" ? "<br>总成交量 − Blitz − Agent" : "");
         return poolStat(part.label, part.value, part.color, sub);
       }).join("");
-      const when = breakdown.fetched_at ? "拆分更新于 " + formatTime(breakdown.fetched_at) : "";
-      els.poolUpdated.textContent = when;
+      stampPool(breakdown, view.live, view.at);
       const races = breakdown.race_count == null ? "" : `本窗口 Blitz ${formatInt(breakdown.race_count)} 轮。`;
       const note = [breakdown.note, races].filter(Boolean).join(" ");
       els.poolBody.innerHTML = `${bar}<div class="pool-grid">${cards}</div><p class="pool-note">${escapeHtml(note)}</p>${poolLegend()}`;
@@ -2344,7 +2595,7 @@
         <h3>Agent 与 42 Blitz 种子</h3>
         <p>三个 Agent 钱包（codex、claude、grok）单独成组，徽章是 Agent。它们不进散户，也不进做市。42 Blitz 种子钱包是成交量接口 <code>excludeSeed=true</code> 排除掉的系统钱包：不排除时有 Blitz 成交，排除后为 0。页面标成「42 系统/种子」，提示「42 Blitz 种子钱包（无积分）」。原有做市标签留在配置里，只改展示。种子钱包同样不进散户和做市。</p>
         <h3>成交量拆分</h3>
-        <p>每一周和总榜有一张拆分：普通交易、Blitz 真实玩家、Blitz 42 种子、Agent（codex / claude / grok）。Blitz 用 <code>/token-races/volume</code>，Agent 用挖矿历史的累计成交差额。普通交易是总成交量减去 Blitz 再减去 Agent，不是另一套接口。取不到的数字显示「暂无数据」，不用 0 填。积分池比例里，交易 70%、NFT 池 20%、Pass 榜 10% 是官方口径；普通交易 55% 和 Token Race 15% 标成「推断」。</p>
+        <p>每一周和总榜有一张拆分：普通交易、Blitz 真实玩家、Blitz 42 种子、Agent（codex / claude / grok）。Blitz 用 <code>/token-races/volume</code>（<code>excludeSeed=true</code> 是真实玩家），Agent 用挖矿累计成交减去这一周开始时的基线。普通交易是总成交量减去 Blitz 再减去 Agent，不是另一套接口。进行中的一周大约每 60 秒在浏览器里重算这四项；任一请求失败就改显示快照，并标成「缓存」。每钱包的 Blitz 列仍用快照。取不到的数字显示「暂无数据」，不用 0 填。积分池比例里，交易 70%、NFT 池 20%、Pass 榜 10% 是官方口径；普通交易 55% 和 Token Race 15% 标成「推断」。</p>
         <div id="tier-c-live"></div>
         <h3>全平台合计</h3>
         <p>四个卡片统计的是该窗口里每一个交易者，用排行榜接口分页拉完（<code>limit=500</code>）。「全部」大约有六万名交易者，浏览器不每 30 秒扫一遍；<code>fetch.py</code> 在 GitHub Actions 里扫完，把合计和高频机器人地址写进快照，页面注明那次扫描的更新时间。表格始终只放成交量前 ${TABLE_CAP} 名。</p>
@@ -2352,7 +2603,7 @@
         <p>起始时刻是配置里的单个值 <code>${escapeHtml(labels.pointsWeekStart)}</code>，一周 7 天，结束于下一周开始前的最后一分钟。成交量直接用排行榜的 <code>from</code> / <code>to</code>（UTC 日历日，含首尾，和 <code>period</code> 互斥）。周四日期到周三日期，正好覆盖文档里的周四 00:00 UTC 至周三 23:59 UTC。官方文档写明这两个参数存在，实时请求也接受尚未结束的 <code>to</code>，返回的是截至目前的本周成交量。因此不需要用全历史成交量去减周初基线。</p>
         <h3>积分周历史</h3>
         <p>第 1 周是积分上线发放窗口（2026-11-04 00:00 UTC 到 2026-11-12 00:00 UTC，8 天）。第 2 周从 2026-11-12 的周四开始，之后每七天一周。「上一周」在积分周之间切换，从本周回到第 1 周。更早的周四只有成交量，收在下拉里的「积分前」，不编号。和上线窗口重叠的 2026-11-05 那一周不单列。</p>
-        <p>选中的一周同时给出成交量排行榜，以及全平台总成交量、交易者人数、做市/机器人占比和散户成交量。积分榜只有积分接口按同一起止时间返回了发放数据时才出现，并按钱包地址并上成交量和做市徽章。对不上的周标成「仅成交量」，不会把别的周的积分填进来。已经结束并且积分状态已经确定的周写在 <code>data/weeks/&lt;开始日期&gt;.json</code>，例行更新发现文件齐全就跳过。进行中的一周每次都刷新：成交量仍走实时接口，积分从快照读。</p>
+        <p>选中的一周同时给出成交量排行榜，以及全平台总成交量、交易者人数、做市/机器人占比和散户成交量。积分榜只有积分接口按同一起止时间返回了发放数据时才出现，并按钱包地址并上成交量和做市徽章。对不上的周标成「仅成交量」，不会把别的周的积分填进来。已经结束并且积分状态已经确定的周写在 <code>data/weeks/&lt;开始日期&gt;.json</code>，例行更新发现文件齐全就跳过。进行中的一周在浏览器里刷新成交量和成交量拆分，积分和每钱包 Blitz 从快照读。标签页在后台时不请求。</p>
         <ul>${sources}</ul>
         <p>站点的积分页没有单独的 epoch 接口。<code>latestWeek</code> 是最近一个已经发放的积分周（结束时刻不含在内），不是正在进行的这一周。第一周从公告日 2026-11-04 00:00 UTC 算到 2026-11-12 00:00 UTC，长 8 天；之后的周期按上面的周四规则。积分接口没有对第三方页面开放 CORS，对照信息由 <code>fetch.py</code> 写入快照。</p>
         <h3>市场列表成交量</h3>
@@ -2520,13 +2771,46 @@
       }
       paintWeek();
       await load(state.period);
-      setInterval(() => {
-        if (state.period === "week") {
-          const currentFrom = state.week?.from;
-          if (state.selectedWeekStart && currentFrom && state.selectedWeekStart !== currentFrom) return;
+      let refreshToken = 0;
+      function refreshDelay() {
+        return isViewingOpenWeek() ? OPEN_WEEK_REFRESH_MS : REFRESH_MS;
+      }
+      async function runScheduledRefresh() {
+        if (document.hidden) {
+          state.refreshPending = true;
+          queueRefresh();
+          return;
         }
-        load(state.period, { silent: true });
-      }, REFRESH_MS);
+        const currentFrom = state.week?.from;
+        if (
+          state.period === "week"
+          && state.selectedWeekStart
+          && currentFrom
+          && state.selectedWeekStart !== currentFrom
+        ) {
+          queueRefresh();
+          return;
+        }
+        await load(state.period, { silent: true });
+        queueRefresh();
+      }
+      function queueRefresh() {
+        const token = ++refreshToken;
+        window.setTimeout(() => {
+          if (token !== refreshToken) return;
+          runScheduledRefresh();
+        }, refreshDelay());
+      }
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) return;
+        const at = state.liveSplit?.at;
+        const stale = isViewingOpenWeek() && (!state.liveSplit?.ok || !at || Date.now() - at.getTime() > OPEN_WEEK_REFRESH_MS);
+        if (!state.refreshPending && !stale) return;
+        state.refreshPending = false;
+        refreshToken += 1;
+        load(state.period, { silent: true }).finally(queueRefresh);
+      });
+      queueRefresh();
       setInterval(() => {
         if (!state.labels) return;
         const prevFrom = state.week?.from;
