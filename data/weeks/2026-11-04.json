@@ -19537,13 +19537,13 @@
     ]
   },
   "blitzPlayers": {
-    "status": "partial",
-    "fetched_at": "2026-11-26T08:53:06Z",
+    "status": "ok",
+    "fetched_at": "2026-11-26T09:01:15Z",
     "from": "2026-11-04",
     "to": "2026-11-11",
     "sort_by": "pnl",
     "total": 456,
-    "volume_missing": 7,
+    "volume_missing": 0,
     "players": [
       {
         "address": "0xf2dcd0c61A8E681B12255Ff00e1D932305cE46B6",
@@ -21115,7 +21115,8 @@
         "win_rate": 0.0,
         "best_streak": 0,
         "longest_loss_streak": 1,
-        "volume": null
+        "volume": 0.9812236226307082,
+        "volume_at": "2026-11-26T09:01:09Z"
       },
       {
         "address": "0x20E6C8A2B4dAB3bCB8138401FF658EE8c13373BD",
@@ -21127,7 +21128,8 @@
         "win_rate": 0.0,
         "best_streak": 0,
         "longest_loss_streak": 1,
-        "volume": null
+        "volume": 0.9812267602856659,
+        "volume_at": "2026-11-26T09:01:09Z"
       },
       {
         "address": "0x478D1306dFCD508A3AE9Be467aa63DDf46FB719A",
@@ -21139,7 +21141,8 @@
         "win_rate": 0.0,
         "best_streak": 0,
         "longest_loss_streak": 1,
-        "volume": null
+        "volume": 0.981239319947931,
+        "volume_at": "2026-11-26T09:01:09Z"
       },
       {
         "address": "0xaDa115D93B8212413B844ab150d4D175cb89cfE0",
@@ -21151,7 +21154,8 @@
         "win_rate": 0.0,
         "best_streak": 0,
         "longest_loss_streak": 1,
-        "volume": null
+        "volume": 0.9812864179281612,
+        "volume_at": "2026-11-26T09:01:09Z"
       },
       {
         "address": "0xfD833D7E6Eda281eb5Af05D02089F3A53c291109",
@@ -21163,7 +21167,8 @@
         "win_rate": 0.0,
         "best_streak": 0,
         "longest_loss_streak": 1,
-        "volume": null
+        "volume": 0.9812864186817088,
+        "volume_at": "2026-11-26T09:01:15Z"
       },
       {
         "address": "0x13C6a5795A7D0AdC95339e6bcEb6869b61b37a79",
@@ -21175,7 +21180,8 @@
         "win_rate": 0.0,
         "best_streak": 0,
         "longest_loss_streak": 1,
-        "volume": null
+        "volume": 0.9815219075779259,
+        "volume_at": "2026-11-26T09:01:15Z"
       },
       {
         "address": "0x080B6cB3A4a62975BD68C4521B9cdC388cae5f10",
@@ -21187,7 +21193,8 @@
         "win_rate": 0.0,
         "best_streak": 0,
         "longest_loss_streak": 1,
-        "volume": null
+        "volume": 0.9819566816991053,
+        "volume_at": "2026-11-26T09:01:15Z"
       },
       {
         "address": "0x65842c91E3892243B303E04D8307e9A69442E47A",
@@ -25472,6 +25479,6 @@
         "volume_at": "2026-11-23T02:58:58Z"
       }
     ],
-    "note": "盈亏是已结算、含手续费的 racePnl。交易量是该周 /token-races/volume 的 userVolume（excludeSeed=true，周四 00:00 UTC 到下周四 00:00 UTC，不含结束时刻）；没查到的留空，页面显示「—」。轮次是 racesPlayed（参与轮数），不是成交笔数。种子钱包和 3 个 Agent 即使出现在榜上也会标出；种子的 userVolume 为 0。 本轮交易量查询已到约 3 分钟上限，没查到的下次继续。已结束的周会沿用已经写入的交易量。"
+    "note": "盈亏是已结算、含手续费的 racePnl。交易量是该周 /token-races/volume 的 userVolume（excludeSeed=true，周四 00:00 UTC 到下周四 00:00 UTC，不含结束时刻）；没查到的留空，页面显示「—」。轮次是 racesPlayed（参与轮数），不是成交笔数。种子钱包和 3 个 Agent 即使出现在榜上也会标出；种子的 userVolume 为 0。"
   }
 }

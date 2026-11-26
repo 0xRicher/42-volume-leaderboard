@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T07:44:42Z",
+  "updated_at": "2026-11-26T09:01:15Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
@@ -32,34 +32,34 @@
       "pointsStatus": "not_distributed",
       "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
       "totals": {
-        "traders": 729,
-        "total_volume": 2309502.1074489253,
+        "traders": 735,
+        "total_volume": 2622472.3996412638,
         "mm_share_pct": 0.0,
         "mm_volume": 0.0,
         "mm_count": 0,
-        "retail_volume": 1276832.9712247162,
-        "retail_share_pct": 55.28607084213078,
-        "retail_count": 720,
-        "agent_volume": 277403.53622421145,
+        "retail_volume": 1283742.2411024815,
+        "retail_share_pct": 48.95160159847969,
+        "retail_count": 726,
+        "agent_volume": 325494.9585387818,
         "agent_count": 3,
-        "seed_volume": 755265.6,
+        "seed_volume": 1013235.2,
         "seed_count": 6,
         "points_traders": null,
         "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
-        "fetchedAt": "2026-11-26T07:44:42Z",
-        "total": 2309502.1074489253,
-        "regular": 1295973.6149348707,
-        "blitzTotal": 760179.4093134638,
-        "blitzReal": 2753.0093134638805,
-        "blitzSeed": 757426.3999999999,
-        "agents": 253349.08320059069,
+        "fetchedAt": "2026-11-26T09:00:59Z",
+        "total": 2622472.3996412638,
+        "regular": 1314561.572620308,
+        "blitzTotal": 1020901.4258185158,
+        "blitzReal": 5666.225818515859,
+        "blitzSeed": 1015235.2,
+        "agents": 287009.4012024398,
         "agentsDetail": {
-          "codex": 70566.12412863271,
-          "claude": 96205.66314360593,
-          "grok": 86577.29592835205
+          "codex": 80193.9508089209,
+          "claude": 101005.04090596084,
+          "grok": 105810.40948755806
         },
         "reconciled": true,
         "note": "codex 的挖矿成交量与排行榜成交量不一致（挖矿 41697.553731447086，排行榜 46516.05830812804）。拆分使用挖矿差额。 claude 的挖矿成交量与排行榜成交量不一致（挖矿 67332.28533663414，排行榜 72155.88032443843）。拆分使用挖矿差额。 grok 的挖矿成交量与排行榜成交量不一致（挖矿 38501.232125792885，排行榜 48100.422820740925）。拆分使用挖矿差额。 全平台拆分已更新；每钱包数字沿用已查到的结果。"
@@ -2049,28 +2049,28 @@
     "0x28aedaf59d20903c51989dcc94be57b99b0784b3"
   ],
   "agentsNow": {
-    "fetched_at": "2026-11-26T07:44:42Z",
+    "fetched_at": "2026-11-26T09:01:16Z",
     "agents": [
       {
         "agent": "codex",
-        "minted": 917,
+        "minted": 919,
         "supply": 2000,
-        "volume": 2105795.826294374,
-        "snapshotAt": "2026-11-26T07:00:00Z"
+        "volume": 2125026.893377955,
+        "snapshotAt": "2026-11-26T09:00:00Z"
       },
       {
         "agent": "claude",
-        "minted": 920,
+        "minted": 922,
         "supply": 2000,
-        "volume": 2173711.716801807,
-        "snapshotAt": "2026-11-26T07:00:00Z"
+        "volume": 2192943.0374921146,
+        "snapshotAt": "2026-11-26T09:00:00Z"
       },
       {
         "agent": "grok",
-        "minted": 944,
+        "minted": 946,
         "supply": 2000,
-        "volume": 2144466.1937823966,
-        "snapshotAt": "2026-11-26T07:00:00Z"
+        "volume": 2178149.681346699,
+        "snapshotAt": "2026-11-26T09:00:00Z"
       }
     ]
   }
