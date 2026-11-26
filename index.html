@@ -251,6 +251,9 @@
       box-shadow: inset 0 0 0 1px var(--line-strong);
     }
     .tabs button:hover { color: var(--text); }
+    .tabs[hidden] { display: none; }
+
+    html[data-view="blitz"] .volume-only { display: none !important; }
 
     .search-box {
       position: relative;
@@ -287,6 +290,8 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
     }
+    .stats[hidden] { display: none; }
+    .blitz-summary { margin-bottom: 14px; }
     .stats.has-points { grid-template-columns: repeat(5, 1fr); }
     @media (max-width: 1100px) {
       .stats.has-points { grid-template-columns: repeat(3, 1fr); }
@@ -324,6 +329,7 @@
     .stat .sub .c-accent { color: var(--cyan); }
 
     .splitbar-wrap { margin: 10px 0 8px; }
+    .splitbar-wrap[hidden] { display: none; }
     .splitbar {
       display: flex;
       height: 8px;
@@ -455,6 +461,8 @@
       font-size: 12px;
       line-height: 1.6;
     }
+    .scope-note[hidden],
+    .board[hidden] { display: none; }
 
     .board {
       background: var(--bg-elev);
@@ -611,8 +619,17 @@
       .wrap { padding: 18px 12px 48px; }
       th.hide-sm, td.hide-sm { display: none; }
       .search-box { margin-left: 0; max-width: none; }
+      .tabs button { padding: 8px 12px; }
     }
   </style>
+  <script>
+    try {
+      var viewParam = new URLSearchParams(location.search).get("view");
+      var viewStored = localStorage.getItem("42-leaderboard-view");
+      var initialView = viewParam === "blitz" || viewParam === "volume" ? viewParam : viewStored;
+      if (initialView === "blitz") document.documentElement.dataset.view = "blitz";
+    } catch (e) { /* private mode or old browser */ }
+  </script>
 </head>
 <body>
   <div class="wrap">
@@ -634,6 +651,13 @@
       </div>
     </header>
 
+    <div class="toolbar" id="view-toolbar">
+      <div class="tabs" id="view-tabs" role="tablist" aria-label="页面视图">
+        <button type="button" role="tab" data-view="volume" aria-selected="true">成交量</button>
+        <button type="button" role="tab" data-view="blitz" aria-selected="false">Blitz</button>
+      </div>
+    </div>
+
     <section class="week-banner" id="week-banner" hidden>
       <div>
         <div class="week-kicker" id="week-kicker">本积分周</div>
@@ -653,21 +677,21 @@
         <button type="button" id="week-prev">上一周</button>
         <button type="button" id="week-current">本周</button>
       </div>
-      <div class="tabs" id="week-board-tabs" role="tablist" aria-label="本周榜单">
+      <div class="tabs volume-only" id="week-board-tabs" role="tablist" aria-label="本周榜单">
         <button type="button" role="tab" data-board="volume" aria-selected="true">成交量排行榜</button>
         <button type="button" role="tab" data-board="points" aria-selected="false">积分排行榜</button>
       </div>
     </div>
 
     <div class="toolbar">
-      <div class="tabs" id="period-tabs" role="tablist" aria-label="时间范围">
+      <div class="tabs volume-only" id="period-tabs" role="tablist" aria-label="时间范围">
         <button type="button" role="tab" data-period="1d" aria-selected="false">24 小时</button>
         <button type="button" role="tab" data-period="7d" aria-selected="false">7 日</button>
         <button type="button" role="tab" data-period="30d" aria-selected="false">30 日</button>
         <button type="button" role="tab" data-period="all" aria-selected="false">全部</button>
         <button type="button" role="tab" data-period="week" aria-selected="true" id="week-tab">本积分周</button>
       </div>
-      <div class="tabs" id="filter-tabs" role="tablist" aria-label="交易者范围">
+      <div class="tabs volume-only" id="filter-tabs" role="tablist" aria-label="交易者范围">
         <button type="button" role="tab" data-filter="all" aria-selected="true">全部</button>
         <button type="button" role="tab" data-filter="retail" aria-selected="false">仅散户</button>
         <button type="button" role="tab" data-filter="mm" aria-selected="false">仅做市</button>
@@ -678,7 +702,7 @@
       </div>
     </div>
 
-    <section class="stats" id="stats" aria-label="全平台合计">
+    <section class="stats volume-only" id="stats" aria-label="全平台合计">
       <article class="stat">
         <div class="label">全平台交易者</div>
         <div class="value" id="stat-traders">--</div>
@@ -705,7 +729,7 @@
         <div class="sub" id="stat-points-sub">含第1周之前已发放的积分</div>
       </article>
     </section>
-    <div class="splitbar-wrap">
+    <div class="splitbar-wrap volume-only" id="split-wrap">
       <div class="splitbar" id="splitbar" aria-hidden="true">
         <span class="seg-retail" id="seg-retail" style="width:0"></span>
         <span class="seg-mm" id="seg-mm" style="width:0"></span>
@@ -721,12 +745,34 @@
         <span><i style="background:#ff8bd2"></i>Agent</span>
       </div>
     </div>
-    <section class="pool-card" id="pool-card" hidden>
+    <section class="pool-card volume-only" id="pool-card" hidden>
       <div class="pool-head">
         <h2 id="pool-title">成交量拆分</h2>
         <span id="pool-updated"></span>
       </div>
       <div id="pool-body"></div>
+    </section>
+    <section class="stats blitz-summary" id="blitz-summary" hidden aria-label="Blitz 合计">
+      <article class="stat">
+        <div class="label">玩家人数</div>
+        <div class="value" id="blitz-stat-count">--</div>
+        <div class="sub" id="blitz-stat-count-sub">本周竞速榜上的钱包</div>
+      </article>
+      <article class="stat">
+        <div class="label">盈亏合计</div>
+        <div class="value" id="blitz-stat-pnl">--</div>
+        <div class="sub">已结算 · 含手续费</div>
+      </article>
+      <article class="stat">
+        <div class="label">真实 Blitz 成交量</div>
+        <div class="value" id="blitz-stat-volume">--</div>
+        <div class="sub" id="blitz-stat-volume-sub">各行 userVolume 相加，种子为 0</div>
+      </article>
+      <article class="stat">
+        <div class="label">种子标记</div>
+        <div class="value" id="blitz-stat-seed">--</div>
+        <div class="sub" id="blitz-stat-seed-sub">出现在种子名单里的地址</div>
+      </article>
     </section>
     <section class="board blitz-card" id="blitz-card" hidden>
       <div class="blitz-head">
@@ -760,9 +806,9 @@
         <button type="button" class="blitz-more" id="blitz-more" hidden>显示更多</button>
       </div>
     </section>
-    <p class="scope-note" id="scope-note"></p>
+    <p class="scope-note volume-only" id="scope-note"></p>
 
-    <section class="board">
+    <section class="board volume-only" id="volume-board">
       <div class="table-scroll">
         <table>
           <thead>
@@ -796,7 +842,7 @@
 
     <p class="hint">
       页面优先直连 <code>https://rest.ft.42.space</code>（该接口允许跨域）。24 小时、7 日、30 日和进行中的积分周会把交易者分页拉完再合计。
-      进行中的一周还会大约每 60 秒重拉成交量拆分（普通交易、Blitz 真实玩家、Blitz 42 种子、Agent）和 Blitz 玩家榜；标签页切到后台时暂停。每钱包的 Blitz 列仍用快照。玩家表的交易量优先用快照，进行中的一周会按可见的前 20 行慢慢补。
+      页面上方可以在「成交量」和「Blitz」之间切换，一次只显示一种，选择会记在地址栏和本地。成交量视图里，进行中的一周大约每 60 秒重拉成交量拆分（普通交易、Blitz 真实玩家、Blitz 42 种子、Agent）。Blitz 视图里，进行中的一周大约每 60 秒只重拉 Blitz 玩家榜。标签页切到后台时暂停。每钱包的 Blitz 列仍用快照。玩家表的交易量优先用快照，进行中的一周会按可见的前 20 行慢慢补。
       「全部」窗口交易者约 6 万，全量合计由 GitHub Actions 写入 <code>data/leaderboard.json</code>，页面读这份快照，表格前 200 名仍走实时接口。
       已经结束的积分周读 <code>data/weeks/</code>，不再每次重拉。积分接口没有跨域，积分榜也来自这份快照。
       GitHub 会拖延定时任务，快照往往几小时才更新一次。
@@ -822,6 +868,7 @@
     const BLITZ_PAGE = 40;
     const BLITZ_LAZY_LIMIT = 20;
     const BLITZ_LAZY_CONCURRENCY = 2;
+    const VIEW_STORAGE_KEY = "42-leaderboard-view";
     const TZ = "Asia/Tokyo";
     const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
@@ -858,6 +905,9 @@
       blitzWeek: null,
       blitzLive: null,
       blitzVolumeLive: {},
+      view: readInitialView(),
+      sourceText: "",
+      volumeKey: "",
     };
 
     let loadSeq = 0;
@@ -913,6 +963,17 @@
       blitzBody: document.getElementById("blitz-body"),
       blitzCount: document.getElementById("blitz-count"),
       blitzMore: document.getElementById("blitz-more"),
+      blitzSummary: document.getElementById("blitz-summary"),
+      blitzStatCount: document.getElementById("blitz-stat-count"),
+      blitzStatCountSub: document.getElementById("blitz-stat-count-sub"),
+      blitzStatPnl: document.getElementById("blitz-stat-pnl"),
+      blitzStatVolume: document.getElementById("blitz-stat-volume"),
+      blitzStatVolumeSub: document.getElementById("blitz-stat-volume-sub"),
+      blitzStatSeed: document.getElementById("blitz-stat-seed"),
+      blitzStatSeedSub: document.getElementById("blitz-stat-seed-sub"),
+      periodTabs: document.getElementById("period-tabs"),
+      filterTabs: document.getElementById("filter-tabs"),
+      volumeBoard: document.getElementById("volume-board"),
     };
 
     const blitzVolumeInflight = new Set();
@@ -1026,8 +1087,39 @@
       return head.querySelectorAll("th:not([hidden])").length;
     }
 
-    function setSource(kind, message) {
-      state.source = kind;
+    function readInitialView() {
+      try {
+        const param = new URLSearchParams(location.search).get("view");
+        if (param === "blitz" || param === "volume") return param;
+        const stored = localStorage.getItem(VIEW_STORAGE_KEY);
+        if (stored === "blitz" || stored === "volume") return stored;
+      } catch (err) { /* private mode */ }
+      return "volume";
+    }
+
+    function isBlitzView() {
+      return state.view === "blitz";
+    }
+
+    function persistView() {
+      try { localStorage.setItem(VIEW_STORAGE_KEY, state.view); } catch (err) { /* private mode */ }
+      const url = new URL(location.href);
+      if (state.view === "blitz") url.searchParams.set("view", "blitz");
+      else url.searchParams.delete("view");
+      const next = url.pathname + url.search + url.hash;
+      const current = location.pathname + location.search + location.hash;
+      if (next !== current) history.replaceState(null, "", url);
+    }
+
+    function volumeKey() {
+      if (state.period === "week") return "week:" + (state.selectedWeekStart || state.week?.from || "");
+      return state.period;
+    }
+
+    function restoreVolumeHeader() {
+      if (isBlitzView()) return;
+      const kind = state.source;
+      const message = state.sourceText;
       els.sourcePill.classList.remove("live", "snap", "error");
       if (kind === "live") {
         els.sourcePill.classList.add("live");
@@ -1038,10 +1130,33 @@
       } else if (kind === "mixed") {
         els.sourcePill.classList.add("snap");
         els.sourceLabel.textContent = message || "表格实时 · 合计来自快照";
-      } else {
+      } else if (kind === "error") {
         els.sourcePill.classList.add("error");
         els.sourceLabel.textContent = message || "加载失败";
+      } else {
+        els.sourceLabel.textContent = message || "加载中";
       }
+      els.updatedPill.textContent = "更新时间：" + (state.updatedAt ? formatTime(state.updatedAt) : "--");
+    }
+
+    function paintBlitzHeader(view) {
+      if (!isBlitzView()) return;
+      els.sourcePill.classList.remove("live", "snap", "error");
+      if (view && view.live && view.at) {
+        els.sourcePill.classList.add("live");
+        els.sourceLabel.textContent = "实时";
+        els.updatedPill.textContent = "更新时间：" + formatTime(view.at);
+      } else {
+        els.sourcePill.classList.add("snap");
+        els.sourceLabel.textContent = "缓存";
+        els.updatedPill.textContent = "更新时间：" + (view && view.at ? formatTime(view.at) : "--");
+      }
+    }
+
+    function setSource(kind, message) {
+      state.source = kind;
+      state.sourceText = message || "";
+      restoreVolumeHeader();
     }
 
     function parsePointsWeekStart(spec) {
@@ -1435,23 +1550,41 @@
       if (el) el.textContent = text;
     }
 
+    function syncViewChrome() {
+      const blitz = isBlitzView();
+      document.documentElement.dataset.view = state.view;
+      document.querySelectorAll("#view-tabs button").forEach((btn) => {
+        btn.setAttribute("aria-selected", btn.dataset.view === state.view ? "true" : "false");
+      });
+      if (els.periodTabs) els.periodTabs.hidden = blitz;
+      if (els.filterTabs) els.filterTabs.hidden = blitz;
+      if (els.stats) els.stats.hidden = blitz;
+      if (els.volumeBoard) els.volumeBoard.hidden = blitz;
+      const split = document.getElementById("split-wrap");
+      if (split) split.hidden = blitz;
+      if (els.scope) els.scope.hidden = blitz;
+      const showWeekTools = blitz || state.period === "week";
+      if (els.weekTools) els.weekTools.hidden = !showWeekTools;
+      if (els.weekBoardTabs) els.weekBoardTabs.hidden = blitz || state.period !== "week" || state.cumulative;
+      if (blitz && els.poolCard) els.poolCard.hidden = true;
+      const refreshPill = document.getElementById("refresh-pill");
+      if (refreshPill) {
+        const every = blitz
+          ? (selectedWeekIsOpen() ? "60 秒" : "关闭")
+          : (isViewingOpenWeek() ? "60 秒" : (state.period === "week" ? "关闭" : "30 秒"));
+        refreshPill.textContent = "自动刷新：" + every;
+      }
+    }
+
     function syncWeekColumns() {
       const on = state.period === "week";
       document.querySelectorAll(".week-only").forEach((el) => { el.hidden = !on; });
       document.querySelectorAll(".pool-only").forEach((el) => { el.hidden = !on; });
-      if (els.weekTools) els.weekTools.hidden = !on;
-      if (els.weekBoardTabs) els.weekBoardTabs.hidden = !on || state.cumulative;
       setHeaderLabel("rank", on ? "成交量排名" : "排名");
       setHeaderLabel("points_rank", state.cumulative ? "总积分排名" : "积分排名");
       setHeaderLabel("points", state.cumulative ? "总积分" : "积分");
       setHeaderLabel("volume", state.cumulative ? "总交易量 (USDT)" : "成交量 (USDT)");
-      const refreshPill = document.getElementById("refresh-pill");
-      if (refreshPill) {
-        const every = isViewingOpenWeek()
-          ? "60 秒"
-          : (state.period === "week" ? "关闭" : "30 秒");
-        refreshPill.textContent = "自动刷新：" + every;
-      }
+      syncViewChrome();
     }
 
     async function fetchWindow({ period, from, to, maxRows, onProgress }) {
@@ -1461,6 +1594,11 @@
       let total = 0;
       const cap = maxRows || Infinity;
       while (rows.length < cap) {
+        if (isBlitzView()) {
+          const err = new Error("view-changed");
+          err.viewChanged = true;
+          throw err;
+        }
         const limit = Math.min(PAGE_SIZE, cap - rows.length);
         const params = new URLSearchParams({
           sort_by: "volume",
@@ -1513,8 +1651,9 @@
       state.aggregateSource = payload.aggregateSource;
       state.totalTraders = payload.totalTraders;
       state.updatedAt = payload.updatedAt;
+      state.volumeKey = volumeKey();
       setSource(payload.sourceKind, payload.sourceText);
-      els.updatedPill.textContent = "更新时间：" + formatTime(payload.updatedAt);
+      if (!isBlitzView()) els.updatedPill.textContent = "更新时间：" + formatTime(payload.updatedAt);
       render();
     }
 
@@ -1567,12 +1706,16 @@
       return Number.isFinite(n) ? n : null;
     }
 
-    function isViewingOpenWeek() {
-      if (state.period !== "week" || state.cumulative) return false;
+    function selectedWeekIsOpen() {
+      if (state.cumulative) return false;
       const start = state.selectedWeekStart || state.week?.from;
       if (!start || !state.week || start !== state.week.from) return false;
       const kind = state.weekDoc?.kind || selectedWeekMeta()?.kind || "thursday";
       return kind !== "distribution";
+    }
+
+    function isViewingOpenWeek() {
+      return state.period === "week" && selectedWeekIsOpen();
     }
 
     function agentIds() {
@@ -1712,7 +1855,7 @@
     }
 
     async function refreshLiveSplit(total, bounds) {
-      if (!isViewingOpenWeek() || document.hidden) return;
+      if (!isViewingOpenWeek() || document.hidden || isBlitzView()) return;
       const seq = loadSeq;
       try {
         const breakdown = await fetchLiveSplit(total, bounds);
@@ -1733,6 +1876,52 @@
       return { breakdown, live: false, at: breakdown?.fetched_at || null };
     }
 
+    async function loadBlitz(seq, silent) {
+      const current = state.week;
+      const start = state.selectedWeekStart || current.from;
+      state.cumulative = start === CUMULATIVE_ID;
+      if (!silent && els.blitzBody) {
+        els.blitzCard.hidden = false;
+        els.blitzBody.innerHTML = `<tr><td colspan="8" class="loading">正在读取 Blitz 玩家…</td></tr>`;
+      }
+      try {
+        state.weekIndex = await fetchWeekIndex();
+      } catch {
+        /* selector falls back to the computed current week */
+      }
+      if (seq !== loadSeq) return;
+      if (state.cumulative) {
+        state.blitzLive = null;
+        const doc = state.weekDoc && state.weekDoc.kind === "cumulative" ? state.weekDoc : null;
+        if (doc) {
+          state.weekHasPoints = Boolean(doc.hasPoints);
+          state.weekPointsNote = doc.points?.note || "";
+        }
+        paintWeek();
+        renderBlitz();
+        return;
+      }
+      let doc = state.weekDoc && state.weekDoc.start === start ? state.weekDoc : null;
+      if (!doc) {
+        try { doc = await fetchWeekDoc(start); } catch { doc = null; }
+      }
+      if (seq !== loadSeq) return;
+      state.weekDoc = doc && doc.start === start ? doc : null;
+      state.weekHasPoints = Boolean(state.weekDoc?.hasPoints);
+      state.weekPointsNote = state.weekDoc?.points?.note || selectedWeekMeta()?.pointsNote || "";
+      if (!selectedWeekIsOpen()) state.blitzLive = null;
+      paintWeek();
+      renderBlitz();
+      if (selectedWeekIsOpen() && !document.hidden) {
+        await refreshLiveBlitz({
+          start: current.start,
+          end: current.end,
+          from: current.from,
+          to: current.to,
+        });
+      }
+    }
+
     let loadDepth = 0;
     async function load(period, { silent } = {}) {
       if (silent && loadDepth) return;
@@ -1747,6 +1936,10 @@
       }
       syncWeekColumns();
       paintWeek();
+      if (isBlitzView()) {
+        await loadBlitz(seq, silent);
+        return;
+      }
       renderBlitz();
       if (period === "week") {
         await loadWeek(seq, silent, week);
@@ -1757,7 +1950,7 @@
         els.tbody.innerHTML = `<tr><td colspan="${cols}" class="loading">正在拉取${escapeHtml(labelFor(period))}的全平台成交量…</td></tr>`;
       }
       const progress = silent ? null : (got, total) => {
-        if (seq !== loadSeq) return;
+        if (seq !== loadSeq || isBlitzView()) return;
         const cols = visibleColumnCount();
         const totalText = total ? ` / ${formatInt(total)}` : "";
         els.tbody.innerHTML = `<tr><td colspan="${cols}" class="loading">正在分页拉取全平台交易者… ${formatInt(got)}${totalText}</td></tr>`;
@@ -1769,7 +1962,7 @@
         } else {
           live = await fetchWindow({ period, onProgress: progress });
         }
-        if (seq !== loadSeq) return;
+        if (seq !== loadSeq || isBlitzView()) return;
         const rows = decorate(live.rows, period);
         if (period === "all") {
           try {
@@ -1800,7 +1993,8 @@
           sourceText: "实时全量",
         });
       } catch (liveErr) {
-        if (seq !== loadSeq) return;
+        if (liveErr && liveErr.viewChanged) return;
+        if (seq !== loadSeq || isBlitzView()) return;
         try {
           if (!state.snapshot) state.snapshot = await loadSnapshotDoc();
           const block = snapshotBlock(period);
@@ -1952,14 +2146,14 @@
       }
 
       const progress = silent ? null : (got, total) => {
-        if (seq !== loadSeq) return;
+        if (seq !== loadSeq || isBlitzView()) return;
         const cols = visibleColumnCount();
         const totalText = total ? ` / ${formatInt(total)}` : "";
         els.tbody.innerHTML = `<tr><td colspan="${cols}" class="loading">正在分页拉取本周全部交易者… ${formatInt(got)}${totalText}</td></tr>`;
       };
       try {
         const live = await fetchWindow({ from: current.from, to: current.to, onProgress: progress });
-        if (seq !== loadSeq) return;
+        if (seq !== loadSeq || isBlitzView()) return;
         const volumeRows = attachPool(decorate(attachPoints(live.rows, map), "week"));
         const pointsRows = attachPool(decorate(pointRows, "week"));
         rememberWeekRows(volumeRows, pointsRows);
@@ -1974,18 +2168,15 @@
           sourceText: state.weekHasPoints ? "实时成交量 · 积分来自快照" : "实时全量",
         });
         if (volumeRows.length) {
-          await Promise.all([
-            refreshLiveSplit(aggregate.total_volume, { start: current.start, end: current.end }),
-            refreshLiveBlitz({ start: current.start, end: current.end, from: current.from, to: current.to }),
-          ]);
-        } else if (seq === loadSeq) {
+          await refreshLiveSplit(aggregate.total_volume, { start: current.start, end: current.end });
+        } else if (seq === loadSeq && !isBlitzView()) {
           state.liveSplit = { ok: false };
           render();
         }
       } catch (liveErr) {
-        if (seq !== loadSeq) return;
+        if (liveErr && liveErr.viewChanged) return;
+        if (seq !== loadSeq || isBlitzView()) return;
         state.liveSplit = { ok: false };
-        state.blitzLive = { ok: false };
         const block = state.weekDoc?.volume;
         if (block && Array.isArray(block.rows) && block.from === current.from) {
           const volumeRows = attachPool(decorate(attachPoints(normalizeApiRows(block.rows), map), "week"));
@@ -2039,14 +2230,29 @@
     function paintWeek() {
       const week = state.week;
       if (!week) return;
-      const show = state.period === "week";
+      const show = state.period === "week" || isBlitzView();
       els.weekBanner.hidden = !show;
       syncWeekColumns();
       paintWeekSelector();
+      if (show && state.cumulative && isBlitzView() && !(state.weekDoc && state.weekDoc.kind === "cumulative")) {
+        const rangeKey = `cumulative-blitz|${state.view}`;
+        if (rangeKey !== weekRangeKey) {
+          weekRangeKey = rangeKey;
+          els.weekKicker.textContent = "总榜";
+          els.weekRange.innerHTML = `<div>总榜没有单独的 Blitz 玩家表。请在上面改选一个积分周。</div>`;
+          els.weekFlag.classList.remove("ok", "wait", "no");
+          els.weekFlag.classList.add("no");
+          els.weekFlag.textContent = "总榜汇总的是成交量和积分，不是 Blitz 玩家。";
+        }
+        els.countdownLabel.textContent = "范围";
+        els.countdown.textContent = "全部时间";
+        els.weekTab.title = "总榜（全部积分）";
+        return;
+      }
       if (show && state.cumulative) {
-        const doc = state.weekDoc;
+        const doc = state.weekDoc && state.weekDoc.kind === "cumulative" ? state.weekDoc : null;
         const pointsTo = doc?.points?.period?.to ? formatDual(new Date(doc.points.period.to)) : "最近一次发放";
-        const rangeKey = `cumulative|${doc?.fetched_at || ""}|${state.weekHasPoints}|${state.weekPointsNote}`;
+        const rangeKey = `cumulative|${doc?.fetched_at || ""}|${state.weekHasPoints}|${state.weekPointsNote}|${state.view}`;
         if (rangeKey !== weekRangeKey) {
           weekRangeKey = rangeKey;
           els.weekKicker.textContent = "总榜";
@@ -2099,7 +2305,7 @@
       const flag = state.weekHasPoints
         ? "有积分"
         : (state.weekDoc?.points?.status || selectedWeekMeta()?.pointsStatus || "");
-      const rangeKey = `${viewing.from}|${viewing.to}|${viewing.kind}|${align}|${show}|${flag}|${state.weekPointsNote}`;
+      const rangeKey = `${viewing.from}|${viewing.to}|${viewing.kind}|${align}|${show}|${flag}|${state.weekPointsNote}|${state.view}`;
       if (rangeKey !== weekRangeKey) {
         weekRangeKey = rangeKey;
         const meta = selectedWeekMeta();
@@ -2125,7 +2331,9 @@
           els.weekFlag.textContent = (state.weekPointsNote || "这一周有积分榜。") + extra;
         } else if (flag === "not_distributed" || flag === "pending") {
           els.weekFlag.classList.add("wait");
-          els.weekFlag.textContent = state.weekPointsNote || "积分尚未发放。下面先展示成交量。";
+          els.weekFlag.textContent = state.weekPointsNote || (isBlitzView()
+            ? "积分尚未发放。"
+            : "积分尚未发放。下面先展示成交量。");
         } else {
           els.weekFlag.classList.add("no");
           els.weekFlag.textContent = state.weekPointsNote || "这一周只有成交量，积分接口没有对应的发放榜。";
@@ -2488,7 +2696,7 @@
     function blitzVolumeFor(address, stored, flag) {
       if (flag === "seed") return stored == null ? 0 : Number(stored);
       const key = String(address || "").toLowerCase();
-      if (isViewingOpenWeek() && state.blitzVolumeLive && Object.prototype.hasOwnProperty.call(state.blitzVolumeLive, key)) {
+      if (selectedWeekIsOpen() && state.blitzVolumeLive && Object.prototype.hasOwnProperty.call(state.blitzVolumeLive, key)) {
         return state.blitzVolumeLive[key];
       }
       return stored == null ? null : Number(stored);
@@ -2497,7 +2705,7 @@
     function blitzPlayersView() {
       const snap = state.weekDoc?.blitzPlayers;
       const snapPlayers = Array.isArray(snap?.players) ? snap.players : [];
-      const useLive = isViewingOpenWeek() && state.blitzLive?.ok && Array.isArray(state.blitzLive.players);
+      const useLive = selectedWeekIsOpen() && state.blitzLive?.ok && Array.isArray(state.blitzLive.players);
       const source = useLive ? state.blitzLive.players : snapPlayers;
       const storedVolume = new Map();
       for (const row of snapPlayers) {
@@ -2556,11 +2764,13 @@
     }
 
     async function refreshLiveBlitz(bounds) {
-      if (!isViewingOpenWeek() || document.hidden) return;
+      if (!isBlitzView() || !selectedWeekIsOpen() || document.hidden) return;
       const seq = loadSeq;
+      const weekFrom = bounds.from;
       try {
         const live = await fetchBlitzLeaderboard(bounds.from, bounds.to);
-        if (seq !== loadSeq || !isViewingOpenWeek()) return;
+        if (seq !== loadSeq || !selectedWeekIsOpen()) return;
+        if ((state.selectedWeekStart || state.week?.from) !== weekFrom) return;
         state.blitzLive = {
           ok: true,
           at: new Date(),
@@ -2573,7 +2783,7 @@
         if (seq !== loadSeq) return;
         state.blitzLive = { ok: false };
       }
-      if (seq === loadSeq && state.period === "week") renderBlitz();
+      if (seq === loadSeq && isBlitzView()) renderBlitz();
     }
 
     function blitzSortValue(row, key) {
@@ -2585,7 +2795,7 @@
     }
 
     function scheduleBlitzVolumes(rows) {
-      if (!isViewingOpenWeek() || document.hidden) return;
+      if (!isBlitzView() || !selectedWeekIsOpen() || document.hidden) return;
       const bounds = activeWeekBounds();
       if (!bounds?.start || !bounds?.end) return;
       let queued = 0;
@@ -2604,6 +2814,10 @@
     }
 
     function pumpBlitzVolumes(bounds) {
+      if (!isBlitzView() || document.hidden) {
+        blitzVolumeQueue = [];
+        return;
+      }
       while (blitzVolumeRunning < BLITZ_LAZY_CONCURRENCY && blitzVolumeQueue.length) {
         const job = blitzVolumeQueue.shift();
         const key = job.address.toLowerCase();
@@ -2614,7 +2828,7 @@
         fetchOneBlitzVolume(job.address, bounds).finally(() => {
           blitzVolumeInflight.delete(key);
           blitzVolumeRunning -= 1;
-          if (isViewingOpenWeek() && !document.hidden) pumpBlitzVolumes(activeWeekBounds());
+          if (isBlitzView() && selectedWeekIsOpen() && !document.hidden) pumpBlitzVolumes(activeWeekBounds());
         });
       }
     }
@@ -2628,7 +2842,7 @@
         const payload = await fetchJsonLive(
           `${API_ROOT}/token-races/volume?from=${frm}&to=${to}&user=${encodeURIComponent(address)}&excludeSeed=true`,
         );
-        if (!isViewingOpenWeek() || (state.selectedWeekStart || state.week?.from) !== week) return;
+        if (!selectedWeekIsOpen() || (state.selectedWeekStart || state.week?.from) !== week) return;
         const volume = finiteNumber(payload?.data?.userVolume);
         if (volume == null) {
           blitzVolumeMiss.set(key, Date.now());
@@ -2642,11 +2856,79 @@
       }
     }
 
+    function paintBlitzSummary(view) {
+      if (!els.blitzStatCount) return;
+      const players = view && Array.isArray(view.players) ? view.players : [];
+      els.blitzStatPnl.classList.remove("up", "down", "flat");
+      if (!players.length) {
+        const missing = Boolean(view && view.missing);
+        els.blitzStatCount.textContent = missing ? "—" : "0";
+        els.blitzStatCountSub.textContent = missing ? "还没有这一周的快照" : "这一周没有 Blitz 玩家";
+        els.blitzStatPnl.textContent = "—";
+        els.blitzStatVolume.textContent = "—";
+        els.blitzStatVolumeSub.textContent = "各行 userVolume 相加，种子为 0";
+        els.blitzStatSeed.textContent = missing ? "—" : "0";
+        els.blitzStatSeedSub.textContent = "出现在种子名单里的地址";
+        return;
+      }
+      let pnl = 0;
+      let pnlKnown = false;
+      let volume = 0;
+      let volumeKnown = 0;
+      let volumeMissing = 0;
+      let seeds = 0;
+      let agents = 0;
+      for (const row of players) {
+        if (row.pnl != null) {
+          pnl += Number(row.pnl);
+          pnlKnown = true;
+        }
+        if (row.volume == null) volumeMissing += 1;
+        else {
+          volume += Number(row.volume);
+          volumeKnown += 1;
+        }
+        if (row.flag === "seed") seeds += 1;
+        else if (row.flag === "agent") agents += 1;
+      }
+      els.blitzStatCount.textContent = formatInt(players.length);
+      els.blitzStatCountSub.textContent = view.total != null && Number(view.total) !== players.length
+        ? `接口共 ${formatInt(view.total)} 人`
+        : "本周竞速榜上的钱包";
+      els.blitzStatPnl.textContent = pnlKnown ? formatUsd(pnl) : "—";
+      if (pnlKnown) els.blitzStatPnl.classList.add(pnlClass(pnl));
+      els.blitzStatVolume.textContent = volumeKnown ? formatUsd(volume) : "—";
+      els.blitzStatVolumeSub.textContent = volumeMissing
+        ? `还有 ${formatInt(volumeMissing)} 人没有交易量，未计入`
+        : "各行 userVolume 相加，种子为 0";
+      els.blitzStatSeed.textContent = formatInt(seeds);
+      els.blitzStatSeedSub.textContent = agents
+        ? `另有 ${formatInt(agents)} 个 Agent`
+        : "出现在种子名单里的地址";
+    }
+
     function renderBlitz() {
       if (!els.blitzCard) return;
+      if (!isBlitzView()) {
+        els.blitzCard.hidden = true;
+        if (els.blitzSummary) els.blitzSummary.hidden = true;
+        return;
+      }
       const show = showBlitzSection();
-      els.blitzCard.hidden = !show;
-      if (!show) return;
+      els.blitzCard.hidden = false;
+      if (els.blitzSummary) els.blitzSummary.hidden = !show;
+      if (!show) {
+        const message = state.cumulative
+          ? "总榜没有 Blitz 玩家表。请选择一个积分周。"
+          : "积分前的周没有 Blitz 玩家表。请选择第 1 周或之后的积分周。";
+        els.blitzUpdated.classList.remove("live", "snap");
+        els.blitzUpdated.textContent = "";
+        els.blitzCount.textContent = "";
+        if (els.blitzMore) els.blitzMore.hidden = true;
+        els.blitzBody.innerHTML = `<tr><td colspan="8" class="empty">${escapeHtml(message)}</td></tr>`;
+        paintBlitzHeader(null);
+        return;
+      }
       const weekKey = state.selectedWeekStart || state.week?.from || "";
       if (state.blitzWeek !== weekKey) {
         state.blitzWeek = weekKey;
@@ -2669,6 +2951,8 @@
         els.blitzUpdated.classList.add("snap");
         els.blitzUpdated.textContent = "缓存";
       }
+      paintBlitzHeader(view);
+      paintBlitzSummary(view);
       const q = state.query.trim().toLowerCase();
       if (state.blitzQuery !== q) {
         state.blitzQuery = q;
@@ -2745,7 +3029,7 @@
 
     function renderPool() {
       if (!els.poolCard) return;
-      const show = state.period === "week";
+      const show = state.period === "week" && !isBlitzView();
       els.poolCard.hidden = !show;
       if (!show) return;
       els.poolTitle.textContent = state.cumulative ? "总榜成交量拆分" : "本周成交量拆分";
@@ -2979,7 +3263,8 @@
         <p>三个 Agent 钱包（codex、claude、grok）单独成组，徽章是 Agent。它们不进散户，也不进做市。42 Blitz 种子钱包是成交量接口 <code>excludeSeed=true</code> 排除掉的系统钱包：不排除时有 Blitz 成交，排除后为 0。页面标成「42 系统/种子」，提示「42 Blitz 种子钱包（无积分）」。原有做市标签留在配置里，只改展示。种子钱包同样不进散户和做市。</p>
         <h3>成交量拆分</h3>
         <p>每一周和总榜有一张拆分：普通交易、Blitz 真实玩家、Blitz 42 种子、Agent（codex / claude / grok）。Blitz 用 <code>/token-races/volume</code>（<code>excludeSeed=true</code> 是真实玩家），Agent 用挖矿累计成交减去这一周开始时的基线。普通交易是总成交量减去 Blitz 再减去 Agent，不是另一套接口。进行中的一周大约每 60 秒在浏览器里重算这四项；任一请求失败就改显示快照，并标成「缓存」。每钱包的 Blitz 列仍用快照。取不到的数字显示「暂无数据」，不用 0 填。积分池比例里，交易 70%、NFT 池 20%、Pass 榜 10% 是官方口径；普通交易 55% 和 Token Race 15% 标成「推断」。</p>
-        <p>拆分下面的「Blitz 玩家」来自 <code>/token-races/leaderboard</code>（<code>sort_by=pnl</code>）。盈亏是已结算、含手续费的 <code>racePnl</code>。交易量是同一周 <code>userVolume</code>（<code>excludeSeed=true</code>），没取到显示「—」。轮次是 <code>racesPlayed</code>，也就是参与轮数，不是成交笔数。进行中的一周大约每 60 秒重拉这张榜；失败就沿用快照并标成「缓存」。交易量仍以快照为准，浏览器只为当前可见的前 20 行补缺失的数字。种子名单和 3 个 Agent 如果出现在榜上会单独标出。</p>
+        <p>页面上方的「成交量 / Blitz」一次只显示一种。成交量是合计卡片、占比条、本周成交量拆分和排行榜。Blitz 是这一周的玩家表，上方有玩家人数、盈亏合计、真实成交量（各行 <code>userVolume</code> 之和）和种子标记人数。积分周选择两边共用。选择写在地址栏 <code>?view=blitz</code> 和浏览器本地，刷新后还在。</p>
+        <p>「Blitz 玩家」来自 <code>/token-races/leaderboard</code>（<code>sort_by=pnl</code>）。盈亏是已结算、含手续费的 <code>racePnl</code>。交易量是同一周 <code>userVolume</code>（<code>excludeSeed=true</code>），没取到显示「—」。轮次是 <code>racesPlayed</code>，也就是参与轮数，不是成交笔数。只有停在 Blitz 视图时，进行中的一周大约每 60 秒重拉这张榜；失败就沿用快照并标成「缓存」。交易量仍以快照为准，浏览器只为当前可见的前 20 行补缺失的数字。种子名单和 3 个 Agent 如果出现在榜上会单独标出。积分前的周和总榜没有这张表。</p>
         <div id="tier-c-live"></div>
         <h3>全平台合计</h3>
         <p>四个卡片统计的是该窗口里每一个交易者，用排行榜接口分页拉完（<code>limit=500</code>）。「全部」大约有六万名交易者，浏览器不每 30 秒扫一遍；<code>fetch.py</code> 在 GitHub Actions 里扫完，把合计和高频机器人地址写进快照，页面注明那次扫描的更新时间。表格始终只放成交量前 ${TABLE_CAP} 名。</p>
@@ -3047,6 +3332,54 @@
         if (state.volumeRows) state.rows = state.volumeRows;
       }
       render();
+    });
+
+    function setView(next) {
+      if (next !== "volume" && next !== "blitz") return;
+      if (state.view === next) return;
+      state.view = next;
+      persistView();
+      syncViewChrome();
+      if (next === "volume") {
+        restoreVolumeHeader();
+        const ready = state.volumeKey === volumeKey() && (state.rows.length || state.aggregate);
+        if (ready) {
+          render();
+          if (isViewingOpenWeek()) {
+            const at = state.liveSplit?.at;
+            const stale = !state.liveSplit?.ok || !at || Date.now() - at.getTime() > OPEN_WEEK_REFRESH_MS;
+            if (stale) load(state.period, { silent: true });
+          }
+        } else {
+          load(state.period);
+        }
+        return;
+      }
+      const start = state.selectedWeekStart || state.week?.from;
+      const docReady = start === CUMULATIVE_ID
+        ? Boolean(state.weekIndex)
+        : Boolean(state.weekDoc && state.weekDoc.start === start && state.weekIndex);
+      if (!docReady) {
+        load(state.period);
+        return;
+      }
+      state.cumulative = start === CUMULATIVE_ID;
+      if (!selectedWeekIsOpen()) state.blitzLive = null;
+      paintWeek();
+      renderBlitz();
+      if (!selectedWeekIsOpen() || document.hidden) return;
+      const at = state.blitzLive?.at;
+      const stale = !state.blitzLive?.ok || !at || Date.now() - at.getTime() > OPEN_WEEK_REFRESH_MS;
+      if (!stale) return;
+      const week = state.week;
+      if (!week) return;
+      refreshLiveBlitz({ start: week.start, end: week.end, from: week.from, to: week.to });
+    }
+
+    document.getElementById("view-tabs").addEventListener("click", (ev) => {
+      const btn = ev.target.closest("button[data-view]");
+      if (!btn) return;
+      setView(btn.dataset.view);
     });
 
     document.getElementById("period-tabs").addEventListener("click", (ev) => {
@@ -3120,13 +3453,15 @@
     els.search.addEventListener("input", () => {
       state.query = els.search.value;
       els.searchWrap.classList.toggle("has-value", Boolean(state.query));
-      render();
+      if (isBlitzView()) renderBlitz();
+      else render();
     });
     els.clear.addEventListener("click", () => {
       els.search.value = "";
       state.query = "";
       els.searchWrap.classList.remove("has-value");
-      render();
+      if (isBlitzView()) renderBlitz();
+      else render();
       els.search.focus();
     });
 
@@ -3188,15 +3523,30 @@
       } catch {
         state.snapshot = null;
       }
+      persistView();
+      syncViewChrome();
       paintWeek();
       await load(state.period);
       let refreshToken = 0;
       function refreshDelay() {
+        if (isBlitzView()) return OPEN_WEEK_REFRESH_MS;
         return isViewingOpenWeek() ? OPEN_WEEK_REFRESH_MS : REFRESH_MS;
       }
       async function runScheduledRefresh() {
         if (document.hidden) {
           state.refreshPending = true;
+          queueRefresh();
+          return;
+        }
+        if (isBlitzView()) {
+          if (!selectedWeekIsOpen()) {
+            queueRefresh();
+            return;
+          }
+          const week = state.week;
+          if (week) {
+            await refreshLiveBlitz({ start: week.start, end: week.end, from: week.from, to: week.to });
+          }
           queueRefresh();
           return;
         }
@@ -3222,6 +3572,19 @@
       }
       document.addEventListener("visibilitychange", () => {
         if (document.hidden) return;
+        if (isBlitzView()) {
+          const at = state.blitzLive?.at;
+          const stale = selectedWeekIsOpen() && (!state.blitzLive?.ok || !at || Date.now() - at.getTime() > OPEN_WEEK_REFRESH_MS);
+          if (!state.refreshPending && !stale) return;
+          state.refreshPending = false;
+          refreshToken += 1;
+          const week = state.week;
+          const job = week && selectedWeekIsOpen()
+            ? refreshLiveBlitz({ start: week.start, end: week.end, from: week.from, to: week.to })
+            : Promise.resolve();
+          job.finally(queueRefresh);
+          return;
+        }
         const at = state.liveSplit?.at;
         const stale = isViewingOpenWeek() && (!state.liveSplit?.ok || !at || Date.now() - at.getTime() > OPEN_WEEK_REFRESH_MS);
         if (!state.refreshPending && !stale) return;
@@ -3237,8 +3600,8 @@
         state.week = currentPointsWeek(new Date(), state.labels.pointsWeekStart);
         if (wasOnCurrent) state.selectedWeekStart = state.week.from;
         paintWeek();
-        if (state.period === "week" && wasOnCurrent && prevFrom && state.week.from !== prevFrom) {
-          load("week", { silent: true });
+        if (wasOnCurrent && prevFrom && state.week.from !== prevFrom && (state.period === "week" || isBlitzView())) {
+          load(state.period, { silent: true });
         }
       }, 1000);
     }
