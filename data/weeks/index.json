@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T05:30:15Z",
+  "updated_at": "2026-11-26T07:44:42Z",
   "points_week_start": "Thursday 00:00 UTC",
   "points_launch": {
     "from": "2026-11-04T00:00:00.000Z",
@@ -11,6 +11,7 @@
     "available": true,
     "mode": "api-boundary",
     "weeks_with_points": [
+      "2026-11-19",
       "2026-11-12",
       "2026-11-04"
     ],
@@ -31,37 +32,37 @@
       "pointsStatus": "not_distributed",
       "pointsNote": "这一周的积分还没发放。页面不会用其他周的积分充数。",
       "totals": {
-        "traders": 714,
-        "total_volume": 1195151.2219719158,
+        "traders": 729,
+        "total_volume": 2309502.1074489253,
         "mm_share_pct": 0.0,
         "mm_volume": 0.0,
         "mm_count": 0,
-        "retail_volume": 726640.4605186116,
-        "retail_share_pct": 60.79903924791255,
-        "retail_count": 705,
-        "agent_volume": 166772.36145330739,
+        "retail_volume": 1276832.9712247162,
+        "retail_share_pct": 55.28607084213078,
+        "retail_count": 720,
+        "agent_volume": 277403.53622421145,
         "agent_count": 3,
-        "seed_volume": 301738.39999999997,
+        "seed_volume": 755265.6,
         "seed_count": 6,
         "points_traders": null,
         "total_distributed_points": null
       },
       "breakdown": {
         "status": "ok",
-        "fetchedAt": "2026-11-26T05:30:15Z",
-        "total": 1195151.2219719158,
-        "regular": 742967.2648621204,
-        "blitzTotal": 304652.8859159213,
-        "blitzReal": 834.0859159213281,
-        "blitzSeed": 303818.8,
-        "agents": 147531.07119387412,
+        "fetchedAt": "2026-11-26T07:44:42Z",
+        "total": 2309502.1074489253,
+        "regular": 1295973.6149348707,
+        "blitzTotal": 760179.4093134638,
+        "blitzReal": 2753.0093134638805,
+        "blitzSeed": 757426.3999999999,
+        "agents": 253349.08320059069,
         "agentsDetail": {
-          "codex": 41697.553731447086,
-          "claude": 67332.28533663414,
-          "grok": 38501.232125792885
+          "codex": 70566.12412863271,
+          "claude": 96205.66314360593,
+          "grok": 86577.29592835205
         },
         "reconciled": true,
-        "note": "codex 的挖矿成交量与排行榜成交量不一致（挖矿 41697.553731447086，排行榜 46516.05830812804）。拆分使用挖矿差额。 claude 的挖矿成交量与排行榜成交量不一致（挖矿 67332.28533663414，排行榜 72155.88032443843）。拆分使用挖矿差额。 grok 的挖矿成交量与排行榜成交量不一致（挖矿 38501.232125792885，排行榜 48100.422820740925）。拆分使用挖矿差额。"
+        "note": "codex 的挖矿成交量与排行榜成交量不一致（挖矿 41697.553731447086，排行榜 46516.05830812804）。拆分使用挖矿差额。 claude 的挖矿成交量与排行榜成交量不一致（挖矿 67332.28533663414，排行榜 72155.88032443843）。拆分使用挖矿差额。 grok 的挖矿成交量与排行榜成交量不一致（挖矿 38501.232125792885，排行榜 48100.422820740925）。拆分使用挖矿差额。 全平台拆分已更新；每钱包数字沿用已查到的结果。"
       }
     },
     {
@@ -73,10 +74,10 @@
       "group": "points",
       "weekNumber": 3,
       "current": false,
-      "finalized": false,
-      "hasPoints": false,
-      "pointsStatus": "pending",
-      "pointsNote": "这一周已经结束，积分可能还在发放，下次更新会再试。",
+      "finalized": true,
+      "hasPoints": true,
+      "pointsStatus": "weekly",
+      "pointsNote": "积分接口按这一周的起止时间返回了发放榜。",
       "totals": {
         "traders": 2032,
         "total_volume": 44290321.903635815,
@@ -90,8 +91,8 @@
         "agent_count": 3,
         "seed_volume": 22664603.79,
         "seed_count": 6,
-        "points_traders": null,
-        "total_distributed_points": null
+        "points_traders": 2003,
+        "total_distributed_points": 1470000.0
       },
       "breakdown": {
         "status": "ok",
@@ -2048,28 +2049,28 @@
     "0x28aedaf59d20903c51989dcc94be57b99b0784b3"
   ],
   "agentsNow": {
-    "fetched_at": "2026-11-26T05:30:15Z",
+    "fetched_at": "2026-11-26T07:44:42Z",
     "agents": [
       {
         "agent": "codex",
-        "minted": 916,
+        "minted": 917,
         "supply": 2000,
-        "volume": 2076927.2558971886,
-        "snapshotAt": "2026-11-26T05:00:00Z"
+        "volume": 2105795.826294374,
+        "snapshotAt": "2026-11-26T07:00:00Z"
       },
       {
         "agent": "claude",
-        "minted": 916,
+        "minted": 920,
         "supply": 2000,
-        "volume": 2144838.338994835,
-        "snapshotAt": "2026-11-26T05:00:00Z"
+        "volume": 2173711.716801807,
+        "snapshotAt": "2026-11-26T07:00:00Z"
       },
       {
         "agent": "grok",
-        "minted": 943,
+        "minted": 944,
         "supply": 2000,
-        "volume": 2096390.1299798375,
-        "snapshotAt": "2026-11-26T05:00:00Z"
+        "volume": 2144466.1937823966,
+        "snapshotAt": "2026-11-26T07:00:00Z"
       }
     ]
   }
