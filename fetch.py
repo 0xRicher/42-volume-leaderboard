@@ -49,6 +49,16 @@ RECONCILE_USDT = 1.0
 # Per-wallet Blitz calls are slow. One Actions run spends at most this long
 # on them and resumes from the cache on the next run.
 PER_WALLET_BUDGET_S = 300
+# Player-table volumes are separate from the attribution crawl above. The
+# leaderboard itself is one or two requests. Filling userVolume is capped so
+# a run never adds more than this on top of the existing budget. Finalized
+# weeks reuse volumes already stored on the week file.
+BLITZ_PLAYER_BUDGET_S = 180
+BLITZ_PLAYER_PAGE = 500
+# Open week: re-read volume for this many leaders by PnL and by races when
+# the stored figure is older than BLITZ_REFRESH. Everyone still missing a
+# volume is queued ahead of those refreshes.
+BLITZ_PLAYER_REFRESH_TOP = 25
 AGENT_HISTORY_START = datetime(2026, 10, 15, tzinfo=timezone.utc)
 
 ROOT = Path(__file__).resolve().parent
@@ -1231,6 +1241,8 @@ def update_week_history(
                 doc = refresh_week(start, end, slot["kind"], now, compiled)
             if existing and existing.get("breakdown") and not doc.get("breakdown"):
                 doc["breakdown"] = existing["breakdown"]
+            if existing and existing.get("blitzPlayers") and not doc.get("blitzPlayers"):
+                doc["blitzPlayers"] = existing["blitzPlayers"]
             doc = enrich_week_breakdown(
                 doc, compiled, histories, now, current=is_current, budget=wallet_budget
             )
@@ -1244,6 +1256,7 @@ def update_week_history(
         documents.append(indexed)
 
     documents.sort(key=lambda doc: doc.get("start") or "", reverse=True)
+    attach_blitz_players(documents, compiled, now, current_start)
     points_weeks = [
         doc["start"] for doc in documents if doc.get("group") == "points" and doc.get("hasPoints")
     ]
@@ -2742,6 +2755,429 @@ def enrich_week_breakdown(
     return doc
 
 
+def _as_float(value) -> float | None:
+    if value is None or value == "":
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _as_int(value, default: int = 0) -> int:
+    number = _as_float(value)
+    if number is None:
+        return default
+    return int(number)
+
+
+def _blitz_player_from_api(row: dict) -> dict | None:
+    address = str(row.get("walletAddress") or "").strip()
+    if not address:
+        return None
+    return {
+        "address": address,
+        "rank": _as_int(row.get("rank"), 0) or None,
+        "pnl": _as_float(row.get("racePnl")),
+        "races": _as_int(row.get("racesPlayed")),
+        "wins": _as_int(row.get("wins")),
+        "losses": _as_int(row.get("losses")),
+        "win_rate": _as_float(row.get("winRate")),
+        "best_streak": _as_int(row.get("bestStreak")),
+        "longest_loss_streak": _as_int(row.get("longestLossStreak")),
+        "volume": None,
+    }
+
+
+def fetch_blitz_player_rows(day_from: str, day_to: str) -> tuple[list[dict] | None, int | None]:
+    """Full Blitz leaderboard for an inclusive UTC date window, sorted by PnL.
+
+    limit=500, so a week is one request until the board passes 500 players,
+    then a second page. Returns (rows, total) or (None, None) on failure.
+    """
+    rows: list[dict] = []
+    seen: set[str] = set()
+    offset = 0
+    pages = 0
+    total: int | None = None
+    while True:
+        url = (
+            f"{API_BASE}/api/v1/token-races/leaderboard"
+            f"?from={day_from}&to={day_to}&sort_by=pnl&limit={BLITZ_PLAYER_PAGE}"
+            f"&offset={offset}&include_total=1"
+        )
+        payload = fetch_ok_soft(url)
+        if payload is None:
+            return None, None
+        chunk = payload.get("data")
+        if not isinstance(chunk, list):
+            return None, None
+        pages += 1
+        pagination = payload.get("pagination") or {}
+        if pagination.get("totalResults") is not None:
+            parsed = _as_int(pagination.get("totalResults"), -1)
+            if parsed >= 0:
+                total = parsed
+        for item in chunk:
+            if not isinstance(item, dict):
+                continue
+            player = _blitz_player_from_api(item)
+            if player is None:
+                continue
+            key = player["address"].lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            rows.append(player)
+        print(
+            f"    blitz players {day_from}..{day_to} page {pages} "
+            f"got={len(chunk)} unique={len(rows)} total={total}",
+            flush=True,
+        )
+        if not chunk or not pagination.get("hasMore"):
+            break
+        offset += len(chunk)
+        if pages >= 6:
+            print("    blitz players pagination stopped", flush=True)
+            return None, None
+        time.sleep(REQUEST_PAUSE_S)
+    return rows, total if total is not None else len(rows)
+
+
+def _pick_cached_volume(
+    previous: dict | None,
+    wallet_volume: float | None,
+    wallet_at: str | None,
+) -> tuple[float | None, str | None]:
+    """Prefer the newer of the stored player volume and the breakdown figure."""
+    prev_vol = _as_float((previous or {}).get("volume")) if previous else None
+    prev_at = str(previous.get("volume_at")) if previous and previous.get("volume_at") else None
+    if prev_vol is not None and wallet_volume is not None:
+        if prev_at and wallet_at and wallet_at > prev_at:
+            return wallet_volume, wallet_at
+        return prev_vol, prev_at
+    if prev_vol is not None:
+        return prev_vol, prev_at
+    if wallet_volume is not None:
+        return wallet_volume, wallet_at
+    return None, None
+
+
+def _blitz_players_same(left: dict | None, right: dict | None) -> bool:
+    if not isinstance(left, dict) or not isinstance(right, dict):
+        return False
+    for key in ("from", "to", "total", "status", "volume_missing"):
+        if left.get(key) != right.get(key):
+            return False
+    old_rows = left.get("players") or []
+    new_rows = right.get("players") or []
+    if len(old_rows) != len(new_rows):
+        return False
+    fields = (
+        "address",
+        "rank",
+        "pnl",
+        "races",
+        "wins",
+        "losses",
+        "win_rate",
+        "best_streak",
+        "longest_loss_streak",
+        "volume",
+        "volume_at",
+        "flag",
+    )
+    for old, new in zip(old_rows, new_rows):
+        for field in fields:
+            if old.get(field) != new.get(field):
+                return False
+    return True
+
+
+def _volume_is_stale(volume_at: str | None, now: datetime) -> bool:
+    if not volume_at:
+        return True
+    try:
+        fetched = parse_iso(volume_at)
+    except ValueError:
+        return True
+    return now - fetched >= BLITZ_REFRESH
+
+
+def attach_blitz_players(
+    documents: list[dict],
+    compiled: dict,
+    now: datetime,
+    current_start: datetime,
+) -> dict:
+    """Store each points week's Blitz leaderboard on the week file.
+
+    userVolume is filled from the week file and from breakdown wallets first.
+    Anything still missing, plus a small stale slice of the open week, is
+    fetched under BLITZ_PLAYER_BUDGET_S. Seeds are flagged and stored as 0
+    because excludeSeed strips them. Missing volumes stay null.
+    """
+    started = time.monotonic()
+    budget = WalletBudget(BLITZ_PLAYER_BUDGET_S)
+    current_key = current_start.date().isoformat()
+    launch_day = compiled["points_launch_from"][:10]
+    index_prev = load_week_file(WEEKS_DIR / "index.json") or {}
+    seeds = {str(addr).lower() for addr in (index_prev.get("blitzSeedWallets") or []) if addr}
+    agents = {str(addr).lower() for addr in (compiled.get("agents") or {})}
+    points_docs: list[dict] = []
+    for doc in documents:
+        if doc.get("group") != "points" and str(doc.get("start") or "") < launch_day:
+            continue
+        if str(doc.get("start") or "") < launch_day:
+            continue
+        points_docs.append(doc)
+        for addr in (doc.get("breakdown") or {}).get("seed_addresses") or []:
+            if addr:
+                seeds.add(str(addr).lower())
+    points_docs.sort(key=lambda doc: doc.get("start") or "", reverse=True)
+
+    prepared: list[dict] = []
+    jobs: list[dict] = []
+    for doc in points_docs:
+        start = parse_iso(doc["start_at"])
+        end = parse_iso(doc["end_exclusive"])
+        day_from, day_to = week_dates(start, end)
+        current = bool(doc.get("current")) or doc.get("start") == current_key
+        print(f"  blitz players {doc.get('start')} {day_from}..{day_to}", flush=True)
+        rows, total = fetch_blitz_player_rows(day_from, day_to)
+        previous = doc.get("blitzPlayers") if isinstance(doc.get("blitzPlayers"), dict) else None
+        prev_by = {
+            str(item.get("address") or "").lower(): item
+            for item in ((previous or {}).get("players") or [])
+            if isinstance(item, dict)
+        }
+        if rows is None:
+            if previous:
+                kept = copy.deepcopy(previous)
+                extra = "本次竞速榜没有取到，沿用上次玩家表。"
+                note = kept.get("note") or ""
+                if extra not in note:
+                    kept["note"] = (note + " " + extra).strip()
+                prepared.append({"doc": doc, "payload": kept, "failed": True})
+            else:
+                prepared.append(
+                    {
+                        "doc": doc,
+                        "failed": True,
+                        "payload": {
+                            "status": "unavailable",
+                            "fetched_at": iso_now(),
+                            "from": day_from,
+                            "to": day_to,
+                            "sort_by": "pnl",
+                            "total": None,
+                            "volume_missing": None,
+                            "players": [],
+                            "note": "竞速榜没有取到。",
+                        },
+                    }
+                )
+            continue
+
+        breakdown = doc.get("breakdown") or {}
+        breakdown_at = str(breakdown.get("fetched_at") or "") or None
+        wallet_vol: dict[str, float] = {}
+        for item in breakdown.get("wallets") or []:
+            if not isinstance(item, dict) or item.get("role") != "blitz_real":
+                continue
+            amount = _as_float(item.get("blitz"))
+            address = str(item.get("address") or "")
+            if amount is None or not address:
+                continue
+            wallet_vol[address.lower()] = amount
+
+        players: list[dict] = []
+        for row in rows:
+            player = dict(row)
+            key = player["address"].lower()
+            if key in agents:
+                player["flag"] = "agent"
+            elif key in seeds:
+                player["flag"] = "seed"
+            prev = prev_by.get(key)
+            if player.get("flag") == "seed":
+                player["volume"] = 0.0
+                if prev and prev.get("volume_at"):
+                    player["volume_at"] = prev.get("volume_at")
+                elif breakdown_at:
+                    player["volume_at"] = breakdown_at
+            else:
+                volume, volume_at = _pick_cached_volume(prev, wallet_vol.get(key), breakdown_at)
+                if volume is None and not current:
+                    cached = _cache_get(blitz_cache_key(int(start.timestamp()), int(end.timestamp()), player["address"], True))
+                    if cached is not None:
+                        volume = cached
+                        volume_at = volume_at or iso_now()
+                player["volume"] = volume
+                if volume is not None and volume_at:
+                    player["volume_at"] = volume_at
+            players.append(player)
+
+        races_order = sorted(
+            range(len(players)),
+            key=lambda index: (-(players[index]["races"] or 0), -(players[index]["pnl"] or 0), players[index]["address"].lower()),
+        )
+        races_rank = {index: pos for pos, index in enumerate(races_order, start=1)}
+        frm = int(start.timestamp())
+        to = int(end.timestamp())
+        scope = "" if not current else now.strftime("%Y%m%d%H")
+        start_ordinal = start.date().toordinal()
+        for index, player in enumerate(players):
+            if player.get("flag") == "seed":
+                continue
+            pnl_rank = player.get("rank") or 10**9
+            priority_rank = min(int(pnl_rank), races_rank[index])
+            missing = player.get("volume") is None
+            refresh = False
+            if current and not missing and priority_rank <= BLITZ_PLAYER_REFRESH_TOP:
+                refresh = _volume_is_stale(player.get("volume_at"), now)
+            if not missing and not refresh:
+                continue
+            jobs.append(
+                {
+                    "sort": (
+                        0 if missing else 1,
+                        0 if current else 1,
+                        -start_ordinal,
+                        priority_rank,
+                    ),
+                    "player": player,
+                    "frm": frm,
+                    "to": to,
+                    "scope": scope,
+                    "address": player["address"],
+                }
+            )
+        prepared.append(
+            {
+                "doc": doc,
+                "failed": False,
+                "players": players,
+                "from": day_from,
+                "to": day_to,
+                "total": total if total is not None else len(players),
+                "current": current,
+            }
+        )
+
+    jobs.sort(key=lambda job: job["sort"])
+    calls = 0
+
+    def volume_job(job: dict) -> bool:
+        value = fetch_blitz_user(
+            job["frm"],
+            job["to"],
+            job["address"],
+            True,
+            use_cache=True,
+            cache_scope=job["scope"],
+        )
+        if value is None:
+            return False
+        job["player"]["volume"] = value
+        job["player"]["volume_at"] = iso_now()
+        return True
+
+    if jobs:
+        print(
+            f"  blitz player volumes queued={len(jobs)} budget={BLITZ_PLAYER_BUDGET_S}s",
+            flush=True,
+        )
+        done = parallel_map(volume_job, jobs, budget=budget)
+        calls = len(done)
+    elapsed = time.monotonic() - started
+    missing_total = 0
+    written = 0
+    budget_note = "本轮交易量查询已到约 3 分钟上限，没查到的下次继续。已结束的周会沿用已经写入的交易量。"
+    base_note = (
+        "盈亏是已结算、含手续费的 racePnl。"
+        "交易量是该周 /token-races/volume 的 userVolume（excludeSeed=true，周四 00:00 UTC 到下周四 00:00 UTC，不含结束时刻）；"
+        "没查到的留空，页面显示「—」。"
+        "轮次是 racesPlayed（参与轮数），不是成交笔数。"
+        "种子钱包和 3 个 Agent 即使出现在榜上也会标出；种子的 userVolume 为 0。"
+    )
+    for item in prepared:
+        doc = item["doc"]
+        if item.get("failed"):
+            payload = item["payload"]
+        else:
+            players = item["players"]
+            missing = sum(1 for player in players if player.get("volume") is None)
+            missing_total += missing
+            notes = [base_note]
+            if missing and budget.exhausted:
+                notes.append(budget_note)
+            payload = {
+                "status": "partial" if missing else "ok",
+                "fetched_at": iso_now(),
+                "from": item["from"],
+                "to": item["to"],
+                "sort_by": "pnl",
+                "total": item["total"],
+                "volume_missing": missing,
+                "players": players,
+                "note": " ".join(notes),
+            }
+        path = WEEKS_DIR / f"{doc['start']}.json"
+        on_disk = load_week_file(path)
+        if not on_disk:
+            print(f"  blitz players skip missing file {path.name}", flush=True)
+            continue
+        previous = on_disk.get("blitzPlayers") if isinstance(on_disk.get("blitzPlayers"), dict) else None
+        if _blitz_players_same(previous, payload):
+            print(f"  blitz players {doc.get('start')} unchanged", flush=True)
+            continue
+        on_disk["blitzPlayers"] = payload
+        write_json(path, on_disk)
+        doc["blitzPlayers"] = payload
+        written += 1
+        print(
+            f"  blitz players {doc.get('start')} status={payload.get('status')} "
+            f"rows={len(payload.get('players') or [])} missing={payload.get('volume_missing')}",
+            flush=True,
+        )
+    print(
+        f"blitz players added_runtime={elapsed:.1f}s budget={BLITZ_PLAYER_BUDGET_S}s "
+        f"volume_calls={calls} files={written} volume_missing={missing_total}",
+        flush=True,
+    )
+    return {
+        "elapsed_s": round(elapsed, 1),
+        "budget_s": BLITZ_PLAYER_BUDGET_S,
+        "volume_calls": calls,
+        "files": written,
+        "volume_missing": missing_total,
+    }
+
+
+def refresh_blitz_players_only() -> int:
+    """Refresh blitzPlayers on points weeks already stored under data/weeks/."""
+    compiled = compile_labels(load_labels())
+    now = datetime.now(timezone.utc)
+    current_start, _current_end = current_points_week(now, compiled["points_week_start"])
+    index = load_week_file(WEEKS_DIR / "index.json") or {}
+    documents: list[dict] = []
+    for entry in index.get("weeks") or []:
+        if entry.get("group") != "points":
+            continue
+        doc = load_week_file(WEEKS_DIR / f"{entry['start']}.json")
+        if not doc:
+            print(f"missing week file {entry['start']}", flush=True)
+            continue
+        doc["group"] = "points"
+        doc["current"] = bool(entry.get("current")) or doc.get("start") == current_start.date().isoformat()
+        documents.append(doc)
+    load_blitz_cache()
+    attach_blitz_players(documents, compiled, now, current_start)
+    flush_blitz_cache()
+    return 0
+
+
 def attach_cumulative_breakdown(doc: dict, compiled: dict, now: datetime) -> dict:
     """Sum per-week Blitz and agent volume onto the all-time board.
 
@@ -3154,4 +3590,6 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    if "--blitz-players" in sys.argv:
+        sys.exit(refresh_blitz_players_only())
     sys.exit(main())

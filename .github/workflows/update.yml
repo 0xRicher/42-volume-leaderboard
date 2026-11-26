@@ -30,6 +30,9 @@ jobs:
           python-version: "3.12"
 
       - name: Fetch leaderboard
+        # Also writes blitzPlayers for each points week. The leaderboard is
+        # one or two requests; per-player userVolume is capped at about 3
+        # minutes (BLITZ_PLAYER_BUDGET_S) on top of the existing run.
         run: python fetch.py
 
       - name: Commit snapshot
