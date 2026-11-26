@@ -405,6 +405,23 @@
     }
     .pool-stat .s { margin-top: 4px; color: var(--dim); font-size: 11.5px; line-height: 1.45; }
     .pool-note { margin: 10px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
+    .blitz-card { margin: 0 0 14px; }
+    .blitz-card[hidden] { display: none; }
+    .blitz-head { padding: 14px 16px 0; }
+    .blitz-head .pool-note { margin-top: 0; }
+    .blitz-more {
+      appearance: none;
+      border: 1px solid var(--line-strong);
+      background: transparent;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 12px;
+    }
+    .blitz-more:hover { border-color: var(--accent); color: var(--accent); }
+    .blitz-more[hidden] { display: none; }
     .pool-columns {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -464,8 +481,8 @@
       white-space: nowrap;
       user-select: none;
     }
-    thead th.sortable { cursor: pointer; }
-    thead th.sortable:hover { color: var(--text); }
+    thead th.sortable, thead th.blitz-sortable { cursor: pointer; }
+    thead th.sortable:hover, thead th.blitz-sortable:hover { color: var(--text); }
     thead th .arrow { margin-left: 4px; color: var(--accent); }
     thead th.num, tbody td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono); }
     tbody td {
@@ -711,6 +728,38 @@
       </div>
       <div id="pool-body"></div>
     </section>
+    <section class="board blitz-card" id="blitz-card" hidden>
+      <div class="blitz-head">
+        <div class="pool-head">
+          <h2>Blitz 玩家</h2>
+          <span id="blitz-updated"></span>
+        </div>
+        <p class="pool-note" id="blitz-note">盈亏为已结算·含手续费。交易量没有取到时显示「—」。轮次是参与轮数，不是成交笔数。</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th class="blitz-sortable num" data-key="rank">排名<span class="arrow"></span></th>
+              <th class="blitz-sortable" data-key="address">钱包<span class="arrow"></span></th>
+              <th class="blitz-sortable num" data-key="pnl" data-tip="已结算·含手续费">盈亏<span class="arrow"></span></th>
+              <th class="blitz-sortable num" data-key="volume" data-tip="excludeSeed 之后的 userVolume。没有取到显示「—」。">交易量<span class="arrow"></span></th>
+              <th class="blitz-sortable num" data-key="races" data-tip="参与轮数，不是成交笔数">轮次<span class="arrow"></span></th>
+              <th class="blitz-sortable num" data-key="wins" data-tip="胜 / 负">胜/负<span class="arrow"></span></th>
+              <th class="blitz-sortable num" data-key="win_rate">胜率<span class="arrow"></span></th>
+              <th class="blitz-sortable num" data-key="best_streak">最佳连胜<span class="arrow"></span></th>
+            </tr>
+          </thead>
+          <tbody id="blitz-body">
+            <tr><td colspan="8" class="loading">正在读取 Blitz 玩家…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="footer">
+        <span id="blitz-count"></span>
+        <button type="button" class="blitz-more" id="blitz-more" hidden>显示更多</button>
+      </div>
+    </section>
     <p class="scope-note" id="scope-note"></p>
 
     <section class="board">
@@ -747,7 +796,7 @@
 
     <p class="hint">
       页面优先直连 <code>https://rest.ft.42.space</code>（该接口允许跨域）。24 小时、7 日、30 日和进行中的积分周会把交易者分页拉完再合计。
-      进行中的一周还会大约每 60 秒重拉成交量拆分（普通交易、Blitz 真实玩家、Blitz 42 种子、Agent）；标签页切到后台时暂停。每钱包的 Blitz 列仍用快照。
+      进行中的一周还会大约每 60 秒重拉成交量拆分（普通交易、Blitz 真实玩家、Blitz 42 种子、Agent）和 Blitz 玩家榜；标签页切到后台时暂停。每钱包的 Blitz 列仍用快照。玩家表的交易量优先用快照，进行中的一周会按可见的前 20 行慢慢补。
       「全部」窗口交易者约 6 万，全量合计由 GitHub Actions 写入 <code>data/leaderboard.json</code>，页面读这份快照，表格前 200 名仍走实时接口。
       已经结束的积分周读 <code>data/weeks/</code>，不再每次重拉。积分接口没有跨域，积分榜也来自这份快照。
       GitHub 会拖延定时任务，快照往往几小时才更新一次。
@@ -770,6 +819,9 @@
     const REFRESH_MS = 30_000;
     const OPEN_WEEK_REFRESH_MS = 60_000;
     const REQUEST_GAP_MS = 150;
+    const BLITZ_PAGE = 40;
+    const BLITZ_LAZY_LIMIT = 20;
+    const BLITZ_LAZY_CONCURRENCY = 2;
     const TZ = "Asia/Tokyo";
     const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
 
@@ -800,6 +852,12 @@
       pointsRows: null,
       liveSplit: null,
       refreshPending: false,
+      blitzSortKey: "pnl",
+      blitzSortDir: "desc",
+      blitzShown: BLITZ_PAGE,
+      blitzWeek: null,
+      blitzLive: null,
+      blitzVolumeLive: {},
     };
 
     let loadSeq = 0;
@@ -849,7 +907,18 @@
       poolTitle: document.getElementById("pool-title"),
       poolUpdated: document.getElementById("pool-updated"),
       poolBody: document.getElementById("pool-body"),
+      blitzCard: document.getElementById("blitz-card"),
+      blitzUpdated: document.getElementById("blitz-updated"),
+      blitzNote: document.getElementById("blitz-note"),
+      blitzBody: document.getElementById("blitz-body"),
+      blitzCount: document.getElementById("blitz-count"),
+      blitzMore: document.getElementById("blitz-more"),
     };
+
+    const blitzVolumeInflight = new Set();
+    const blitzVolumeMiss = new Map();
+    let blitzVolumeRunning = 0;
+    let blitzVolumeQueue = [];
 
     function shortAddr(addr) {
       if (!addr || addr.length < 12) return addr || "";
@@ -952,7 +1021,9 @@
     }
 
     function visibleColumnCount() {
-      return document.querySelectorAll("thead th:not([hidden])").length;
+      const head = document.querySelector(".board:not(.blitz-card) thead");
+      if (!head) return 7;
+      return head.querySelectorAll("th:not([hidden])").length;
     }
 
     function setSource(kind, message) {
@@ -1676,6 +1747,7 @@
       }
       syncWeekColumns();
       paintWeek();
+      renderBlitz();
       if (period === "week") {
         await loadWeek(seq, silent, week);
         return;
@@ -1790,6 +1862,7 @@
         els.tbody.innerHTML = `<tr><td colspan="${cols}" class="error-banner">${escapeHtml(String(err))}</td></tr>`;
         renderSummary();
         renderPool();
+        renderBlitz();
         return;
       }
       if (seq !== loadSeq) return;
@@ -1851,6 +1924,7 @@
 
       if (!isLiveCurrent) {
         state.liveSplit = null;
+        state.blitzLive = null;
         const block = state.weekDoc?.volume;
         if (!block || !Array.isArray(block.rows)) {
           state.aggregate = null;
@@ -1859,6 +1933,7 @@
           els.tbody.innerHTML = `<tr><td colspan="${cols}" class="error-banner">还没有 ${escapeHtml(start)} 的周数据。先运行 <code>python3 fetch.py</code>。</td></tr>`;
           renderSummary();
           renderPool();
+          renderBlitz();
           return;
         }
         const volumeRows = attachPool(decorate(attachPoints(normalizeApiRows(block.rows), map), "week"));
@@ -1899,7 +1974,10 @@
           sourceText: state.weekHasPoints ? "实时成交量 · 积分来自快照" : "实时全量",
         });
         if (volumeRows.length) {
-          await refreshLiveSplit(aggregate.total_volume, { start: current.start, end: current.end });
+          await Promise.all([
+            refreshLiveSplit(aggregate.total_volume, { start: current.start, end: current.end }),
+            refreshLiveBlitz({ start: current.start, end: current.end, from: current.from, to: current.to }),
+          ]);
         } else if (seq === loadSeq) {
           state.liveSplit = { ok: false };
           render();
@@ -1907,6 +1985,7 @@
       } catch (liveErr) {
         if (seq !== loadSeq) return;
         state.liveSplit = { ok: false };
+        state.blitzLive = { ok: false };
         const block = state.weekDoc?.volume;
         if (block && Array.isArray(block.rows) && block.from === current.from) {
           const volumeRows = attachPool(decorate(attachPoints(normalizeApiRows(block.rows), map), "week"));
@@ -2361,6 +2440,309 @@
       card.dataset.agents = String((breakdown.agents || {}).sum);
     }
 
+    function showBlitzSection() {
+      if (state.period !== "week" || state.cumulative) return false;
+      const meta = selectedWeekMeta();
+      if (meta && meta.group === "pre") return false;
+      return true;
+    }
+
+    function normalizeBlitzPlayer(row) {
+      if (!row || typeof row !== "object") return null;
+      const address = String(row.address || row.walletAddress || "").trim();
+      if (!address) return null;
+      const num = (value) => {
+        if (value == null || value === "") return null;
+        const n = Number(value);
+        return Number.isFinite(n) ? n : null;
+      };
+      const int = (value) => {
+        const n = num(value);
+        return n == null ? 0 : Math.trunc(n);
+      };
+      const flag = row.flag === "seed" || row.flag === "agent" ? row.flag : null;
+      return {
+        address,
+        rank: num(row.rank),
+        pnl: num(row.pnl != null ? row.pnl : row.racePnl),
+        races: int(row.races != null ? row.races : row.racesPlayed),
+        wins: int(row.wins),
+        losses: int(row.losses),
+        win_rate: num(row.win_rate != null ? row.win_rate : row.winRate),
+        best_streak: int(row.best_streak != null ? row.best_streak : row.bestStreak),
+        volume: num(row.volume),
+        flag,
+      };
+    }
+
+    function flagBlitz(address) {
+      const key = String(address || "").toLowerCase();
+      if (!key) return null;
+      if (state.compiled?.agents?.has(key)) return "agent";
+      const seeds = activeSeedSet();
+      for (const addr of state.weekIndex?.blitzSeedWallets || []) seeds.add(String(addr).toLowerCase());
+      if (seeds.has(key)) return "seed";
+      return null;
+    }
+
+    function blitzVolumeFor(address, stored, flag) {
+      if (flag === "seed") return stored == null ? 0 : Number(stored);
+      const key = String(address || "").toLowerCase();
+      if (isViewingOpenWeek() && state.blitzVolumeLive && Object.prototype.hasOwnProperty.call(state.blitzVolumeLive, key)) {
+        return state.blitzVolumeLive[key];
+      }
+      return stored == null ? null : Number(stored);
+    }
+
+    function blitzPlayersView() {
+      const snap = state.weekDoc?.blitzPlayers;
+      const snapPlayers = Array.isArray(snap?.players) ? snap.players : [];
+      const useLive = isViewingOpenWeek() && state.blitzLive?.ok && Array.isArray(state.blitzLive.players);
+      const source = useLive ? state.blitzLive.players : snapPlayers;
+      const storedVolume = new Map();
+      for (const row of snapPlayers) {
+        const item = normalizeBlitzPlayer(row);
+        if (item && item.volume != null) storedVolume.set(item.address.toLowerCase(), item.volume);
+      }
+      const players = [];
+      for (const row of source) {
+        const item = normalizeBlitzPlayer(row);
+        if (!item) continue;
+        const flag = item.flag || flagBlitz(item.address);
+        const stored = item.volume != null ? item.volume : storedVolume.get(item.address.toLowerCase());
+        item.flag = flag;
+        item.volume = blitzVolumeFor(item.address, stored == null ? null : stored, flag);
+        players.push(item);
+      }
+      const at = useLive ? state.blitzLive.at : (snap?.fetched_at || null);
+      return {
+        players,
+        total: useLive ? (state.blitzLive.total ?? players.length) : (snap?.total ?? players.length),
+        live: Boolean(useLive),
+        at,
+        missing: !useLive && !snap,
+      };
+    }
+
+    async function fetchBlitzLeaderboard(from, to) {
+      const players = [];
+      const seen = new Set();
+      let offset = 0;
+      let total = null;
+      let pages = 0;
+      while (pages < 6) {
+        const url = `${API_ROOT}/token-races/leaderboard?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&sort_by=pnl&limit=500&offset=${offset}&include_total=1`;
+        const payload = await fetchJsonLive(url);
+        const chunk = Array.isArray(payload.data) ? payload.data : null;
+        if (!chunk) throw new Error("blitz board invalid");
+        pages += 1;
+        if (payload.pagination && payload.pagination.totalResults != null) {
+          const n = Number(payload.pagination.totalResults);
+          if (Number.isFinite(n)) total = n;
+        }
+        for (const row of chunk) {
+          const item = normalizeBlitzPlayer(row);
+          if (!item) continue;
+          const key = item.address.toLowerCase();
+          if (seen.has(key)) continue;
+          seen.add(key);
+          players.push(item);
+        }
+        if (!chunk.length || !payload.pagination?.hasMore) break;
+        offset += chunk.length;
+        await sleep(REQUEST_GAP_MS);
+      }
+      return { players, total: total == null ? players.length : total };
+    }
+
+    async function refreshLiveBlitz(bounds) {
+      if (!isViewingOpenWeek() || document.hidden) return;
+      const seq = loadSeq;
+      try {
+        const live = await fetchBlitzLeaderboard(bounds.from, bounds.to);
+        if (seq !== loadSeq || !isViewingOpenWeek()) return;
+        state.blitzLive = {
+          ok: true,
+          at: new Date(),
+          players: live.players,
+          total: live.total,
+          from: bounds.from,
+          to: bounds.to,
+        };
+      } catch (err) {
+        if (seq !== loadSeq) return;
+        state.blitzLive = { ok: false };
+      }
+      if (seq === loadSeq && state.period === "week") renderBlitz();
+    }
+
+    function blitzSortValue(row, key) {
+      if (key === "address") return row.address.toLowerCase();
+      if (key === "wins") return row.wins;
+      const value = row[key];
+      if (value == null || Number.isNaN(Number(value))) return null;
+      return Number(value);
+    }
+
+    function scheduleBlitzVolumes(rows) {
+      if (!isViewingOpenWeek() || document.hidden) return;
+      const bounds = activeWeekBounds();
+      if (!bounds?.start || !bounds?.end) return;
+      let queued = 0;
+      for (const row of rows) {
+        if (queued >= BLITZ_LAZY_LIMIT) break;
+        if (!row || row.flag === "seed" || row.volume != null) continue;
+        const key = row.address.toLowerCase();
+        const missed = blitzVolumeMiss.get(key);
+        if (missed && Date.now() - missed < OPEN_WEEK_REFRESH_MS) continue;
+        if (blitzVolumeInflight.has(key)) continue;
+        if (blitzVolumeQueue.some((item) => item.address.toLowerCase() === key)) continue;
+        blitzVolumeQueue.push({ address: row.address, from: bounds.from });
+        queued += 1;
+      }
+      pumpBlitzVolumes(bounds);
+    }
+
+    function pumpBlitzVolumes(bounds) {
+      while (blitzVolumeRunning < BLITZ_LAZY_CONCURRENCY && blitzVolumeQueue.length) {
+        const job = blitzVolumeQueue.shift();
+        const key = job.address.toLowerCase();
+        if (state.blitzWeek && job.from && state.blitzWeek !== job.from && state.selectedWeekStart !== job.from) continue;
+        if (blitzVolumeInflight.has(key)) continue;
+        blitzVolumeInflight.add(key);
+        blitzVolumeRunning += 1;
+        fetchOneBlitzVolume(job.address, bounds).finally(() => {
+          blitzVolumeInflight.delete(key);
+          blitzVolumeRunning -= 1;
+          if (isViewingOpenWeek() && !document.hidden) pumpBlitzVolumes(activeWeekBounds());
+        });
+      }
+    }
+
+    async function fetchOneBlitzVolume(address, bounds) {
+      const frm = Math.floor(bounds.start.getTime() / 1000);
+      const to = Math.floor(bounds.end.getTime() / 1000);
+      const key = address.toLowerCase();
+      const week = bounds.from;
+      try {
+        const payload = await fetchJsonLive(
+          `${API_ROOT}/token-races/volume?from=${frm}&to=${to}&user=${encodeURIComponent(address)}&excludeSeed=true`,
+        );
+        if (!isViewingOpenWeek() || (state.selectedWeekStart || state.week?.from) !== week) return;
+        const volume = finiteNumber(payload?.data?.userVolume);
+        if (volume == null) {
+          blitzVolumeMiss.set(key, Date.now());
+          return;
+        }
+        state.blitzVolumeLive[key] = volume;
+        blitzVolumeMiss.delete(key);
+        renderBlitz();
+      } catch (err) {
+        blitzVolumeMiss.set(key, Date.now());
+      }
+    }
+
+    function renderBlitz() {
+      if (!els.blitzCard) return;
+      const show = showBlitzSection();
+      els.blitzCard.hidden = !show;
+      if (!show) return;
+      const weekKey = state.selectedWeekStart || state.week?.from || "";
+      if (state.blitzWeek !== weekKey) {
+        state.blitzWeek = weekKey;
+        state.blitzShown = BLITZ_PAGE;
+        state.blitzSortKey = "pnl";
+        state.blitzSortDir = "desc";
+        state.blitzVolumeLive = {};
+        blitzVolumeQueue = [];
+        blitzVolumeMiss.clear();
+      }
+      const view = blitzPlayersView();
+      els.blitzUpdated.classList.remove("live", "snap");
+      if (view.live && view.at) {
+        els.blitzUpdated.classList.add("live");
+        els.blitzUpdated.textContent = "实时 · 更新于 " + formatClock(view.at) + " (东京时间)";
+      } else if (view.at) {
+        els.blitzUpdated.classList.add("snap");
+        els.blitzUpdated.textContent = "缓存 · 更新于 " + formatTime(view.at);
+      } else {
+        els.blitzUpdated.classList.add("snap");
+        els.blitzUpdated.textContent = "缓存";
+      }
+      const q = state.query.trim().toLowerCase();
+      if (state.blitzQuery !== q) {
+        state.blitzQuery = q;
+        state.blitzShown = BLITZ_PAGE;
+      }
+      let rows = view.players.slice();
+      if (q) rows = rows.filter((row) => row.address.toLowerCase().includes(q));
+      const matched = rows.length;
+      const dir = state.blitzSortDir === "asc" ? 1 : -1;
+      const key = state.blitzSortKey || "pnl";
+      rows.sort((a, b) => {
+        const va = blitzSortValue(a, key);
+        const vb = blitzSortValue(b, key);
+        if (va == null && vb == null) return a.address.localeCompare(b.address);
+        if (va == null) return 1;
+        if (vb == null) return -1;
+        if (typeof va === "string") return va.localeCompare(vb) * dir;
+        if (va !== vb) return (va - vb) * dir;
+        if (key === "wins" && a.losses !== b.losses) return (a.losses - b.losses) * dir;
+        return (a.rank ?? 1e12) - (b.rank ?? 1e12);
+      });
+      const sum = rows.reduce((total, row) => total + (Number(row.pnl) || 0), 0);
+      const flagged = rows.filter((row) => row.flag === "seed" || row.flag === "agent").length;
+      const shown = rows.slice(0, state.blitzShown || BLITZ_PAGE);
+      document.querySelectorAll("#blitz-card thead th.blitz-sortable").forEach((th) => {
+        const arrow = th.querySelector(".arrow");
+        if (!arrow) return;
+        arrow.textContent = th.dataset.key === key ? (state.blitzSortDir === "asc" ? "▲" : "▼") : "";
+      });
+      const flagNote = flagged ? ` · 含 ${formatInt(flagged)} 个种子/Agent` : "";
+      if (!view.players.length) {
+        els.blitzCount.textContent = view.missing ? "还没有这一周的 Blitz 玩家快照" : "这一周没有 Blitz 玩家";
+      } else if (q) {
+        els.blitzCount.textContent = `搜索到 ${formatInt(matched)} 名 · 盈亏合计 ${formatUsd(sum)}${flagNote}`;
+      } else {
+        els.blitzCount.textContent = `显示 ${formatInt(shown.length)} / ${formatInt(matched)} 名 · 盈亏合计 ${formatUsd(sum)}${flagNote}`;
+      }
+      if (els.blitzMore) els.blitzMore.hidden = shown.length >= rows.length || !rows.length;
+      if (!rows.length) {
+        const empty = q ? "没有匹配的钱包" : (view.missing ? "这一周的 Blitz 玩家表还没写进快照。" : "这一周没有 Blitz 玩家。");
+        els.blitzBody.innerHTML = `<tr><td colspan="8" class="empty">${escapeHtml(empty)}</td></tr>`;
+        return;
+      }
+      els.blitzBody.innerHTML = shown.map((row) => {
+        const rowClass = row.flag === "seed" ? "row-seed" : row.flag === "agent" ? "row-agent" : "";
+        const rank = row.rank == null ? null : Number(row.rank);
+        const rankClass = rank === 1 ? "r1" : rank === 2 ? "r2" : rank === 3 ? "r3" : "";
+        const medal = rank === 1 ? "🥇 " : rank === 2 ? "🥈 " : rank === 3 ? "🥉 " : "";
+        const badge = row.flag === "seed"
+          ? `<button type="button" class="badge badge-seed" data-tip="这个地址在种子名单里。竞速榜通常会排除种子，这里仍标出来。交易量是 excludeSeed 之后的 userVolume。">种子</button>`
+          : row.flag === "agent"
+            ? `<button type="button" class="badge badge-agent" data-tip="NFT / Agent 池的 Agent 钱包。不算 Blitz 玩家。">Agent</button>`
+            : "";
+        const volumeText = row.volume == null ? "—" : formatUsd(row.volume);
+        return `<tr class="${rowClass}">
+          <td class="num rank ${rankClass}">${rank == null ? "—" : medal + rank}</td>
+          <td>
+            <div class="trader">
+              <a href="${explorerUrl(row.address)}" target="_blank" rel="noopener" title="${escapeHtml(row.address)}">${escapeHtml(shortAddr(row.address))}</a>
+              ${badge}
+              <button type="button" class="copy" data-addr="${escapeHtml(row.address)}" title="复制地址">复制</button>
+            </div>
+          </td>
+          <td class="num ${pnlClass(row.pnl)}" title="已结算·含手续费">${row.pnl == null ? "—" : formatUsd(row.pnl)}</td>
+          <td class="num">${volumeText}</td>
+          <td class="num" title="参与轮数">${formatInt(row.races)}</td>
+          <td class="num">${formatInt(row.wins)} / ${formatInt(row.losses)}</td>
+          <td class="num">${row.win_rate == null ? "—" : formatWinRate(row.win_rate)}</td>
+          <td class="num">${formatInt(row.best_streak)}</td>
+        </tr>`;
+      }).join("");
+      scheduleBlitzVolumes(shown.slice(0, BLITZ_LAZY_LIMIT));
+    }
+
     function renderPool() {
       if (!els.poolCard) return;
       const show = state.period === "week";
@@ -2453,6 +2835,7 @@
       });
       renderSummary();
       renderPool();
+      renderBlitz();
       const view = sortedView();
       const cols = visibleColumnCount();
       document.querySelectorAll("thead th.sortable").forEach((th) => {
@@ -2596,6 +2979,7 @@
         <p>三个 Agent 钱包（codex、claude、grok）单独成组，徽章是 Agent。它们不进散户，也不进做市。42 Blitz 种子钱包是成交量接口 <code>excludeSeed=true</code> 排除掉的系统钱包：不排除时有 Blitz 成交，排除后为 0。页面标成「42 系统/种子」，提示「42 Blitz 种子钱包（无积分）」。原有做市标签留在配置里，只改展示。种子钱包同样不进散户和做市。</p>
         <h3>成交量拆分</h3>
         <p>每一周和总榜有一张拆分：普通交易、Blitz 真实玩家、Blitz 42 种子、Agent（codex / claude / grok）。Blitz 用 <code>/token-races/volume</code>（<code>excludeSeed=true</code> 是真实玩家），Agent 用挖矿累计成交减去这一周开始时的基线。普通交易是总成交量减去 Blitz 再减去 Agent，不是另一套接口。进行中的一周大约每 60 秒在浏览器里重算这四项；任一请求失败就改显示快照，并标成「缓存」。每钱包的 Blitz 列仍用快照。取不到的数字显示「暂无数据」，不用 0 填。积分池比例里，交易 70%、NFT 池 20%、Pass 榜 10% 是官方口径；普通交易 55% 和 Token Race 15% 标成「推断」。</p>
+        <p>拆分下面的「Blitz 玩家」来自 <code>/token-races/leaderboard</code>（<code>sort_by=pnl</code>）。盈亏是已结算、含手续费的 <code>racePnl</code>。交易量是同一周 <code>userVolume</code>（<code>excludeSeed=true</code>），没取到显示「—」。轮次是 <code>racesPlayed</code>，也就是参与轮数，不是成交笔数。进行中的一周大约每 60 秒重拉这张榜；失败就沿用快照并标成「缓存」。交易量仍以快照为准，浏览器只为当前可见的前 20 行补缺失的数字。种子名单和 3 个 Agent 如果出现在榜上会单独标出。</p>
         <div id="tier-c-live"></div>
         <h3>全平台合计</h3>
         <p>四个卡片统计的是该窗口里每一个交易者，用排行榜接口分页拉完（<code>limit=500</code>）。「全部」大约有六万名交易者，浏览器不每 30 秒扫一遍；<code>fetch.py</code> 在 GitHub Actions 里扫完，把合计和高频机器人地址写进快照，页面注明那次扫描的更新时间。表格始终只放成交量前 ${TABLE_CAP} 名。</p>
@@ -2697,6 +3081,41 @@
         render();
       });
     });
+
+    document.querySelectorAll("#blitz-card thead th.blitz-sortable").forEach((th) => {
+      th.addEventListener("click", () => {
+        const key = th.dataset.key;
+        if (state.blitzSortKey === key) state.blitzSortDir = state.blitzSortDir === "desc" ? "asc" : "desc";
+        else {
+          state.blitzSortKey = key;
+          state.blitzSortDir = key === "address" || key === "rank" ? "asc" : "desc";
+        }
+        state.blitzShown = BLITZ_PAGE;
+        renderBlitz();
+      });
+    });
+
+    if (els.blitzMore) {
+      els.blitzMore.addEventListener("click", () => {
+        state.blitzShown += BLITZ_PAGE;
+        renderBlitz();
+      });
+    }
+    if (els.blitzBody) {
+      els.blitzBody.addEventListener("click", async (ev) => {
+        const btn = ev.target.closest("button.copy");
+        if (!btn) return;
+        const addr = btn.dataset.addr;
+        try {
+          await navigator.clipboard.writeText(addr);
+          btn.textContent = "已复制";
+          setTimeout(() => { btn.textContent = "复制"; }, 1200);
+        } catch {
+          btn.textContent = "失败";
+          setTimeout(() => { btn.textContent = "复制"; }, 1200);
+        }
+      });
+    }
 
     els.search.addEventListener("input", () => {
       state.query = els.search.value;
