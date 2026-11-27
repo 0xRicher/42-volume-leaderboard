@@ -20673,7 +20673,7 @@
   },
   "blitzPlayers": {
     "status": "ok",
-    "fetched_at": "2026-11-26T08:53:06Z",
+    "fetched_at": "2026-11-27T06:35:23Z",
     "from": "2026-11-12",
     "to": "2026-11-18",
     "sort_by": "pnl",
@@ -20691,7 +20691,8 @@
         "best_streak": 7,
         "longest_loss_streak": 7,
         "volume": 1276.4950495049504,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5416C471Cbc00e97aEE47177B9594C19d7E6C9b7",
@@ -20704,7 +20705,8 @@
         "best_streak": 5,
         "longest_loss_streak": 5,
         "volume": 545.5551206799181,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xd0A80151A3c29502a9BC0287D674dd0f4Cb512Bf",
@@ -20717,7 +20719,8 @@
         "best_streak": 8,
         "longest_loss_streak": 5,
         "volume": 500.418755613365,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xb386f46a7d25C833934ecf3f9B7fF6278aB2910C",
@@ -20730,7 +20733,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 263.9488084787691,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xaAA8aCa1f08f7f1808B6558397Bd6d426a25E424",
@@ -20743,7 +20747,8 @@
         "best_streak": 7,
         "longest_loss_streak": 5,
         "volume": 639.7509052098455,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x3e15aeCD5DC386F4d2d71d5Bfa9e9Cf2623BFD96",
@@ -20756,7 +20761,8 @@
         "best_streak": 4,
         "longest_loss_streak": 8,
         "volume": 428.66336633663366,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xf23fF2713Fb8DCD87E7f35F3d4bB1461473F1C6F",
@@ -20769,7 +20775,8 @@
         "best_streak": 4,
         "longest_loss_streak": 6,
         "volume": 149.93190645792345,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x54fc7932e8D5590067581C10d58ab75467139F7A",
@@ -20782,7 +20789,8 @@
         "best_streak": 4,
         "longest_loss_streak": 8,
         "volume": 106.01980198019803,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x0DE8b802f014583e4483c686Bda8D6C97cC1f453",
@@ -20795,7 +20803,8 @@
         "best_streak": 4,
         "longest_loss_streak": 10,
         "volume": 320.0166456539256,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xecE03423b3f18775390B17cCbdA280C3fBbed875",
@@ -20808,7 +20817,8 @@
         "best_streak": 3,
         "longest_loss_streak": 3,
         "volume": 147.12871287128712,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4a41dcE8323A814BeDe652060D65071084f4c83C",
@@ -20821,7 +20831,8 @@
         "best_streak": 8,
         "longest_loss_streak": 8,
         "volume": 208.01981571324464,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x66aF19E35A7Da43bB87a3456A9731882f2Ae9f2C",
@@ -20834,7 +20845,8 @@
         "best_streak": 1,
         "longest_loss_streak": 6,
         "volume": 68.6863599086652,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x544446701B64b477C3aF499b849ba9d7f05005AF",
@@ -20847,7 +20859,8 @@
         "best_streak": 7,
         "longest_loss_streak": 4,
         "volume": 500.4207736402955,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x17c1dea5FA8b081dE8800B7E8fE3212b21346EA1",
@@ -20860,7 +20873,8 @@
         "best_streak": 3,
         "longest_loss_streak": 2,
         "volume": 24.53073183865917,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xF30FC81Dd3b922025e0C266E9f7F558220E6EBf2",
@@ -20873,7 +20887,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 29.43664581178366,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x8fFc52F13639772D92E572E87BB74EcFc32C5aa3",
@@ -20886,7 +20901,8 @@
         "best_streak": 3,
         "longest_loss_streak": 5,
         "volume": 63.04950495049505,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xFE4E965AA48ef2083949F93aA907BB25fdDaD071",
@@ -20899,7 +20915,8 @@
         "best_streak": 3,
         "longest_loss_streak": 6,
         "volume": 60.836147053835774,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xc4fd188B8f225a2e806639209be84Fe3B79871EC",
@@ -20912,7 +20929,8 @@
         "best_streak": 5,
         "longest_loss_streak": 4,
         "volume": 95.17863622812133,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xC74894dE92d66307Cfcbf4FD1c62c1Fe95F4193D",
@@ -20925,7 +20943,8 @@
         "best_streak": 1,
         "longest_loss_streak": 0,
         "volume": 9.812094907498718,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x1B7c2bC6DF851a0912B71017bF688529d7E0e9C6",
@@ -20938,7 +20957,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 59.854860634400566,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x59851a7CfdeE2c9478C13488bF8Fe9Fdee1cBdA4",
@@ -20951,7 +20971,8 @@
         "best_streak": 3,
         "longest_loss_streak": 3,
         "volume": 284.5544577511405,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xc0167fbaFe6AFC6Cee0bb570DD33fb3113e966af",
@@ -20964,7 +20985,8 @@
         "best_streak": 7,
         "longest_loss_streak": 2,
         "volume": 29.43715447685266,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xB984863333eE8278545c3e7cEBA73aAd5901216C",
@@ -20977,7 +20999,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 27.474543963767598,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xd01458c3DD266e0dc5236721686Bb414A4c3BB6e",
@@ -20990,7 +21013,8 @@
         "best_streak": 3,
         "longest_loss_streak": 5,
         "volume": 90.2728556729769,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xD1fa90a4eab894b2385FA0244F3Ee05447C199C9",
@@ -21003,7 +21027,8 @@
         "best_streak": 2,
         "longest_loss_streak": 1,
         "volume": 12.756048358750665,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xe532A73B5C9492a4F7107C59A049f3EBA736CA3c",
@@ -21016,7 +21041,8 @@
         "best_streak": 2,
         "longest_loss_streak": 0,
         "volume": 6.868502544278332,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x02FDa75fe9E5173BeeBe8B07cdF6D3B95AeeF956",
@@ -21029,7 +21055,8 @@
         "best_streak": 3,
         "longest_loss_streak": 4,
         "volume": 43.173980592481556,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x0C0C9c7faE63947791CE88e6e899c35c965666Bb",
@@ -21042,7 +21069,8 @@
         "best_streak": 2,
         "longest_loss_streak": 5,
         "volume": 52.986420893960215,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x92a40Cf5aF69bf8c9d448B695578d6C4379792f2",
@@ -21055,7 +21083,8 @@
         "best_streak": 3,
         "longest_loss_streak": 3,
         "volume": 47.84158415841584,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xe1Dc7d4E4E6eb64BfD8D52E1D762F1F1d8FF4239",
@@ -21068,7 +21097,8 @@
         "best_streak": 6,
         "longest_loss_streak": 10,
         "volume": 283.74257425742576,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xE2ACB5C0A6C3458c76FF8582131e64A36560A4e7",
@@ -21081,7 +21111,8 @@
         "best_streak": 7,
         "longest_loss_streak": 5,
         "volume": 32.38124294045564,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x12E597bbEb2173A0eced969Aec6D998C8A781386",
@@ -21094,7 +21125,8 @@
         "best_streak": 2,
         "longest_loss_streak": 2,
         "volume": 10.79382247979873,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x6Ab942F14e416768711C13E392EB8C15E4d9b708",
@@ -21107,7 +21139,8 @@
         "best_streak": 4,
         "longest_loss_streak": 4,
         "volume": 103.95049504950495,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x404E2c91Aa1A379FA97e078D97503fF2c1B40668",
@@ -21120,7 +21153,8 @@
         "best_streak": 2,
         "longest_loss_streak": 5,
         "volume": 73.59183432405256,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xd5312687725Da7F7DDEb956b776e69659a8B789b",
@@ -21133,7 +21167,8 @@
         "best_streak": 2,
         "longest_loss_streak": 1,
         "volume": 12.755969864628906,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xb4d85050438C5fdA675ef466A2545569Ebb896e8",
@@ -21146,7 +21181,8 @@
         "best_streak": 4,
         "longest_loss_streak": 6,
         "volume": 55.929824853956106,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5Ae68744AAa918c7a1916EB25774b4C0fd4F3C11",
@@ -21159,7 +21195,8 @@
         "best_streak": 2,
         "longest_loss_streak": 3,
         "volume": 8.363366336633664,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x3D8b6ac36eDf8FD85762576d342F362f8bEb71Ef",
@@ -21172,7 +21209,8 @@
         "best_streak": 4,
         "longest_loss_streak": 4,
         "volume": 100.08780791244665,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x54734b16110b813aee211c8BE1DB89D28286a7Bb",
@@ -21185,7 +21223,8 @@
         "best_streak": 5,
         "longest_loss_streak": 6,
         "volume": 90.36633663366337,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x78BbAc91933F6f9341fB34a4B9e84623E41AF745",
@@ -21198,7 +21237,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 16.680880045435668,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x9deD080D857928f99781E77f663038D7696b2c11",
@@ -21211,7 +21251,8 @@
         "best_streak": 4,
         "longest_loss_streak": 7,
         "volume": 270.8811881188119,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x80D6e89E41477a487347B6453D83C25d59145C55",
@@ -21224,7 +21265,8 @@
         "best_streak": 4,
         "longest_loss_streak": 10,
         "volume": 126.5783494250256,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x53e693A7154654aDE82829e2E9753DbD0A62bd89",
@@ -21237,7 +21279,8 @@
         "best_streak": 3,
         "longest_loss_streak": 4,
         "volume": 15.746534653465346,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x41c44237c88548B66Bc5c3e07134F7e0a3B367f5",
@@ -21250,7 +21293,8 @@
         "best_streak": 3,
         "longest_loss_streak": 6,
         "volume": 345.7524752475247,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5216cBAC292dD2370fdfB8312EcB079B2b7272Df",
@@ -21263,7 +21307,8 @@
         "best_streak": 2,
         "longest_loss_streak": 0,
         "volume": 1.9625728353539238,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x42cf576Fb7C0419F2A22Ec4a87Ec686B55E8a845",
@@ -21276,7 +21321,8 @@
         "best_streak": 2,
         "longest_loss_streak": 0,
         "volume": 1.9624472409911995,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xEbC3B9c146a509ddebEEec5856737D555729A0E8",
@@ -21289,7 +21335,8 @@
         "best_streak": 2,
         "longest_loss_streak": 2,
         "volume": 4.9061181018500255,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x04969a07a3c2eC003a01d5e49207e05Ac9aa73eb",
@@ -21302,7 +21349,8 @@
         "best_streak": 2,
         "longest_loss_streak": 5,
         "volume": 243.34441552350268,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x53721212db753E14F0217967e8D34E05F02774B0",
@@ -21315,7 +21363,8 @@
         "best_streak": 5,
         "longest_loss_streak": 3,
         "volume": 31.400239133518276,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x673955C3FDFcAD270F98898019D94da0e283E1B1",
@@ -21328,7 +21377,8 @@
         "best_streak": 3,
         "longest_loss_streak": 2,
         "volume": 4.906133801427988,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x531f1aB4Cb4Ce02760603AD8AB08b4c1B6b29B95",
@@ -21341,7 +21391,8 @@
         "best_streak": 4,
         "longest_loss_streak": 2,
         "volume": 34.45100440370327,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xFbB6b6E4014C5Dd4dECC8dc195f437715035B89C",
@@ -21354,7 +21405,8 @@
         "best_streak": 3,
         "longest_loss_streak": 7,
         "volume": 16.27128712871287,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x20763D5aa8d5d5f159f74Dc8D6D9D288915347ec",
@@ -21367,7 +21419,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 4.906118111144027,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5d457955e9CC69c118DA7D21A8D32b680b288106",
@@ -21406,7 +21459,8 @@
         "best_streak": 3,
         "longest_loss_streak": 3,
         "volume": 46.0990099009901,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xD5d34c948a05F89682A4ab23d4E9F93F42d0F463",
@@ -21432,7 +21486,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 15.699593625749205,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x6036fB0056B761c9017C2199108d9249b30f7c4c",
@@ -21445,7 +21500,8 @@
         "best_streak": 5,
         "longest_loss_streak": 8,
         "volume": 329.68799021756547,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x13D949fE5A3D13D88B325035825D260943c99edA",
@@ -21458,7 +21514,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 3.4445544554455445,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 11785.618761361993
       },
       {
         "address": "0x5D18B5d63aB3a9F95cA20bF4CEBB50EaEa3A95Fe",
@@ -21471,7 +21528,8 @@
         "best_streak": 2,
         "longest_loss_streak": 1,
         "volume": 5.887624316883437,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x9f4E13ac5d69F4cbd39aCC0e10F2AEfa66cD14a7",
@@ -21484,7 +21542,8 @@
         "best_streak": 2,
         "longest_loss_streak": 3,
         "volume": 6.8686124415750065,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x67506AC99034FEC04aE6f3fdBFDc4ED6fDCDfcE0",
@@ -21510,7 +21569,8 @@
         "best_streak": 2,
         "longest_loss_streak": 3,
         "volume": 35.64356435643565,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x274F4435db49a55B81918670E2C3342019873e1E",
@@ -21523,7 +21583,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 1.9624472407400102,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x365283521735d8DB38d89C2EAd32497555cF6B05",
@@ -21549,7 +21610,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 3.924937698456176,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x150F1B8D8E6253324dc835B7c52a1438d5395014",
@@ -21562,7 +21624,8 @@
         "best_streak": 0,
         "longest_loss_streak": 1,
         "volume": 1.4851485148514851,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xb24a87c78dc7B0A19C32E45c6c6901750Ea07A31",
@@ -21575,7 +21638,8 @@
         "best_streak": 0,
         "longest_loss_streak": 1,
         "volume": 2.9702970297029703,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2b6f82Cef0C58Afd1698f360554161AbC434a20C",
@@ -21588,7 +21652,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 1.9683168316831683,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x0D5C441E3c7ca3C2070a3223edf45d82aACB8Ec1",
@@ -21601,7 +21666,8 @@
         "best_streak": 3,
         "longest_loss_streak": 6,
         "volume": 25.699315585788504,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 10055.64054881537
       },
       {
         "address": "0xe4707186dB92793Ff50bD276DA5F0e7D19850e1c",
@@ -21614,7 +21680,8 @@
         "best_streak": 2,
         "longest_loss_streak": 4,
         "volume": 5.404950495049505,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xbCE784C82aACaa1a7FC4502D640247A1a8491e2f",
@@ -21627,7 +21694,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 2.9438121573113487,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xa3ae9Ead8F066E193f0fFce9b9c1667F720BC780",
@@ -21640,7 +21708,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 2.9436708611100153,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xff8dD9aB41F3848ce6D35d25d8Cd971882771E58",
@@ -21653,7 +21722,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 2.9436708611100153,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xf701478782CED01759E088843DFa4292283AEeCC",
@@ -21666,7 +21736,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 2.9524752475247524,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 31463.715613530047
       },
       {
         "address": "0x33DbfAd343c0D6081CAb18F71Aa5d1187cCad2f4",
@@ -21679,7 +21750,8 @@
         "best_streak": 2,
         "longest_loss_streak": 2,
         "volume": 5.887765609568101,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x98e0aDe91D8aaBA571B5262BA78731a3E67A4152",
@@ -21692,7 +21764,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 2.014783929964175,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x19a09baf3C0Dc43F1eF81Fe3f017055dBb1C1CDb",
@@ -21770,7 +21843,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 5.8874673168338925,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x9e6b9Cc64ec96E68fB50A27d48A5B94E42947B30",
@@ -21783,7 +21857,8 @@
         "best_streak": 2,
         "longest_loss_streak": 1,
         "volume": 5.887341722220031,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x7f0e4931d59391B30a2F73d73BefD1FE03AfBF5e",
@@ -21796,7 +21871,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 4.691579355995146,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x51C1bC5AF038fADD83A76a32E1b03B3a2eD5C972",
@@ -21809,7 +21885,8 @@
         "best_streak": 2,
         "longest_loss_streak": 2,
         "volume": 5.887483022942843,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2B4b706a2E76f5e4FBf2dbDB9bdF0c3b8a7F28a0",
@@ -21822,7 +21899,8 @@
         "best_streak": 3,
         "longest_loss_streak": 2,
         "volume": 8.831153877270708,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x49d07AD5ecD5c31c73BE01596d2A1D6e51Ed72F3",
@@ -21835,7 +21913,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 14.718322905891867,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x9c28c83D8e6BeF22dD087d0B64C55e44e467E111",
@@ -21848,7 +21927,8 @@
         "best_streak": 3,
         "longest_loss_streak": 4,
         "volume": 7.849804663040345,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xD727E5912BC22351EEA446f5E14D9867A0Dcb200",
@@ -21861,7 +21941,8 @@
         "best_streak": 4,
         "longest_loss_streak": 10,
         "volume": 9.34950495049505,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x1fb3c63c854bD8BdA6a3A8ea7D0f72989b1Df576",
@@ -21874,7 +21955,8 @@
         "best_streak": 5,
         "longest_loss_streak": 2,
         "volume": 73.59148893434293,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xff869fA83BDA026280C908C1D133B674EE380adc",
@@ -21887,7 +21969,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 6.397029702970297,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xf6066FE683630E5605b843c23d5511636631D10B",
@@ -21900,7 +21983,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 3.925051477761642,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x41620D969Ef2a06776Cb0c2f9d8C7e4C5DCD75dE",
@@ -21913,7 +21997,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 3.9248944814800204,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x39EdF9fc2B17C31a800daD2eaDff0f78770f5F78",
@@ -21926,7 +22011,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 10.793915111327486,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x131E0255527249A61e20E9c32c1e03DD00c1212C",
@@ -21939,7 +22025,8 @@
         "best_streak": 3,
         "longest_loss_streak": 7,
         "volume": 100.4059405940594,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x926634932927b388A7c06D4193E7792aBBE11881",
@@ -21952,7 +22039,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 3.9248944814800204,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x208acC5B867ABAbF0F68f28bECeebA67789C131A",
@@ -21965,7 +22053,8 @@
         "best_streak": 5,
         "longest_loss_streak": 3,
         "volume": 26.493367442617714,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2B68348CeE3DCb3B6cBb93b7d7c54ea4E92f2F11",
@@ -21978,7 +22067,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 3.925035779942093,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x82AD6c6f8670746b22Abce5A1823B5373fDC5f0d",
@@ -21991,7 +22081,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 5.0981006474021555,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x713E5DB5eaCFC22D6Fe21938B1e85433c34EDdF4",
@@ -22004,7 +22095,8 @@
         "best_streak": 0,
         "longest_loss_streak": 1,
         "volume": 1.9643564356435643,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2206452969Cdb7961b837C628062adf592418b28",
@@ -22017,7 +22109,8 @@
         "best_streak": 0,
         "longest_loss_streak": 1,
         "volume": 1.9624472407400102,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x32b1d0F0B942e7C5F9e43736c8BB2ba529a0Ff36",
@@ -22030,7 +22123,8 @@
         "best_streak": 0,
         "longest_loss_streak": 2,
         "volume": 1.9624472407400102,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xe2b23BB03bdc890Cf1ee27102822a45FA0a544E7",
@@ -22043,7 +22137,8 @@
         "best_streak": 0,
         "longest_loss_streak": 1,
         "volume": 1.9624944386935168,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xE3C60cBcd538E533DaDBf64a59141AB4021F23a7",
@@ -22056,7 +22151,8 @@
         "best_streak": 3,
         "longest_loss_streak": 7,
         "volume": 23.662066388859266,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2C709B6383Ff024fa178D0C845c03DDA546F9Ded",
@@ -22069,7 +22165,8 @@
         "best_streak": 2,
         "longest_loss_streak": 4,
         "volume": 6.868628141152937,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xdDd2B9DC12eA952Fc6dc5f89D095CDa5F2962Bb6",
@@ -22082,7 +22179,8 @@
         "best_streak": 0,
         "longest_loss_streak": 3,
         "volume": 2.4603960396039604,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2747ad71ff7532c9a6d66f51C7490f8505Da5a1d",
@@ -22095,7 +22193,8 @@
         "best_streak": 0,
         "longest_loss_streak": 4,
         "volume": 11.774683444440175,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x3532338cF51C997de7e818C83895413e7cAfE632",
@@ -22108,7 +22207,8 @@
         "best_streak": 5,
         "longest_loss_streak": 4,
         "volume": 17.662166463112584,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x97D83735c51178129bAe1BD7686ea0E942184864",
@@ -22121,7 +22221,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 6.868502544278332,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x22C2fa18AC12F75E5857F566a1d5DB0E6E2DC510",
@@ -22134,7 +22235,8 @@
         "best_streak": 2,
         "longest_loss_streak": 4,
         "volume": 18.81188118811881,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x9800D530902125b7AfA6c2260F552585Cf4751fc",
@@ -22147,7 +22249,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 4.906133801176776,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x88797edFFAB6DfBB37bF11F238bC2f77232Ac1C1",
@@ -22160,7 +22263,8 @@
         "best_streak": 1,
         "longest_loss_streak": 4,
         "volume": 6.719532416835502,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xeE0C6696373ca4b788e41ef7292BD12A98571d2c",
@@ -22173,7 +22277,8 @@
         "best_streak": 2,
         "longest_loss_streak": 3,
         "volume": 14.720426628987182,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x418F59Dce24d95590F25c6A6B8e3d45109A5096f",
@@ -22186,7 +22291,8 @@
         "best_streak": 0,
         "longest_loss_streak": 2,
         "volume": 2.9436708611100153,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xbD897a591D0267CF07DbcA9B1bedE0ddc139ad5E",
@@ -22199,7 +22305,8 @@
         "best_streak": 0,
         "longest_loss_streak": 2,
         "volume": 2.9436708611100153,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x80fE31e70BDDD0E27539dC59867AdA05cD53320C",
@@ -22212,7 +22319,8 @@
         "best_streak": 0,
         "longest_loss_streak": 3,
         "volume": 2.943953449996033,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xD72b77FB96362b8b75a9648026482a8C0C15b08f",
@@ -22225,7 +22333,8 @@
         "best_streak": 1,
         "longest_loss_streak": 5,
         "volume": 7.849788962960041,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x6a30557bD1Dbd2AeeC400D553959602Cea17ebb7",
@@ -22238,7 +22347,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 7.849788962960041,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x0c1fCC1522350210f0BdDDbf8f27bD816B66EfaD",
@@ -22251,7 +22361,8 @@
         "best_streak": 3,
         "longest_loss_streak": 5,
         "volume": 90.86336633663366,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xA19b6dE5100A5407fD67Afbd1C87E47B34c70404",
@@ -22264,7 +22375,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 8.307509878802954,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x19E0627994ba5C5e81F1bf402784efB67a947B44",
@@ -22277,7 +22389,8 @@
         "best_streak": 1,
         "longest_loss_streak": 4,
         "volume": 9.646771527840581,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xE1835aF987A0746894BDd1E7a6Bd937ec4103263",
@@ -22290,7 +22403,8 @@
         "best_streak": 1,
         "longest_loss_streak": 4,
         "volume": 11.80990099009901,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xe197628A03d2cC7810BeB9fb68B06967C759Eec6",
@@ -22303,7 +22417,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 7.849788962960041,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xDc8d39fCfcB06e2CB6ac0324066ddB5B5576a095",
@@ -22342,7 +22457,8 @@
         "best_streak": 2,
         "longest_loss_streak": 2,
         "volume": 13.73727198364218,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x27C824AC033D58cBb7C2A460220167f2d95A7a67",
@@ -22355,7 +22471,8 @@
         "best_streak": 2,
         "longest_loss_streak": 8,
         "volume": 52.004726286252335,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xfD10f0546a57F678cA45bD51318Ef0A8A77c2B9F",
@@ -22368,7 +22485,8 @@
         "best_streak": 12,
         "longest_loss_streak": 3,
         "volume": 151.1098638139698,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xdA06EEe16dF4A8092c170AEFcB0C3a25252453D9",
@@ -22381,7 +22499,8 @@
         "best_streak": 2,
         "longest_loss_streak": 5,
         "volume": 13.73741327758281,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5B7768E94D70BED29277c723E48A06c5C080D4D2",
@@ -22394,7 +22513,8 @@
         "best_streak": 6,
         "longest_loss_streak": 3,
         "volume": 24.530731805702672,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xd813Bc31657E064a99546383c8181daca3Ca93FF",
@@ -22407,7 +22527,8 @@
         "best_streak": 3,
         "longest_loss_streak": 3,
         "volume": 84.07920792079207,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x9aaEf91578844d1AE19Ef8625e5A7AbB291B7E36",
@@ -22511,7 +22632,8 @@
         "best_streak": 3,
         "longest_loss_streak": 1,
         "volume": 17.405304883004536,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5005EfB178df2B88BE4DF4546ebc2694552928F8",
@@ -22524,7 +22646,8 @@
         "best_streak": 3,
         "longest_loss_streak": 8,
         "volume": 55.445544554455445,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 6295.674194056574
       },
       {
         "address": "0xeaEeE5def170d2EF4C8F85c0D5B1eF4ca2352979",
@@ -22537,7 +22660,8 @@
         "best_streak": 3,
         "longest_loss_streak": 3,
         "volume": 24.752475247524753,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xC851cFfc8d619e578E93be48eeA48134C407C85b",
@@ -22550,7 +22674,8 @@
         "best_streak": 3,
         "longest_loss_streak": 4,
         "volume": 367.97065565478295,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x784e105960E35115F45eF2f316fca4e0D2114445",
@@ -22563,7 +22688,8 @@
         "best_streak": 1,
         "longest_loss_streak": 5,
         "volume": 7.850071557623483,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5Cf91eBeF24B9b7b003Ee5a81EC478Aaa44343E5",
@@ -22589,7 +22715,8 @@
         "best_streak": 2,
         "longest_loss_streak": 5,
         "volume": 33.663366336633665,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2a5bF01f62D6F7cb7493014A1E32f27A7DB221CC",
@@ -22602,7 +22729,8 @@
         "best_streak": 2,
         "longest_loss_streak": 4,
         "volume": 16.831683168316832,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x398E9fba870113564E2c40aA202699a5355e0DC3",
@@ -22615,7 +22743,8 @@
         "best_streak": 4,
         "longest_loss_streak": 2,
         "volume": 18.64339008097069,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x30e05CE90164ba90268ACAa2898405035d14575c",
@@ -22641,7 +22770,8 @@
         "best_streak": 2,
         "longest_loss_streak": 6,
         "volume": 149.14785721652638,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x98A8Ff629CFc1ea2CF5D1526bC6FD39D0363F61C",
@@ -22654,7 +22784,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 20.481120245445947,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x51caEb376ff4D58b35D1f57bD34Ee89641d5b040",
@@ -22667,7 +22798,8 @@
         "best_streak": 4,
         "longest_loss_streak": 10,
         "volume": 66.93069306930693,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4471Dc71FC2DEeF62b2C258Ceebd4c01E7A0BEEa",
@@ -22680,7 +22812,8 @@
         "best_streak": 2,
         "longest_loss_streak": 6,
         "volume": 13.861386138613861,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x8Af968d77E9b30287b5BfB9710D979380aBbD3f5",
@@ -22693,7 +22826,8 @@
         "best_streak": 1,
         "longest_loss_streak": 6,
         "volume": 9.192492835410171,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4caD4Fb82bfee2826316FF9BaE54B0E7dF416c6c",
@@ -22706,7 +22840,8 @@
         "best_streak": 1,
         "longest_loss_streak": 1,
         "volume": 8.178356435643565,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4fF958D019F9E37162dD6bf5aeb083C1B4f8dF1F",
@@ -22719,7 +22854,8 @@
         "best_streak": 3,
         "longest_loss_streak": 7,
         "volume": 40.23024693632535,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x10D18F2129f599b4bD5D178FC395Dd2621A94431",
@@ -22732,7 +22868,8 @@
         "best_streak": 1,
         "longest_loss_streak": 7,
         "volume": 16.680958549102723,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xDb2a7e3b0Ba2E2c5DC6dBccED393D2ea367bC5bD",
@@ -22745,7 +22882,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 9.812247194007487,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2867911ed77E82187e7c6545AdAF2b60e1687b89",
@@ -22771,7 +22909,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 12.755797167513393,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x0C896f0A6aF0D963Be9e0b93677a588b11d82afC",
@@ -22784,7 +22923,8 @@
         "best_streak": 6,
         "longest_loss_streak": 6,
         "volume": 23.54964948128279,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x0229B0Fe3BEfcf6999Ad08c1989c73A14a387659",
@@ -22797,7 +22937,8 @@
         "best_streak": 1,
         "longest_loss_streak": 6,
         "volume": 10.793601118010724,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x6C488c7c6799f4BDE721CA9b134e4ccE0AecB9C9",
@@ -22810,7 +22951,8 @@
         "best_streak": 5,
         "longest_loss_streak": 2,
         "volume": 53.96748596645313,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4acF6864cabDCFb576ebCc89c8eBdCaD53aeE7FF",
@@ -22823,7 +22965,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 12.756048358750697,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x89E09872d1adb397B535109819DDD7583F7F800e",
@@ -22849,7 +22992,8 @@
         "best_streak": 3,
         "longest_loss_streak": 9,
         "volume": 54.949417613647746,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5dCeb0371F3b8a099F267B9e7784dF02844242Ef",
@@ -22862,7 +23006,8 @@
         "best_streak": 4,
         "longest_loss_streak": 3,
         "volume": 53.96729912060153,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x0e28F19b57fBA8bFB8Ef91a8E39D924375fC039d",
@@ -22875,7 +23020,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 16.681084140953455,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x419C2ded1f339D5D8a8AcF3195438498857BE4f4",
@@ -22940,7 +23086,8 @@
         "best_streak": 2,
         "longest_loss_streak": 4,
         "volume": 55.180669279525866,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2BfA2F57EDce9b6F7E277f806048AaFF898e2866",
@@ -22953,7 +23100,8 @@
         "best_streak": 4,
         "longest_loss_streak": 5,
         "volume": 139.02970297029702,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xc558BACf348886Eec1d413aFB349EEAE11d4ECFa",
@@ -22966,7 +23114,8 @@
         "best_streak": 1,
         "longest_loss_streak": 5,
         "volume": 24.53059050975252,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xd7ee0c15ad9fB76aC52fa4d5e45ec0e5E4a1e0d9",
@@ -23005,7 +23154,8 @@
         "best_streak": 1,
         "longest_loss_streak": 7,
         "volume": 15.700001814524082,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x3C3060e0a6F50D6e2814D20D5e4e4d273b31263A",
@@ -23018,7 +23168,8 @@
         "best_streak": 2,
         "longest_loss_streak": 6,
         "volume": 69.88118811881188,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x74284FC1E8849C3c41705A48fe512E005350a44D",
@@ -23031,7 +23182,8 @@
         "best_streak": 1,
         "longest_loss_streak": 8,
         "volume": 15.699860514052535,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xc330461f5ff9BC43C4E25F2bb76A762C64c9fA77",
@@ -23044,7 +23196,8 @@
         "best_streak": 2,
         "longest_loss_streak": 7,
         "volume": 62.79890827859856,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x60CCd82B69a73Cb4a122b9256f4C2ba7a6F27695",
@@ -23057,7 +23210,8 @@
         "best_streak": 3,
         "longest_loss_streak": 3,
         "volume": 50.042545935071594,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xabAE9B378c92a5cF725F2c1579e84595B7825680",
@@ -23070,7 +23224,8 @@
         "best_streak": 1,
         "longest_loss_streak": 2,
         "volume": 45.050368274171525,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x12C35830fb0B7DFA3abE6FF6b95F7270971E3350",
@@ -23083,7 +23238,8 @@
         "best_streak": 3,
         "longest_loss_streak": 2,
         "volume": 52.986216798191165,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xA2A43440DF450C8b5b2bceed60b4c0b7C19c6dc0",
@@ -23096,7 +23252,8 @@
         "best_streak": 6,
         "longest_loss_streak": 2,
         "volume": 67.70563239983095,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x9000EA69C13676AE6c1035AAf4808e620997eCE8",
@@ -23109,7 +23266,8 @@
         "best_streak": 2,
         "longest_loss_streak": 6,
         "volume": 64.7611357340394,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xB4200865dCac4394C2e8562b35947Efb695b8D3B",
@@ -23122,7 +23280,8 @@
         "best_streak": 2,
         "longest_loss_streak": 4,
         "volume": 24.31247008792926,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2e1076D781Dd3af92aF1F9e72a9e7E37E0e93d83",
@@ -23135,7 +23294,8 @@
         "best_streak": 3,
         "longest_loss_streak": 7,
         "volume": 51.68316831683168,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x369A90011194b5Ec501F1381dB57f2009e5c60C7",
@@ -23148,7 +23308,8 @@
         "best_streak": 2,
         "longest_loss_streak": 5,
         "volume": 46.0708300567453,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x7d75B31f98A9Afcca5e5d84Da7ab2ba8b9026fDe",
@@ -23161,7 +23322,8 @@
         "best_streak": 2,
         "longest_loss_streak": 4,
         "volume": 28.45618526217783,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x55BC822cBB9b45d326F37F6752e4e381B1C65206",
@@ -23174,7 +23336,8 @@
         "best_streak": 1,
         "longest_loss_streak": 4,
         "volume": 24.53175229032493,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x1259513711f5FacEAE9215E39F3D3bD89f110B3F",
@@ -23187,7 +23350,8 @@
         "best_streak": 1,
         "longest_loss_streak": 8,
         "volume": 24.53095159954242,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x856feE6E1B2196585eEAeA6BBA0290C8CD1B22e2",
@@ -23200,7 +23364,8 @@
         "best_streak": 3,
         "longest_loss_streak": 7,
         "volume": 51.02563782983152,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x30542bCdE2d0d1ecf1074603d4ED38223e199069",
@@ -23213,7 +23378,8 @@
         "best_streak": 2,
         "longest_loss_streak": 8,
         "volume": 64.7604135514454,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x58229a20652ec6F48648B72023976ED49006B81f",
@@ -23226,7 +23392,8 @@
         "best_streak": 3,
         "longest_loss_streak": 3,
         "volume": 41.54666438244373,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x8BB57db19b10c1562629d08a717367c6ee8e7EC3",
@@ -23239,7 +23406,8 @@
         "best_streak": 1,
         "longest_loss_streak": 4,
         "volume": 41.21227123190414,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xa7a9d71c4F5645Ba60aaBfa6C0c3C5cd4311B059",
@@ -23252,7 +23420,8 @@
         "best_streak": 9,
         "longest_loss_streak": 4,
         "volume": 52.00654744005453,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xE6260Ca06a1f6Bdaa3E2fab8609F51201F51C7CF",
@@ -23265,7 +23434,8 @@
         "best_streak": 2,
         "longest_loss_streak": 4,
         "volume": 21.586778351938797,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4840490f39414b0e0F8761Bf18bF53093A447d5b",
@@ -23278,7 +23448,8 @@
         "best_streak": 1,
         "longest_loss_streak": 4,
         "volume": 22.764837003652687,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xe1f4bB42266037C9949246aDF29F6bb0CAFa4894",
@@ -23291,7 +23462,8 @@
         "best_streak": 2,
         "longest_loss_streak": 7,
         "volume": 45.13644353506027,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xD13761FE505Ad140E861532f2D1ABb4862B5c160",
@@ -23304,7 +23476,8 @@
         "best_streak": 2,
         "longest_loss_streak": 7,
         "volume": 53.9681625956291,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xD43bc257BE532c835fe9fc045d1D229Dc842336A",
@@ -23317,7 +23490,8 @@
         "best_streak": 2,
         "longest_loss_streak": 10,
         "volume": 50.04342509510814,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xD8cA5869a172481B8C01D017DD93b68E274e7421",
@@ -23330,7 +23504,8 @@
         "best_streak": 5,
         "longest_loss_streak": 6,
         "volume": 317.91089108910893,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xA3afE0500A732e79f27A86E946fFBdB494f11115",
@@ -23343,7 +23518,8 @@
         "best_streak": 3,
         "longest_loss_streak": 9,
         "volume": 35.32433292547165,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xC9ae1998445c8c8999905dF4143cAca27Dd16B2d",
@@ -23369,7 +23545,8 @@
         "best_streak": 5,
         "longest_loss_streak": 4,
         "volume": 111.36895155808668,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x8BFCD811b67383a7a90691A3ef2cBc46ebc3E36E",
@@ -23395,7 +23572,8 @@
         "best_streak": 3,
         "longest_loss_streak": 5,
         "volume": 105.97226089876439,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xfb5f788F5eE7CA61a2853348dbaCe51281993796",
@@ -23408,7 +23586,8 @@
         "best_streak": 4,
         "longest_loss_streak": 4,
         "volume": 53.96758171049225,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x044f457963D8716db2A361AB5846585A52aCbc03",
@@ -23447,7 +23626,8 @@
         "best_streak": 2,
         "longest_loss_streak": 3,
         "volume": 174.46131635785176,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x9dC7df1C8035E89dA92a032821DA0B5Ba1c7A8e4",
@@ -23460,7 +23640,8 @@
         "best_streak": 4,
         "longest_loss_streak": 6,
         "volume": 161.41465311510373,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x41B4AAb0bc3cDAD0ab44418f8F38507ee3D72dcF",
@@ -23473,7 +23654,8 @@
         "best_streak": 6,
         "longest_loss_streak": 6,
         "volume": 88.31007873657619,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xc4C3c579c8c7c426f49e8519cB1dadD10B167C99",
@@ -23486,7 +23668,8 @@
         "best_streak": 1,
         "longest_loss_streak": 3,
         "volume": 48.0798475030943,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x72b9706723840A80E0F546e4Dd0f71D41d19B245",
@@ -23499,7 +23682,8 @@
         "best_streak": 3,
         "longest_loss_streak": 6,
         "volume": 37.28656665285614,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2cE06e9bC08C47B631B184E4Ecc7fAE8D510Cd3A",
@@ -23512,7 +23696,8 @@
         "best_streak": 5,
         "longest_loss_streak": 3,
         "volume": 348.33413403483945,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x9a589826e5f7a28fF9f4d1A8963eF454562Be3A2",
@@ -23538,7 +23723,8 @@
         "best_streak": 6,
         "longest_loss_streak": 13,
         "volume": 150.7236711086056,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xD07F6C6Be3338886453cad6c3Cc167Ffa62a3f05",
@@ -23551,7 +23737,8 @@
         "best_streak": 1,
         "longest_loss_streak": 7,
         "volume": 35.32419163429419,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4932aEe9325b19d82f7fA39c7930331E8B86Db30",
@@ -23564,7 +23751,8 @@
         "best_streak": 2,
         "longest_loss_streak": 8,
         "volume": 71.21584158415841,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 5433.824041320148
       },
       {
         "address": "0x44fc9D778fa95e7c4aEB47Fba4179138452e9212",
@@ -23577,7 +23765,8 @@
         "best_streak": 1,
         "longest_loss_streak": 4,
         "volume": 53.96761311241121,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x1f1FC51339A599c6edc4D0d3A0E066a37a63FdCE",
@@ -23590,7 +23779,8 @@
         "best_streak": 4,
         "longest_loss_streak": 7,
         "volume": 165.82624235504275,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x95Bca0D70b1Fd954216372F01D5Ab4eCFD74635f",
@@ -23603,7 +23793,8 @@
         "best_streak": 4,
         "longest_loss_streak": 11,
         "volume": 102.04833977855621,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x88e5E119e9916B32e68A18fd9AB96274d71749C9",
@@ -23616,7 +23807,8 @@
         "best_streak": 3,
         "longest_loss_streak": 7,
         "volume": 150.4950495049505,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xbd4320116D97e21A6BCaD7789530a7511235F252",
@@ -23629,7 +23821,8 @@
         "best_streak": 4,
         "longest_loss_streak": 6,
         "volume": 517.8712871287129,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xcb6bb88D3a6F8b3227896E198A1e605285B102c7",
@@ -23642,7 +23835,8 @@
         "best_streak": 5,
         "longest_loss_streak": 7,
         "volume": 514.1620833830335,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xEb64F8e6618CB67Fc5000797BDc0634aEAD0F6Ad",
@@ -23655,7 +23849,8 @@
         "best_streak": 3,
         "longest_loss_streak": 10,
         "volume": 114.61651485148515,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4eD9f7462777A13c8D7C082A179a3485ea69A0aa",
@@ -23668,7 +23863,8 @@
         "best_streak": 7,
         "longest_loss_streak": 5,
         "volume": 128.5409222596258,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4D9AaFaFE04E66279295B38EA6131F497f4f1615",
@@ -23681,7 +23877,8 @@
         "best_streak": 2,
         "longest_loss_streak": 9,
         "volume": 58.87348001599061,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xb937A2C5bc1C4277c9edd92A1390D71DF7FE0788",
@@ -23694,7 +23891,8 @@
         "best_streak": 3,
         "longest_loss_streak": 7,
         "volume": 608.352892486599,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x3eE0E293f1Fa1eb8C41fa60888D7F7bf2D6D81F5",
@@ -23707,7 +23905,8 @@
         "best_streak": 4,
         "longest_loss_streak": 7,
         "volume": 247.88118811881188,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5963EAC67C9cB54cE4D474DaE13C7caE12639731",
@@ -23720,7 +23919,8 @@
         "best_streak": 7,
         "longest_loss_streak": 2,
         "volume": 274.7429670499076,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x84083a59b56A68F58E21c3bfE47a27D61f9eAF06",
@@ -23759,7 +23959,8 @@
         "best_streak": 2,
         "longest_loss_streak": 6,
         "volume": 131.4840705965533,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x7522E96A89eFa28C845F9Ef3617F8b056e0481CF",
@@ -23772,7 +23973,8 @@
         "best_streak": 6,
         "longest_loss_streak": 5,
         "volume": 101.06690278992811,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x67caE0333741fe313a16cE70B53191Fcde82680A",
@@ -23785,7 +23987,8 @@
         "best_streak": 4,
         "longest_loss_streak": 13,
         "volume": 118.73108009508124,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xc030F01cfb652e8cf8c25e495A7882cfF31b67FD",
@@ -23798,7 +24001,8 @@
         "best_streak": 4,
         "longest_loss_streak": 11,
         "volume": 165.860358042892,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x23df4498B179a5acb2d5dbCc64e6ed7dE7D01CC3",
@@ -23811,7 +24015,8 @@
         "best_streak": 2,
         "longest_loss_streak": 7,
         "volume": 160.9233018401538,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xF2abA5Bccd97b4f3AA17eA5447001B0f51bA8A7c",
@@ -23824,7 +24029,8 @@
         "best_streak": 2,
         "longest_loss_streak": 1,
         "volume": 133.16943099739544,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x957CEC45254c0F6C44E23fD84201dcBbC4b618E8",
@@ -23837,7 +24043,8 @@
         "best_streak": 5,
         "longest_loss_streak": 4,
         "volume": 80.6930693069307,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 278095.9172434885
       },
       {
         "address": "0x85CD4547eEA77bc10FC5594B374036603548C071",
@@ -23850,7 +24057,8 @@
         "best_streak": 1,
         "longest_loss_streak": 5,
         "volume": 72.61015699834361,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4E9f15bE6d23fB481D36D621960fDBDb7C264D8f",
@@ -23863,7 +24071,8 @@
         "best_streak": 4,
         "longest_loss_streak": 5,
         "volume": 637.813796642764,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xd0B236d5Bc974771B88357FbdD122406283E7d4a",
@@ -23876,7 +24085,8 @@
         "best_streak": 2,
         "longest_loss_streak": 4,
         "volume": 107.93466104127309,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xcEdA528415708dF81fA8D78eB0060dcd1087da94",
@@ -23902,7 +24112,8 @@
         "best_streak": 1,
         "longest_loss_streak": 5,
         "volume": 67.70400591692635,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x81197e51B29b8A1489B78a6d5E8Be069B71F19B9",
@@ -23915,7 +24126,8 @@
         "best_streak": 1,
         "longest_loss_streak": 8,
         "volume": 82.42242302731913,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x0eCAC276f5e583ec639F262A05c784Ed1dEF5115",
@@ -23928,7 +24140,8 @@
         "best_streak": 2,
         "longest_loss_streak": 2,
         "volume": 376.547567167792,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xcA44781d054d780Cf1d2645E62f10a5e4Af235e0",
@@ -23941,7 +24154,8 @@
         "best_streak": 4,
         "longest_loss_streak": 6,
         "volume": 306.15665904217997,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xe85Be2f4CCB33157A4dAb6D2d5F8FA8D70FbB2cC",
@@ -23954,7 +24168,8 @@
         "best_streak": 4,
         "longest_loss_streak": 10,
         "volume": 451.37553883406497,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x68e43ba2e0B6614b082B3431058616deB347A116",
@@ -23967,7 +24182,8 @@
         "best_streak": 4,
         "longest_loss_streak": 7,
         "volume": 171.71421363513537,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xA47abBAB0AC4b9A407a84F99BDAb6dC805d68d5D",
@@ -23980,7 +24196,8 @@
         "best_streak": 14,
         "longest_loss_streak": 6,
         "volume": 377.79314100167403,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x8c4d95BC0974F938811d56AE7c072ef63393D02F",
@@ -23993,7 +24210,8 @@
         "best_streak": 2,
         "longest_loss_streak": 7,
         "volume": 294.3645584877473,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xEA96c293424994aBc1a99b131dE80Fa369d37eA1",
@@ -24006,7 +24224,8 @@
         "best_streak": 1,
         "longest_loss_streak": 6,
         "volume": 112.84073204639874,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xc47Ea92118d74c0CCBb02A369B8c774D7dEeCDd7",
@@ -24019,7 +24238,8 @@
         "best_streak": 4,
         "longest_loss_streak": 10,
         "volume": 468.25564356435643,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x7CfF3E5E7E4EE5EB7e998a24EA70663c68bBedA3",
@@ -24032,7 +24252,8 @@
         "best_streak": 2,
         "longest_loss_streak": 7,
         "volume": 121.67059855827955,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x3aBcf3DF0C761edaA856D38ca13f799a22Dd0342",
@@ -24045,7 +24266,8 @@
         "best_streak": 3,
         "longest_loss_streak": 6,
         "volume": 110.8791231292389,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5E46eAa5CFa2274423679b38C2aEB27763Ed2f0C",
@@ -24058,7 +24280,8 @@
         "best_streak": 2,
         "longest_loss_streak": 8,
         "volume": 233.5311117490062,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xBd0341D84a1Ac2D3FCB702A4e84AB7F3102B0a70",
@@ -24071,7 +24294,8 @@
         "best_streak": 5,
         "longest_loss_streak": 12,
         "volume": 762.3762376237623,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x5bD667f1B4A05E50aF59bEe33a7fbb501D9A49d4",
@@ -24084,7 +24308,8 @@
         "best_streak": 4,
         "longest_loss_streak": 8,
         "volume": 313.9924345627124,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xC76309966Bde42300B4C479B6350af19D2c82a83",
@@ -24097,7 +24322,8 @@
         "best_streak": 3,
         "longest_loss_streak": 7,
         "volume": 372.8615422342685,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xb1fC3b22B99a7B2A63c2b7952DdE76Bad5d3f71D",
@@ -24110,7 +24336,8 @@
         "best_streak": 1,
         "longest_loss_streak": 8,
         "volume": 140.31577839188733,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xC40fc9207c2C8F06902e40372E45f1f896412b52",
@@ -24123,7 +24350,8 @@
         "best_streak": 3,
         "longest_loss_streak": 8,
         "volume": 158.95891727634574,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x61516470135b22b6812C5B63513EdFA687f46067",
@@ -24136,7 +24364,8 @@
         "best_streak": 5,
         "longest_loss_streak": 8,
         "volume": 538.6138613861386,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xEF8fECA4CC208F58e2bdfe06EA91893A8a20D35a",
@@ -24149,7 +24378,8 @@
         "best_streak": 4,
         "longest_loss_streak": 9,
         "volume": 412.11090780538194,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xF775a5ecb2B17A2fCc0c32C00Ffd4900bfEE128b",
@@ -24162,7 +24392,8 @@
         "best_streak": 2,
         "longest_loss_streak": 11,
         "volume": 383.6571482033012,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x4ba5912F6D0302255B351D3624f116f5E1E39998",
@@ -24175,7 +24406,8 @@
         "best_streak": 1,
         "longest_loss_streak": 7,
         "volume": 187.4133817965202,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xFb4fC5BCAb0D5d2e731a8FD94933b2894e113D37",
@@ -24188,7 +24420,8 @@
         "best_streak": 6,
         "longest_loss_streak": 12,
         "volume": 513.1809613704597,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x8245C61d6Dc78E02A6Ca29E42fF66986399a9d73",
@@ -24201,7 +24434,8 @@
         "best_streak": 4,
         "longest_loss_streak": 12,
         "volume": 395.4329777111524,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x6f0Bfb661488e3B01fEd20FE814c70F036cB8c64",
@@ -24214,7 +24448,8 @@
         "best_streak": 3,
         "longest_loss_streak": 8,
         "volume": 387.58794573688226,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x19543dd795789c28Fc5e68081ba8e1880bD6dC78",
@@ -24227,7 +24462,8 @@
         "best_streak": 2,
         "longest_loss_streak": 13,
         "volume": 412.4950495049505,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xde542d11b8C5250C08C60C33b436890ffADf7C29",
@@ -24253,7 +24489,8 @@
         "best_streak": 1,
         "longest_loss_streak": 5,
         "volume": 174.66111702122907,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xeF41242b7684C5bbF6E6Ab07848877523183e182",
@@ -24266,7 +24503,8 @@
         "best_streak": 2,
         "longest_loss_streak": 10,
         "volume": 225.6911723244007,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x2Ff7016Ac60be2A60f4A5D1F913de7d6D3c99EA3",
@@ -24279,7 +24517,8 @@
         "best_streak": 4,
         "longest_loss_streak": 10,
         "volume": 658.4018201234778,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xaDa115D93B8212413B844ab150d4D175cb89cfE0",
@@ -24292,7 +24531,8 @@
         "best_streak": 3,
         "longest_loss_streak": 9,
         "volume": 554.3901209301688,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x056C4D1AeD24c5C6Cdc690c8f7D0d47E99CF4144",
@@ -24305,7 +24545,8 @@
         "best_streak": 2,
         "longest_loss_streak": 11,
         "volume": 294.3675900501304,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xBd2c5bCF86ED16C476Ec273DACb9c9aE41009331",
@@ -24318,7 +24559,8 @@
         "best_streak": 2,
         "longest_loss_streak": 5,
         "volume": 523.9778235772493,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xfDd4db20a715aD3090852b1d97fea55602466962",
@@ -24331,7 +24573,8 @@
         "best_streak": 2,
         "longest_loss_streak": 9,
         "volume": 450.3802915778413,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x17e64AdbebB4D3c0D8071A02461fa1b56338ccCF",
@@ -24344,7 +24587,8 @@
         "best_streak": 1,
         "longest_loss_streak": 6,
         "volume": 613.264856928972,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xe318331186E49f8ff20162631787E0a0bc407470",
@@ -24357,7 +24601,8 @@
         "best_streak": 1,
         "longest_loss_streak": 6,
         "volume": 421.92488195759455,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x1FF3BcEcA5B5c1f2f077e3ecD345CA88813300BB",
@@ -24383,7 +24628,8 @@
         "best_streak": 5,
         "longest_loss_streak": 14,
         "volume": 2228.3631043083988,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x3b08aA16f9f917F9E2Bc09e922e65C7A67051535",
@@ -24396,7 +24642,8 @@
         "best_streak": 10,
         "longest_loss_streak": 5,
         "volume": 1330.5396530902356,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0x1720F66f27f0de25CFD0b02D2f582245eAA27f10",
@@ -24409,7 +24656,8 @@
         "best_streak": 3,
         "longest_loss_streak": 8,
         "volume": 839.9194750924944,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 0.0
       },
       {
         "address": "0xEaFaF83FA2fBe239bb01962471cBD05789714e09",
@@ -24492,7 +24740,8 @@
         "best_streak": 4,
         "longest_loss_streak": 10,
         "volume": 5477.139404299401,
-        "volume_at": "2026-11-24T01:57:25Z"
+        "volume_at": "2026-11-24T01:57:25Z",
+        "leaderboard": 5477.139404299401
       }
     ],
     "note": "盈亏是已结算、含手续费的 racePnl。交易量是该周 /token-races/volume 的 userVolume（excludeSeed=true，周四 00:00 UTC 到下周四 00:00 UTC，不含结束时刻）；没查到的留空，页面显示「—」。轮次是 racesPlayed（参与轮数），不是成交笔数。种子钱包和 3 个 Agent 即使出现在榜上也会标出；种子的 userVolume 为 0。"
