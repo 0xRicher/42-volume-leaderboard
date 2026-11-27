@@ -55,10 +55,13 @@ PER_WALLET_BUDGET_S = 300
 # weeks reuse volumes already stored on the week file.
 BLITZ_PLAYER_BUDGET_S = 180
 BLITZ_PLAYER_PAGE = 500
-# Open week: re-read volume for this many leaders by PnL and by races when
-# the stored figure is older than BLITZ_REFRESH. Everyone still missing a
-# volume is queued ahead of those refreshes.
+# Open week: wallets whose racesPlayed or leaderboard total moved since the
+# stored userVolume are refreshed first. After those, re-read this many
+# leaders by PnL and by races when the stored figure is older than
+# BLITZ_REFRESH. Everyone still missing a volume is queued ahead of both.
 BLITZ_PLAYER_REFRESH_TOP = 25
+# Ignore sub-cent noise when deciding that a wallet's total volume changed.
+VOLUME_CHANGE_EPS = 0.01
 AGENT_HISTORY_START = datetime(2026, 10, 15, tzinfo=timezone.utc)
 
 ROOT = Path(__file__).resolve().parent
@@ -1246,7 +1249,12 @@ def update_week_history(
             doc = enrich_week_breakdown(
                 doc, compiled, histories, now, current=is_current, budget=wallet_budget
             )
+            # Full per-wallet totals stay in memory for the open-week volume
+            # refresh. They are not part of the week file.
+            open_volumes = doc.pop("_open_volumes", None)
             write_json(path, doc)
+            if open_volumes:
+                doc["_open_volumes"] = open_volumes
         indexed = dict(doc)
         indexed.pop("_scanned_rows", None)
         indexed["group"] = slot["group"]
@@ -1563,11 +1571,14 @@ def fetch_blitz_user(
     *,
     use_cache: bool,
     cache_scope: str = "",
+    refresh: bool = False,
 ) -> float | None:
     # Finished weeks use a stable key. The open week adds an hour bucket so a
     # later run can resume inside that hour without freezing an old value forever.
+    # refresh=True skips that read: a wallet whose races or total volume just
+    # moved must not reuse the figure stored earlier in the same hour.
     key = blitz_cache_key(frm, to, user, exclude) + (f":{cache_scope}" if cache_scope else "")
-    if use_cache or cache_scope:
+    if not refresh and (use_cache or cache_scope):
         cached = _cache_get(key)
         if cached is not None:
             return cached
@@ -1587,7 +1598,7 @@ def fetch_blitz_user(
         return None
     # Always remember per-wallet results. The open week keys include an hour
     # bucket, so they are not reused after that hour or after the week closes.
-    if use_cache or cache_scope:
+    if use_cache or cache_scope or refresh:
         _cache_put(key, value)
     return value
 
@@ -2674,6 +2685,12 @@ def enrich_week_breakdown(
     budget: WalletBudget | None = None,
 ) -> dict:
     scanned = doc.pop("_scanned_rows", None)
+    if current and scanned:
+        doc["_open_volumes"] = {
+            str(row.get("trader") or "").lower(): float(row.get("volume") or 0)
+            for row in scanned
+            if row.get("trader")
+        }
     previous = doc.get("breakdown") if isinstance(doc.get("breakdown"), dict) else None
     # Week files written before the pre/points split still say kind=thursday.
     # Points weeks start at the launch date in wallet-labels.json.
@@ -2863,6 +2880,113 @@ def _pick_cached_volume(
     return None, None
 
 
+def blitz_volume_refresh_kind(
+    *,
+    current: bool,
+    missing: bool,
+    prev_races: int | None,
+    new_races: int,
+    prev_total: float | None,
+    new_total: float | None,
+    priority_rank: int,
+    volume_stale: bool,
+) -> str | None:
+    """Why this wallet's open-week userVolume should be fetched.
+
+    Missing volumes come first. Then a wallet whose racesPlayed or leaderboard
+    total moved since the stored figure. Then the small stale leader slice.
+    Finished weeks only fill gaps.
+    """
+    if missing:
+        return "missing"
+    if not current:
+        return None
+    races_changed = prev_races is not None and int(prev_races) != int(new_races or 0)
+    total_changed = (
+        prev_total is not None
+        and new_total is not None
+        and abs(float(prev_total) - float(new_total)) > VOLUME_CHANGE_EPS
+    )
+    if races_changed or total_changed:
+        return "changed"
+    if volume_stale and priority_rank <= BLITZ_PLAYER_REFRESH_TOP:
+        return "stale"
+    return None
+
+
+def blitz_change_delta(
+    kind: str | None,
+    prev_races: int | None,
+    new_races: int,
+    prev_total: float | None,
+    new_total: float | None,
+) -> float:
+    """Larger moves are fetched first when the 3-minute budget runs out."""
+    if kind != "changed":
+        return 0.0
+    if (
+        prev_total is not None
+        and new_total is not None
+        and abs(float(prev_total) - float(new_total)) > VOLUME_CHANGE_EPS
+    ):
+        return abs(float(new_total) - float(prev_total))
+    if prev_races is not None:
+        return float(abs(int(new_races or 0) - int(prev_races)))
+    return 0.0
+
+
+def _apply_refreshed_blitz_volumes(doc: dict, players: list[dict]) -> bool:
+    """Copy freshly read userVolume onto breakdown wallets.
+
+    The volume table reads breakdown.wallets, not blitzPlayers. Returns True
+    when a stored wallet figure changed.
+    """
+    breakdown = doc.get("breakdown")
+    if not isinstance(breakdown, dict):
+        return False
+    by = {
+        str(item.get("address") or "").lower(): item
+        for item in (breakdown.get("wallets") or [])
+        if isinstance(item, dict)
+    }
+    dirty = False
+    for player in players:
+        if player.get("flag") == "seed" or player.get("volume") is None:
+            continue
+        key = str(player.get("address") or "").lower()
+        item = by.get(key)
+        if not item or item.get("role") == "seed":
+            continue
+        vol = float(player["volume"])
+        lb = _as_float(player.get("leaderboard"))
+        prev_blitz = _as_float(item.get("blitz"))
+        prev_lb = _as_float(item.get("leaderboard"))
+        blitz_moved = prev_blitz is None or abs(prev_blitz - vol) > 1e-9
+        lb_moved = lb is not None and (prev_lb is None or abs(prev_lb - float(lb)) > VOLUME_CHANGE_EPS)
+        if not blitz_moved and not lb_moved:
+            continue
+        item["blitz"] = vol
+        if lb is not None:
+            item["leaderboard"] = lb
+            agent = _as_float(item.get("agent")) or 0.0
+            if item.get("role") == "agent":
+                item["regular"] = float(lb) - vol - agent
+            else:
+                item["regular"] = float(lb) - vol
+        if player.get("races") is not None:
+            item["races"] = player.get("races")
+        dirty = True
+    if dirty:
+        note = breakdown.get("note") or ""
+        extra = "成交量或轮次有变化的钱包已重查 Blitz 成交量。"
+        kept = "全平台拆分已更新；每钱包数字沿用已查到的结果。"
+        if kept in note:
+            note = note.replace(kept, "全平台拆分已更新。")
+        if extra not in note:
+            breakdown["note"] = (note + " " + extra).strip()
+    return dirty
+
+
 def _blitz_players_same(left: dict | None, right: dict | None) -> bool:
     if not isinstance(left, dict) or not isinstance(right, dict):
         return False
@@ -2885,6 +3009,7 @@ def _blitz_players_same(left: dict | None, right: dict | None) -> bool:
         "longest_loss_streak",
         "volume",
         "volume_at",
+        "leaderboard",
         "flag",
     )
     for old, new in zip(old_rows, new_rows):
@@ -2913,9 +3038,12 @@ def attach_blitz_players(
     """Store each points week's Blitz leaderboard on the week file.
 
     userVolume is filled from the week file and from breakdown wallets first.
-    Anything still missing, plus a small stale slice of the open week, is
-    fetched under BLITZ_PLAYER_BUDGET_S. Seeds are flagged and stored as 0
-    because excludeSeed strips them. Missing volumes stay null.
+    Anything still missing is fetched first. On the open week, wallets whose
+    racesPlayed or leaderboard total changed since that stored figure are
+    next, then a small stale slice of the leaders. All of that stays inside
+    BLITZ_PLAYER_BUDGET_S. Refreshed figures are copied onto breakdown
+    wallets so the volume table's Blitz column matches. Seeds are flagged
+    and stored as 0 because excludeSeed strips them. Missing volumes stay null.
     """
     started = time.monotonic()
     budget = WalletBudget(BLITZ_PLAYER_BUDGET_S)
@@ -2943,6 +3071,9 @@ def attach_blitz_players(
         end = parse_iso(doc["end_exclusive"])
         day_from, day_to = week_dates(start, end)
         current = bool(doc.get("current")) or doc.get("start") == current_key
+        open_volumes = doc.pop("_open_volumes", None) or {}
+        if not isinstance(open_volumes, dict):
+            open_volumes = {}
         print(f"  blitz players {doc.get('start')} {day_from}..{day_to}", flush=True)
         rows, total = fetch_blitz_player_rows(day_from, day_to)
         previous = doc.get("blitzPlayers") if isinstance(doc.get("blitzPlayers"), dict) else None
@@ -2982,12 +3113,20 @@ def attach_blitz_players(
         breakdown = doc.get("breakdown") or {}
         breakdown_at = str(breakdown.get("fetched_at") or "") or None
         wallet_vol: dict[str, float] = {}
+        wallet_lb: dict[str, float] = {}
         for item in breakdown.get("wallets") or []:
-            if not isinstance(item, dict) or item.get("role") != "blitz_real":
+            if not isinstance(item, dict):
+                continue
+            address = str(item.get("address") or "")
+            if not address:
+                continue
+            leaderboard_total = _as_float(item.get("leaderboard"))
+            if leaderboard_total is not None:
+                wallet_lb[address.lower()] = leaderboard_total
+            if item.get("role") != "blitz_real":
                 continue
             amount = _as_float(item.get("blitz"))
-            address = str(item.get("address") or "")
-            if amount is None or not address:
+            if amount is None:
                 continue
             wallet_vol[address.lower()] = amount
 
@@ -3016,6 +3155,10 @@ def attach_blitz_players(
                 player["volume"] = volume
                 if volume is not None and volume_at:
                     player["volume_at"] = volume_at
+                if prev and prev.get("leaderboard") is not None:
+                    player["leaderboard"] = prev.get("leaderboard")
+                elif volume is not None and key in wallet_lb:
+                    player["leaderboard"] = wallet_lb[key]
             players.append(player)
 
         races_order = sorted(
@@ -3030,20 +3173,50 @@ def attach_blitz_players(
         for index, player in enumerate(players):
             if player.get("flag") == "seed":
                 continue
+            key = player["address"].lower()
             pnl_rank = player.get("rank") or 10**9
             priority_rank = min(int(pnl_rank), races_rank[index])
             missing = player.get("volume") is None
-            refresh = False
-            if current and not missing and priority_rank <= BLITZ_PLAYER_REFRESH_TOP:
-                refresh = _volume_is_stale(player.get("volume_at"), now)
-            if not missing and not refresh:
+            prev = prev_by.get(key)
+            prev_races = None if not prev or prev.get("races") is None else int(prev.get("races") or 0)
+            prev_total = _as_float(player.get("leaderboard"))
+            new_total = _as_float(open_volumes.get(key)) if current else None
+            kind = blitz_volume_refresh_kind(
+                current=current,
+                missing=missing,
+                prev_races=prev_races,
+                new_races=int(player.get("races") or 0),
+                prev_total=prev_total,
+                new_total=new_total,
+                priority_rank=priority_rank,
+                volume_stale=_volume_is_stale(player.get("volume_at"), now),
+            )
+            if kind is None:
+                # Remember the total we just saw so the next run can tell if it moved.
+                if (
+                    current
+                    and new_total is not None
+                    and (
+                        player.get("leaderboard") is None
+                        or abs(float(player["leaderboard"]) - new_total) > VOLUME_CHANGE_EPS
+                    )
+                ):
+                    player["leaderboard"] = new_total
                 continue
+            delta = blitz_change_delta(
+                kind,
+                prev_races,
+                int(player.get("races") or 0),
+                prev_total,
+                new_total,
+            )
             jobs.append(
                 {
                     "sort": (
-                        0 if missing else 1,
+                        0 if kind == "missing" else 1 if kind == "changed" else 2,
                         0 if current else 1,
                         -start_ordinal,
+                        -delta,
                         priority_rank,
                     ),
                     "player": player,
@@ -3051,6 +3224,9 @@ def attach_blitz_players(
                     "to": to,
                     "scope": scope,
                     "address": player["address"],
+                    "refresh": kind in {"changed", "stale"},
+                    "new_total": new_total,
+                    "kind": kind,
                 }
             )
         prepared.append(
@@ -3076,16 +3252,21 @@ def attach_blitz_players(
             True,
             use_cache=True,
             cache_scope=job["scope"],
+            refresh=bool(job.get("refresh")),
         )
         if value is None:
             return False
         job["player"]["volume"] = value
         job["player"]["volume_at"] = iso_now()
+        if job.get("new_total") is not None:
+            job["player"]["leaderboard"] = job["new_total"]
         return True
 
     if jobs:
+        changed = sum(1 for job in jobs if job.get("kind") == "changed")
         print(
-            f"  blitz player volumes queued={len(jobs)} budget={BLITZ_PLAYER_BUDGET_S}s",
+            f"  blitz player volumes queued={len(jobs)} changed={changed} "
+            f"budget={BLITZ_PLAYER_BUDGET_S}s",
             flush=True,
         )
         done = parallel_map(volume_job, jobs, budget=budget)
@@ -3129,7 +3310,13 @@ def attach_blitz_players(
             print(f"  blitz players skip missing file {path.name}", flush=True)
             continue
         previous = on_disk.get("blitzPlayers") if isinstance(on_disk.get("blitzPlayers"), dict) else None
-        if _blitz_players_same(previous, payload):
+        breakdown_changed = False
+        if not item.get("failed") and item.get("current"):
+            breakdown_changed = _apply_refreshed_blitz_volumes(doc, item.get("players") or [])
+            if breakdown_changed:
+                on_disk["breakdown"] = doc.get("breakdown")
+                stamp_pool_fields(on_disk, on_disk["breakdown"])
+        if _blitz_players_same(previous, payload) and not breakdown_changed:
             print(f"  blitz players {doc.get('start')} unchanged", flush=True)
             continue
         on_disk["blitzPlayers"] = payload

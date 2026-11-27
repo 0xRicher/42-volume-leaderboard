@@ -511,6 +511,21 @@
     tbody tr.row-seed:hover { background: rgba(240, 193, 75, 0.14); }
     tbody tr.row-agent:hover { background: rgba(255, 139, 210, 0.14); }
     tbody tr:last-child td { border-bottom: 0; }
+    i.vol-mark {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-left: 5px;
+      border-radius: 50%;
+      background: var(--dim);
+      vertical-align: 1px;
+      box-shadow: 0 0 0 2px rgba(94, 100, 117, 0.28);
+      font-style: normal;
+    }
+    i.vol-mark.warn {
+      background: var(--gold);
+      box-shadow: 0 0 0 2px rgba(240, 193, 75, 0.22);
+    }
 
     .rank { font-family: var(--mono); font-weight: 700; color: var(--muted); min-width: 48px; }
     .rank.r1 { color: var(--gold); }
@@ -842,7 +857,7 @@
 
     <p class="hint">
       页面优先直连 <code>https://rest.ft.42.space</code>（该接口允许跨域）。24 小时、7 日、30 日和进行中的积分周会把交易者分页拉完再合计。
-      页面上方可以在「成交量」和「Blitz」之间切换，一次只显示一种，选择会记在地址栏和本地。成交量视图里，进行中的一周大约每 60 秒重拉成交量拆分（普通交易、Blitz 真实玩家、Blitz 42 种子、Agent）。Blitz 视图里，进行中的一周大约每 60 秒只重拉 Blitz 玩家榜。标签页切到后台时暂停。每钱包的 Blitz 列仍用快照。玩家表的交易量优先用快照，进行中的一周会按可见的前 20 行慢慢补。
+      页面上方可以在「成交量」和「Blitz」之间切换，一次只显示一种，选择会记在地址栏和本地。成交量视图里，进行中的一周大约每 60 秒重拉成交量拆分（普通交易、Blitz 真实玩家、Blitz 42 种子、Agent）。Blitz 视图里，进行中的一周大约每 60 秒只重拉 Blitz 玩家榜。标签页切到后台时暂停。进行中的一周，屏幕上的钱包和搜索框里的地址会另拉 Blitz 成交量，大约每 60 秒更新；还没回到的格子先显示快照，旁边有一个小点。
       「全部」窗口交易者约 6 万，全量合计由 GitHub Actions 写入 <code>data/leaderboard.json</code>，页面读这份快照，表格前 200 名仍走实时接口。
       已经结束的积分周读 <code>data/weeks/</code>，不再每次重拉。积分接口没有跨域，积分榜也来自这份快照。
       GitHub 会拖延定时任务，快照往往几小时才更新一次。
@@ -866,8 +881,10 @@
     const OPEN_WEEK_REFRESH_MS = 60_000;
     const REQUEST_GAP_MS = 150;
     const BLITZ_PAGE = 40;
-    const BLITZ_LAZY_LIMIT = 20;
-    const BLITZ_LAZY_CONCURRENCY = 2;
+    const LIVE_VOL_LIMIT = 30;
+    const LIVE_VOL_CONCURRENCY = 3;
+    const LIVE_VOL_RATE_PER_SEC = 10;
+    const LIVE_VOL_BACKOFF_MS = 20_000;
     const VIEW_STORAGE_KEY = "42-leaderboard-view";
     const TZ = "Asia/Tokyo";
     const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
@@ -905,6 +922,10 @@
       blitzWeek: null,
       blitzLive: null,
       blitzVolumeLive: {},
+      visibleWallets: [],
+      liveVolumeFocus: [],
+      liveVolumeWeek: "",
+      volumeRemark: false,
       view: readInitialView(),
       sourceText: "",
       volumeKey: "",
@@ -978,8 +999,10 @@
 
     const blitzVolumeInflight = new Set();
     const blitzVolumeMiss = new Map();
+    const liveVolumeStarts = [];
     let blitzVolumeRunning = 0;
     let blitzVolumeQueue = [];
+    let volumeRenderQueued = false;
 
     function shortAddr(addr) {
       if (!addr || addr.length < 12) return addr || "";
@@ -1838,7 +1861,7 @@
       const regular = total - blitzTotal - agentSum;
       const parts = regular + blitzReal + blitzSeed + agentSum;
       if (Math.abs(parts - total) > 1) throw new Error("split does not add up");
-      let note = "每钱包的 Blitz 列仍用快照。普通交易 = 本周排行榜总成交量 − Blitz − Agent。";
+      let note = "屏幕上的钱包会另拉 Blitz 成交量，没回到之前先显示快照。普通交易 = 本周排行榜总成交量 − Blitz − Agent。";
       if (regular < -1) note += " 普通交易差额为负：Blitz 与 Agent 之和大于本周排行榜总成交量。";
       return {
         status: "ok",
@@ -2427,8 +2450,8 @@
       const dir = state.sortDir === "asc" ? 1 : -1;
       const key = state.sortKey;
       rows.sort((a, b) => {
-        const va = a[key];
-        const vb = b[key];
+        const va = poolSortValue(a, key);
+        const vb = poolSortValue(b, key);
         if (va == null && vb == null) return 0;
         if (va == null) return 1;
         if (vb == null) return -1;
@@ -2536,8 +2559,8 @@
         const bounds = activeWeekBounds();
         const when = bounds.current
           ? (state.liveSplit?.ok
-            ? "本周排行榜和成交量拆分来自刚刚的实时接口。每钱包 Blitz 仍用快照。"
-            : "本周排行榜来自刚刚的实时全量分页。成交量拆分暂时用快照。")
+            ? "本周排行榜和成交量拆分来自刚刚的实时接口。屏幕上的钱包会另拉 Blitz 成交量，没回到之前先显示快照。"
+            : "本周排行榜来自刚刚的实时全量分页。成交量拆分暂时用快照。屏幕上的钱包会另拉 Blitz 成交量。")
           : "这一周已经结束，成交量和上方合计来自快照，例行更新不会重拉。";
         const status = state.weekDoc?.points?.status || selectedWeekMeta()?.pointsStatus || "";
         const points = state.weekHasPoints
@@ -2584,6 +2607,7 @@
         for (const row of rows) {
           if (row.blitz_volume == null) row.blitz_volume = null;
           if (row.regular_volume == null) row.regular_volume = null;
+          row.agent_volume = Number(row.agent_volume) || 0;
         }
         return rows;
       }
@@ -2593,9 +2617,10 @@
       const gaps = Boolean(breakdown.gaps_closed) && breakdown.status !== "unavailable";
       for (const row of rows) {
         const item = map.get(String(row.trader || "").toLowerCase());
+        const agentPart = item && item.role === "agent" && item.agent != null ? Number(item.agent) : 0;
+        row.agent_volume = agentPart;
         if (item && item.blitz != null) {
           const blitz = Number(item.blitz);
-          const agentPart = item.role === "agent" && item.agent != null ? Number(item.agent) : 0;
           row.blitz_volume = blitz;
           row.regular_volume = Number(row.volume || 0) - blitz - agentPart;
           row.pool_role = item.role || row.pool_role;
@@ -2603,7 +2628,7 @@
         }
         if (item && item.role === "agent") {
           row.blitz_volume = item.blitz == null ? null : Number(item.blitz);
-          row.regular_volume = item.regular == null ? null : Number(row.volume || 0) - Number(item.blitz || 0) - Number(item.agent || 0);
+          row.regular_volume = item.regular == null ? null : Number(row.volume || 0) - Number(item.blitz || 0) - agentPart;
           row.pool_role = "agent";
           continue;
         }
@@ -2693,13 +2718,140 @@
       return null;
     }
 
-    function blitzVolumeFor(address, stored, flag) {
-      if (flag === "seed") return stored == null ? 0 : Number(stored);
+    function liveBlitzRecord(address) {
       const key = String(address || "").toLowerCase();
-      if (selectedWeekIsOpen() && state.blitzVolumeLive && Object.prototype.hasOwnProperty.call(state.blitzVolumeLive, key)) {
-        return state.blitzVolumeLive[key];
+      const hit = state.blitzVolumeLive[key];
+      if (!hit || typeof hit.volume !== "number" || !Number.isFinite(hit.volume)) return null;
+      const week = state.selectedWeekStart || state.week?.from;
+      if (hit.week !== week) return null;
+      return hit;
+    }
+
+    function liveBlitzFresh(address) {
+      const hit = liveBlitzRecord(address);
+      return Boolean(hit && Date.now() - hit.at < OPEN_WEEK_REFRESH_MS);
+    }
+
+    function poolFigures(row, focusSet) {
+      const total = Number(row.volume) || 0;
+      const agent = row.pool_role === "agent" ? (Number(row.agent_volume) || 0) : 0;
+      const snapshot = row.blitz_volume == null || Number.isNaN(Number(row.blitz_volume))
+        ? null
+        : Number(row.blitz_volume);
+      const live = selectedWeekIsOpen() ? liveBlitzRecord(row.trader) : null;
+      const blitz = live ? live.volume : snapshot;
+      let regular = blitz == null ? null : total - blitz - agent;
+      const blitzOverTotal = blitz != null && blitz - total > 0.05;
+      const inconsistent = blitzOverTotal || (regular != null && regular < -0.05);
+      if (regular != null && regular < 0) regular = 0;
+      const key = String(row.trader || "").toLowerCase();
+      const pending = Boolean(selectedWeekIsOpen() && !live && focusSet && focusSet.has(key));
+      return { blitz, regular, flag: inconsistent, cached: pending, blitzOverTotal };
+    }
+
+    function poolSortValue(row, key) {
+      if (state.period === "week" && (key === "blitz_volume" || key === "regular_volume")) {
+        const fig = poolFigures(row, null);
+        return key === "blitz_volume" ? fig.blitz : fig.regular;
       }
-      return stored == null ? null : Number(stored);
+      return row[key];
+    }
+
+    function poolVolumeMark(fig) {
+      if (!fig) return "";
+      if (fig.flag) {
+        const why = fig.blitzOverTotal
+          ? (fig.cached ? "缓存的 Blitz 成交量高于本周总成交量，普通成交量已按 0 显示" : "Blitz 成交量高于本周总成交量，普通成交量已按 0 显示")
+          : "普通成交量已按 0 显示";
+        return `<i class="vol-mark warn" data-tip="${escapeHtml(why)}"></i>`;
+      }
+      if (!fig.cached) return "";
+      const tip = fig.blitz == null
+        ? "正在读取这一钱包的 Blitz 成交量"
+        : "缓存，正在更新这一钱包的 Blitz 成交量";
+      return `<i class="vol-mark" data-tip="${escapeHtml(tip)}"></i>`;
+    }
+
+    function cachedVolumeMark(pending, hasValue) {
+      if (!pending) return "";
+      const tip = hasValue
+        ? "缓存，正在更新这一钱包的 Blitz 成交量"
+        : "正在读取这一钱包的 Blitz 成交量";
+      return `<i class="vol-mark" data-tip="${escapeHtml(tip)}"></i>`;
+    }
+
+    function syncLiveVolumeWeek() {
+      const week = state.selectedWeekStart || state.week?.from || "";
+      if (state.liveVolumeWeek === week) return;
+      state.liveVolumeWeek = week;
+      state.visibleWallets = [];
+      state.liveVolumeFocus = [];
+      blitzVolumeQueue = [];
+    }
+
+    function planLiveTargets(preferred, fallback) {
+      const out = [];
+      const seen = new Set();
+      const add = (address) => {
+        const raw = String(address || "").trim();
+        const key = raw.toLowerCase();
+        if (!/^0x[0-9a-f]{40}$/.test(key) || seen.has(key) || out.length >= LIVE_VOL_LIMIT) return;
+        if (flagBlitz(raw) === "seed") return;
+        seen.add(key);
+        out.push(raw);
+      };
+      const query = state.query.trim();
+      if (/^0x[0-9a-fA-F]{40}$/.test(query)) add(query);
+      for (const address of preferred || []) add(address);
+      for (const address of fallback || []) add(address);
+      return out;
+    }
+
+    function liveFocus(pageAddresses) {
+      if (!selectedWeekIsOpen()) return [];
+      const preferred = state.visibleWallets.length ? state.visibleWallets : pageAddresses;
+      return planLiveTargets(preferred, pageAddresses);
+    }
+
+    function sameAddressList(left, right) {
+      if (!left || !right || left.length !== right.length) return false;
+      for (let i = 0; i < left.length; i += 1) {
+        if (String(left[i]).toLowerCase() !== String(right[i]).toLowerCase()) return false;
+      }
+      return true;
+    }
+
+    function measureVisibleWallets(tbody) {
+      const found = [];
+      if (!tbody) return found;
+      const nodes = tbody.querySelectorAll("tr[data-wallet]");
+      for (const tr of nodes) {
+        const rect = tr.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < window.innerHeight) found.push(tr.dataset.wallet);
+        if (found.length >= LIVE_VOL_LIMIT) break;
+      }
+      return found;
+    }
+
+    function renderAfterVolume() {
+      if (volumeRenderQueued) return;
+      volumeRenderQueued = true;
+      queueMicrotask(() => {
+        volumeRenderQueued = false;
+        if (!selectedWeekIsOpen()) return;
+        if (isBlitzView()) renderBlitz();
+        else if (state.period === "week") render();
+      });
+    }
+
+    function takeLiveVolumeSlot() {
+      const now = Date.now();
+      while (liveVolumeStarts.length && now - liveVolumeStarts[0] >= 1000) liveVolumeStarts.shift();
+      if (liveVolumeStarts.length >= LIVE_VOL_RATE_PER_SEC) {
+        return 1000 - (now - liveVolumeStarts[0]) + 25;
+      }
+      liveVolumeStarts.push(now);
+      return 0;
     }
 
     function blitzPlayersView() {
@@ -2719,7 +2871,17 @@
         const flag = item.flag || flagBlitz(item.address);
         const stored = item.volume != null ? item.volume : storedVolume.get(item.address.toLowerCase());
         item.flag = flag;
-        item.volume = blitzVolumeFor(item.address, stored == null ? null : stored, flag);
+        const live = flag === "seed" || !selectedWeekIsOpen() ? null : liveBlitzRecord(item.address);
+        if (flag === "seed") {
+          item.volume = stored == null ? 0 : Number(stored);
+          item.volume_live = false;
+        } else if (live) {
+          item.volume = live.volume;
+          item.volume_live = true;
+        } else {
+          item.volume = stored == null ? null : Number(stored);
+          item.volume_live = false;
+        }
         players.push(item);
       }
       const at = useLive ? state.blitzLive.at : (snap?.fetched_at || null);
@@ -2794,53 +2956,69 @@
       return Number(value);
     }
 
-    function scheduleBlitzVolumes(rows) {
-      if (!isBlitzView() || !selectedWeekIsOpen() || document.hidden) return;
-      const bounds = activeWeekBounds();
-      if (!bounds?.start || !bounds?.end) return;
-      let queued = 0;
-      for (const row of rows) {
-        if (queued >= BLITZ_LAZY_LIMIT) break;
-        if (!row || row.flag === "seed" || row.volume != null) continue;
-        const key = row.address.toLowerCase();
-        const missed = blitzVolumeMiss.get(key);
-        if (missed && Date.now() - missed < OPEN_WEEK_REFRESH_MS) continue;
-        if (blitzVolumeInflight.has(key)) continue;
-        if (blitzVolumeQueue.some((item) => item.address.toLowerCase() === key)) continue;
-        blitzVolumeQueue.push({ address: row.address, from: bounds.from });
-        queued += 1;
-      }
-      pumpBlitzVolumes(bounds);
-    }
-
-    function pumpBlitzVolumes(bounds) {
-      if (!isBlitzView() || document.hidden) {
+    function scheduleLiveVolumes(addresses) {
+      if (document.hidden || !selectedWeekIsOpen() || (!isBlitzView() && state.period !== "week")) {
         blitzVolumeQueue = [];
         return;
       }
-      while (blitzVolumeRunning < BLITZ_LAZY_CONCURRENCY && blitzVolumeQueue.length) {
+      const wanted = new Set((addresses || []).map((address) => String(address).toLowerCase()));
+      blitzVolumeQueue = blitzVolumeQueue.filter((job) => wanted.has(job.address.toLowerCase()));
+      const week = state.selectedWeekStart || state.week?.from;
+      for (const address of addresses || []) {
+        const key = String(address).toLowerCase();
+        if (!wanted.has(key) || liveBlitzFresh(key) || blitzVolumeInflight.has(key)) continue;
+        if (blitzVolumeQueue.some((job) => job.address.toLowerCase() === key)) continue;
+        const missed = blitzVolumeMiss.get(key);
+        if (missed && Date.now() - missed < LIVE_VOL_BACKOFF_MS) continue;
+        blitzVolumeQueue.push({ address, week });
+      }
+      pumpLiveVolumes();
+    }
+
+    function pumpLiveVolumes() {
+      if (document.hidden || !selectedWeekIsOpen()) return;
+      while (blitzVolumeRunning < LIVE_VOL_CONCURRENCY && blitzVolumeQueue.length) {
         const job = blitzVolumeQueue.shift();
         const key = job.address.toLowerCase();
-        if (state.blitzWeek && job.from && state.blitzWeek !== job.from && state.selectedWeekStart !== job.from) continue;
-        if (blitzVolumeInflight.has(key)) continue;
+        const week = state.selectedWeekStart || state.week?.from;
+        if (job.week && job.week !== week) continue;
+        if (blitzVolumeInflight.has(key) || liveBlitzFresh(key)) continue;
         blitzVolumeInflight.add(key);
         blitzVolumeRunning += 1;
-        fetchOneBlitzVolume(job.address, bounds).finally(() => {
-          blitzVolumeInflight.delete(key);
-          blitzVolumeRunning -= 1;
-          if (isBlitzView() && selectedWeekIsOpen() && !document.hidden) pumpBlitzVolumes(activeWeekBounds());
-        });
+        const wait = takeLiveVolumeSlot();
+        const run = () => {
+          if (document.hidden || !selectedWeekIsOpen() || (job.week && job.week !== (state.selectedWeekStart || state.week?.from))) {
+            blitzVolumeInflight.delete(key);
+            blitzVolumeRunning -= 1;
+            return;
+          }
+          fetchOneLiveVolume(job.address, week).finally(() => {
+            blitzVolumeInflight.delete(key);
+            blitzVolumeRunning -= 1;
+            if (!document.hidden && selectedWeekIsOpen()) pumpLiveVolumes();
+          });
+        };
+        if (wait > 0) window.setTimeout(run, wait);
+        else run();
       }
     }
 
-    async function fetchOneBlitzVolume(address, bounds) {
-      const frm = Math.floor(bounds.start.getTime() / 1000);
-      const to = Math.floor(bounds.end.getTime() / 1000);
+    async function fetchOneLiveVolume(address, week) {
+      const bounds = activeWeekBounds();
       const key = address.toLowerCase();
-      const week = bounds.from;
+      if (!bounds?.start) {
+        blitzVolumeMiss.set(key, Date.now());
+        return;
+      }
+      const from = Math.floor(new Date(bounds.start).getTime() / 1000);
+      const to = Math.floor(Date.now() / 1000);
+      if (!Number.isFinite(from) || to <= from) {
+        blitzVolumeMiss.set(key, Date.now());
+        return;
+      }
       try {
         const payload = await fetchJsonLive(
-          `${API_ROOT}/token-races/volume?from=${frm}&to=${to}&user=${encodeURIComponent(address)}&excludeSeed=true`,
+          `${API_ROOT}/token-races/volume?from=${from}&to=${to}&user=${encodeURIComponent(address)}&excludeSeed=true`,
         );
         if (!selectedWeekIsOpen() || (state.selectedWeekStart || state.week?.from) !== week) return;
         const volume = finiteNumber(payload?.data?.userVolume);
@@ -2848,12 +3026,33 @@
           blitzVolumeMiss.set(key, Date.now());
           return;
         }
-        state.blitzVolumeLive[key] = volume;
+        state.blitzVolumeLive[key] = { volume, at: Date.now(), week };
         blitzVolumeMiss.delete(key);
-        renderBlitz();
+        renderAfterVolume();
       } catch (err) {
         blitzVolumeMiss.set(key, Date.now());
       }
+    }
+
+    function finishLiveVolumePaint(tbody, pageAddresses, mode) {
+      if (document.hidden || !selectedWeekIsOpen()) return;
+      if (mode === "volume" && (isBlitzView() || state.period !== "week")) return;
+      if (mode === "blitz" && !isBlitzView()) return;
+      const visible = measureVisibleWallets(tbody);
+      if (
+        visible.length
+        && !sameAddressList(visible, state.visibleWallets)
+        && !state.volumeRemark
+      ) {
+        state.visibleWallets = visible;
+        state.volumeRemark = true;
+        if (mode === "blitz") renderBlitz();
+        else render();
+        state.volumeRemark = false;
+        return;
+      }
+      if (visible.length) state.visibleWallets = visible;
+      scheduleLiveVolumes(state.liveVolumeFocus);
     }
 
     function paintBlitzSummary(view) {
@@ -2909,6 +3108,7 @@
 
     function renderBlitz() {
       if (!els.blitzCard) return;
+      syncLiveVolumeWeek();
       if (!isBlitzView()) {
         els.blitzCard.hidden = true;
         if (els.blitzSummary) els.blitzSummary.hidden = true;
@@ -2931,13 +3131,18 @@
       }
       const weekKey = state.selectedWeekStart || state.week?.from || "";
       if (state.blitzWeek !== weekKey) {
+        const weekChanged = Boolean(state.blitzWeek) && state.blitzWeek !== weekKey;
         state.blitzWeek = weekKey;
         state.blitzShown = BLITZ_PAGE;
         state.blitzSortKey = "pnl";
         state.blitzSortDir = "desc";
-        state.blitzVolumeLive = {};
-        blitzVolumeQueue = [];
-        blitzVolumeMiss.clear();
+        if (weekChanged) {
+          state.blitzVolumeLive = {};
+          state.visibleWallets = [];
+          state.liveVolumeFocus = [];
+          blitzVolumeQueue = [];
+          blitzVolumeMiss.clear();
+        }
       }
       const view = blitzPlayersView();
       els.blitzUpdated.classList.remove("live", "snap");
@@ -2977,6 +3182,9 @@
       const sum = rows.reduce((total, row) => total + (Number(row.pnl) || 0), 0);
       const flagged = rows.filter((row) => row.flag === "seed" || row.flag === "agent").length;
       const shown = rows.slice(0, state.blitzShown || BLITZ_PAGE);
+      const pageAddresses = shown.map((row) => row.address);
+      state.liveVolumeFocus = liveFocus(pageAddresses);
+      const focusSet = new Set(state.liveVolumeFocus.map((address) => address.toLowerCase()));
       document.querySelectorAll("#blitz-card thead th.blitz-sortable").forEach((th) => {
         const arrow = th.querySelector(".arrow");
         if (!arrow) return;
@@ -2994,6 +3202,7 @@
       if (!rows.length) {
         const empty = q ? "没有匹配的钱包" : (view.missing ? "这一周的 Blitz 玩家表还没写进快照。" : "这一周没有 Blitz 玩家。");
         els.blitzBody.innerHTML = `<tr><td colspan="8" class="empty">${escapeHtml(empty)}</td></tr>`;
+        finishLiveVolumePaint(els.blitzBody, [], "blitz");
         return;
       }
       els.blitzBody.innerHTML = shown.map((row) => {
@@ -3006,8 +3215,14 @@
           : row.flag === "agent"
             ? `<button type="button" class="badge badge-agent" data-tip="NFT / Agent 池的 Agent 钱包。不算 Blitz 玩家。">Agent</button>`
             : "";
-        const volumeText = row.volume == null ? "—" : formatUsd(row.volume);
-        return `<tr class="${rowClass}">
+        const pending = Boolean(
+          selectedWeekIsOpen()
+          && !row.volume_live
+          && row.flag !== "seed"
+          && focusSet.has(row.address.toLowerCase())
+        );
+        const volumeText = (row.volume == null ? "—" : formatUsd(row.volume)) + cachedVolumeMark(pending, row.volume != null);
+        return `<tr class="${rowClass}" data-wallet="${escapeHtml(row.address)}">
           <td class="num rank ${rankClass}">${rank == null ? "—" : medal + rank}</td>
           <td>
             <div class="trader">
@@ -3024,7 +3239,7 @@
           <td class="num">${formatInt(row.best_streak)}</td>
         </tr>`;
       }).join("");
-      scheduleBlitzVolumes(shown.slice(0, BLITZ_LAZY_LIMIT));
+      finishLiveVolumePaint(els.blitzBody, pageAddresses, "blitz");
     }
 
     function renderPool() {
@@ -3104,6 +3319,7 @@
     }
 
     function render() {
+      syncLiveVolumeWeek();
       if (state.filter !== "retail" && state.sortKey === "retail_rank") {
         state.sortKey = "volume";
         state.sortDir = "desc";
@@ -3144,16 +3360,22 @@
           : `表格显示${capName}前 ${formatInt(view.rows.length)} 名` + (capped ? `（筛选后共 ${formatInt(view.poolSize)} 名）` : "");
       }
 
+      const pageAddresses = view.rows.map((row) => row.trader);
+      state.liveVolumeFocus = isViewingOpenWeek() && !isBlitzView() ? liveFocus(pageAddresses) : state.liveVolumeFocus;
+      const focusSet = new Set((isViewingOpenWeek() && !isBlitzView() ? state.liveVolumeFocus : []).map((address) => address.toLowerCase()));
+
       if (!view.rows.length) {
         const empty = pointsMode && !state.weekHasPoints
           ? (state.weekPointsNote || "这一周没有积分数据，只有成交量。")
           : "没有匹配的交易者";
         els.tbody.innerHTML = `<tr><td colspan="${cols}" class="empty">${escapeHtml(empty)}</td></tr>`;
         renderTierC();
+        finishLiveVolumePaint(els.tbody, pageAddresses, "volume");
         return;
       }
 
       els.tbody.innerHTML = view.rows.map((row) => {
+        const fig = state.period === "week" ? poolFigures(row, focusSet) : null;
         const tier = row.tag?.tier;
         const source = row.tag?.source;
         const rowClass = source === "seed"
@@ -3178,7 +3400,7 @@
         const globalRankClass = useRetailMedal || pointsMode ? "" : rankClass;
         const globalMedal = useRetailMedal || pointsMode ? "" : medal;
         const volumeRankText = row.rank == null ? "—" : `${globalMedal}${row.rank}`;
-        return `<tr class="${rowClass}">
+        return `<tr class="${rowClass}" data-wallet="${escapeHtml(row.trader)}">
           <td class="num rank ${globalRankClass}">${volumeRankText}</td>
           ${retailCell}
           ${weekCells}
@@ -3192,7 +3414,7 @@
           </td>
           ${pointsCell}
           <td class="num" title="${(row.volume || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}">${formatUsd(row.volume)}</td>
-          ${state.period === "week" ? `<td class="num">${formatPoolAmount(row.blitz_volume)}</td><td class="num">${formatPoolAmount(row.regular_volume)}</td>` : ""}
+          ${state.period === "week" ? `<td class="num">${formatPoolAmount(fig.blitz)}${poolVolumeMark(fig)}</td><td class="num">${formatPoolAmount(fig.regular)}${poolVolumeMark(fig)}</td>` : ""}
           <td class="num ${pnlClass(row.pnl)}" title="${(row.pnl || 0).toLocaleString("en-US", { maximumFractionDigits: 2 })}">${formatUsd(row.pnl)}</td>
           <td class="num hide-sm ${pnlClass(row.pnl_pct)}">${formatPct(row.pnl_pct)}</td>
           <td class="num">${formatInt(row.trade_count)}</td>
@@ -3200,6 +3422,7 @@
         </tr>`;
       }).join("");
       renderTierC();
+      finishLiveVolumePaint(els.tbody, pageAddresses, "volume");
     }
 
     let tierCKey = "";
@@ -3262,9 +3485,9 @@
         <h3>Agent 与 42 Blitz 种子</h3>
         <p>三个 Agent 钱包（codex、claude、grok）单独成组，徽章是 Agent。它们不进散户，也不进做市。42 Blitz 种子钱包是成交量接口 <code>excludeSeed=true</code> 排除掉的系统钱包：不排除时有 Blitz 成交，排除后为 0。页面标成「42 系统/种子」，提示「42 Blitz 种子钱包（无积分）」。原有做市标签留在配置里，只改展示。种子钱包同样不进散户和做市。</p>
         <h3>成交量拆分</h3>
-        <p>每一周和总榜有一张拆分：普通交易、Blitz 真实玩家、Blitz 42 种子、Agent（codex / claude / grok）。Blitz 用 <code>/token-races/volume</code>（<code>excludeSeed=true</code> 是真实玩家），Agent 用挖矿累计成交减去这一周开始时的基线。普通交易是总成交量减去 Blitz 再减去 Agent，不是另一套接口。进行中的一周大约每 60 秒在浏览器里重算这四项；任一请求失败就改显示快照，并标成「缓存」。每钱包的 Blitz 列仍用快照。取不到的数字显示「暂无数据」，不用 0 填。积分池比例里，交易 70%、NFT 池 20%、Pass 榜 10% 是官方口径；普通交易 55% 和 Token Race 15% 标成「推断」。</p>
+        <p>每一周和总榜有一张拆分：普通交易、Blitz 真实玩家、Blitz 42 种子、Agent（codex / claude / grok）。Blitz 用 <code>/token-races/volume</code>（<code>excludeSeed=true</code> 是真实玩家），Agent 用挖矿累计成交减去这一周开始时的基线。普通交易是总成交量减去 Blitz 再减去 Agent，不是另一套接口。进行中的一周大约每 60 秒在浏览器里重算这四项；任一请求失败就改显示快照，并标成「缓存」。屏幕上的钱包和搜索框里的地址会按同一窗口另拉每钱包 Blitz，没回到之前先显示快照并带一个小点。缓存的 Blitz 高于总成交量时，普通成交量按 0 显示并标出来。取不到的数字显示「暂无数据」，不用 0 填。积分池比例里，交易 70%、NFT 池 20%、Pass 榜 10% 是官方口径；普通交易 55% 和 Token Race 15% 标成「推断」。</p>
         <p>页面上方的「成交量 / Blitz」一次只显示一种。成交量是合计卡片、占比条、本周成交量拆分和排行榜。Blitz 是这一周的玩家表，上方有玩家人数、盈亏合计、真实成交量（各行 <code>userVolume</code> 之和）和种子标记人数。积分周选择两边共用。选择写在地址栏 <code>?view=blitz</code> 和浏览器本地，刷新后还在。</p>
-        <p>「Blitz 玩家」来自 <code>/token-races/leaderboard</code>（<code>sort_by=pnl</code>）。盈亏是已结算、含手续费的 <code>racePnl</code>。交易量是同一周 <code>userVolume</code>（<code>excludeSeed=true</code>），没取到显示「—」。轮次是 <code>racesPlayed</code>，也就是参与轮数，不是成交笔数。只有停在 Blitz 视图时，进行中的一周大约每 60 秒重拉这张榜；失败就沿用快照并标成「缓存」。交易量仍以快照为准，浏览器只为当前可见的前 20 行补缺失的数字。种子名单和 3 个 Agent 如果出现在榜上会单独标出。积分前的周和总榜没有这张表。</p>
+        <p>「Blitz 玩家」来自 <code>/token-races/leaderboard</code>（<code>sort_by=pnl</code>）。盈亏是已结算、含手续费的 <code>racePnl</code>。交易量是同一周 <code>userVolume</code>（<code>excludeSeed=true</code>），没取到显示「—」。轮次是 <code>racesPlayed</code>，也就是参与轮数，不是成交笔数。只有停在 Blitz 视图时，进行中的一周大约每 60 秒重拉这张榜；失败就沿用快照并标成「缓存」。交易量对屏幕上的行和搜索框里的地址另拉实时数字，大约每 60 秒更新，没回到之前先显示快照并带一个小点。种子名单和 3 个 Agent 如果出现在榜上会单独标出。积分前的周和总榜没有这张表。</p>
         <div id="tier-c-live"></div>
         <h3>全平台合计</h3>
         <p>四个卡片统计的是该窗口里每一个交易者，用排行榜接口分页拉完（<code>limit=500</code>）。「全部」大约有六万名交易者，浏览器不每 30 秒扫一遍；<code>fetch.py</code> 在 GitHub Actions 里扫完，把合计和高频机器人地址写进快照，页面注明那次扫描的更新时间。表格始终只放成交量前 ${TABLE_CAP} 名。</p>
@@ -3272,7 +3495,7 @@
         <p>起始时刻是配置里的单个值 <code>${escapeHtml(labels.pointsWeekStart)}</code>，一周 7 天，结束于下一周开始前的最后一分钟。成交量直接用排行榜的 <code>from</code> / <code>to</code>（UTC 日历日，含首尾，和 <code>period</code> 互斥）。周四日期到周三日期，正好覆盖文档里的周四 00:00 UTC 至周三 23:59 UTC。官方文档写明这两个参数存在，实时请求也接受尚未结束的 <code>to</code>，返回的是截至目前的本周成交量。因此不需要用全历史成交量去减周初基线。</p>
         <h3>积分周历史</h3>
         <p>第 1 周是积分上线发放窗口（2026-11-04 00:00 UTC 到 2026-11-12 00:00 UTC，8 天）。第 2 周从 2026-11-12 的周四开始，之后每七天一周。「上一周」在积分周之间切换，从本周回到第 1 周。更早的周四只有成交量，收在下拉里的「积分前」，不编号。和上线窗口重叠的 2026-11-05 那一周不单列。</p>
-        <p>选中的一周同时给出成交量排行榜，以及全平台总成交量、交易者人数、做市/机器人占比和散户成交量。积分榜只有积分接口按同一起止时间返回了发放数据时才出现，并按钱包地址并上成交量和做市徽章。对不上的周标成「仅成交量」，不会把别的周的积分填进来。已经结束并且积分状态已经确定的周写在 <code>data/weeks/&lt;开始日期&gt;.json</code>，例行更新发现文件齐全就跳过。进行中的一周在浏览器里刷新成交量和成交量拆分，积分和每钱包 Blitz 从快照读。标签页在后台时不请求。</p>
+        <p>选中的一周同时给出成交量排行榜，以及全平台总成交量、交易者人数、做市/机器人占比和散户成交量。积分榜只有积分接口按同一起止时间返回了发放数据时才出现，并按钱包地址并上成交量和做市徽章。对不上的周标成「仅成交量」，不会把别的周的积分填进来。已经结束并且积分状态已经确定的周写在 <code>data/weeks/&lt;开始日期&gt;.json</code>，例行更新发现文件齐全就跳过。进行中的一周在浏览器里刷新成交量和成交量拆分。屏幕上的钱包和搜索框里的地址会另拉 Blitz 成交量；其余钱包先用快照。标签页在后台时不请求。</p>
         <ul>${sources}</ul>
         <p>站点的积分页没有单独的 epoch 接口。<code>latestWeek</code> 是最近一个已经发放的积分周（结束时刻不含在内），不是正在进行的这一周。第一周从公告日 2026-11-04 00:00 UTC 算到 2026-11-12 00:00 UTC，长 8 天；之后的周期按上面的周四规则。积分接口没有对第三方页面开放 CORS，对照信息由 <code>fetch.py</code> 写入快照。</p>
         <h3>市场列表成交量</h3>
@@ -3338,6 +3561,7 @@
       if (next !== "volume" && next !== "blitz") return;
       if (state.view === next) return;
       state.view = next;
+      state.visibleWallets = [];
       persistView();
       syncViewChrome();
       if (next === "volume") {
@@ -3505,6 +3729,26 @@
       if (el) showTip(el);
     });
     document.addEventListener("focusout", () => { els.tip.hidden = true; });
+
+    let liveVolumeScrollTimer = 0;
+    function refreshVisibleVolumes() {
+      if (document.hidden || !selectedWeekIsOpen()) return;
+      const tbody = isBlitzView() ? els.blitzBody : (state.period === "week" ? els.tbody : null);
+      if (!tbody) return;
+      const visible = measureVisibleWallets(tbody);
+      if (!visible.length || sameAddressList(visible, state.visibleWallets)) return;
+      state.visibleWallets = visible;
+      if (isBlitzView()) renderBlitz();
+      else render();
+    }
+    window.addEventListener("scroll", () => {
+      window.clearTimeout(liveVolumeScrollTimer);
+      liveVolumeScrollTimer = window.setTimeout(refreshVisibleVolumes, 200);
+    }, { passive: true });
+    window.addEventListener("resize", () => {
+      window.clearTimeout(liveVolumeScrollTimer);
+      liveVolumeScrollTimer = window.setTimeout(refreshVisibleVolumes, 200);
+    });
 
     async function init() {
       try {
